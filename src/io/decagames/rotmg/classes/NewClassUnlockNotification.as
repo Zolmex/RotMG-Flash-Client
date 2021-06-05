@@ -9,13 +9,13 @@ package io.decagames.rotmg.classes
     import flash.display.Shape;
     import flash.display.Bitmap;
     import com.greensock.TimelineMax;
-    import io.decagames.rotmg.ui.labels.UILabel;
+
+import io.decagames.rotmg.ui.labels.UILabel;
     import com.greensock.TweenMax;
     import com.greensock.easing.Bounce;
     import com.greensock.easing.Expo;
     import com.company.assembleegameclient.objects.ObjectLibrary;
     import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
-    import flashx.textLayout.formats.TextAlign;
     import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
     import io.decagames.rotmg.ui.texture.TextureParser;
     import com.company.assembleegameclient.appengine.SavedCharacter;
@@ -138,7 +138,7 @@ package io.decagames.rotmg.classes
         private function createCharacterName():void
         {
             this._characterName = new UILabel();
-            DefaultLabelFormat.notificationLabel(this._characterName, 14, 0xFFFFFF, TextAlign.CENTER, true);
+            DefaultLabelFormat.notificationLabel(this._characterName, 14, 0xFFFFFF, "center", true);
             this._contentContainer.addChild(this._characterName);
         }
 
@@ -178,7 +178,7 @@ package io.decagames.rotmg.classes
             var _local_1:UILabel;
             _local_1 = new UILabel();
             _local_1.text = this.NEW_CLASS_UNLOCKED;
-            DefaultLabelFormat.notificationLabel(_local_1, 18, 0xFF00, TextAlign.CENTER, true);
+            DefaultLabelFormat.notificationLabel(_local_1, 18, 0xFF00, "center", true);
             _local_1.width = this.WIDTH;
             _local_1.x = ((this.WIDTH - _local_1.width) / 2);
             _local_1.y = ((this.HEIGHT - _local_1.height) - 12);

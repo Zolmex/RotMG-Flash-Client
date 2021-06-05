@@ -11,7 +11,6 @@ package kabam.rotmg.arena.component
     import kabam.rotmg.util.graphics.BevelRect;
     import kabam.rotmg.text.view.TextFieldDisplayConcrete;
     import flash.text.TextFieldAutoSize;
-    import flashx.textLayout.formats.VerticalAlign;
     import kabam.rotmg.text.view.stringBuilder.LineBuilder;
 
     public class HostQuerySpeechBubble extends Sprite 
@@ -53,7 +52,7 @@ package kabam.rotmg.arena.component
 
         private function makeText(_arg_1:String):TextFieldDisplayConcrete
         {
-            var _local_2:TextFieldDisplayConcrete = new TextFieldDisplayConcrete().setSize(16).setLeading(3).setAutoSize(TextFieldAutoSize.LEFT).setVerticalAlign(VerticalAlign.TOP).setMultiLine(true).setWordWrap(true).setPosition(this.PADDING, this.PADDING).setTextWidth((this.WIDTH - (2 * this.PADDING))).setTextHeight((this.HEIGHT - (2 * this.PADDING)));
+            var _local_2:TextFieldDisplayConcrete = new TextFieldDisplayConcrete().setSize(16).setLeading(3).setAutoSize(TextFieldAutoSize.LEFT).setVerticalAlign("top").setMultiLine(true).setWordWrap(true).setPosition(this.PADDING, this.PADDING).setTextWidth((this.WIDTH - (2 * this.PADDING))).setTextHeight((this.HEIGHT - (2 * this.PADDING)));
             _local_2.setStringBuilder(new LineBuilder().setParams(_arg_1));
             return (_local_2);
         }

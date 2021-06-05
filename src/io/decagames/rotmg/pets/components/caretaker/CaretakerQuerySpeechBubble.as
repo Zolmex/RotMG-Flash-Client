@@ -11,7 +11,6 @@ package io.decagames.rotmg.pets.components.caretaker
     import kabam.rotmg.util.graphics.BevelRect;
     import kabam.rotmg.text.view.TextFieldDisplayConcrete;
     import flash.text.TextFieldAutoSize;
-    import flashx.textLayout.formats.VerticalAlign;
     import kabam.rotmg.text.view.stringBuilder.LineBuilder;
 
     public class CaretakerQuerySpeechBubble extends Sprite 
@@ -52,7 +51,7 @@ package io.decagames.rotmg.pets.components.caretaker
 
         private function makeText(_arg_1:String):TextFieldDisplayConcrete
         {
-            var _local_2:TextFieldDisplayConcrete = new TextFieldDisplayConcrete().setSize(16).setAutoSize(TextFieldAutoSize.CENTER).setVerticalAlign(VerticalAlign.MIDDLE).setPosition((this.WIDTH / 2), (this.HEIGHT / 2));
+            var _local_2:TextFieldDisplayConcrete = new TextFieldDisplayConcrete().setSize(16).setAutoSize("center").setVerticalAlign("middle").setPosition((this.WIDTH / 2), (this.HEIGHT / 2));
             _local_2.setStringBuilder(new LineBuilder().setParams(_arg_1));
             return (_local_2);
         }

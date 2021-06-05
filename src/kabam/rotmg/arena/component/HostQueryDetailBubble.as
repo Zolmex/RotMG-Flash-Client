@@ -9,7 +9,6 @@ package kabam.rotmg.arena.component
     import flash.display.Shape;
     import kabam.rotmg.text.view.TextFieldDisplayConcrete;
     import flash.text.TextFieldAutoSize;
-    import flashx.textLayout.formats.VerticalAlign;
     import kabam.rotmg.text.view.stringBuilder.LineBuilder;
     import kabam.rotmg.util.graphics.GraphicsHelper;
     import kabam.rotmg.util.graphics.BevelRect;
@@ -34,7 +33,7 @@ package kabam.rotmg.arena.component
 
         private function makeText():TextFieldDisplayConcrete
         {
-            return (new TextFieldDisplayConcrete().setSize(16).setLeading(3).setAutoSize(TextFieldAutoSize.LEFT).setVerticalAlign(VerticalAlign.TOP).setMultiLine(true).setWordWrap(true).setPosition(this.PADDING, this.PADDING).setTextWidth((this.WIDTH - (2 * this.PADDING))).setTextHeight((this.HEIGHT - (2 * this.PADDING))));
+            return (new TextFieldDisplayConcrete().setSize(16).setLeading(3).setAutoSize(TextFieldAutoSize.LEFT).setVerticalAlign("top").setMultiLine(true).setWordWrap(true).setPosition(this.PADDING, this.PADDING).setTextWidth((this.WIDTH - (2 * this.PADDING))).setTextHeight((this.HEIGHT - (2 * this.PADDING))));
         }
 
         public function setText(_arg_1:String):void
