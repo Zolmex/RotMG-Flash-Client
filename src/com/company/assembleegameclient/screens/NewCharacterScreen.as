@@ -28,7 +28,7 @@ package com.company.assembleegameclient.screens
         public var selected:Signal;
         private var backButton_:TitleMenuOption;
         private var creditDisplay_:CreditDisplay;
-        private var boxes_:Object = {};
+        private var boxes_:Object = {}
         private var isInitialized:Boolean = false;
 
         public function NewCharacterScreen()
@@ -52,7 +52,7 @@ package com.company.assembleegameclient.screens
             if (this.isInitialized)
             {
                 return;
-            };
+            }
             this.isInitialized = true;
             this.backButton_ = new TitleMenuOption(ScreenTypes.BACK, 36, false);
             this.backButton_.addEventListener(MouseEvent.CLICK, this.onBackClick);
@@ -80,10 +80,10 @@ package com.company.assembleegameclient.screens
                         _local_8.addEventListener(MouseEvent.ROLL_OUT, this.onCharBoxOut);
                         _local_8.characterSelectClicked_.add(this.onCharBoxClick);
                         addChild(_local_8);
-                    };
-                };
+                    }
+                }
                 _local_2++;
-            };
+            }
             this.backButton_.x = ((stage.stageWidth / 2) - (this.backButton_.width / 2));
             this.backButton_.y = 550;
             this.creditDisplay_.x = stage.stageWidth;
@@ -92,7 +92,7 @@ package com.company.assembleegameclient.screens
             if (_local_3)
             {
                 _local_3.trackPageView("/newCharScreen");
-            };
+            }
         }
 
         private function onBackClick(_arg_1:Event):void
@@ -121,13 +121,13 @@ package com.company.assembleegameclient.screens
             if (!_local_2.available_)
             {
                 return;
-            };
+            }
             var _local_3:int = _local_2.objectType();
             var _local_4:String = ObjectLibrary.typeToDisplayId_[_local_3];
             var _local_5:GoogleAnalytics = StaticInjectorContext.getInjector().getInstance(GoogleAnalytics);
             if (_local_5)
             {
-            };
+            }
             this.selected.dispatch(_local_3);
         }
 
@@ -158,11 +158,11 @@ package com.company.assembleegameclient.screens
                         if (((_local_6) || (_arg_1.isLevelRequirementsMet(_local_4))))
                         {
                             _local_7.unlock();
-                        };
-                    };
-                };
+                        }
+                    }
+                }
                 _local_2++;
-            };
+            }
         }
 
 

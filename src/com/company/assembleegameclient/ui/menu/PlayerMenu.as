@@ -90,19 +90,19 @@ package com.company.assembleegameclient.ui.menu
                 _local_3 = new MenuOption(AssetLibrary.getImageFromSet("lofiInterfaceBig", 3), 0xFFFFFF, TextKey.PLAYERMENU_UNMUTE);
                 _local_3.addEventListener(MouseEvent.CLICK, this.onUnMute);
                 addOption(_local_3);
-            };
+            }
             if (((this.gs_.map.allowPlayerTeleport()) && (this.player_.isTeleportEligible(this.player_))))
             {
                 _local_3 = new TeleportMenuOption(this.gs_.map.player_);
                 _local_3.addEventListener(MouseEvent.CLICK, this.onTeleport);
                 addOption(_local_3);
-            };
+            }
             if (((this.gs_.map.player_.guildRank_ >= GuildUtil.OFFICER) && ((_arg_2.guildName_ == null) || (_arg_2.guildName_.length == 0))))
             {
                 _local_3 = new MenuOption(AssetLibrary.getImageFromSet("lofiInterfaceBig", 10), 0xFFFFFF, TextKey.PLAYERMENU_INVITE);
                 _local_3.addEventListener(MouseEvent.CLICK, this.onInvite);
                 addOption(_local_3);
-            };
+            }
             if (!this.player_.starred_)
             {
                 _local_3 = new MenuOption(AssetLibrary.getImageFromSet("lofiInterface2", 5), 0xFFFFFF, TextKey.PLAYERMENU_LOCK);
@@ -114,7 +114,7 @@ package com.company.assembleegameclient.ui.menu
                 _local_3 = new MenuOption(AssetLibrary.getImageFromSet("lofiInterface2", 6), 0xFFFFFF, TextKey.PLAYERMENU_UNLOCK);
                 _local_3.addEventListener(MouseEvent.CLICK, this.onUnlock);
                 addOption(_local_3);
-            };
+            }
             _local_3 = new MenuOption(AssetLibrary.getImageFromSet("lofiInterfaceBig", 7), 0xFFFFFF, TextKey.PLAYERMENU_TRADE);
             _local_3.addEventListener(MouseEvent.CLICK, this.onTrade);
             addOption(_local_3);
@@ -126,7 +126,7 @@ package com.company.assembleegameclient.ui.menu
                 _local_3 = new MenuOption(AssetLibrary.getImageFromSet("lofiInterfaceBig", 21), 0xFFFFFF, TextKey.PLAYERMENU_GUILDCHAT);
                 _local_3.addEventListener(MouseEvent.CLICK, this.onGuildMessage);
                 addOption(_local_3);
-            };
+            }
             if (!this.player_.ignored_)
             {
                 _local_3 = new MenuOption(AssetLibrary.getImageFromSet("lofiInterfaceBig", 8), 0xFFFFFF, TextKey.PLAYERMENU_IGNORE);
@@ -138,7 +138,7 @@ package com.company.assembleegameclient.ui.menu
                 _local_3 = new MenuOption(AssetLibrary.getImageFromSet("lofiInterfaceBig", 9), 0xFFFFFF, TextKey.PLAYERMENU_UNIGNORE);
                 _local_3.addEventListener(MouseEvent.CLICK, this.onUnignore);
                 addOption(_local_3);
-            };
+            }
             _local_3 = new MenuOption(AssetLibrary.getImageFromSet("lofiInterfaceBig", 18), 0xFFFFFF, "Add Friend");
             _local_3.addEventListener(MouseEvent.CLICK, this.onAddFriend);
             addOption(_local_3);

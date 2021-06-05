@@ -55,7 +55,7 @@ package kabam.rotmg.account.core
             else
             {
                 this.purchaseSlot();
-            };
+            }
         }
 
         private function isSlotUnaffordable():Boolean

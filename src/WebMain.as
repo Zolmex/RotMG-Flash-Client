@@ -82,7 +82,7 @@ package
             else
             {
                 addEventListener(Event.ADDED_TO_STAGE, this.onAddedToStage);
-            };
+            }
         }
 
         private function onAddedToStage(_arg_1:Event):void
@@ -124,7 +124,7 @@ package
             {
                 Parameters.data_.fullscreenMode = false;
                 Parameters.save();
-            };
+            }
         }
 
 

@@ -128,8 +128,8 @@ package kabam.rotmg.ui.view
                     _local_4 = "";
                     _local_3 = false;
                     this.response.dispatch(true);
-                };
-            };
+                }
+            }
             this.errorLabel.setStringBuilder(new LineBuilder().setParams(_local_4));
             this.ageVerificationField.setErrorHighlight(_local_3);
             drawButtonsAndBackground();
@@ -143,7 +143,7 @@ package kabam.rotmg.ui.view
             if (((_local_1.month > _local_2.month) || ((_local_1.month == _local_2.month) && (_local_1.date > _local_2.date))))
             {
                 _local_3--;
-            };
+            }
             return (_local_3);
         }
 

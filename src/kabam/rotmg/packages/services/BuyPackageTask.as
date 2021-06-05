@@ -52,7 +52,7 @@ package kabam.rotmg.packages.services
             else
             {
                 this.abandonPurchase(_local_3);
-            };
+            }
             completeTask(true, _arg_2);
         }
 
@@ -73,7 +73,7 @@ package kabam.rotmg.packages.services
             if (ERROR_MESSAGES_THAT_REFRESH.indexOf(_arg_1) != -1)
             {
                 this.getPackageTask.start();
-            };
+            }
         }
 
 

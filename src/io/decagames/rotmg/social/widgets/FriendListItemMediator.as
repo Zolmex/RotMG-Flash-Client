@@ -65,27 +65,27 @@ package io.decagames.rotmg.social.widgets
             if (this.view.removeButton)
             {
                 this.view.removeButton.addEventListener(MouseEvent.CLICK, this.onRemoveClick);
-            };
+            }
             if (this.view.acceptButton)
             {
                 this.view.acceptButton.addEventListener(MouseEvent.CLICK, this.onAcceptClick);
-            };
+            }
             if (this.view.rejectButton)
             {
                 this.view.rejectButton.addEventListener(MouseEvent.CLICK, this.onRejectClick);
-            };
+            }
             if (this.view.messageButton)
             {
                 this.view.messageButton.addEventListener(MouseEvent.CLICK, this.onMessageClick);
-            };
+            }
             if (this.view.teleportButton)
             {
                 this.view.teleportButton.addEventListener(MouseEvent.CLICK, this.onTeleportClick);
-            };
+            }
             if (this.view.blockButton)
             {
                 this.view.blockButton.addEventListener(MouseEvent.CLICK, this.onBlockClick);
-            };
+            }
         }
 
         private function onMessageClick(_arg_1:MouseEvent):void
@@ -99,27 +99,27 @@ package io.decagames.rotmg.social.widgets
             if (this.view.removeButton)
             {
                 this.view.removeButton.removeEventListener(MouseEvent.CLICK, this.onRemoveClick);
-            };
+            }
             if (this.view.acceptButton)
             {
                 this.view.acceptButton.removeEventListener(MouseEvent.CLICK, this.onAcceptClick);
-            };
+            }
             if (this.view.rejectButton)
             {
                 this.view.rejectButton.removeEventListener(MouseEvent.CLICK, this.onRejectClick);
-            };
+            }
             if (this.view.messageButton)
             {
                 this.view.messageButton.removeEventListener(MouseEvent.CLICK, this.onMessageClick);
-            };
+            }
             if (this.view.teleportButton)
             {
                 this.view.teleportButton.removeEventListener(MouseEvent.CLICK, this.onTeleportClick);
-            };
+            }
             if (this.view.blockButton)
             {
                 this.view.blockButton.removeEventListener(MouseEvent.CLICK, this.onBlockClick);
-            };
+            }
         }
 
         private function onTeleportClick(_arg_1:MouseEvent):void
@@ -129,7 +129,7 @@ package io.decagames.rotmg.social.widgets
             if (_local_3)
             {
                 _local_2 = Boolean(int(_local_3.charXML_.IsChallenger));
-            };
+            }
             if (_local_2)
             {
                 Parameters.data_.preferredChallengerServer = this.view.vo.getServerName();
@@ -137,7 +137,7 @@ package io.decagames.rotmg.social.widgets
             else
             {
                 Parameters.data_.preferredServer = this.view.vo.getServerName();
-            };
+            }
             Parameters.save();
             this.enterGame.dispatch();
             var _local_4:GameInitData = new GameInitData();
@@ -171,7 +171,7 @@ package io.decagames.rotmg.social.widgets
             else
             {
                 this.showPopup.dispatch(new ErrorModal(350, "Friends List Error", LineBuilder.getLocalizedStringFromKey(String(_arg_2))));
-            };
+            }
             this.removeFade.dispatch();
             this.refreshSignal.dispatch(RefreshListSignal.CONTEXT_FRIENDS_LIST, _arg_1);
         }
@@ -185,7 +185,7 @@ package io.decagames.rotmg.social.widgets
             else
             {
                 this.showPopup.dispatch(new ErrorModal(350, "Friends List Error", LineBuilder.getLocalizedStringFromKey(String(_arg_2))));
-            };
+            }
             this.removeFade.dispatch();
             this.refreshSignal.dispatch(RefreshListSignal.CONTEXT_FRIENDS_LIST, _arg_1);
         }
@@ -200,7 +200,7 @@ package io.decagames.rotmg.social.widgets
             else
             {
                 this.showPopup.dispatch(new ErrorModal(350, "Friends List Error", LineBuilder.getLocalizedStringFromKey(String(_arg_2))));
-            };
+            }
             this.removeFade.dispatch();
             this.refreshSignal.dispatch(RefreshListSignal.CONTEXT_FRIENDS_LIST, _arg_1);
         }
@@ -214,7 +214,7 @@ package io.decagames.rotmg.social.widgets
             else
             {
                 this.showPopup.dispatch(new ErrorModal(350, "Friends List Error", LineBuilder.getLocalizedStringFromKey(String(_arg_2))));
-            };
+            }
             this.removeFade.dispatch();
             this.refreshSignal.dispatch(RefreshListSignal.CONTEXT_FRIENDS_LIST, _arg_1);
         }

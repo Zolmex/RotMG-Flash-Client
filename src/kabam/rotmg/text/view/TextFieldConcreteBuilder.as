@@ -55,8 +55,8 @@ package kabam.rotmg.text.view
                 if (((!(this.containerWidth == -1)) && (!(this.containerMargin == -1))))
                 {
                     _arg_1.setTextWidth((this.containerWidth - (this.containerMargin * 2)));
-                };
-            };
+                }
+            }
             _arg_1.setBold(true);
             _arg_1.setWordWrap(true);
             _arg_1.setMultiLine(true);
@@ -66,11 +66,11 @@ package kabam.rotmg.text.view
             if (_arg_2 != -1)
             {
                 _arg_1.x = _arg_2;
-            };
+            }
             if (_arg_3 != -1)
             {
                 _arg_1.y = _arg_3;
-            };
+            }
             return (_arg_1);
         }
 

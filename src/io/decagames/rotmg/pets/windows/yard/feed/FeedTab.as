@@ -61,7 +61,7 @@ package io.decagames.rotmg.pets.windows.yard.feed
                 this.feedLabel.text = ("Feed power: " + _arg_1);
                 this._feedGoldButton.alpha = 1;
                 this._feedFameButton.alpha = 1;
-            };
+            }
             this._feedGoldButton.disabled = (_arg_1 == 0);
             this._feedFameButton.disabled = (_arg_1 == 0);
         }

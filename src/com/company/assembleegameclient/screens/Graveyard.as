@@ -6,10 +6,10 @@
 package com.company.assembleegameclient.screens
 {
     import flash.display.Sprite;
-    import __AS3__.vec.Vector;
+    
     import com.company.assembleegameclient.appengine.SavedNewsItem;
     import kabam.rotmg.core.model.PlayerModel;
-    import __AS3__.vec.*;
+    
 
     public class Graveyard extends Sprite 
     {
@@ -27,8 +27,8 @@ package com.company.assembleegameclient.screens
                 {
                     this.addLine(new GraveyardLine(_local_2.getIcon(), _local_2.title_, _local_2.tagline_, _local_2.link_, _local_2.date_, _arg_1.getAccountId()));
                     this.hasCharacters_ = true;
-                };
-            };
+                }
+            }
         }
 
         public function hasCharacters():Boolean

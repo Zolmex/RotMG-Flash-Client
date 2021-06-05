@@ -5,8 +5,8 @@
 
 package kabam.lib.util
 {
-    import __AS3__.vec.Vector;
-    import __AS3__.vec.*;
+    
+    
 
     public class DateValidator 
     {
@@ -36,7 +36,7 @@ package kabam.lib.util
             if (_arg_1 == -1)
             {
                 return (31);
-            };
+            }
             return ((_arg_1 == FEBRUARY) ? this.getDaysInFebruary(_arg_2) : DAYS_IN_MONTH[(_arg_1 - 1)]);
         }
 
@@ -45,7 +45,7 @@ package kabam.lib.util
             if (((_arg_1 == -1) || (this.isLeapYear(_arg_1))))
             {
                 return (29);
-            };
+            }
             return (28);
         }
 

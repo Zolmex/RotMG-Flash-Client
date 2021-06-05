@@ -7,7 +7,7 @@ package kabam.rotmg.friends.view
 {
     import flash.display.Sprite;
     import org.osflash.signals.Signal;
-    import __AS3__.vec.Vector;
+    
     import kabam.rotmg.game.view.components.TabView;
     import flash.events.MouseEvent;
     import com.company.ui.BaseSimpleText;
@@ -18,7 +18,7 @@ package kabam.rotmg.friends.view
     import flash.display.GraphicsPath;
     import flash.display.IGraphicsData;
     import com.company.util.GraphicsUtil;
-    import __AS3__.vec.*;
+    
 
     public class FriendTabView extends Sprite 
     {
@@ -51,7 +51,7 @@ package kabam.rotmg.friends.view
             while (numChildren > 0)
             {
                 this.removeChildAt((numChildren - 1));
-            };
+            }
             this.tabSprite.removeEventListener(MouseEvent.CLICK, this.onTabClicked);
             this.tabs = null;
             this.contents = null;
@@ -75,7 +75,7 @@ package kabam.rotmg.friends.view
                 _local_4.setSelected(true);
                 this.showContent(0);
                 this.tabSelected.dispatch(_arg_2.name);
-            };
+            }
         }
 
         public function clearTabs():void
@@ -89,7 +89,7 @@ package kabam.rotmg.friends.view
                 this.tabSprite.removeChild(this.tabs[_local_1]);
                 this.containerSprite.removeChild(this.contents[_local_1]);
                 _local_1++;
-            };
+            }
             this.tabs = new Vector.<TabView>();
             this.contents = new Vector.<Sprite>();
         }
@@ -126,8 +126,8 @@ package kabam.rotmg.friends.view
                     _arg_1.setSelected(true);
                     this.showContent(_arg_1.index);
                     this.tabSelected.dispatch(this.contents[_arg_1.index].name);
-                };
-            };
+                }
+            }
         }
 
         private function addTextTab(_arg_1:int, _arg_2:BaseSimpleText):TabTextView
@@ -151,7 +151,7 @@ package kabam.rotmg.friends.view
                 _local_2.visible = false;
                 _local_3.visible = true;
                 this.currentTabIndex = _arg_1;
-            };
+            }
         }
 
         private function drawBackground():void

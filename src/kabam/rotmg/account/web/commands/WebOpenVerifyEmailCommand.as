@@ -27,7 +27,7 @@ package kabam.rotmg.account.web.commands
             {
                 this.openDialog.dispatch(new WebVerifyEmailDialog());
                 this.pollVerifyEmailSignal.dispatch();
-            };
+            }
         }
 
 

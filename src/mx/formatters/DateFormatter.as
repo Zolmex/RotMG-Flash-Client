@@ -30,7 +30,7 @@ package mx.formatters
             if (((!(_arg_1)) || (_arg_1 == "")))
             {
                 return (null);
-            };
+            }
             var _local_2:int = -1;
             var _local_3:int = -1;
             var _local_4:int = -1;
@@ -64,7 +64,7 @@ package mx.formatters
                                 if (!((("a" <= _local_8) && (_local_8 <= "z")) || (("A" <= _local_8) && (_local_8 <= "Z")))) break;
                                 _local_14 = (_local_14 + _local_8);
                                 _local_10++;
-                            };
+                            }
                             _local_15 = DateBase.defaultStringKey.length;
                             _local_16 = 0;
                             while (_local_16 < _local_15)
@@ -78,7 +78,7 @@ package mx.formatters
                                         if (_local_5 < 12)
                                         {
                                             _local_5 = (_local_5 + 12);
-                                        };
+                                        }
                                     }
                                     else
                                     {
@@ -88,7 +88,7 @@ package mx.formatters
                                             if (_local_5 == 12)
                                             {
                                                 _local_5 = 0;
-                                            };
+                                            }
                                         }
                                         else
                                         {
@@ -101,14 +101,14 @@ package mx.formatters
                                                 else
                                                 {
                                                     break;
-                                                };
-                                            };
-                                        };
-                                    };
+                                                }
+                                            }
+                                        }
+                                    }
                                     break;
-                                };
+                                }
                                 _local_16++;
-                            };
+                            }
                             _local_9 = 0;
                         }
                         else
@@ -120,7 +120,7 @@ package mx.formatters
                                 {
                                     _local_18 = (_local_18 + _local_8);
                                     _local_10++;
-                                };
+                                }
                                 _local_19 = int(_local_18);
                                 if (_local_19 >= 70)
                                 {
@@ -132,7 +132,7 @@ package mx.formatters
                                     else
                                     {
                                         break;
-                                    };
+                                    }
                                 }
                                 else
                                 {
@@ -151,8 +151,8 @@ package mx.formatters
                                             else
                                             {
                                                 break;
-                                            };
-                                        };
+                                            }
+                                        }
                                     }
                                     else
                                     {
@@ -171,8 +171,8 @@ package mx.formatters
                                                 else
                                                 {
                                                     break;
-                                                };
-                                            };
+                                                }
+                                            }
                                         }
                                         else
                                         {
@@ -201,40 +201,40 @@ package mx.formatters
                                                         else
                                                         {
                                                             break;
-                                                        };
-                                                    };
-                                                };
-                                            };
-                                        };
-                                    };
-                                };
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
                                 _local_9 = 0;
-                            };
-                        };
-                    };
-                };
-            };
+                            }
+                        }
+                    }
+                }
+            }
             if ((((((_local_2 < 0) || (_local_3 < 0)) || (_local_3 > 11)) || (_local_4 < 1)) || (_local_4 > 31)))
             {
                 return (null);
-            };
+            }
             if (_local_7 < 0)
             {
                 _local_7 = 0;
-            };
+            }
             if (_local_6 < 0)
             {
                 _local_6 = 0;
-            };
+            }
             if (_local_5 < 0)
             {
                 _local_5 = 0;
-            };
+            }
             var _local_13:Date = new Date(_local_2, _local_3, _local_4, _local_5, _local_6, _local_7);
             if (((!(_local_4 == _local_13.getDate())) || (!(_local_3 == _local_13.getMonth()))))
             {
                 return (null);
-            };
+            }
             return (_local_13);
         }
 
@@ -262,12 +262,12 @@ package mx.formatters
             if (error)
             {
                 error = null;
-            };
+            }
             if (((!(_arg_1)) || ((_arg_1 is String) && (_arg_1 == ""))))
             {
                 error = defaultInvalidValueError;
                 return ("");
-            };
+            }
             if ((_arg_1 is String))
             {
                 _arg_1 = DateFormatter.parseDateString(String(_arg_1));
@@ -275,7 +275,7 @@ package mx.formatters
                 {
                     error = defaultInvalidValueError;
                     return ("");
-                };
+                }
             }
             else
             {
@@ -283,8 +283,8 @@ package mx.formatters
                 {
                     error = defaultInvalidValueError;
                     return ("");
-                };
-            };
+                }
+            }
             var _local_3:int;
             var _local_4:* = "";
             var _local_5:int = this.formatString.length;
@@ -305,16 +305,16 @@ package mx.formatters
                         {
                             error = defaultInvalidFormatError;
                             return ("");
-                        };
-                    };
-                };
+                        }
+                    }
+                }
                 _local_6++;
-            };
+            }
             if (_local_3 < 1)
             {
                 error = defaultInvalidFormatError;
                 return ("");
-            };
+            }
             var _local_7:StringFormatter = new StringFormatter(this.formatString, VALID_PATTERN_CHARS, DateBase.extractTokenDate);
             return (_local_7.formatValue(_arg_1));
         }

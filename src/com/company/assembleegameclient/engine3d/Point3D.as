@@ -5,7 +5,6 @@
 
 package com.company.assembleegameclient.engine3d
 {
-    import __AS3__.vec.Vector;
     import flash.display.GraphicsPathCommand;
     import flash.display.GraphicsEndFill;
     import flash.display.GraphicsPath;
@@ -19,7 +18,6 @@ package com.company.assembleegameclient.engine3d
     import flash.geom.Matrix3D;
     import com.company.assembleegameclient.map.Camera;
     import flash.display.BitmapData;
-    import __AS3__.vec.*;
 
     public class Point3D 
     {
@@ -54,7 +52,7 @@ package com.company.assembleegameclient.engine3d
             if (this.posS_.w < 0)
             {
                 return;
-            };
+            }
             var _local_8:Number = (this.posS_.w * Math.sin(((_arg_5.pp_.fieldOfView / 2) * Trig.toRadians)));
             var _local_9:Number = (this.size_ / _local_8);
             this.data_.length = 0;
@@ -67,7 +65,7 @@ package com.company.assembleegameclient.engine3d
                 _local_10 = Math.cos(_arg_3);
                 _local_11 = Math.sin(_arg_3);
                 this.data_.push((this.posS_.x + ((_local_10 * -(_local_9)) + (_local_11 * -(_local_9)))), (this.posS_.y + ((_local_11 * -(_local_9)) - (_local_10 * -(_local_9)))), (this.posS_.x + ((_local_10 * _local_9) + (_local_11 * -(_local_9)))), (this.posS_.y + ((_local_11 * _local_9) - (_local_10 * -(_local_9)))), (this.posS_.x + ((_local_10 * _local_9) + (_local_11 * _local_9))), (this.posS_.y + ((_local_11 * _local_9) - (_local_10 * _local_9))), (this.posS_.x + ((_local_10 * -(_local_9)) + (_local_11 * _local_9))), (this.posS_.y + ((_local_11 * -(_local_9)) - (_local_10 * _local_9))));
-            };
+            }
             if (_arg_6 != null)
             {
                 this.bitmapFill_.bitmapData = _arg_6;
@@ -83,7 +81,7 @@ package com.company.assembleegameclient.engine3d
             {
                 this.solidFill_.color = _arg_7;
                 _arg_1.push(this.solidFill_);
-            };
+            }
             _arg_1.push(this.path_);
             _arg_1.push(END_FILL);
         }

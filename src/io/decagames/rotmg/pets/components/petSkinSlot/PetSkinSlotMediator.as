@@ -27,15 +27,15 @@ package io.decagames.rotmg.pets.components.petSkinSlot
             if (this.view.skinVO)
             {
                 this.view.addSkin(this.petIconFactory.getPetSkinTexture(this.view.skinVO, 40, this.view.skinVO.rarity.color));
-            };
+            }
             if (this.view.isSkinSelectableSlot)
             {
                 if (this.view.skinVO.isOwned)
                 {
                     this.view.addEventListener(MouseEvent.CLICK, this.onSelectSkin);
-                };
+                }
                 this.selectPetSkin.add(this.onSkinSelected);
-            };
+            }
             this.view.updatedVOSignal.add(this.onPetUpdated);
         }
 
@@ -44,7 +44,7 @@ package io.decagames.rotmg.pets.components.petSkinSlot
             if (!this.view.manualUpdate)
             {
                 this.view.addSkin(((this.view.skinVO == null) ? null : this.petIconFactory.getPetSkinTexture(this.view.skinVO, 40)));
-            };
+            }
         }
 
         private function onSelectSkin(_arg_1:MouseEvent):void
@@ -65,7 +65,7 @@ package io.decagames.rotmg.pets.components.petSkinSlot
             {
                 this.view.removeEventListener(MouseEvent.CLICK, this.onSelectSkin);
                 this.selectPetSkin.remove(this.onSkinSelected);
-            };
+            }
             this.view.updatedVOSignal.remove(this.onPetUpdated);
         }
 

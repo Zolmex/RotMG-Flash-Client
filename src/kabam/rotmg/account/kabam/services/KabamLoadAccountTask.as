@@ -41,7 +41,7 @@ package kabam.rotmg.account.kabam.services
             else
             {
                 this.sendRequest();
-            };
+            }
         }
 
         private function sendRequest():void
@@ -49,7 +49,7 @@ package kabam.rotmg.account.kabam.services
             var _local_1:Object = {
                 "signedRequest":this.kabam.signedRequest,
                 "entrytag":this.account.getEntryTag()
-            };
+            }
             this.client.setMaxRetries(2);
             this.client.complete.addOnce(this.onComplete);
             this.client.sendRequest("/kabam/getcredentials", _local_1);

@@ -73,7 +73,7 @@ package kabam.rotmg.account.kongregate.view
             {
                 this.register_ = new DeprecatedClickableText(12, false, TextKey.KONGREGATEACCOUNTDETAILDIALOG_REGISTER);
                 this.register_.addEventListener(MouseEvent.CLICK, this.onRegister);
-            };
+            }
             _local_4.rightButton_.addEventListener(MouseEvent.CLICK, this.onContinue);
         }
 

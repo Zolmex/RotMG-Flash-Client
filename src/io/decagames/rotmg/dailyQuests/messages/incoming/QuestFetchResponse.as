@@ -6,10 +6,10 @@
 package io.decagames.rotmg.dailyQuests.messages.incoming
 {
     import kabam.rotmg.messaging.impl.incoming.IncomingMessage;
-    import __AS3__.vec.Vector;
+    
     import io.decagames.rotmg.dailyQuests.messages.data.QuestData;
     import flash.utils.IDataInput;
-    import __AS3__.vec.*;
+    
 
     public class QuestFetchResponse extends IncomingMessage 
     {
@@ -33,7 +33,7 @@ package io.decagames.rotmg.dailyQuests.messages.incoming
                 this.quests[_local_3] = new QuestData();
                 this.quests[_local_3].parseFromInput(_arg_1);
                 _local_3++;
-            };
+            }
             this.nextRefreshPrice = _arg_1.readShort();
         }
 

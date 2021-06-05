@@ -74,7 +74,7 @@ package io.decagames.rotmg.social.popups
             {
                 this.showPopup.dispatch(new ErrorModal(350, "Friends List Error", LineBuilder.getLocalizedStringFromKey(String(_arg_2))));
                 this.removeFade.dispatch();
-            };
+            }
         }
 
 

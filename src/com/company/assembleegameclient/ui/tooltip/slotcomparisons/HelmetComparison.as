@@ -50,8 +50,8 @@ package com.company.assembleegameclient.ui.tooltip.slotcomparisons
                 if (tag.@effect == typeName)
                 {
                     return (tag);
-                };
-            };
+                }
+            }
             return (null);
         }
 
@@ -65,8 +65,8 @@ package com.company.assembleegameclient.ui.tooltip.slotcomparisons
                 if (tag.@effect == typeName)
                 {
                     return (tag);
-                };
-            };
+                }
+            }
             return (null);
         }
 
@@ -75,7 +75,7 @@ package com.company.assembleegameclient.ui.tooltip.slotcomparisons
             if (((this.berserk == null) || (this.otherBerserk == null)))
             {
                 return;
-            };
+            }
             var _local_1:Number = Number(this.berserk.@range);
             var _local_2:Number = Number(this.otherBerserk.@range);
             var _local_3:Number = Number(this.berserk.@duration);
@@ -118,8 +118,8 @@ package com.company.assembleegameclient.ui.tooltip.slotcomparisons
                         "duration":this.speedy.@duration
                     }, TooltipHelper.getOpenTag(BETTER_COLOR), TooltipHelper.getCloseTag());
                     processedTags[this.speedy.toXMLString()] = true;
-                };
-            };
+                }
+            }
         }
 
         private function handleArmored():void
@@ -132,7 +132,7 @@ package com.company.assembleegameclient.ui.tooltip.slotcomparisons
                     "duration":this.armored.@duration
                 }, TooltipHelper.getOpenTag(UNTIERED_COLOR), TooltipHelper.getCloseTag());
                 processedTags[this.armored.toXMLString()] = true;
-            };
+            }
         }
 
 

@@ -9,7 +9,7 @@ package com.company.assembleegameclient.objects
     import kabam.rotmg.core.StaticInjectorContext;
     import kabam.rotmg.text.view.BitmapTextFactory;
     import flash.display.BitmapData;
-    import __AS3__.vec.Vector;
+    
     import flash.display.IGraphicsData;
     import com.company.assembleegameclient.map.Camera;
     import com.company.assembleegameclient.ui.panels.PortalPanel;
@@ -47,7 +47,7 @@ package com.company.assembleegameclient.objects
             if (this.nexusPortal_)
             {
                 drawName(_arg_1, _arg_2);
-            };
+            }
         }
 
         public function getPanel(_arg_1:GameSprite):Panel

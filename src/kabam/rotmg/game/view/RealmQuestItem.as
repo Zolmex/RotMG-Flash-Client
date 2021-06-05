@@ -55,7 +55,7 @@ package kabam.rotmg.game.view
             if (this._diamond)
             {
                 this._content.removeChild(this._diamond);
-            };
+            }
             var _local_1:String = ((this._isComplete) ? "checkbox_filled" : "checkbox_empty");
             this._diamond = TextureParser.instance.getTexture("UI", _local_1);
             this._content.addChild(this._diamond);
@@ -76,7 +76,7 @@ package kabam.rotmg.game.view
             if (this._label.numLines > 1)
             {
                 this._label.height = 30;
-            };
+            }
             this._label.x = (this._diamond.width + 5);
             this._content.addChild(this._label);
         }

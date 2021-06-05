@@ -24,7 +24,7 @@ package com.company.assembleegameclient.util
                 _local_3 = new Bitmap(_local_4);
                 _local_3.scaleX = _arg_2;
                 _local_3.scaleY = _arg_2;
-            };
+            }
             return (_local_3);
         }
 

@@ -38,7 +38,7 @@ package io.decagames.rotmg.pets.components.petIcon
                 _local_6 = TextureRedrawer.resize(_local_4, _arg_1.getSkinMaskedImage().mask_, _arg_2, true, 0, 0, _local_5);
                 _local_6 = GlowRedrawer.outlineGlow(_local_6, _arg_3, this.outlineSize);
                 return (_local_6);
-            };
+            }
             return (new BitmapDataSpy(_arg_2, _arg_2));
         }
 

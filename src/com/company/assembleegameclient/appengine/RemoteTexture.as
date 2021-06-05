@@ -40,7 +40,7 @@ package com.company.assembleegameclient.appengine
         {
             var _local_1:String = ((this.instance_ == "testing") ? "test.realmofthemadgod.com" : "realmofthemadgod.com");
             var _local_2:String = URL_PATTERN.replace("{DOMAIN}", _local_1);
-            var _local_3:Object = {};
+            var _local_3:Object = {}
             _local_3.id = this.id_;
             _local_3.time = START_TIME;
             var _local_4:RetryLoader = new AppEngineRetryLoader();
@@ -58,7 +58,7 @@ package com.company.assembleegameclient.appengine
             else
             {
                 this.reportError(_arg_2);
-            };
+            }
         }
 
         public function makeTexture(_arg_1:ByteArray):void

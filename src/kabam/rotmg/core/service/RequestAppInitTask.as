@@ -45,7 +45,7 @@ package kabam.rotmg.core.service
             if (_arg_1 != null)
             {
                 DynamicSettings.xml = _arg_1;
-            };
+            }
         }
 
 

@@ -5,9 +5,9 @@
 
 package kabam.rotmg.dailyLogin.model
 {
-    import __AS3__.vec.Vector;
+    
     import io.decagames.rotmg.utils.date.TimeSpan;
-    import __AS3__.vec.*;
+    
 
     public class DailyLoginModel 
     {
@@ -18,10 +18,10 @@ package kabam.rotmg.dailyLogin.model
         public var currentDisplayedCaledar:String;
         private var serverTimestamp:Number;
         private var serverMeasureTime:Number;
-        private var daysConfig:Object = {};
-        private var userDayConfig:Object = {};
-        private var currentDayConfig:Object = {};
-        private var maxDayConfig:Object = {};
+        private var daysConfig:Object = {}
+        private var userDayConfig:Object = {}
+        private var currentDayConfig:Object = {}
+        private var maxDayConfig:Object = {}
         private var _initialized:Boolean;
         private var _currentDay:int = -1;
         private var _currentDate:Date;
@@ -31,13 +31,13 @@ package kabam.rotmg.dailyLogin.model
             if (_arg_1.dayNumber < _arg_2.dayNumber)
             {
                 return (-1);
-            };
+            }
             if (_arg_1.dayNumber > _arg_2.dayNumber)
             {
                 return (1);
-            };
+            }
             return (0);
-        };
+        }
 
         public function DailyLoginModel()
         {
@@ -114,10 +114,10 @@ package kabam.rotmg.dailyLogin.model
                 if (_local_5 == this.userDayConfig[_arg_1])
                 {
                     _local_6.isCurrent = true;
-                };
+                }
                 _local_4.push(_local_6);
                 _local_5++;
-            };
+            }
             this.daysConfig[_arg_1] = _local_4;
         }
 
@@ -129,8 +129,8 @@ package kabam.rotmg.dailyLogin.model
                 if (_local_3.dayNumber == _arg_2)
                 {
                     return (_local_3);
-                };
-            };
+                }
+            }
             return (new CalendarDayModel(_arg_2, -1, 0, 0, false, _arg_1));
         }
 
@@ -153,8 +153,8 @@ package kabam.rotmg.dailyLogin.model
                 if (_local_2 > _local_1)
                 {
                     _local_1 = _local_2;
-                };
-            };
+                }
+            }
             return (_local_1);
         }
 

@@ -72,7 +72,7 @@ package com.company.assembleegameclient.ui.tooltip
                 addChild(_local_2);
                 _local_3 = (_local_3 + _local_2.height);
                 _local_4++;
-            };
+            }
             _local_2 = new LegendLine(FameUtil.maxStars(), FameUtil.maxStars(), new ColorTransform());
             _local_2.x = PADDING_LEFT;
             _local_2.y = _local_3;
@@ -100,9 +100,9 @@ import flash.filters.DropShadowFilter;
 class LegendLine extends Sprite 
 {
 
-    /*private*/ var coloredStar_:StarGraphic;
-    /*private*/ var rangeText_:TextFieldDisplayConcrete;
-    /*private*/ var star_:StarGraphic;
+    private var coloredStar_:StarGraphic;
+    private var rangeText_:TextFieldDisplayConcrete;
+    private var star_:StarGraphic;
 
     public function LegendLine(_arg_1:int, _arg_2:int, _arg_3:ColorTransform)
     {
@@ -139,7 +139,7 @@ class LegendLine extends Sprite
         addChild(this.coloredStar_);
     }
 
-    /*private*/ function positionGreyStar():void
+    private function positionGreyStar():void
     {
         this.star_.x = (this.rangeText_.getBounds(this).right + 2);
         this.star_.y = 4;

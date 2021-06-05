@@ -35,18 +35,18 @@ package io.decagames.rotmg.fame
                 this.dungeonBitmap.x = (-(Math.round((_local_2.width / 2))) + 13);
                 this.dungeonBitmap.y = (-(Math.round((_local_2.height / 2))) + 11);
                 addChild(this.dungeonBitmap);
-            };
+            }
             label.y = 4;
             label.x = 24;
             lineHeight = 25;
             if (fameValue)
             {
                 fameValue.y = 4;
-            };
+            }
             if (lock)
             {
                 lock.y = -6;
-            };
+            }
         }
 
         override public function clean():void
@@ -55,7 +55,7 @@ package io.decagames.rotmg.fame
             if (this.dungeonBitmap)
             {
                 this.dungeonBitmap.bitmapData.dispose();
-            };
+            }
         }
 
 

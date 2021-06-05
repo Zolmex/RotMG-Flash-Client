@@ -56,7 +56,7 @@ package kabam.rotmg.core.commands
             else
             {
                 this.setScreen.dispatch(this.view);
-            };
+            }
         }
 
         private function reloadDataThenSetScreen():void
@@ -70,7 +70,7 @@ package kabam.rotmg.core.commands
             if (!this.seasonalEventModel.isChallenger)
             {
                 _local_1.add(this.getSeasonalEventTask);
-            };
+            }
             _local_1.add(new DispatchSignalTask(this.setScreen, this.view));
             this.monitor.add(_local_1);
             _local_1.start();

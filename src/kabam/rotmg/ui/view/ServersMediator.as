@@ -39,7 +39,7 @@ package kabam.rotmg.ui.view
             if (this.securityQuestionsModel.showSecurityQuestionsOnStartup)
             {
                 this.openDialog.dispatch(new SecurityQuestionsInfoDialog());
-            };
+            }
         }
 
         override public function destroy():void

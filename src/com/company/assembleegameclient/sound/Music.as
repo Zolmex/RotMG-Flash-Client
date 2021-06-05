@@ -39,7 +39,7 @@ package com.company.assembleegameclient.sound
             var _local_2:GoogleAnalytics = StaticInjectorContext.getInjector().getInstance(GoogleAnalytics);
             if (_local_2)
             {
-            };
+            }
             Parameters.data_.playMusic = _arg_1;
             Parameters.save();
             musicVolumeTransform.volume = ((Parameters.data_.playMusic) ? volume : 0);
@@ -53,7 +53,7 @@ package com.company.assembleegameclient.sound
             if (!Parameters.data_.playMusic)
             {
                 return;
-            };
+            }
             if (musicVolumeTransform != null)
             {
                 musicVolumeTransform.volume = _arg_1;
@@ -61,7 +61,7 @@ package com.company.assembleegameclient.sound
             else
             {
                 musicVolumeTransform = new SoundTransform(_arg_1);
-            };
+            }
             musicChannel_.soundTransform = musicVolumeTransform;
         }
 

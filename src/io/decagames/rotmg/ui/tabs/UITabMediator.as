@@ -20,7 +20,7 @@ package io.decagames.rotmg.ui.tabs
             if (this.view.transparentBackgroundFix)
             {
                 this.view.addEventListener(Event.ENTER_FRAME, this.checkSize);
-            };
+            }
         }
 
         private function checkSize(_arg_1:Event):void
@@ -28,7 +28,7 @@ package io.decagames.rotmg.ui.tabs
             if (this.view.content)
             {
                 this.view.drawTransparentBackground();
-            };
+            }
         }
 
         override public function destroy():void
@@ -36,7 +36,7 @@ package io.decagames.rotmg.ui.tabs
             if (this.view.transparentBackgroundFix)
             {
                 this.view.removeEventListener(Event.ENTER_FRAME, this.checkSize);
-            };
+            }
         }
 
 

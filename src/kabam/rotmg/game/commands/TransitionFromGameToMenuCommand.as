@@ -43,7 +43,7 @@ package kabam.rotmg.game.commands
             else
             {
                 this.showCurrentCharacterScreen();
-            };
+            }
         }
 
         private function showDeathView():void

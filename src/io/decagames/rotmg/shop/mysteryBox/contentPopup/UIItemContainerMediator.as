@@ -40,7 +40,7 @@ package io.decagames.rotmg.shop.mysteryBox.contentPopup
             {
                 this.tooltip.attachToTarget(this.view);
                 this.showTooltipSignal.dispatch(this.tooltip);
-            };
+            }
         }
 
         override public function destroy():void

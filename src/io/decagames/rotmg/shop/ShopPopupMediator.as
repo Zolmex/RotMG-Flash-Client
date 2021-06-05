@@ -27,7 +27,7 @@ package io.decagames.rotmg.shop
     import io.decagames.rotmg.ui.tabs.UITab;
     import kabam.rotmg.mysterybox.model.MysteryBoxInfo;
     import io.decagames.rotmg.shop.genericBox.GenericBoxTile;
-    import __AS3__.vec.Vector;
+    
     import io.decagames.rotmg.shop.mysteryBox.MysteryBoxTile;
     import kabam.rotmg.packages.model.PackageInfo;
     import io.decagames.rotmg.shop.packages.PackageBoxTile;
@@ -116,8 +116,8 @@ package io.decagames.rotmg.shop
                     _local_3 = this.createBoxTile(_local_2, MysteryBoxTile);
                     _local_3.selfRemoveSignal.add(this.updateMysteryBoxes);
                     this.mysteryBoxesGrid.addGridElement(_local_3);
-                };
-            };
+                }
+            }
         }
 
         private function updatePackages():void
@@ -133,8 +133,8 @@ package io.decagames.rotmg.shop
                     _local_3 = this.createBoxTile(_local_2, PackageBoxTile);
                     _local_3.selfRemoveSignal.add(this.updatePackages);
                     this.packageBoxesGrid.addGridElement(_local_3);
-                };
-            };
+                }
+            }
         }
 
         private function createBoxTile(_arg_1:GenericBoxInfo, _arg_2:Class):GenericBoxTile
@@ -151,7 +151,7 @@ package io.decagames.rotmg.shop
             if (this.supporterModel.hasValidData)
             {
                 this.tabs.addTab(new SupporterShopTabView(this.supporterModel.campaignTitle, this.supporterModel.campaignDescription), true);
-            };
+            }
             this.tabs.addTab(this.createMysteryBoxTab(), (!(this.supporterModel.hasValidData)));
             this.tabs.addTab(this.createPackageBoxTab());
             this.tabs.y = 115;
@@ -182,15 +182,15 @@ package io.decagames.rotmg.shop
                     if (((_local_4.isNew()) && ((_local_4.startTime.getTime() > _local_2.getTime()) || (!(Parameters.data_["packages_indicator"])))))
                     {
                         _local_3 = true;
-                    };
-                };
-            };
+                    }
+                }
+            }
             this.packageTab = this.tabs.getTabButtonByLabel("Packages");
             if (this.packageTab)
             {
                 this.packageTab.showIndicator = _local_3;
                 this.packageTab.clickSignal.add(this.onPackageClick);
-            };
+            }
             this.gameModel.player.creditsWereChanged.add(this.refreshCoins);
             this.gameModel.player.fameWasChanged.add(this.refreshFame);
             this.toolTip = new TextToolTip(0x363636, 0x9B9B9B, "Buy Gold", "Click to buy more Realm Gold!", 200);
@@ -205,7 +205,7 @@ package io.decagames.rotmg.shop
             if (!this.supporterModel.hasValidData)
             {
                 this.updateShop(null);
-            };
+            }
         }
 
         private function onTabChange(_arg_1:String):void
@@ -213,7 +213,7 @@ package io.decagames.rotmg.shop
             if (this.updateTimer)
             {
                 this.updateTimer.reset();
-            };
+            }
             if (_arg_1 != "Campaign")
             {
                 this.updateShop(null);
@@ -222,7 +222,7 @@ package io.decagames.rotmg.shop
             {
                 TweenMax.killTweensOf(this.updateLabel);
                 this.updateLabel.alpha = 0;
-            };
+            }
         }
 
         private function get updateInterval():int
@@ -230,7 +230,7 @@ package io.decagames.rotmg.shop
             if (DynamicSettings.settingExists("MysteryBoxRefresh"))
             {
                 return (DynamicSettings.getSettingValue("MysteryBoxRefresh") * 1000);
-            };
+            }
             return (ShopConfiguration.DEFAULT_SHOP_REFRESH_COOLDOWN * 1000);
         }
 
@@ -244,7 +244,7 @@ package io.decagames.rotmg.shop
                 case "Packages":
                     this.tryUpdatePackages();
                     return;
-            };
+            }
         }
 
         private function tryUpdateMysteryBoxes():void
@@ -295,7 +295,7 @@ package io.decagames.rotmg.shop
             {
                 Parameters.data_["packages_indicator"] = new Date().getTime();
                 TabButton(_arg_1).showIndicator = false;
-            };
+            }
         }
 
         override public function destroy():void
@@ -318,7 +318,7 @@ package io.decagames.rotmg.shop
             if (this.packageTab)
             {
                 this.packageTab.clickSignal.remove(this.onPackageClick);
-            };
+            }
         }
 
         private function refreshCoins():void

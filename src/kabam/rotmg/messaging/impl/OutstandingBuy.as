@@ -29,7 +29,7 @@ package kabam.rotmg.messaging.impl
             var _local_1:GoogleAnalytics = StaticInjectorContext.getInjector().getInstance(GoogleAnalytics);
             if (_local_1)
             {
-            };
+            }
         }
 
 

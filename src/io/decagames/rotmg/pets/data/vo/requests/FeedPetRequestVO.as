@@ -5,7 +5,7 @@
 
 package io.decagames.rotmg.pets.data.vo.requests
 {
-    import __AS3__.vec.Vector;
+    
     import kabam.rotmg.messaging.impl.data.SlotObjectData;
 
     public class FeedPetRequestVO implements IUpgradePetRequestVO 

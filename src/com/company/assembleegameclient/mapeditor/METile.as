@@ -5,7 +5,7 @@
 
 package com.company.assembleegameclient.mapeditor
 {
-    import __AS3__.vec.Vector;
+    
 
     public class METile 
     {
@@ -35,9 +35,9 @@ package com.company.assembleegameclient.mapeditor
                 if (this.types_[_local_1] != -1)
                 {
                     return (false);
-                };
+                }
                 _local_1++;
-            };
+            }
             return (true);
         }
 

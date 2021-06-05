@@ -41,7 +41,7 @@ package io.decagames.rotmg.supportCampaign.tasks
             else
             {
                 this.onTextError(_arg_2);
-            };
+            }
         }
 
         private function onTextError(_arg_1:String):void
@@ -62,7 +62,7 @@ package io.decagames.rotmg.supportCampaign.tasks
                 logger.error(("Error parsing campaign data: " + data));
                 completeTask(true);
                 return;
-            };
+            }
             this.logger.info("GetCampaignStatus update");
             this.logger.info(xmlData);
             this.model.parseConfigData(xmlData);

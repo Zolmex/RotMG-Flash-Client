@@ -41,7 +41,7 @@ package com.company.assembleegameclient.util.redrawers
             if (((_arg_4) && (isCached(_arg_1, _local_7))))
             {
                 return (glowHashes[_arg_1][_local_7]);
-            };
+            }
             var _local_8:BitmapData = _arg_1.clone();
             tempMatrix_.identity();
             tempMatrix_.scale((_arg_1.width / 0x0100), (_arg_1.height / 0x0100));
@@ -69,7 +69,7 @@ package com.company.assembleegameclient.util.redrawers
                         _local_8.applyFilter(_local_8, _local_8.rect, PointUtil.ORIGIN, GLOW_FILTER_SUPPORT_OUTLINE_ALT);
                         _local_8.applyFilter(_local_8, _local_8.rect, PointUtil.ORIGIN, GLOW_FILTER_SUPPORT_DARK_ALT);
                         _local_8.applyFilter(_local_8, _local_8.rect, PointUtil.ORIGIN, GLOW_FILTER_SUPPORT_ALT);
-                    };
+                    }
                 }
                 else
                 {
@@ -86,13 +86,13 @@ package com.company.assembleegameclient.util.redrawers
                         _local_8.applyFilter(_local_8, _local_8.rect, PointUtil.ORIGIN, GLOW_FILTER_SUPPORT_OUTLINE);
                         _local_8.applyFilter(_local_8, _local_8.rect, PointUtil.ORIGIN, GLOW_FILTER_SUPPORT_DARK);
                         _local_8.applyFilter(_local_8, _local_8.rect, PointUtil.ORIGIN, GLOW_FILTER_SUPPORT);
-                    };
-                };
-            };
+                    }
+                }
+            }
             if (_arg_4)
             {
                 cache(_arg_1, _arg_2, _arg_3, _local_8, _arg_5);
-            };
+            }
             return (_local_8);
         }
 
@@ -106,10 +106,10 @@ package com.company.assembleegameclient.util.redrawers
             }
             else
             {
-                _local_7 = {};
+                _local_7 = {}
                 _local_7[_local_6] = _arg_4;
                 glowHashes[_arg_1] = _local_7;
-            };
+            }
         }
 
         private static function isCached(_arg_1:BitmapData, _arg_2:String):Boolean
@@ -121,8 +121,8 @@ package com.company.assembleegameclient.util.redrawers
                 if ((_arg_2 in _local_3))
                 {
                     return (true);
-                };
-            };
+                }
+            }
             return (false);
         }
 

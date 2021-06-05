@@ -21,8 +21,8 @@ package com.greensock.plugins
         {
             if ((_arg_2 is Array))
             {
-                _arg_2 = {"values":_arg_2};
-            };
+                _arg_2 = {"values":_arg_2}
+            }
             _arg_2.type = "thru";
             return (super._onInitTween(_arg_1, _arg_2, _arg_3));
         }

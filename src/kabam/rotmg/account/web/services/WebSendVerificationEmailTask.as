@@ -38,7 +38,7 @@ package kabam.rotmg.account.web.services
             else
             {
                 this.onError(_arg_2);
-            };
+            }
         }
 
         private function onSent():void

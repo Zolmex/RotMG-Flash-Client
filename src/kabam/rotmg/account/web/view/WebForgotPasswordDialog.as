@@ -40,7 +40,7 @@ package kabam.rotmg.account.web.view
             {
                 disable();
                 this.submit.dispatch(this.emailInput.text());
-            };
+            }
         }
 
         private function isEmailValid():Boolean
@@ -49,7 +49,7 @@ package kabam.rotmg.account.web.view
             if (!_local_1)
             {
                 this.emailInput.setError("Not a valid email address");
-            };
+            }
             return (_local_1);
         }
 

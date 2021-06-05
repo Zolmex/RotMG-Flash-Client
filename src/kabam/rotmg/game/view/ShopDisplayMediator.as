@@ -13,7 +13,7 @@ package kabam.rotmg.game.view
     import kabam.rotmg.tooltips.HoverTooltipDelegate;
     import kabam.rotmg.packages.model.PackageInfo;
     import flash.events.MouseEvent;
-    import __AS3__.vec.Vector;
+    
     import com.company.assembleegameclient.parameters.Parameters;
 
     public class ShopDisplayMediator extends Mediator 
@@ -43,7 +43,7 @@ package kabam.rotmg.game.view
                 this.hoverTooltipDelegate.setHideToolTipsSignal(this.hideTooltipSignal);
                 this.hoverTooltipDelegate.setDisplayObject(this.view.shopButton);
                 this.hoverTooltipDelegate.tooltip = this.toolTip;
-            };
+            }
             var _local_1:Vector.<PackageInfo> = this.packageBoxModel.getTargetingBoxesForGrid().concat(this.packageBoxModel.getBoxesForGrid());
             var _local_2:Date = new Date();
             _local_2.setTime(Parameters.data_["packages_indicator"]);
@@ -54,9 +54,9 @@ package kabam.rotmg.game.view
                     if (((_local_3.isNew()) && ((_local_3.startTime.getTime() > _local_2.getTime()) || (!(Parameters.data_["packages_indicator"])))))
                     {
                         this.view.newIndicator(true);
-                    };
-                };
-            };
+                    }
+                }
+            }
         }
 
 

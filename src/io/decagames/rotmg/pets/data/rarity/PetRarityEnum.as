@@ -36,7 +36,7 @@ package io.decagames.rotmg.pets.data.rarity
             for each (_local_1 in PetRarityEnum.list)
             {
                 _local_1.rarityName = LineBuilder.getLocalizedStringFromKey(_local_1.rarityKey);
-            };
+            }
         }
 
         public static function get list():Array
@@ -53,8 +53,8 @@ package io.decagames.rotmg.pets.data.rarity
                 if (_arg_1 == _local_3.rarityKey)
                 {
                     _local_2 = _local_3;
-                };
-            };
+                }
+            }
             return (_local_2);
         }
 
@@ -67,8 +67,8 @@ package io.decagames.rotmg.pets.data.rarity
                 if (_arg_1 == _local_3.rarityName)
                 {
                     _local_2 = _local_3;
-                };
-            };
+                }
+            }
             return (_local_2);
         }
 
@@ -81,8 +81,8 @@ package io.decagames.rotmg.pets.data.rarity
                 if (_arg_1 == _local_3.ordinal)
                 {
                     _local_2 = _local_3;
-                };
-            };
+                }
+            }
             return (_local_2);
         }
 

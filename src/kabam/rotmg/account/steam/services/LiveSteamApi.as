@@ -70,7 +70,7 @@ package kabam.rotmg.account.steam.services
 
         public function getSessionAuthentication():Object
         {
-            var _local_1:Object = {};
+            var _local_1:Object = {}
             _local_1.steamid = (this.steamID = ((this.steamID) || (this.api.getSteamID())));
             _local_1.sessionticket = this.sessionTicket;
             return (_local_1);

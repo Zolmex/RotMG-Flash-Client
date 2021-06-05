@@ -30,7 +30,7 @@ package com.company.assembleegameclient.ui.tooltip.slotcomparisons
             {
                 defense = int(this.defTags.@amount);
                 otherDefense = int(this.otherDefTags.@amount);
-            };
+            }
         }
 
         private function compareDefense(_arg_1:int, _arg_2:int):String

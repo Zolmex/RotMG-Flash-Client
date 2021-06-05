@@ -31,7 +31,7 @@ package com.greensock.plugins
             if (isNaN(_arg_2))
             {
                 return (_arg_1);
-            };
+            }
             var _local_3:Number = (1 - _arg_2);
             var _local_4:Number = (_local_3 * _lumR);
             var _local_5:Number = (_local_3 * _lumG);
@@ -45,7 +45,7 @@ package com.greensock.plugins
             if (isNaN(_arg_2))
             {
                 return (_arg_1);
-            };
+            }
             _arg_2 = (_arg_2 * (Math.PI / 180));
             var _local_3:Number = Math.cos(_arg_2);
             var _local_4:Number = Math.sin(_arg_2);
@@ -58,7 +58,7 @@ package com.greensock.plugins
             if (isNaN(_arg_2))
             {
                 return (_arg_1);
-            };
+            }
             _arg_2 = (_arg_2 + 0.01);
             var _local_3:Array = [_arg_2, 0, 0, 0, (128 * (1 - _arg_2)), 0, _arg_2, 0, 0, (128 * (1 - _arg_2)), 0, 0, _arg_2, 0, (128 * (1 - _arg_2)), 0, 0, 0, 1, 0];
             return (applyMatrix(_local_3, _arg_1));
@@ -71,7 +71,7 @@ package com.greensock.plugins
             if (((!(_arg_1 is Array)) || (!(_arg_2 is Array))))
             {
                 return (_arg_2);
-            };
+            }
             var _local_3:Array = [];
             var _local_4:int;
             var _local_5:int;
@@ -84,10 +84,10 @@ package com.greensock.plugins
                     _local_5 = ((_local_7 == 4) ? _arg_1[(_local_4 + 4)] : 0);
                     _local_3[(_local_4 + _local_7)] = (((((_arg_1[_local_4] * _arg_2[_local_7]) + (_arg_1[(_local_4 + 1)] * _arg_2[(_local_7 + 5)])) + (_arg_1[(_local_4 + 2)] * _arg_2[(_local_7 + 10)])) + (_arg_1[(_local_4 + 3)] * _arg_2[(_local_7 + 15)])) + _local_5);
                     _local_7 = (_local_7 + 1);
-                };
+                }
                 _local_4 = (_local_4 + 5);
                 _local_6 = (_local_6 + 1);
-            };
+            }
             return (_local_3);
         }
 
@@ -96,7 +96,7 @@ package com.greensock.plugins
             if (isNaN(_arg_2))
             {
                 return (_arg_1);
-            };
+            }
             var _local_3:Array = [(_lumR * 0x0100), (_lumG * 0x0100), (_lumB * 0x0100), 0, (-256 * _arg_2), (_lumR * 0x0100), (_lumG * 0x0100), (_lumB * 0x0100), 0, (-256 * _arg_2), (_lumR * 0x0100), (_lumG * 0x0100), (_lumB * 0x0100), 0, (-256 * _arg_2), 0, 0, 0, 1, 0];
             return (applyMatrix(_local_3, _arg_1));
         }
@@ -106,11 +106,11 @@ package com.greensock.plugins
             if (isNaN(_arg_2))
             {
                 return (_arg_1);
-            };
+            }
             if (isNaN(_arg_3))
             {
                 _arg_3 = 1;
-            };
+            }
             var _local_4:Number = (((_arg_2 >> 16) & 0xFF) / 0xFF);
             var _local_5:Number = (((_arg_2 >> 8) & 0xFF) / 0xFF);
             var _local_6:Number = ((_arg_2 & 0xFF) / 0xFF);
@@ -124,7 +124,7 @@ package com.greensock.plugins
             if (isNaN(_arg_2))
             {
                 return (_arg_1);
-            };
+            }
             _arg_2 = ((_arg_2 * 100) - 100);
             return (applyMatrix([1, 0, 0, 0, _arg_2, 0, 1, 0, 0, _arg_2, 0, 0, 1, 0, _arg_2, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1], _arg_1));
         }
@@ -149,7 +149,7 @@ package com.greensock.plugins
             {
                 trace("FILTER NULL! ");
                 return (true);
-            };
+            }
             _matrix = ColorMatrixFilter(_filter).matrix;
             var _local_5:Array = [];
             if (((!(_local_4.matrix == null)) && (_local_4.matrix is Array)))
@@ -165,7 +165,7 @@ package com.greensock.plugins
                 else
                 {
                     _local_5 = _idMatrix.slice();
-                };
+                }
                 _local_5 = setBrightness(_local_5, _local_4.brightness);
                 _local_5 = setContrast(_local_5, _local_4.contrast);
                 _local_5 = setHue(_local_5, _local_4.hue);
@@ -174,8 +174,8 @@ package com.greensock.plugins
                 if (!isNaN(_local_4.colorize))
                 {
                     _local_5 = colorize(_local_5, _local_4.colorize, _local_4.amount);
-                };
-            };
+                }
+            }
             _matrixTween = new EndArrayPlugin();
             _matrixTween._init(_matrix, _local_5);
             return (true);

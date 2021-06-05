@@ -6,7 +6,7 @@
 package kabam.rotmg.classes.view
 {
     import kabam.rotmg.assets.services.CharacterFactory;
-    import __AS3__.vec.Vector;
+    
     import kabam.rotmg.classes.model.CharacterSkin;
     import flash.display.DisplayObject;
     import kabam.rotmg.classes.model.CharacterSkins;
@@ -16,7 +16,7 @@ package kabam.rotmg.classes.view
     import com.company.assembleegameclient.parameters.Parameters;
     import flash.display.BitmapData;
     import flash.display.Bitmap;
-    import __AS3__.vec.*;
+    
 
     public class CharacterSkinListItemFactory 
     {
@@ -37,7 +37,7 @@ package kabam.rotmg.classes.view
             {
                 _local_4[_local_5] = this.makeCharacterSkinTile(_local_2[_local_5]);
                 _local_5++;
-            };
+            }
             return (_local_4);
         }
 

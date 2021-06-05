@@ -92,7 +92,7 @@ package kabam.rotmg.account.web.commands
             if (((_local_1 == null) || (_local_1 == GameSprite)))
             {
                 _local_1 = ((Boolean(this.seasonalEventModel.isSeasonalMode)) ? CharacterTypeSelectionScreen : CharacterSelectionAndNewsScreen);
-            };
+            }
             return (new (_local_1)());
         }
 

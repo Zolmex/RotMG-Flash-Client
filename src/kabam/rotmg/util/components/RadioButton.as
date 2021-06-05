@@ -16,7 +16,7 @@ package kabam.rotmg.util.components
     import flash.display.GraphicsPath;
     import com.company.util.GraphicsUtil;
     import flash.display.IGraphicsData;
-    import __AS3__.vec.Vector;
+    
     import flash.display.Graphics;
 
     public class RadioButton extends Sprite 

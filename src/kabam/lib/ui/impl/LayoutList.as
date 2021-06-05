@@ -10,12 +10,12 @@ package kabam.lib.ui.impl
     import kabam.lib.ui.api.Layout;
     import kabam.lib.ui.api.Size;
     import org.osflash.signals.Signal;
-    import __AS3__.vec.Vector;
+    
     import flash.display.DisplayObject;
     import flash.display.Shape;
     import flash.geom.Rectangle;
     import flash.display.Graphics;
-    import __AS3__.vec.*;
+    
 
     public class LayoutList extends Sprite implements List 
     {
@@ -108,7 +108,7 @@ package kabam.lib.ui.impl
             while (_local_1--)
             {
                 this.container.removeChild(this.list[_local_1]);
-            };
+            }
             this.list.length = 0;
         }
 
@@ -118,7 +118,7 @@ package kabam.lib.ui.impl
             for each (_local_2 in _arg_1)
             {
                 this.addToListAndContainer(_local_2);
-            };
+            }
         }
 
         private function addToListAndContainer(_arg_1:DisplayObject):void

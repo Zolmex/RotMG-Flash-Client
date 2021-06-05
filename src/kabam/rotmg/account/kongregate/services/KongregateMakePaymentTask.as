@@ -29,7 +29,7 @@ package kabam.rotmg.account.kongregate.services
             var _local_2:Object = {
                 "identifier":_local_1.id_,
                 "data":_local_1.data_
-            };
+            }
             this.api.purchaseResponse.addOnce(this.onPurchaseResult);
             this.api.purchaseItems(_local_2);
         }

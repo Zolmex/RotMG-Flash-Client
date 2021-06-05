@@ -35,7 +35,7 @@ package com.greensock.plugins
                 _local_8 = (_local_5 & 0xFF);
                 _colors[_colors.length] = new ColorProp(_arg_1, _arg_2, _local_4, _local_6, ((_arg_3 >> 16) - _local_6), _local_7, (((_arg_3 >> 8) & 0xFF) - _local_7), _local_8, ((_arg_3 & 0xFF) - _local_8));
                 _overwriteProps[_overwriteProps.length] = _arg_2;
-            };
+            }
         }
 
         override public function setRatio(_arg_1:Number):void
@@ -55,8 +55,8 @@ package com.greensock.plugins
                 else
                 {
                     _local_3.t[_local_3.p] = _local_4;
-                };
-            };
+                }
+            }
         }
 
         override public function _onInitTween(_arg_1:Object, _arg_2:*, _arg_3:TweenLite):Boolean
@@ -65,7 +65,7 @@ package com.greensock.plugins
             for (_local_4 in _arg_2)
             {
                 _initColor(_arg_1, _local_4, uint(_arg_2[_local_4]));
-            };
+            }
             return (true);
         }
 
@@ -77,8 +77,8 @@ package com.greensock.plugins
                 if (_arg_1[_colors[_local_2].p] != null)
                 {
                     _colors.splice(_local_2, 1);
-                };
-            };
+                }
+            }
             return (super._kill(_arg_1));
         }
 

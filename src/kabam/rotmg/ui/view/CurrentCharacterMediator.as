@@ -100,7 +100,7 @@ package kabam.rotmg.ui.view
             if (this.securityQuestionsModel.showSecurityQuestionsOnStartup)
             {
                 this.openDialog.dispatch(new SecurityQuestionsInfoDialog());
-            };
+            }
             if (this.seasonalEventModel.scheduledSeasonalEvent)
             {
                 if (Parameters.data_[PopupNamesConfig.CHALLENGER_INFO_POPUP])
@@ -111,14 +111,14 @@ package kabam.rotmg.ui.view
                     {
                         this.showSeasonsComingPopup();
                         Parameters.data_[PopupNamesConfig.CHALLENGER_INFO_POPUP] = _local_2;
-                    };
+                    }
                 }
                 else
                 {
                     this.showSeasonsComingPopup();
                     Parameters.data_[PopupNamesConfig.CHALLENGER_INFO_POPUP] = new Date().time;
-                };
-            };
+                }
+            }
         }
 
         override public function destroy():void
@@ -156,7 +156,7 @@ package kabam.rotmg.ui.view
                 _local_2.action = Parameters.data_.joinDate;
                 Parameters.data_.lastDailyAnalytics = _local_1;
                 Parameters.save();
-            };
+            }
         }
 
         private function onNewCharacter():void
@@ -168,7 +168,7 @@ package kabam.rotmg.ui.view
             else
             {
                 this.setScreen.dispatch(new NewCharacterScreen());
-            };
+            }
         }
 
         private function showSeasonalErrorPopUp(_arg_1:String):void

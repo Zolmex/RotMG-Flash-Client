@@ -28,7 +28,7 @@ package kabam.rotmg.ui.commands
         public function execute():void
         {
             this._aeClient = StaticInjectorContext.getInjector().getInstance(AppEngineClient);
-            this._params = {};
+            this._params = {}
             MoreObjectUtil.addToObject(this._params, this.account.getCredentials());
             this.setupTimer();
         }
@@ -43,7 +43,7 @@ package kabam.rotmg.ui.commands
                 this.removeTimerListeners();
                 this.account.verify(_local_4);
                 this.closeDialog.dispatch();
-            };
+            }
         }
 
         private function setupTimer():void

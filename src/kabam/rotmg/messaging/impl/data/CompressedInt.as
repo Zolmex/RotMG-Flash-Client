@@ -23,11 +23,11 @@ package kabam.rotmg.messaging.impl.data
                 _local_3 = _arg_1.readUnsignedByte();
                 _local_2 = (_local_2 | ((_local_3 & 0x7F) << _local_5));
                 _local_5 = (_local_5 + 7);
-            };
+            }
             if (_local_4)
             {
                 _local_2 = -(_local_2);
-            };
+            }
             return (_local_2);
         }
 

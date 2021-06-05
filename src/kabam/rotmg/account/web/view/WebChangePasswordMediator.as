@@ -56,7 +56,7 @@ package kabam.rotmg.account.web.view
                 _local_1.currentPassword = this.view.password_.text();
                 _local_1.newPassword = this.view.newPassword_.text();
                 this.change.dispatch(_local_1);
-            };
+            }
         }
 
         private function isCurrentPasswordValid():Boolean
@@ -65,7 +65,7 @@ package kabam.rotmg.account.web.view
             if (!_local_1)
             {
                 this.view.password_.setError(TextKey.WEB_CHANGE_PASSWORD_INCORRECT);
-            };
+            }
             return (_local_1);
         }
 
@@ -75,7 +75,7 @@ package kabam.rotmg.account.web.view
             if (!_local_1)
             {
                 this.view.newPassword_.setError(TextKey.REGISTER_WEB_SHORT_ERROR);
-            };
+            }
             return (_local_1);
         }
 
@@ -85,7 +85,7 @@ package kabam.rotmg.account.web.view
             if (!_local_1)
             {
                 this.view.retypeNewPassword_.setError(TextKey.REGISTER_WEB_MATCH_ERROR);
-            };
+            }
             return (_local_1);
         }
 

@@ -39,7 +39,7 @@ package kabam.rotmg.arena.view
             else
             {
                 this.view.infoButton.addEventListener(MouseEvent.CLICK, this.onButtonRightClick);
-            };
+            }
         }
 
         override public function destroy():void

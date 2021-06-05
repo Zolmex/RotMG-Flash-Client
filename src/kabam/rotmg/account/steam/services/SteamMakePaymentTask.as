@@ -54,7 +54,7 @@ package kabam.rotmg.account.steam.services
             else
             {
                 this.onPurchaseOfferError(_arg_2);
-            };
+            }
         }
 
         private function onPurchaseOfferComplete():void
@@ -84,7 +84,7 @@ package kabam.rotmg.account.steam.services
             else
             {
                 this.onPurchaseFinalizeError(_arg_2);
-            };
+            }
         }
 
         private function onPurchaseFinalizeComplete():void

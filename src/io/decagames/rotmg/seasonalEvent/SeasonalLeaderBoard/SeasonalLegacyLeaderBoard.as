@@ -13,7 +13,7 @@ package io.decagames.rotmg.seasonalEvent.SeasonalLeaderBoard
     import io.decagames.rotmg.ui.gird.UIGrid;
     import io.decagames.rotmg.ui.labels.UILabel;
     import com.company.assembleegameclient.ui.dropdown.DropDown;
-    import __AS3__.vec.Vector;
+    
     import io.decagames.rotmg.ui.gird.UIGridElement;
     import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
     import flash.text.TextFormatAlign;
@@ -71,11 +71,11 @@ package io.decagames.rotmg.seasonalEvent.SeasonalLeaderBoard
             if (this._top20Grid)
             {
                 this._top20Grid.clearGrid();
-            };
+            }
             if (this._yourPositionGrid)
             {
                 this._yourPositionGrid.clearGrid();
-            };
+            }
         }
 
         public function setErrorMessage(_arg_1:String):void

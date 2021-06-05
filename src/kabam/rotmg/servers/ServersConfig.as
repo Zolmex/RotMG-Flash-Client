@@ -42,7 +42,7 @@ package kabam.rotmg.servers
                     return;
                 default:
                     this.configureLiveServers();
-            };
+            }
         }
 
         private function configureLocalhost():void

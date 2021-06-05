@@ -11,9 +11,9 @@ package kabam.rotmg.news.services
     import kabam.rotmg.language.model.LanguageModel;
     import flash.utils.getTimer;
     import kabam.rotmg.news.model.NewsCellVO;
-    import __AS3__.vec.Vector;
+    
     import kabam.rotmg.news.model.NewsCellLinkType;
-    import __AS3__.vec.*;
+    
 
     public class GetAppEngineNewsTask extends BaseTask implements GetNewsTask 
     {
@@ -44,11 +44,11 @@ package kabam.rotmg.news.services
             {
                 completeTask(true);
                 reset();
-            };
+            }
             if ((((!("production".toLowerCase() == "dev")) && (!(this.updateCooldown == 0))) && (this.numUpdateAttempts >= 2)))
             {
                 this.updateCooldown = 0;
-            };
+            }
         }
 
         private function onComplete(_arg_1:Boolean, _arg_2:*):void
@@ -56,7 +56,7 @@ package kabam.rotmg.news.services
             if (_arg_1)
             {
                 this.onNewsRequestDone(_arg_2);
-            };
+            }
             completeTask(_arg_1, _arg_2);
             reset();
         }
@@ -69,7 +69,7 @@ package kabam.rotmg.news.services
             for each (_local_4 in _local_3)
             {
                 _local_2.push(this.returnNewsCellVO(_local_4));
-            };
+            }
             this.model.updateNews(_local_2);
         }
 

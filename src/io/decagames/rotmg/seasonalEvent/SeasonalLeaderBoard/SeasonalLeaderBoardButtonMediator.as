@@ -51,7 +51,7 @@ package io.decagames.rotmg.seasonalEvent.SeasonalLeaderBoard
             else
             {
                 this.showPopupSignal.dispatch(new SeasonalLegacyLeaderBoard());
-            };
+            }
         }
 
         override public function destroy():void

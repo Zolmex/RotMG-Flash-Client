@@ -19,7 +19,7 @@ package kabam.lib.json
             while (_local_4--)
             {
                 _arg_1 = (_arg_1 + "=");
-            };
+            }
             _arg_1 = _arg_1.replace(_local_2, "+").replace(_local_3, "/");
             return (Base64.decode(_arg_1));
         }

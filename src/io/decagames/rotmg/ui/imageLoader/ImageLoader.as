@@ -40,7 +40,7 @@ package io.decagames.rotmg.ui.imageLoader
             }
             catch(error:SecurityError)
             {
-            };
+            }
         }
 
         public function removeLoaderListeners():void
@@ -50,7 +50,7 @@ package io.decagames.rotmg.ui.imageLoader
                 this._loader.contentLoaderInfo.removeEventListener(Event.COMPLETE, this._callBack);
                 this._loader.contentLoaderInfo.removeEventListener(IOErrorEvent.IO_ERROR, onIOError);
                 this._loader.contentLoaderInfo.removeEventListener(SecurityErrorEvent.SECURITY_ERROR, onSecurityEventError);
-            };
+            }
         }
 
         public function get loader():Loader

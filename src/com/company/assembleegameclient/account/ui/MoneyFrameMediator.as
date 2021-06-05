@@ -66,7 +66,7 @@ package com.company.assembleegameclient.account.ui
             else
             {
                 this.requestOffersData();
-            };
+            }
         }
 
         private function requestOffersData():void
@@ -84,7 +84,7 @@ package com.company.assembleegameclient.account.ui
             else
             {
                 this.openDialog.dispatch(new ErrorDialog("Unable to get gold offer information"));
-            };
+            }
         }
 
         override public function destroy():void
@@ -92,7 +92,7 @@ package com.company.assembleegameclient.account.ui
             if (this.hudModel.gameSprite.map.name_ == "Arena")
             {
                 this.openDialog.dispatch(new ContinueOrQuitDialog(this.currentArenaRun.costOfContinue, true));
-            };
+            }
             this.view.buyNow.add(this.onBuyNow);
             this.view.cancel.add(this.onCancel);
         }

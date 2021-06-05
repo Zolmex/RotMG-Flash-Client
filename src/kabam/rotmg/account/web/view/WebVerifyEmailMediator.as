@@ -79,7 +79,7 @@ package kabam.rotmg.account.web.view
             else
             {
                 this.onError(_arg_2);
-            };
+            }
         }
 
         private function onSent():void

@@ -60,7 +60,7 @@ package com.company.assembleegameclient.ui
             if (parent != null)
             {
                 parent.removeChild(this);
-            };
+            }
         }
 
 

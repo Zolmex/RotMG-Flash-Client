@@ -39,8 +39,8 @@ package com.greensock.plugins
                 else
                 {
                     return (false);
-                };
-            };
+                }
+            }
             if ((_arg_2 is ColorTransform))
             {
                 _local_5.concat(_arg_2);
@@ -48,7 +48,7 @@ package com.greensock.plugins
             else
             {
                 _local_5.concat(_local_4);
-            };
+            }
             for (_local_6 in _arg_2)
             {
                 if (((_local_6 == "tint") || (_local_6 == "color")))
@@ -56,16 +56,16 @@ package com.greensock.plugins
                     if (_arg_2[_local_6] != null)
                     {
                         _local_5.color = int(_arg_2[_local_6]);
-                    };
+                    }
                 }
                 else
                 {
                     if (!(((_local_6 == "tintAmount") || (_local_6 == "exposure")) || (_local_6 == "brightness")))
                     {
                         _local_5[_local_6] = _arg_2[_local_6];
-                    };
-                };
-            };
+                    }
+                }
+            }
             if (!(_arg_2 is ColorTransform))
             {
                 if (!isNaN(_arg_2.tintAmount))
@@ -89,10 +89,10 @@ package com.greensock.plugins
                         {
                             _local_5.redOffset = (_local_5.greenOffset = (_local_5.blueOffset = Math.max(0, ((_arg_2.brightness - 1) * 0xFF))));
                             _local_5.redMultiplier = (_local_5.greenMultiplier = (_local_5.blueMultiplier = (1 - Math.abs((_arg_2.brightness - 1)))));
-                        };
-                    };
-                };
-            };
+                        }
+                    }
+                }
+            }
             _init(_local_4, _local_5);
             return (true);
         }

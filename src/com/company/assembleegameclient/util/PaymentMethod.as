@@ -6,7 +6,7 @@
 package com.company.assembleegameclient.util
 {
     import kabam.rotmg.text.model.TextKey;
-    import __AS3__.vec.Vector;
+    
     import kabam.rotmg.core.StaticInjectorContext;
     import kabam.rotmg.account.core.Account;
     import kabam.rotmg.application.api.ApplicationSetup;
@@ -40,8 +40,8 @@ package com.company.assembleegameclient.util
                 if (_local_2.label_ == _arg_1)
                 {
                     return (_local_2);
-                };
-            };
+                }
+            }
             return (null);
         }
 
@@ -65,7 +65,7 @@ package com.company.assembleegameclient.util
                     _local_6["price"] = _arg_3.price_.toString();
                     _local_6["paymentid"] = this.paymentid_;
                     break;
-            };
+            }
             return ((_local_5.getAppEngineUrl(true) + "/credits/add?") + _local_6.toString());
         }
 

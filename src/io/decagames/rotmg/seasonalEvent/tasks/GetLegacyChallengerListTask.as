@@ -13,7 +13,7 @@ package io.decagames.rotmg.seasonalEvent.tasks
     import kabam.rotmg.legends.model.LegendFactory;
     import io.decagames.rotmg.seasonalEvent.SeasonalLeaderBoard.SeasonalItemDataFactory;
     import io.decagames.rotmg.seasonalEvent.signals.SeasonalLeaderBoardErrorSignal;
-    import __AS3__.vec.Vector;
+    
     import io.decagames.rotmg.seasonalEvent.SeasonalLeaderBoard.SeasonalLeaderBoardItemData;
 
     public class GetLegacyChallengerListTask extends BaseTask 
@@ -52,8 +52,8 @@ package io.decagames.rotmg.seasonalEvent.tasks
                 else
                 {
                     this.client.sendRequest(((("/fame/challengerAccountLeaderboard?season=" + this.seasonId) + "&account=") + this.account.getUserName()), this.makeRequestObject());
-                };
-            };
+                }
+            }
         }
 
         private function onComplete(_arg_1:Boolean, _arg_2:*):void
@@ -65,7 +65,7 @@ package io.decagames.rotmg.seasonalEvent.tasks
             else
             {
                 this.onFameListError(_arg_2);
-            };
+            }
         }
 
         private function onFameListError(_arg_1:String):void
@@ -86,7 +86,7 @@ package io.decagames.rotmg.seasonalEvent.tasks
             {
                 _local_3.sort(this.fameSort);
                 this.seasonalEventModel.leaderboardLegacyPlayerItemDatas = _local_3;
-            };
+            }
             completeTask(true);
         }
 
@@ -95,17 +95,17 @@ package io.decagames.rotmg.seasonalEvent.tasks
             if (_arg_1.totalFame > _arg_2.totalFame)
             {
                 return (-1);
-            };
+            }
             if (_arg_1.totalFame < _arg_2.totalFame)
             {
                 return (1);
-            };
+            }
             return (0);
         }
 
         private function makeRequestObject():Object
         {
-            var _local_1:Object = {};
+            var _local_1:Object = {}
             _local_1.accountId = this.player.getAccountId();
             _local_1.charId = this.charId;
             return (_local_1);

@@ -34,7 +34,7 @@ package io.decagames.rotmg.pets.components.petStatsGrid
             if (((this.view.petVO) && (this.view.petVO.updated)))
             {
                 this.view.petVO.updated.add(this.VOUpdated);
-            };
+            }
             this.simulateFeedSignal.add(this.simulateFeed);
             this.release.add(this.onRelease);
         }
@@ -45,7 +45,7 @@ package io.decagames.rotmg.pets.components.petStatsGrid
             if (((this.view.petVO) && (this.view.petVO.updated)))
             {
                 this.view.petVO.updated.remove(this.VOUpdated);
-            };
+            }
             this.simulateFeedSignal.remove(this.simulateFeed);
             this.release.remove(this.onRelease);
         }
@@ -62,7 +62,7 @@ package io.decagames.rotmg.pets.components.petStatsGrid
             {
                 _local_2 = AbilitiesUtil.simulateAbilityUpgrade(this.view.petVO, _arg_1);
                 this.view.renderSimulation(_local_2);
-            };
+            }
         }
 
         private function VOUpdated():void
@@ -75,16 +75,16 @@ package io.decagames.rotmg.pets.components.petStatsGrid
             if (_arg_1.getID() != this.model.getActivePet().getID())
             {
                 return;
-            };
+            }
             if (((this.view.petVO) && (this.view.petVO.updated)))
             {
                 this.view.petVO.updated.remove(this.VOUpdated);
-            };
+            }
             this.view.updateVO(_arg_1);
             if (((this.view.petVO) && (this.view.petVO.updated)))
             {
                 this.view.petVO.updated.add(this.VOUpdated);
-            };
+            }
         }
 
 

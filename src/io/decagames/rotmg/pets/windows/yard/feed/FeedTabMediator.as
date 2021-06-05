@@ -19,7 +19,7 @@ package io.decagames.rotmg.pets.windows.yard.feed
     import io.decagames.rotmg.pets.signals.SimulateFeedSignal;
     import io.decagames.rotmg.seasonalEvent.data.SeasonalEventModel;
     import io.decagames.rotmg.pets.data.vo.PetVO;
-    import __AS3__.vec.Vector;
+    
     import io.decagames.rotmg.pets.windows.yard.feed.items.FeedItem;
     import com.company.assembleegameclient.ui.panels.itemgrids.itemtiles.InventoryTile;
     import kabam.rotmg.game.view.components.InventoryTabContent;
@@ -34,7 +34,7 @@ package io.decagames.rotmg.pets.windows.yard.feed
     import com.company.assembleegameclient.util.Currency;
     import io.decagames.rotmg.ui.popups.modal.error.ErrorModal;
     import kabam.rotmg.text.view.stringBuilder.LineBuilder;
-    import __AS3__.vec.*;
+    
 
     public class FeedTabMediator extends Mediator 
     {
@@ -100,9 +100,9 @@ package io.decagames.rotmg.pets.windows.yard.feed
                 for each (_local_2 in this.items)
                 {
                     _local_2.selected = false;
-                };
+                }
                 this.refreshFeedPower();
-            };
+            }
         }
 
         private function renderItems():void
@@ -117,7 +117,7 @@ package io.decagames.rotmg.pets.windows.yard.feed
             if (_local_1)
             {
                 _local_2 = _local_2.concat(_local_1.storage.tiles);
-            };
+            }
             for each (_local_3 in _local_2)
             {
                 _local_4 = _local_3.getItemId();
@@ -126,8 +126,8 @@ package io.decagames.rotmg.pets.windows.yard.feed
                     _local_5 = new FeedItem(_local_3);
                     this.items.push(_local_5);
                     this.view.addItem(_local_5);
-                };
-            };
+                }
+            }
         }
 
         private function refreshFeedPower():void
@@ -141,8 +141,8 @@ package io.decagames.rotmg.pets.windows.yard.feed
                 {
                     _local_1 = (_local_1 + _local_3.feedPower);
                     _local_2++;
-                };
-            };
+                }
+            }
             if (this.currentPet)
             {
                 this.view.feedGoldButton.price = ((Boolean(this.seasonalEventModel.isChallenger)) ? 0 : (FeedFuseCostModel.getFeedGoldCost(this.currentPet.rarity) * _local_2));
@@ -154,7 +154,7 @@ package io.decagames.rotmg.pets.windows.yard.feed
                 this.view.feedGoldButton.price = 0;
                 this.view.feedFameButton.price = 0;
                 this.view.updateFeedPower(0, false);
-            };
+            }
             this.simulateFeed.dispatch(_local_1);
         }
 
@@ -164,11 +164,11 @@ package io.decagames.rotmg.pets.windows.yard.feed
             if (_local_1 != null)
             {
                 return (_local_1.credits_);
-            };
+            }
             if (this.playerModel != null)
             {
                 return (this.playerModel.getCredits());
-            };
+            }
             return (0);
         }
 
@@ -178,11 +178,11 @@ package io.decagames.rotmg.pets.windows.yard.feed
             if (_local_1 != null)
             {
                 return (_local_1.fame_);
-            };
+            }
             if (this.playerModel != null)
             {
                 return (this.playerModel.getFame());
-            };
+            }
             return (0);
         }
 
@@ -196,8 +196,8 @@ package io.decagames.rotmg.pets.windows.yard.feed
                 if (((_local_3) && (_local_3.hasOwnProperty("feedPower"))))
                 {
                     return (true);
-                };
-            };
+                }
+            }
             return (_local_2.hasOwnProperty("feedPower"));
         }
 
@@ -219,17 +219,17 @@ package io.decagames.rotmg.pets.windows.yard.feed
             if (!this.checkYardType())
             {
                 return;
-            };
+            }
             if (((_arg_1 == PetUpgradeRequest.GOLD_PAYMENT_TYPE) && (this.currentGold < _arg_2)))
             {
                 this.showPopup.dispatch(new NotEnoughResources(300, Currency.GOLD));
                 return;
-            };
+            }
             if (((_arg_1 == PetUpgradeRequest.FAME_PAYMENT_TYPE) && (this.currentFame < _arg_2)))
             {
                 this.showPopup.dispatch(new NotEnoughResources(300, Currency.FAME));
                 return;
-            };
+            }
             var _local_3:Vector.<SlotObjectData> = new Vector.<SlotObjectData>();
             for each (_local_4 in this.items)
             {
@@ -240,8 +240,8 @@ package io.decagames.rotmg.pets.windows.yard.feed
                     _local_6.objectType_ = _local_4.item.getItemId();
                     _local_6.slotId_ = _local_4.item.tileId;
                     _local_3.push(_local_6);
-                };
-            };
+                }
+            }
             this.currentPet.abilityUpdated.addOnce(this.abilityUpdated);
             this.showFade.dispatch();
             _local_5 = new FeedPetRequestVO(this.currentPet.getID(), _local_3, _arg_1);
@@ -256,7 +256,7 @@ package io.decagames.rotmg.pets.windows.yard.feed
             for each (_local_1 in this.items)
             {
                 _local_1.selected = false;
-            };
+            }
             this.refreshFeedPower();
         }
 
@@ -267,7 +267,7 @@ package io.decagames.rotmg.pets.windows.yard.feed
             for each (_local_2 in this.items)
             {
                 _local_2.selected = false;
-            };
+            }
             this.refreshFeedPower();
         }
 
@@ -277,7 +277,7 @@ package io.decagames.rotmg.pets.windows.yard.feed
             {
                 this.showPopup.dispatch(new ErrorModal(350, "Feed Pets", LineBuilder.getLocalizedStringFromKey("server.upgrade_petyard_first")));
                 return (false);
-            };
+            }
             return (true);
         }
 

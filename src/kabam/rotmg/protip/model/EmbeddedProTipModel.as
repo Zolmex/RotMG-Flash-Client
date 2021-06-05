@@ -5,8 +5,8 @@
 
 package kabam.rotmg.protip.model
 {
-    import __AS3__.vec.Vector;
-    import __AS3__.vec.*;
+    
+    
 
     public class EmbeddedProTipModel implements IProTipModel 
     {
@@ -40,7 +40,7 @@ package kabam.rotmg.protip.model
             for each (_local_2 in _local_1.Protip)
             {
                 this.tips.push(_local_2.toString());
-            };
+            }
             this.count = this.tips.length;
         }
 
@@ -52,12 +52,12 @@ package kabam.rotmg.protip.model
             {
                 _local_1.push(_local_2);
                 _local_2++;
-            };
+            }
             this.indices = new Vector.<int>(0);
             while (_local_2 > 0)
             {
                 this.indices.push(_local_1.splice(Math.floor((Math.random() * _local_2--)), 1)[0]);
-            };
+            }
             this.indices.fixed = true;
         }
 

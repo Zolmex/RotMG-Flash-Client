@@ -29,7 +29,7 @@ package com.company.assembleegameclient.objects.particles
             if (this.color_ == -1)
             {
                 return (false);
-            };
+            }
             x_ = this.start_.x;
             y_ = this.start_.y;
             var _local_3:int = 40;
@@ -43,7 +43,7 @@ package com.company.assembleegameclient.objects.particles
                 _local_9 = new SparkerParticle(_local_3, this.color_, _local_4, this.start_, _local_8);
                 map_.addObj(_local_9, x_, y_);
                 _local_6++;
-            };
+            }
             return (false);
         }
 
@@ -55,7 +55,7 @@ package com.company.assembleegameclient.objects.particles
             if (this.color_ == -1)
             {
                 return (false);
-            };
+            }
             x_ = this.start_.x;
             y_ = this.start_.y;
             var _local_3:* = 200;
@@ -69,7 +69,7 @@ package com.company.assembleegameclient.objects.particles
                 _local_9 = new SparkerParticle(_local_3, this.color_, _local_4, this.start_, _local_8);
                 map_.addObj(_local_9, x_, y_);
                 _local_6++;
-            };
+            }
             return (false);
         }
 

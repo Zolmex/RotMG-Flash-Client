@@ -6,10 +6,10 @@
 package kabam.rotmg.messaging.impl.outgoing
 {
     import kabam.rotmg.messaging.impl.data.WorldPosData;
-    import __AS3__.vec.Vector;
+    
     import kabam.rotmg.messaging.impl.data.MoveRecord;
     import flash.utils.IDataOutput;
-    import __AS3__.vec.*;
+    
 
     public class Move extends OutgoingMessage 
     {
@@ -37,7 +37,7 @@ package kabam.rotmg.messaging.impl.outgoing
             {
                 this.records_[_local_2].writeToOutput(_arg_1);
                 _local_2++;
-            };
+            }
         }
 
         override public function toString():String

@@ -49,7 +49,7 @@ package io.decagames.rotmg.shop
             else
             {
                 DefaultLabelFormat.shopTag(this._label);
-            };
+            }
             addChild(this._label);
             this.background.width = (this._label.textWidth + 8);
             this.background.height = (this._label.textHeight + 8);

@@ -14,14 +14,14 @@ package io.decagames.rotmg.seasonalEvent.SeasonalLeaderBoard
     import io.decagames.rotmg.seasonalEvent.signals.RequestLegacySeasonSignal;
     import kabam.rotmg.legends.control.FameListUpdateSignal;
     import io.decagames.rotmg.ui.buttons.SliceScalingButton;
-    import __AS3__.vec.Vector;
+    
     import io.decagames.rotmg.seasonalEvent.data.LegacySeasonData;
     import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
     import io.decagames.rotmg.ui.texture.TextureParser;
     import io.decagames.rotmg.ui.popups.header.PopupHeader;
     import flash.events.Event;
     import io.decagames.rotmg.ui.buttons.BaseButton;
-    import __AS3__.vec.*;
+    
 
     public class SeasonalLegacyLeaderBoardMediator extends Mediator 
     {
@@ -74,16 +74,16 @@ package io.decagames.rotmg.seasonalEvent.SeasonalLeaderBoard
                 {
                     this._legacyLeaderBoardSeasons.push(_local_5);
                     _local_1.push(_local_5.title);
-                };
+                }
                 _local_4++;
-            };
+            }
             if (_local_1.length > 0)
             {
                 this._currentSeasonId = "";
                 _local_1.unshift("Click to choose a season!");
                 this.view.setDropDownData(_local_1);
                 this.view.dropDown.addEventListener(Event.CHANGE, this.onDropDownChanged);
-            };
+            }
         }
 
         private function onDropDownChanged(_arg_1:Event):void
@@ -98,7 +98,7 @@ package io.decagames.rotmg.seasonalEvent.SeasonalLeaderBoard
             else
             {
                 this.view.tabs.getTabButtonByLabel(SeasonalLeaderBoard.PLAYER_TAB_LABEL).visible = false;
-            };
+            }
             this.requestLegacySeasonSignal.dispatch(this._currentSeasonId, true);
         }
 
@@ -115,9 +115,9 @@ package io.decagames.rotmg.seasonalEvent.SeasonalLeaderBoard
                 {
                     _local_2 = true;
                     break;
-                };
+                }
                 _local_4++;
-            };
+            }
             return (_local_2);
         }
 
@@ -132,7 +132,7 @@ package io.decagames.rotmg.seasonalEvent.SeasonalLeaderBoard
             if (this.view.tabs.currentTabLabel == SeasonalLeaderBoard.PLAYER_TAB_LABEL)
             {
                 this.view.tabs.tabSelectedSignal.dispatch(SeasonalLegacyLeaderBoard.TOP_20_TAB_LABEL);
-            };
+            }
         }
 
         private function getSeasonId():String
@@ -164,7 +164,7 @@ package io.decagames.rotmg.seasonalEvent.SeasonalLeaderBoard
             {
                 this.showSpinner();
                 this.updateLeaderBoard();
-            };
+            }
         }
 
         private function showSpinner():void
@@ -180,7 +180,7 @@ package io.decagames.rotmg.seasonalEvent.SeasonalLeaderBoard
                 if (this.seasonalEventModel.leaderboardLegacyTop20ItemDatas)
                 {
                     this.upDateTop20();
-                };
+                }
             }
             else
             {
@@ -193,13 +193,13 @@ package io.decagames.rotmg.seasonalEvent.SeasonalLeaderBoard
                     else
                     {
                         this.requestLegacySeasonSignal.dispatch(((this._currentSeasonId != "") ? this._currentSeasonId : this.getSeasonId()), false);
-                    };
+                    }
                 }
                 else
                 {
                     this.onTabSelected(this.view.tabs.currentTabLabel);
-                };
-            };
+                }
+            }
         }
 
         private function upDateTop20():void
@@ -212,7 +212,7 @@ package io.decagames.rotmg.seasonalEvent.SeasonalLeaderBoard
             for each (_local_2 in _local_1)
             {
                 this.view.addTop20Item(_local_2);
-            };
+            }
         }
 
         private function upDatePlayerPosition():void
@@ -225,7 +225,7 @@ package io.decagames.rotmg.seasonalEvent.SeasonalLeaderBoard
             for each (_local_2 in _local_1)
             {
                 this.view.addPlayerListItem(_local_2);
-            };
+            }
         }
 
         override public function destroy():void
@@ -237,7 +237,7 @@ package io.decagames.rotmg.seasonalEvent.SeasonalLeaderBoard
             if (this.view.dropDown)
             {
                 this.view.dropDown.removeEventListener(Event.CHANGE, this.onDropDownChanged);
-            };
+            }
         }
 
         private function onClose(_arg_1:BaseButton):void

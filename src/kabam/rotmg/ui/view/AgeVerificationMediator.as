@@ -39,7 +39,7 @@ package kabam.rotmg.ui.view
             else
             {
                 this.handleRejected();
-            };
+            }
         }
 
         private function handleAccepted():void

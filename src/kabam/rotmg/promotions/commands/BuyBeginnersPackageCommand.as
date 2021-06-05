@@ -45,7 +45,7 @@ package kabam.rotmg.promotions.commands
             else
             {
                 this.promptUserToRegisterAndAbort();
-            };
+            }
         }
 
         private function openAccountSpecificPaymentScreen():void
@@ -57,7 +57,7 @@ package kabam.rotmg.promotions.commands
             else
             {
                 this.makePaymentImmediately();
-            };
+            }
         }
 
         private function makePaymentImmediately():void

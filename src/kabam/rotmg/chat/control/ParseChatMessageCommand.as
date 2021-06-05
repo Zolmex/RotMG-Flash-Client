@@ -57,11 +57,11 @@ package kabam.rotmg.chat.control
                 case "/resetDailyQuests":
                     if (this.player.isAdmin())
                     {
-                        _local_1 = {};
+                        _local_1 = {}
                         MoreObjectUtil.addToObject(_local_1, this.account.getCredentials());
                         this.client.sendRequest("/dailyquest/resetDailyQuestsAdmin", _local_1);
                         this.addTextLine.dispatch(ChatMessage.make(Parameters.SERVER_CHAT_NAME, "Restarting daily quests. Please refresh game."));
-                    };
+                    }
                     return;
                 case "/resetPackagePopup":
                     Parameters.data_[PopupNamesConfig.PACKAGES_OFFER_POPUP] = null;
@@ -73,7 +73,7 @@ package kabam.rotmg.chat.control
                 case "/c":
                 case "/class":
                 case "/classes":
-                    _local_2 = {};
+                    _local_2 = {}
                     _local_3 = 0;
                     for each (_local_4 in this.hudModel.gameSprite.map.goDict_)
                     {
@@ -81,18 +81,18 @@ package kabam.rotmg.chat.control
                         {
                             _local_2[_local_4.objectType_] = ((_local_2[_local_4.objectType_] != undefined) ? (_local_2[_local_4.objectType_] + 1) : uint(1));
                             _local_3++;
-                        };
-                    };
+                        }
+                    }
                     _local_5 = "";
                     for (_local_6 in _local_2)
                     {
                         _local_5 = (_local_5 + (((" " + ObjectLibrary.typeToDisplayId_[_local_6]) + ": ") + _local_2[_local_6]));
-                    };
+                    }
                     this.addTextLine.dispatch(ChatMessage.make("", ((("Classes online (" + _local_3) + "):") + _local_5)));
                     return;
                 default:
                     this.hudModel.gameSprite.gsc_.playerText(this.data);
-            };
+            }
         }
 
 

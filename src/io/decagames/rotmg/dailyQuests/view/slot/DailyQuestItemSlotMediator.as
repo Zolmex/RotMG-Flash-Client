@@ -46,7 +46,7 @@ package io.decagames.rotmg.dailyQuests.view.slot
             {
                 this.unselectAllSignal.add(this.unselectHandler);
                 this.view.addEventListener(MouseEvent.CLICK, this.onSlotSelected);
-            };
+            }
         }
 
         private function unselectHandler(_arg_1:int):void
@@ -54,7 +54,7 @@ package io.decagames.rotmg.dailyQuests.view.slot
             if (this.view.itemID != _arg_1)
             {
                 this.view.selected = false;
-            };
+            }
         }
 
         override public function destroy():void
@@ -64,7 +64,7 @@ package io.decagames.rotmg.dailyQuests.view.slot
             {
                 this.unselectAllSignal.remove(this.unselectHandler);
                 this.view.removeEventListener(MouseEvent.CLICK, this.onSlotSelected);
-            };
+            }
             this.view.dispose();
         }
 
@@ -79,7 +79,7 @@ package io.decagames.rotmg.dailyQuests.view.slot
             else
             {
                 this.model.selectedItem = -1;
-            };
+            }
             this.selectedItemSlotsSignal.dispatch(this.model.selectedItem);
         }
 

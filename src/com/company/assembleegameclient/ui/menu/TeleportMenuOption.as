@@ -70,7 +70,7 @@ package com.company.assembleegameclient.ui.menu
                     addChild(this.barText_);
                     addChild(this.barMask);
                     this.barText_.mask = this.barMask;
-                };
+                }
                 _local_4 = (this.barTextOrigWidth_ * (1 - (_local_2 / _local_3)));
                 this.barMask.width = _local_4;
                 setColorTransform(inactiveCT);
@@ -80,7 +80,7 @@ package com.company.assembleegameclient.ui.menu
                 if (contains(this.barText_))
                 {
                     removeChild(this.barText_);
-                };
+                }
                 if (this.mouseOver_)
                 {
                     setColorTransform(mouseOverCT);
@@ -88,8 +88,8 @@ package com.company.assembleegameclient.ui.menu
                 else
                 {
                     setColorTransform(null);
-                };
-            };
+                }
+            }
         }
 
         override protected function onMouseOver(_arg_1:MouseEvent):void

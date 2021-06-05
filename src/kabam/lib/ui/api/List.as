@@ -6,7 +6,7 @@
 package kabam.lib.ui.api
 {
     import flash.display.DisplayObject;
-    import __AS3__.vec.Vector;
+    
 
     public interface List 
     {

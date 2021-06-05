@@ -5,9 +5,9 @@
 
 package kabam.rotmg.messaging.impl.outgoing
 {
-    import __AS3__.vec.Vector;
+    
     import flash.utils.IDataOutput;
-    import __AS3__.vec.*;
+    
 
     public class ChangeTrade extends OutgoingMessage 
     {
@@ -27,7 +27,7 @@ package kabam.rotmg.messaging.impl.outgoing
             {
                 _arg_1.writeBoolean(this.offer_[_local_2]);
                 _local_2++;
-            };
+            }
         }
 
         override public function toString():String

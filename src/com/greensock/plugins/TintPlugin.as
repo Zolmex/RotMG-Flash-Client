@@ -35,7 +35,7 @@ package com.greensock.plugins
             {
                 _local_2[_local_3.p] = ((_local_3.c * _arg_1) + _local_3.s);
                 _local_3 = _local_3._next;
-            };
+            }
             _transform.colorTransform = _local_2;
         }
 
@@ -44,12 +44,12 @@ package com.greensock.plugins
             if (!(_arg_1 is DisplayObject))
             {
                 return (false);
-            };
+            }
             var _local_4:ColorTransform = new ColorTransform();
             if (((!(_arg_2 == null)) && (!(_arg_3.vars.removeTint == true))))
             {
                 _local_4.color = uint(_arg_2);
-            };
+            }
             _transform = DisplayObject(_arg_1).transform;
             var _local_5:ColorTransform = _transform.colorTransform;
             _local_4.alphaMultiplier = _local_5.alphaMultiplier;
@@ -68,8 +68,8 @@ package com.greensock.plugins
                 if (_arg_1[_local_4] != _arg_2[_local_4])
                 {
                     _addTween(_arg_1, _local_4, _arg_1[_local_4], _arg_2[_local_4], "tint");
-                };
-            };
+                }
+            }
         }
 
 

@@ -316,7 +316,7 @@ package kabam.rotmg.assets
             "Oryx Cage":new oryxCage_(),
             "Oryx Hung Cage":new oryxCageHung_(),
             "Oryx Door":new oryxDoor_()
-        };
+        }
 
 
     }

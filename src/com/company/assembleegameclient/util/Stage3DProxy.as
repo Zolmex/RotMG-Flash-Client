@@ -32,7 +32,7 @@ package com.company.assembleegameclient.util
             if (context3D == null)
             {
                 context3D = new Context3DProxy(this.stage3D.context3D);
-            };
+            }
             return (context3D);
         }
 

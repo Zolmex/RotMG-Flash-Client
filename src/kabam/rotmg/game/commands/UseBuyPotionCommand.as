@@ -40,7 +40,7 @@ package kabam.rotmg.game.commands
             if (this.player == null)
             {
                 return;
-            };
+            }
             this.potionId = this.vo.objectId;
             this.count = this.player.getPotionCount(this.potionId);
             this.potion = this.potInventoryModel.getPotionModel(this.potionId);
@@ -51,7 +51,7 @@ package kabam.rotmg.game.commands
             else
             {
                 this.logger.info("Not safe to purchase potion");
-            };
+            }
         }
 
         private function canPurchasePotion():Boolean
@@ -71,7 +71,7 @@ package kabam.rotmg.game.commands
             {
                 this.sendServerRequest();
                 SoundEffectLibrary.play("use_potion");
-            };
+            }
         }
 
         private function isPlayerStatMaxed():Boolean
@@ -79,11 +79,11 @@ package kabam.rotmg.game.commands
             if (this.potionId == PotionInventoryModel.HEALTH_POTION_ID)
             {
                 return (this.player.hp_ >= this.player.maxHP_);
-            };
+            }
             if (this.potionId == PotionInventoryModel.MAGIC_POTION_ID)
             {
                 return (this.player.mp_ >= this.player.maxMP_);
-            };
+            }
             return (false);
         }
 
@@ -95,7 +95,7 @@ package kabam.rotmg.game.commands
             if (this.player.getPotionCount(this.vo.objectId) == 0)
             {
                 this.potInventoryModel.getPotionModel(this.vo.objectId).purchasedPot();
-            };
+            }
         }
 
 

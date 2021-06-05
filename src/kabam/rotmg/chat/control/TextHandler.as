@@ -78,11 +78,11 @@ package kabam.rotmg.chat.control
             if ((((!(_local_4)) && (_arg_1.numStars_ < Parameters.data_.chatStarRequirement)) && (_local_3)))
             {
                 return;
-            };
+            }
             if ((((!(_arg_1.recipient_ == "")) && (Parameters.data_.chatFriend)) && (!(this.socialModel.isMyFriend(_arg_1.recipient_)))))
             {
                 return;
-            };
+            }
             if (((!(Parameters.data_.chatAll)) && (_local_3)))
             {
                 if (!((_arg_1.recipient_ == Parameters.GUILD_CHAT_NAME) && (Parameters.data_.chatGuild)))
@@ -92,10 +92,10 @@ package kabam.rotmg.chat.control
                         if (!(((_local_4) && (!(_arg_1.recipient_ == ""))) && (Parameters.data_.chatWhisper)))
                         {
                             return;
-                        };
-                    };
-                };
-            };
+                        }
+                    }
+                }
+            }
             if (this.useCleanString(_arg_1))
             {
                 _local_5 = _arg_1.cleanText_;
@@ -105,19 +105,19 @@ package kabam.rotmg.chat.control
             {
                 _local_5 = _arg_1.text_;
                 _arg_1.text_ = this.replaceIfSlashServerCommand(_arg_1.text_);
-            };
+            }
             if (((_local_2) && (this.isToBeLocalized(_local_5))))
             {
                 _local_5 = this.getLocalizedString(_local_5);
-            };
+            }
             if (((!(_local_2)) && (this.spamFilter.isSpam(_local_5))))
             {
                 if (_arg_1.name_ == this.model.player.name_)
                 {
                     this.addTextLine.dispatch(ChatMessage.make(Parameters.ERROR_CHAT_NAME, "This message has been flagged as spam."));
-                };
+                }
                 return;
-            };
+            }
             if (_arg_1.recipient_)
             {
                 if (((!(_arg_1.recipient_ == this.model.player.name_)) && (!(this.isSpecialRecipientChat(_arg_1.recipient_)))))
@@ -131,9 +131,9 @@ package kabam.rotmg.chat.control
                     {
                         this.tellModel.push(_arg_1.name_);
                         this.tellModel.resetRecipients();
-                    };
-                };
-            };
+                    }
+                }
+            }
             if (((_local_2) && (TextureDataConcrete.remoteTexturesUsed == true)))
             {
                 TextureDataConcrete.remoteTexturesUsed = false;
@@ -146,8 +146,8 @@ package kabam.rotmg.chat.control
                     this.addTextAsTextLine(_arg_1);
                     _arg_1.name_ = _local_6;
                     _arg_1.text_ = _local_7;
-                };
-            };
+                }
+            }
             if (_local_2)
             {
                 if (((((_arg_1.text_ == "Please verify your email before chat") && (!(this.hudModel == null))) && (this.hudModel.gameSprite.map.name_ == "Nexus")) && (!(this.openDialogSignal == null))))
@@ -165,29 +165,29 @@ package kabam.rotmg.chat.control
                         else
                         {
                             NewsTicker.setPendingScrollText(_arg_1.text_);
-                        };
+                        }
                     }
                     else
                     {
                         if (((_arg_1.name_ == "#{objects.ft_shopkeep}") && (!(FortuneModel.HAS_FORTUNES))))
                         {
                             return;
-                        };
-                    };
-                };
-            };
+                        }
+                    }
+                }
+            }
             if (_arg_1.objectId_ >= 0)
             {
                 this.showSpeechBaloon(_arg_1, _local_5);
-            };
+            }
             if (((_local_2) || ((this.account.isRegistered()) && ((!(Parameters.data_["hidePlayerChat"])) || (this.isSpecialRecipientChat(_arg_1.name_))))))
             {
                 if (((_local_2) && (!(_arg_1.text_.search("NexusPortal.") == -1))))
                 {
                     this.dispatchServerName(_arg_1.text_);
-                };
+                }
                 this.addTextAsTextLine(_arg_1);
-            };
+            }
         }
 
         private function isSpecialRecipientChat(_arg_1:String):Boolean
@@ -222,7 +222,7 @@ package kabam.rotmg.chat.control
             catch(error:Error)
             {
                 message.text = ((useCleanString(text)) ? text.cleanText_ : text.text_);
-            };
+            }
         }
 
         private function dispatchServerName(_arg_1:String):void
@@ -240,8 +240,8 @@ package kabam.rotmg.chat.control
                 if (((_local_2) && (_local_2.getServer())))
                 {
                     return (_arg_1.replace("74026S9", (_local_2.getServer().name + ", ")));
-                };
-            };
+                }
+            }
             return (_arg_1);
         }
 
@@ -271,7 +271,7 @@ package kabam.rotmg.chat.control
                 _local_6 = ChatListItemFactory.isGuildMessage(_arg_1.name_);
                 _local_7 = new AddSpeechBalloonVO(_local_3, _arg_2, _arg_1.name_, _local_5, _local_6, _local_4.back, 1, _local_4.outline, 1, _local_4.text, _arg_1.bubbleTime_, false, true);
                 this.addSpeechBalloon.dispatch(_local_7);
-            };
+            }
         }
 
         private function getColors(_arg_1:Text, _arg_2:GameObject):TextColors
@@ -279,15 +279,15 @@ package kabam.rotmg.chat.control
             if (_arg_2.props_.isEnemy_)
             {
                 return (this.ENEMY_SPEECH_COLORS);
-            };
+            }
             if (_arg_1.recipient_ == Parameters.GUILD_CHAT_NAME)
             {
                 return (this.GUILD_SPEECH_COLORS);
-            };
+            }
             if (_arg_1.recipient_ != "")
             {
                 return (this.TELL_SPEECH_COLORS);
-            };
+            }
             return (this.NORMAL_SPEECH_COLORS);
         }
 

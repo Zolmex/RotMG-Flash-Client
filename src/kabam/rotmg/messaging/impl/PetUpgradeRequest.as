@@ -6,10 +6,8 @@
 package kabam.rotmg.messaging.impl
 {
     import kabam.rotmg.messaging.impl.outgoing.OutgoingMessage;
-    import __AS3__.vec.Vector;
     import kabam.rotmg.messaging.impl.data.SlotObjectData;
     import flash.utils.IDataOutput;
-    import __AS3__.vec.*;
 
     public class PetUpgradeRequest extends OutgoingMessage 
     {
@@ -41,7 +39,7 @@ package kabam.rotmg.messaging.impl
             for each (_local_2 in this.slotsObject)
             {
                 _local_2.writeToOutput(_arg_1);
-            };
+            }
         }
 
 

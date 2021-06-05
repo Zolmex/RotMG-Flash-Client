@@ -5,12 +5,12 @@
 
 package com.company.assembleegameclient.ui.panels.itemgrids
 {
-    import __AS3__.vec.Vector;
+    
     import com.company.assembleegameclient.ui.panels.itemgrids.itemtiles.InventoryTile;
     import com.company.assembleegameclient.objects.GameObject;
     import com.company.assembleegameclient.objects.Player;
     import com.company.assembleegameclient.ui.panels.itemgrids.itemtiles.ItemTile;
-    import __AS3__.vec.*;
+    
 
     public class InventoryGrid extends ItemGrid 
     {
@@ -34,7 +34,7 @@ package com.company.assembleegameclient.ui.panels.itemgrids
                 addToGrid(_local_6, 2, _local_5);
                 this._tiles[_local_5] = _local_6;
                 _local_5++;
-            };
+            }
         }
 
         public function getItemById(_arg_1:int):InventoryTile
@@ -45,8 +45,8 @@ package com.company.assembleegameclient.ui.panels.itemgrids
                 if (_local_2.getItemId() == _arg_1)
                 {
                     return (_local_2);
-                };
-            };
+                }
+            }
             return (null);
         }
 
@@ -67,22 +67,22 @@ package com.company.assembleegameclient.ui.panels.itemgrids
                         if (this._tiles[_local_5].setItem(_arg_1[(_local_5 + indexOffset)]))
                         {
                             _local_3 = true;
-                        };
+                        }
                     }
                     else
                     {
                         if (this._tiles[_local_5].setItem(-1))
                         {
                             _local_3 = true;
-                        };
-                    };
+                        }
+                    }
                     _local_5++;
-                };
+                }
                 if (_local_3)
                 {
                     refreshTooltip();
-                };
-            };
+                }
+            }
         }
 
         public function get tiles():Vector.<InventoryTile>
@@ -96,7 +96,7 @@ package com.company.assembleegameclient.ui.panels.itemgrids
             for each (_local_2 in this._tiles)
             {
                 _local_2.toggleTierTag(_arg_1);
-            };
+            }
         }
 
 

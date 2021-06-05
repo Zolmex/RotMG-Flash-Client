@@ -39,7 +39,7 @@ package kabam.rotmg.account.web.view
             if (!_local_1)
             {
                 this.password_.setError(TextKey.WEB_CHANGE_PASSWORD_INCORRECT);
-            };
+            }
             return (_local_1);
         }
 
@@ -62,10 +62,10 @@ package kabam.rotmg.account.web.view
                     {
                         this.newPassword_.setError(TextKey.LINK_WEB_ACCOUNT_SHORT);
                         _local_1 = false;
-                    };
+                    }
                     _local_3++;
-                };
-            };
+                }
+            }
             return (_local_1);
         }
 
@@ -75,7 +75,7 @@ package kabam.rotmg.account.web.view
             if (!_local_1)
             {
                 this.retypeNewPassword_.setError(TextKey.PASSWORD_DOES_NOT_MATCH);
-            };
+            }
             return (_local_1);
         }
 

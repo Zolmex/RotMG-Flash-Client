@@ -8,7 +8,7 @@ package com.company.assembleegameclient.objects.particles
     import com.company.assembleegameclient.objects.thrown.BitmapParticle;
     import com.company.assembleegameclient.objects.GameObject;
     import com.company.assembleegameclient.parameters.Parameters;
-    import __AS3__.vec.Vector;
+    
     import flash.display.BitmapData;
     import flash.geom.Point;
 
@@ -51,12 +51,12 @@ package com.company.assembleegameclient.objects.particles
             if (this.numFramesRemaining <= 0)
             {
                 return (false);
-            };
+            }
             this.frameUpdateModulator++;
             if ((this.frameUpdateModulator % 2))
             {
                 this.currentFrame++;
-            };
+            }
             _bitmapData = this.images[(this.currentFrame % this.numFrames)];
             this.plusX = (this.plusX + this.dx_);
             this.plusY = (this.plusY + this.dy_);
@@ -64,7 +64,7 @@ package com.company.assembleegameclient.objects.particles
             {
                 this.cameraAngle = Parameters.data_.cameraAngle;
                 _rotation = (-(this.radians) - this.cameraAngle);
-            };
+            }
             moveTo(((this.go.x_ + this.originX) + this.plusX), ((this.go.y_ + this.originY) + this.plusY));
             return (true);
         }

@@ -39,7 +39,7 @@ package kabam.rotmg.ui.model
             if (((!(_arg_1 == null)) && (_arg_1.length > 0)))
             {
                 this.costIndex = 0;
-            };
+            }
         }
 
         public function get costs():Array
@@ -75,9 +75,9 @@ package kabam.rotmg.ui.model
                 if (this.costIndex < (this.costs.length - 1))
                 {
                     this.costIndex++;
-                };
+                }
                 this.update.dispatch(this.position);
-            };
+            }
         }
 
         private function coolDownPurchase(_arg_1:TimerEvent):void
@@ -85,7 +85,7 @@ package kabam.rotmg.ui.model
             if (this.costIndex == 0)
             {
                 this.purchaseCoolDownTimer.stop();
-            };
+            }
             this.available = true;
             this.update.dispatch(this.position);
         }
@@ -96,7 +96,7 @@ package kabam.rotmg.ui.model
             if (this.costIndex == 0)
             {
                 this.costCoolDownTimer.stop();
-            };
+            }
             this.update.dispatch(this.position);
         }
 
@@ -106,7 +106,7 @@ package kabam.rotmg.ui.model
             if (_arg_1 <= 0)
             {
                 _local_2 = this.costs[this.costIndex];
-            };
+            }
             return (_local_2);
         }
 

@@ -20,7 +20,7 @@ package com.company.assembleegameclient.objects
     import com.company.assembleegameclient.map.Map;
     import com.company.assembleegameclient.map.Square;
     import com.company.assembleegameclient.util.FreeList;
-    import __AS3__.vec.Vector;
+    
     import com.company.assembleegameclient.util.BloodComposition;
     import com.company.assembleegameclient.objects.particles.HitEffect;
     import com.company.assembleegameclient.tutorial.doneAction;
@@ -30,7 +30,7 @@ package com.company.assembleegameclient.objects
     import com.company.assembleegameclient.util.RandomUtil;
     import flash.display.IGraphicsData;
     import com.company.assembleegameclient.map.Camera;
-    import __AS3__.vec.*;
+    
 
     public class Projectile extends BasicObject 
     {
@@ -120,7 +120,7 @@ package com.company.assembleegameclient.objects
             else
             {
                 _local_13 = ObjectLibrary.getSizeFromType(this.containerType_);
-            };
+            }
             this.p_.setSize((8 * (_local_13 / 100)));
             this.damage_ = 0;
         }
@@ -138,7 +138,7 @@ package com.company.assembleegameclient.objects
             if (!super.addTo(_arg_1, _arg_2, _arg_3))
             {
                 return (false);
-            };
+            }
             if (((!(this.containerProps_.flying_)) && (square_.sink_)))
             {
                 z_ = 0.1;
@@ -149,8 +149,8 @@ package com.company.assembleegameclient.objects
                 if (((!(_local_4 == null)) && (_local_4.sinkLevel_ > 0)))
                 {
                     z_ = (0.5 - (0.4 * (_local_4.sinkLevel_ / Parameters.MAX_SINK_LEVEL)));
-                };
-            };
+                }
+            }
             return (true);
         }
 
@@ -160,7 +160,7 @@ package com.company.assembleegameclient.objects
             if (_local_3 == null)
             {
                 return (false);
-            };
+            }
             x_ = _arg_1;
             y_ = _arg_2;
             square_ = _local_3;
@@ -219,8 +219,8 @@ package com.company.assembleegameclient.objects
                         if (_local_3 > _local_13)
                         {
                             _local_3 = (_local_13 - (_local_3 - _local_13));
-                        };
-                    };
+                        }
+                    }
                     _arg_2.x = (_arg_2.x + (_local_3 * Math.cos(this.angle_)));
                     _arg_2.y = (_arg_2.y + (_local_3 * Math.sin(this.angle_)));
                     if (this.projProps_.amplitude_ != 0)
@@ -228,9 +228,9 @@ package com.company.assembleegameclient.objects
                         _local_14 = (this.projProps_.amplitude_ * Math.sin((_local_4 + ((((_arg_1 / this.lifetime_) * this.projProps_.frequency_) * 2) * Math.PI))));
                         _arg_2.x = (_arg_2.x + (_local_14 * Math.cos((this.angle_ + (Math.PI / 2)))));
                         _arg_2.y = (_arg_2.y + (_local_14 * Math.sin((this.angle_ + (Math.PI / 2)))));
-                    };
-                };
-            };
+                    }
+                }
+            }
         }
 
         override public function update(_arg_1:int, _arg_2:int):Boolean
@@ -246,7 +246,7 @@ package com.company.assembleegameclient.objects
             if (_local_3 > this.lifetime_)
             {
                 return (false);
-            };
+            }
             var _local_4:Point = this.staticPoint_;
             this.positionAt(_local_3, _local_4);
             if (((!(this.moveTo(_local_4.x, _local_4.y))) || (square_.tileType_ == 0xFFFF)))
@@ -263,11 +263,11 @@ package com.company.assembleegameclient.objects
                         {
                             _local_5 = BloodComposition.getColors(this.texture_);
                             map_.addObj(new HitEffect(_local_5, 100, 3, this.angle_, this.projProps_.speed_), _local_4.x, _local_4.y);
-                        };
-                    };
-                };
+                        }
+                    }
+                }
                 return (false);
-            };
+            }
             if ((((!(square_.obj_ == null)) && ((!(square_.obj_.props_.isEnemy_)) || (!(this.damagesEnemies_)))) && ((square_.obj_.props_.enemyOccupySquare_) || ((!(this.projProps_.passesCover_)) && (square_.obj_.props_.occupySquare_)))))
             {
                 if (this.damagesPlayers_)
@@ -280,10 +280,10 @@ package com.company.assembleegameclient.objects
                     {
                         _local_5 = BloodComposition.getColors(this.texture_);
                         map_.addObj(new HitEffect(_local_5, 100, 3, this.angle_, this.projProps_.speed_), _local_4.x, _local_4.y);
-                    };
-                };
+                    }
+                }
                 return (false);
-            };
+            }
             var _local_6:GameObject = this.getHit(_local_4.x, _local_4.y);
             if (_local_6 != null)
             {
@@ -301,8 +301,8 @@ package com.company.assembleegameclient.objects
                         if (_local_6.props_.isEnemy_)
                         {
                             doneAction(map_.gs_, Tutorial.KILL_ACTION);
-                        };
-                    };
+                        }
+                    }
                     if (_local_6 == _local_7)
                     {
                         map_.gs_.gsc_.playerHit(this.bulletId_, this.ownerId_);
@@ -320,10 +320,10 @@ package com.company.assembleegameclient.objects
                             if (!this.projProps_.multiHit_)
                             {
                                 map_.gs_.gsc_.otherHit(_arg_1, this.bulletId_, this.ownerId_, _local_6.objectId_);
-                            };
-                        };
-                    };
-                };
+                            }
+                        }
+                    }
+                }
                 if (this.projProps_.multiHit_)
                 {
                     this.multiHitDict_[_local_6] = true;
@@ -331,8 +331,8 @@ package com.company.assembleegameclient.objects
                 else
                 {
                     return (false);
-                };
-            };
+                }
+            }
             return (true);
         }
 
@@ -364,21 +364,21 @@ package com.company.assembleegameclient.objects
                                         if (_local_5 == map_.player_)
                                         {
                                             return (_local_5);
-                                        };
+                                        }
                                         _local_8 = Math.sqrt(((_local_6 * _local_6) + (_local_7 * _local_7)));
                                         _local_9 = ((_local_6 * _local_6) + (_local_7 * _local_7));
                                         if (_local_9 < _local_3)
                                         {
                                             _local_3 = _local_9;
                                             _local_4 = _local_5;
-                                        };
-                                    };
-                                };
-                            };
-                        };
-                    };
-                };
-            };
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
             return (_local_4);
         }
 
@@ -391,7 +391,7 @@ package com.company.assembleegameclient.objects
             if (!Parameters.drawProj_)
             {
                 return;
-            };
+            }
             var _local_4:BitmapData = this.texture_;
             if (Parameters.projColorType_ != 0)
             {
@@ -421,9 +421,9 @@ package com.company.assembleegameclient.objects
                         _local_8 = 0;
                         _local_9 = 0;
                         break;
-                };
+                }
                 _local_4 = TextureRedrawer.redraw(_local_4, 120, true, _local_9);
-            };
+            }
             var _local_5:Number = ((this.props_.rotation_ == 0) ? 0 : (_arg_3 / this.props_.rotation_));
             this.staticVector3D_.x = x_;
             this.staticVector3D_.y = y_;
@@ -440,10 +440,10 @@ package com.company.assembleegameclient.objects
                     if( (!((!(map_ == null)) && (!(map_.player_.objectId_ == this.ownerId_)))) || (!((this.projProps_.particleTrailIntensity_ == -1) && ((Math.random() * 100) > this.projProps_.particleTrailIntensity_))) )
                     {
                         map_.addObj(new SparkParticle(100, this.projProps_.particleTrailColor_, _local_10, 0.5, RandomUtil.plusMinus(3), RandomUtil.plusMinus(3)), x_, y_);
-                    };
+                    }
                     _local_11++;
-                };
-            };
+                }
+            }
         }
 
         private function getDirectionAngle(_arg_1:Number):Number
@@ -461,7 +461,7 @@ package com.company.assembleegameclient.objects
             if (!Parameters.drawProj_)
             {
                 return;
-            };
+            }
             var _local_4:Number = (this.props_.shadowSize_ / 400);
             var _local_5:Number = (30 * _local_4);
             var _local_6:Number = (15 * _local_4);

@@ -5,7 +5,7 @@
 
 package kabam.rotmg.game.model
 {
-    import __AS3__.vec.Vector;
+    
 
     public class QuestModel 
     {
@@ -80,7 +80,7 @@ package kabam.rotmg.game.model
             {
                 this._requirementsStates[_local_2] = false;
                 _local_2++;
-            };
+            }
         }
 
 

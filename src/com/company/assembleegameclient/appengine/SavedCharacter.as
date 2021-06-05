@@ -48,7 +48,7 @@ package com.company.assembleegameclient.appengine
                 _local_5 = StaticInjectorContext.getInjector().getInstance(PetsModel).getPetVO(_local_4);
                 _local_5.apply(_local_3);
                 this.setPetVO(_local_5);
-            };
+            }
         }
 
         public static function getImage(_arg_1:SavedCharacter, _arg_2:XML, _arg_3:int, _arg_4:int, _arg_5:Number, _arg_6:Boolean, _arg_7:Boolean):BitmapData
@@ -68,8 +68,8 @@ package com.company.assembleegameclient.appengine
                 if (!_arg_7)
                 {
                     _local_12 = CachingColorTransformer.transformBitmapData(_local_12, new ColorTransform(0.75, 0.75, 0.75, 1, 0, 0, 0, 0));
-                };
-            };
+                }
+            }
             return (_local_12);
         }
 
@@ -80,7 +80,7 @@ package com.company.assembleegameclient.appengine
             if (_local_3 != _local_4)
             {
                 return (_local_4 - _local_3);
-            };
+            }
             return (_arg_2.xp() - _arg_1.xp());
         }
 
@@ -108,11 +108,11 @@ package com.company.assembleegameclient.appengine
                         if (((!(_local_5 == null)) && (_local_5.hasOwnProperty("FameBonus"))))
                         {
                             _local_2 = (_local_2 + int(_local_5.FameBonus));
-                        };
-                    };
-                };
+                        }
+                    }
+                }
                 _local_3++;
-            };
+            }
             return (_local_2);
         }
 
@@ -217,7 +217,7 @@ package com.company.assembleegameclient.appengine
             if (!this.charXML_.hasOwnProperty("CreationDate"))
             {
                 return ("Unknown");
-            };
+            }
             return (this.charXML_.CreationDate);
         }
 

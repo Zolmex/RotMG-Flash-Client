@@ -6,7 +6,7 @@
 package com.company.assembleegameclient.objects
 {
     import com.company.assembleegameclient.sound.SoundEffectLibrary;
-    import __AS3__.vec.Vector;
+    
 
     public class Character extends GameObject 
     {
@@ -35,8 +35,8 @@ package com.company.assembleegameclient.objects
                 if (((_arg_5) || (_arg_2 > 0)))
                 {
                     SoundEffectLibrary.play(this.hurtSound_);
-                };
-            };
+                }
+            }
         }
 
 

@@ -45,7 +45,7 @@ package kabam.rotmg.account.steam.services
             else
             {
                 this.onRegisterError(_arg_2);
-            };
+            }
         }
 
         private function makeDataPacket():Object

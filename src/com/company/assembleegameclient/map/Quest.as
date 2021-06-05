@@ -27,7 +27,7 @@ package com.company.assembleegameclient.map
             {
                 this.questAvailableAt_ = (getTimer() + 200);
                 this.questOldAt_ = this.questAvailableAt_;
-            };
+            }
             this.objectId_ = _arg_1;
         }
 
@@ -42,7 +42,7 @@ package com.company.assembleegameclient.map
             if (_arg_1 < this.questAvailableAt_)
             {
                 return (null);
-            };
+            }
             return (this.map_.goDict_[this.objectId_]);
         }
 

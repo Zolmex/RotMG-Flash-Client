@@ -11,10 +11,10 @@ package io.decagames.rotmg.dailyQuests.view.list
     import kabam.rotmg.ui.signals.UpdateQuestSignal;
     import io.decagames.rotmg.dailyQuests.signal.ShowQuestInfoSignal;
     import kabam.rotmg.constants.GeneralConstants;
-    import __AS3__.vec.Vector;
+    
     import io.decagames.rotmg.dailyQuests.model.DailyQuest;
     import io.decagames.rotmg.dailyQuests.view.info.DailyQuestInfo;
-    import __AS3__.vec.*;
+    
 
     public class DailyQuestsListMediator extends Mediator 
     {
@@ -49,7 +49,7 @@ package io.decagames.rotmg.dailyQuests.view.list
             else
             {
                 this.showInfoSignal.dispatch("", -1, _arg_1);
-            };
+            }
         }
 
         private function onQuestsUpdate(_arg_1:String):void
@@ -74,19 +74,19 @@ package io.decagames.rotmg.dailyQuests.view.list
                 if (_local_4.expiration != "")
                 {
                     _local_5 = ((Number(_local_4.expiration) - (_local_3.time / 1000)) < 0);
-                };
+                }
                 if (!((_local_4.completed) || (_local_5)))
                 {
                     _local_6 = new DailyQuestListElement(_local_4.id, _local_4.name, _local_4.completed, DailyQuestInfo.hasAllItems(_local_4.requirements, _arg_1), _local_4.category);
                     if (_local_2)
                     {
                         _local_6.isSelected = true;
-                    };
+                    }
                     _local_2 = false;
                     this.view.addEventToList(_local_6);
                     this.hasEvent = true;
-                };
-            };
+                }
+            }
         }
 
         private function addDailyQuests(_arg_1:Vector.<int>):void
@@ -102,11 +102,11 @@ package io.decagames.rotmg.dailyQuests.view.list
                     if (_local_2)
                     {
                         _local_4.isSelected = true;
-                    };
+                    }
                     _local_2 = false;
                     this.view.addQuestToList(_local_4);
-                };
-            };
+                }
+            }
             this.onTabSelected(DailyQuestsList.QUEST_TAB_LABEL);
         }
 
@@ -115,7 +115,7 @@ package io.decagames.rotmg.dailyQuests.view.list
             if (this.hasEvent)
             {
                 this.view.addIndicator(this.hasEvent);
-            };
+            }
         }
 
         override public function destroy():void

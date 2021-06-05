@@ -5,7 +5,7 @@
 
 package com.company.assembleegameclient.objects.particles
 {
-    import __AS3__.vec.Vector;
+    
     import flash.display.BitmapData;
     import flash.geom.Point;
     import com.company.assembleegameclient.objects.GameObject;
@@ -14,7 +14,7 @@ package com.company.assembleegameclient.objects.particles
     import com.company.util.ImageSet;
     import com.company.assembleegameclient.util.TextureRedrawer;
     import flash.events.TimerEvent;
-    import __AS3__.vec.*;
+    
 
     public class SpritesProjectEffect extends ParticleEffect 
     {
@@ -46,7 +46,7 @@ package com.company.assembleegameclient.objects.particles
                 this.innerRadius = 0;
                 this.outerRadius = _arg_2;
                 this.particleScale = 80;
-            };
+            }
         }
 
         private function parseBitmapDataFromImageSet():void
@@ -60,7 +60,7 @@ package com.company.assembleegameclient.objects.particles
             {
                 images.push(TextureRedrawer.redraw(_local_1.images_[_local_2], this.particleScale, true, 16764736, true));
                 _local_2++;
-            };
+            }
         }
 
         override public function update(_arg_1:int, _arg_2:int):Boolean
@@ -68,11 +68,11 @@ package com.company.assembleegameclient.objects.particles
             if (this.isDestroyed)
             {
                 return (false);
-            };
+            }
             if (!this.timer)
             {
                 this.initialize();
-            };
+            }
             x_ = this.go.x_;
             y_ = this.go.y_;
             return (true);
@@ -102,8 +102,8 @@ package com.company.assembleegameclient.objects.particles
                     this.end_ = new Point((this.go.x_ + (Math.sin(this.radians) * this.outerRadius)), (this.go.y_ + (Math.cos(this.radians) * this.outerRadius)));
                     map_.addObj(new NoteParticle(this.objectId, 20, this.particleScale, this.start_, this.end_, this.radians, this.go, images), this.start_.x, this.start_.y);
                     _local_3++;
-                };
-            };
+                }
+            }
         }
 
         private function onTimerComplete(_arg_1:TimerEvent):void
@@ -119,7 +119,7 @@ package com.company.assembleegameclient.objects.particles
                 this.timer.removeEventListener(TimerEvent.TIMER, this.onTimerComplete);
                 this.timer.stop();
                 this.timer = null;
-            };
+            }
             this.go = null;
             this.isDestroyed = true;
         }

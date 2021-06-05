@@ -39,8 +39,8 @@ package com.company.assembleegameclient.ui.tooltip.slotcomparisons
                         "duration":tag.@duration
                     }, TooltipHelper.getOpenTag(UNTIERED_COLOR), TooltipHelper.getCloseTag());
                     processedTags[tag.toXMLString()] = true;
-                };
-            };
+                }
+            }
         }
 
         private function canCompare():Boolean
@@ -58,8 +58,8 @@ package com.company.assembleegameclient.ui.tooltip.slotcomparisons
                 if (tag.@effect == effectName)
                 {
                     return (tag);
-                };
-            };
+                }
+            }
             return (null);
         }
 

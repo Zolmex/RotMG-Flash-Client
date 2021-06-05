@@ -40,7 +40,7 @@ package kabam.rotmg.account.web
             }
             catch(error:Error)
             {
-            };
+            }
         }
 
         public function getUserName():String
@@ -91,11 +91,11 @@ package kabam.rotmg.account.web
                     _local_4.data["Token"] = _arg_3;
                     _local_4.data["Password"] = _arg_2;
                     _local_4.flush();
-                };
+                }
             }
             catch(error:Error)
             {
-            };
+            }
         }
 
         public function clear():void
@@ -103,7 +103,7 @@ package kabam.rotmg.account.web
             this._rememberMe = true;
             this.updateUser(GUID.create(), null, null);
             Parameters.sendLogin_ = true;
-            Parameters.data_.charIdUseMap = {};
+            Parameters.data_.charIdUseMap = {}
             Parameters.save();
         }
 

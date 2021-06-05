@@ -5,9 +5,9 @@
 
 package com.company.assembleegameclient.objects.animation
 {
-    import __AS3__.vec.Vector;
+    
     import flash.display.BitmapData;
-    import __AS3__.vec.*;
+    
 
     public class Animations 
     {
@@ -32,17 +32,17 @@ package com.company.assembleegameclient.objects.animation
                 for each (_local_2 in this.animationsData_.animations)
                 {
                     this.nextRun_.push(_local_2.getLastRun(_arg_1));
-                };
-            };
+                }
+            }
             if (this.running_ != null)
             {
                 _local_4 = this.running_.getTexture(_arg_1);
                 if (_local_4 != null)
                 {
                     return (_local_4);
-                };
+                }
                 this.running_ = null;
-            };
+            }
             var _local_3:int;
             while (_local_3 < this.nextRun_.length)
             {
@@ -55,10 +55,10 @@ package com.company.assembleegameclient.objects.animation
                     {
                         this.running_ = new RunningAnimation(_local_2, _local_5);
                         return (this.running_.getTexture(_arg_1));
-                    };
-                };
+                    }
+                }
                 _local_3++;
-            };
+            }
             return (null);
         }
 
@@ -96,16 +96,16 @@ class RunningAnimation
             if (this.frameId_ >= (this.animationData_.frames.length - 1))
             {
                 return (null);
-            };
+            }
             this.frameStart_ = (this.frameStart_ + _local_2.time_);
             this.frameId_++;
             _local_2 = this.animationData_.frames[this.frameId_];
             this.texture_ = null;
-        };
+        }
         if (this.texture_ == null)
         {
             this.texture_ = _local_2.textureData_.getTexture((Math.random() * 100));
-        };
+        }
         return (this.texture_);
     }
 

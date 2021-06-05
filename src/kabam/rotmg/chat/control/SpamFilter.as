@@ -25,7 +25,7 @@ package kabam.rotmg.chat.control
             {
                 _local_1[_local_3.charCodeAt(0)] = _local_3.charAt(1);
                 _local_1[_local_3.charCodeAt(1)] = _local_3.charAt(1);
-            };
+            }
             return (_local_1);
         }
 
@@ -44,7 +44,7 @@ package kabam.rotmg.chat.control
             while (_local_1 < this.testPatterns.length)
             {
                 _local_1++;
-            };
+            }
         }
 
         public function isSpam(_arg_1:String):Boolean
@@ -65,9 +65,9 @@ package kabam.rotmg.chat.control
                 if (_local_4 !== null)
                 {
                     _local_2.push(_local_4);
-                };
+                }
                 _local_3++;
-            };
+            }
             return (_local_2.join(""));
         }
 
@@ -85,12 +85,12 @@ package kabam.rotmg.chat.control
                     if (((!(this.newPatterns[_local_1].charAt(_local_4) == "'")) && (!(this.newPatterns[_local_1].charAt(_local_4) == '"'))))
                     {
                         _local_3 = _local_3.concat(this.newPatterns[_local_1].charAt(_local_4));
-                    };
+                    }
                     _local_4++;
-                };
+                }
                 this.newPatterns[_local_1] = _local_3;
                 _local_1++;
-            };
+            }
             var _local_2:Array = this.newPatterns;
             _local_2.sort();
             return (this.testPatterns);

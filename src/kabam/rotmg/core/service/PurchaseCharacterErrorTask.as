@@ -30,7 +30,7 @@ package kabam.rotmg.core.service
             else
             {
                 this.openDialog.dispatch(new ErrorDialog(this.parentTask.error));
-            };
+            }
         }
 
 

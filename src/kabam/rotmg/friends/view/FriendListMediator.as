@@ -64,7 +64,7 @@ package kabam.rotmg.friends.view
             if (_arg_1)
             {
                 this.view.init(this.model.friendsList, this.model.getAllInvitations(), this.model.getCurrentServerName());
-            };
+            }
         }
 
         private function reportError(_arg_1:String):void
@@ -82,7 +82,7 @@ package kabam.rotmg.friends.view
                 case FriendsActions.INVITE_TAB:
                     this.view.updateInvitationTab(this.model.getAllInvitations());
                     return;
-            };
+            }
         }
 
         private function onFriendActed(_arg_1:String, _arg_2:String):void
@@ -102,15 +102,15 @@ package kabam.rotmg.friends.view
                         if (_arg_2 == "")
                         {
                             this.view.updateFriendTab(this.model.friendsList, this.model.getCurrentServerName());
-                        };
-                    };
+                        }
+                    }
                     return;
                 case FriendsActions.INVITE:
                     if (this.model.ifReachMax())
                     {
                         this.view.updateInput(TextKey.FRIEND_REACH_CAPACITY);
                         return;
-                    };
+                    }
                     _local_3.callback = this.inviteFriendCallback;
                     break;
                 case FriendsActions.REMOVE:
@@ -137,7 +137,7 @@ package kabam.rotmg.friends.view
                 case FriendsActions.JUMP:
                     this.jumpCallback(_arg_2);
                     return;
-            };
+            }
             this.actionSignal.dispatch(_local_3);
         }
 
@@ -156,8 +156,8 @@ package kabam.rotmg.friends.view
                 else
                 {
                     this.view.updateInput(_arg_2);
-                };
-            };
+                }
+            }
         }
 
         private function removeFriendCallback(_arg_1:Boolean, _arg_2:String, _arg_3:String):void
@@ -169,7 +169,7 @@ package kabam.rotmg.friends.view
             else
             {
                 this.reportError(_arg_2);
-            };
+            }
         }
 
         private function acceptInvitationCallback(_arg_1:Boolean, _arg_2:String, _arg_3:String):void
@@ -180,12 +180,12 @@ package kabam.rotmg.friends.view
                 if (this.model.removeInvitation(_arg_3))
                 {
                     this.view.updateInvitationTab(this.model.getAllInvitations());
-                };
+                }
             }
             else
             {
                 this.reportError(_arg_2);
-            };
+            }
         }
 
         private function rejectInvitationCallback(_arg_1:Boolean, _arg_2:String, _arg_3:String):void
@@ -195,12 +195,12 @@ package kabam.rotmg.friends.view
                 if (this.model.removeInvitation(_arg_3))
                 {
                     this.view.updateInvitationTab(this.model.getAllInvitations());
-                };
+                }
             }
             else
             {
                 this.reportError(_arg_2);
-            };
+            }
         }
 
         private function blockInvitationCallback(_arg_1:String):void
@@ -221,7 +221,7 @@ package kabam.rotmg.friends.view
             if (_local_3)
             {
                 _local_2 = Boolean(int(_local_3.charXML_.IsChallenger));
-            };
+            }
             if (_local_2)
             {
                 Parameters.data_.preferredChallengerServer = _arg_1;
@@ -229,7 +229,7 @@ package kabam.rotmg.friends.view
             else
             {
                 Parameters.data_.preferredServer = _arg_1;
-            };
+            }
             Parameters.save();
             this.enterGame.dispatch();
             var _local_4:GameInitData = new GameInitData();

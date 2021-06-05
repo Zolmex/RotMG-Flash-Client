@@ -56,7 +56,7 @@ package kabam.rotmg.mysterybox.services
             {
                 this.logger.warn("GetMysteryBox.onComplete: Request failed.");
                 completeTask(true);
-            };
+            }
             reset();
         }
 
@@ -68,7 +68,7 @@ package kabam.rotmg.mysterybox.services
             if (_local_3.length() > 0)
             {
                 this.updateSoldCounters(_local_3);
-            };
+            }
             if (_local_2.length() > 0)
             {
                 this.parse(_local_2);
@@ -78,13 +78,13 @@ package kabam.rotmg.mysterybox.services
                 if (this.mysteryBoxModel.isInitialized())
                 {
                     this.mysteryBoxModel.updateSignal.dispatch();
-                };
-            };
+                }
+            }
             var _local_4:XMLList = XML(_arg_1).child("FortuneGame");
             if (_local_4.length() > 0)
             {
                 this.parseFortune(_local_4);
-            };
+            }
             completeTask(true);
         }
 
@@ -123,12 +123,12 @@ package kabam.rotmg.mysterybox.services
                 if (_local_2.attribute("left") != "-1")
                 {
                     _local_3.unitsLeft = _local_2.attribute("left");
-                };
+                }
                 if (_local_2.attribute("purchaseLeft") != "-1")
                 {
                     _local_3.purchaseLeft = _local_2.attribute("purchaseLeft");
-                };
-            };
+                }
+            }
         }
 
         private function parse(_arg_1:XMLList):void
@@ -151,57 +151,57 @@ package kabam.rotmg.mysterybox.services
                 {
                     _local_5.saleAmount = _local_4.Sale.attribute("price").toString();
                     _local_5.saleCurrency = _local_4.Sale.attribute("currency").toString();
-                };
+                }
                 if (_local_4.hasOwnProperty("Left"))
                 {
                     _local_5.unitsLeft = _local_4.Left;
-                };
+                }
                 if (_local_4.hasOwnProperty("Total"))
                 {
                     _local_5.totalUnits = _local_4.Total;
-                };
+                }
                 if (_local_4.hasOwnProperty("Slot"))
                 {
                     _local_5.slot = _local_4.Slot;
-                };
+                }
                 if (_local_4.hasOwnProperty("Jackpots"))
                 {
                     _local_5.jackpots = _local_4.Jackpots;
-                };
+                }
                 if (_local_4.hasOwnProperty("DisplayedItems"))
                 {
                     _local_5.displayedItems = _local_4.DisplayedItems;
-                };
+                }
                 if (_local_4.hasOwnProperty("Rolls"))
                 {
                     _local_5.rolls = int(_local_4.Rolls);
-                };
+                }
                 if (_local_4.hasOwnProperty("Tags"))
                 {
                     _local_5.tags = _local_4.Tags;
-                };
+                }
                 if (_local_4.hasOwnProperty("MaxPurchase"))
                 {
                     _local_5.maxPurchase = _local_4.MaxPurchase;
-                };
+                }
                 if (_local_4.hasOwnProperty("PurchaseLeft"))
                 {
                     _local_5.purchaseLeft = int(_local_4.PurchaseLeft);
-                };
+                }
                 _local_5.iconImageUrl = _local_4.Icon.toString();
                 _local_5.infoImageUrl = _local_4.Image.toString();
                 _local_5.startTime = TimeUtil.parseUTCDate(_local_4.StartTime.toString());
                 if (_local_4.EndTime.toString())
                 {
                     _local_5.endTime = TimeUtil.parseUTCDate(_local_4.EndTime.toString());
-                };
+                }
                 _local_5.parseContents();
                 if (((!(_local_3)) && ((_local_5.isNew()) || (_local_5.isOnSale()))))
                 {
                     _local_3 = true;
-                };
+                }
                 _local_2.push(_local_5);
-            };
+            }
             this.mysteryBoxModel.setMysetryBoxes(_local_2);
             this.mysteryBoxModel.isNew = _local_3;
         }

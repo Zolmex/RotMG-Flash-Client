@@ -8,7 +8,7 @@ package kabam.rotmg.dailyLogin.view
     import flash.display.Sprite;
     import kabam.rotmg.dailyLogin.model.CalendarDayModel;
     import kabam.rotmg.dailyLogin.config.CalendarSettings;
-    import __AS3__.vec.Vector;
+    
 
     public class CalendarView extends Sprite 
     {
@@ -32,19 +32,19 @@ package kabam.rotmg.dailyLogin.view
                 if (_local_5 > 0)
                 {
                     _local_9.x = (_local_9.x + (_local_5 * CalendarSettings.BOX_MARGIN));
-                };
+                }
                 _local_9.y = (_local_6 * CalendarSettings.BOX_HEIGHT);
                 if (_local_6 > 0)
                 {
                     _local_9.y = (_local_9.y + (_local_6 * CalendarSettings.BOX_MARGIN));
-                };
+                }
                 _local_5++;
                 if ((++_local_4 % CalendarSettings.NUMBER_OF_COLUMNS) == 0)
                 {
                     _local_5 = 0;
                     _local_6++;
-                };
-            };
+                }
+            }
             _local_8 = ((CalendarSettings.BOX_WIDTH * CalendarSettings.NUMBER_OF_COLUMNS) + ((CalendarSettings.NUMBER_OF_COLUMNS - 1) * CalendarSettings.BOX_MARGIN));
             this.x = ((this.parent.width - _local_8) / 2);
             this.y = (CalendarSettings.DAILY_LOGIN_TABS_PADDING + CalendarSettings.TABS_HEIGHT);

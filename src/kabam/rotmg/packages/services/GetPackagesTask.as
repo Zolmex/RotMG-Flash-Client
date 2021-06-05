@@ -49,7 +49,7 @@ package kabam.rotmg.packages.services
             {
                 this.logger.warn("GetPackageTask.onComplete: Request failed.");
                 completeTask(true);
-            };
+            }
             reset();
         }
 
@@ -61,7 +61,7 @@ package kabam.rotmg.packages.services
             if (_local_3.length() > 0)
             {
                 this.updateSoldCounters(_local_3);
-            };
+            }
             if (_local_2.length() > 0)
             {
                 this.parse(_local_2);
@@ -71,8 +71,8 @@ package kabam.rotmg.packages.services
                 if (this.packageModel.getInitialized())
                 {
                     this.packageModel.updateSignal.dispatch();
-                };
-            };
+                }
+            }
             completeTask(true);
         }
 
@@ -88,13 +88,13 @@ package kabam.rotmg.packages.services
                     if (_local_2.attribute("left") != "-1")
                     {
                         _local_3.unitsLeft = _local_2.attribute("left");
-                    };
+                    }
                     if (_local_2.attribute("purchaseLeft") != "-1")
                     {
                         _local_3.purchaseLeft = _local_2.attribute("purchaseLeft");
-                    };
-                };
-            };
+                    }
+                }
+            }
         }
 
         private function hasNoPackage(_arg_1:*):Boolean
@@ -122,43 +122,43 @@ package kabam.rotmg.packages.services
                 {
                     _local_4.saleAmount = int(_local_3.Sale.attribute("price").toString());
                     _local_4.saleCurrency = int(_local_3.Sale.attribute("currency").toString());
-                };
+                }
                 if (_local_3.hasOwnProperty("Left"))
                 {
                     _local_4.unitsLeft = _local_3.Left;
-                };
+                }
                 if (_local_3.hasOwnProperty("MaxPurchase"))
                 {
                     _local_4.maxPurchase = _local_3.MaxPurchase;
-                };
+                }
                 if (_local_3.hasOwnProperty("PurchaseLeft"))
                 {
                     _local_4.purchaseLeft = _local_3.PurchaseLeft;
-                };
+                }
                 if (_local_3.hasOwnProperty("ShowOnLogin"))
                 {
                     _local_4.showOnLogin = (int(_local_3.ShowOnLogin) == 1);
-                };
+                }
                 if (_local_3.hasOwnProperty("Total"))
                 {
                     _local_4.totalUnits = _local_3.Total;
-                };
+                }
                 if (_local_3.hasOwnProperty("Slot"))
                 {
                     _local_4.slot = _local_3.Slot;
-                };
+                }
                 if (_local_3.hasOwnProperty("Tags"))
                 {
                     _local_4.tags = _local_3.Tags;
-                };
+                }
                 if (_local_3.StartTime.toString())
                 {
                     _local_4.startTime = TimeUtil.parseUTCDate(_local_3.StartTime.toString());
-                };
+                }
                 if (_local_3.EndTime.toString())
                 {
                     _local_4.endTime = TimeUtil.parseUTCDate(_local_3.EndTime.toString());
-                };
+                }
                 _local_4.image = _local_3.Image.toString();
                 _local_4.charSlot = int(_local_3.CharSlot.toString());
                 _local_4.vaultSlot = int(_local_3.VaultSlot.toString());
@@ -166,9 +166,9 @@ package kabam.rotmg.packages.services
                 if (_local_3.PopupImage.toString() != "")
                 {
                     _local_4.popupImage = _local_3.PopupImage.toString();
-                };
+                }
                 _local_2.push(_local_4);
-            };
+            }
             this.packageModel.setPackages(_local_2);
         }
 

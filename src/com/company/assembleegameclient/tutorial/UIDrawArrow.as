@@ -40,7 +40,7 @@ package com.company.assembleegameclient.tutorial
             {
                 _local_4.x = this.p1_.x;
                 _local_4.y = this.p1_.y;
-            };
+            }
             _arg_2.lineStyle(_arg_1, this.color_);
             _arg_2.moveTo(this.p0_.x, this.p0_.y);
             _arg_2.lineTo(_local_4.x, _local_4.y);

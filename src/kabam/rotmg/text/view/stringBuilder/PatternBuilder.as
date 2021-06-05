@@ -36,7 +36,7 @@ package kabam.rotmg.text.view.stringBuilder
             for each (_local_2 in this.keys)
             {
                 _local_1 = _local_1.replace(_local_2, this.provider.getValue(_local_2.substr(1, (_local_2.length - 2))));
-            };
+            }
             return (_local_1.replace(/\\n/g, "\n"));
         }
 

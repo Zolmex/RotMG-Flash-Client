@@ -65,7 +65,7 @@ package kabam.rotmg.ui.view
             {
                 this.socialModel.noInvitationSignal.add(this.clearFriendsIndicator);
                 this.socialModel.socialDataSignal.add(this.onFriendsData);
-            };
+            }
             this.view.initFriendList(this.imageFactory, this.iconButtonFactory, this.onFriendsBtnClicked, ((Parameters.USE_NEW_FRIENDS_UI) && (this.socialModel.hasInvitations)));
         }
 
@@ -83,7 +83,7 @@ package kabam.rotmg.ui.view
             else
             {
                 this.openDialog.dispatch(new FriendListView());
-            };
+            }
         }
 
         private function onFriendsData(_arg_1:String, _arg_2:Boolean, _arg_3:String):void
@@ -97,8 +97,8 @@ package kabam.rotmg.ui.view
                 else
                 {
                     this.view.clearInvitationIndicator();
-                };
-            };
+                }
+            }
         }
 
         private function injectFactories():void
@@ -118,7 +118,7 @@ package kabam.rotmg.ui.view
             {
                 this.socialModel.noInvitationSignal.remove(this.clearFriendsIndicator);
                 this.socialModel.socialDataSignal.remove(this.onFriendsData);
-            };
+            }
         }
 
         private function onGotoNexus():void
@@ -128,7 +128,7 @@ package kabam.rotmg.ui.view
             var _local_1:GoogleAnalytics = StaticInjectorContext.getInjector().getInstance(GoogleAnalytics);
             if (_local_1)
             {
-            };
+            }
             Parameters.data_.needsRandomRealm = false;
             Parameters.save();
         }
@@ -139,7 +139,7 @@ package kabam.rotmg.ui.view
             var _local_1:GoogleAnalytics = StaticInjectorContext.getInjector().getInstance(GoogleAnalytics);
             if (_local_1)
             {
-            };
+            }
             this.hudModel.gameSprite.addChild(new Options(this.hudModel.gameSprite));
         }
 

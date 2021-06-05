@@ -26,7 +26,7 @@ package com.greensock.plugins
             if (("endArray" in _arg_1))
             {
                 _round = _arg_2;
-            };
+            }
         }
 
         public function _init(_arg_1:Array, _arg_2:Array):void
@@ -40,8 +40,8 @@ package com.greensock.plugins
                 {
                     var _local_5:* = _local_4++;
                     _info[_local_5] = new ArrayTweenInfo(_local_3, _a[_local_3], (_arg_2[_local_3] - _a[_local_3]));
-                };
-            };
+                }
+            }
         }
 
         override public function setRatio(_arg_1:Number):void
@@ -55,7 +55,7 @@ package com.greensock.plugins
                 {
                     _local_3 = _info[_local_2];
                     _a[_local_3.i] = (((_local_4 = ((_local_3.c * _arg_1) + _local_3.s)) > 0) ? ((_local_4 + 0.5) >> 0) : ((_local_4 - 0.5) >> 0));
-                };
+                }
             }
             else
             {
@@ -63,8 +63,8 @@ package com.greensock.plugins
                 {
                     _local_3 = _info[_local_2];
                     _a[_local_3.i] = ((_local_3.c * _arg_1) + _local_3.s);
-                };
-            };
+                }
+            }
         }
 
         override public function _onInitTween(_arg_1:Object, _arg_2:*, _arg_3:TweenLite):Boolean
@@ -72,7 +72,7 @@ package com.greensock.plugins
             if (((!(_arg_1 is Array)) || (!(_arg_2 is Array))))
             {
                 return (false);
-            };
+            }
             _init((_arg_1 as Array), _arg_2);
             return (true);
         }

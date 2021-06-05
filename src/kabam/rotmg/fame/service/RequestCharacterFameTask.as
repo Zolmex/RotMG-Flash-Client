@@ -61,7 +61,7 @@ package kabam.rotmg.fame.service
 
         private function getDataPacket():Object
         {
-            var _local_1:Object = {};
+            var _local_1:Object = {}
             _local_1.accountId = this.accountId;
             _local_1.charId = ((this.accountId == "") ? -1 : this.charId);
             return (_local_1);
@@ -76,7 +76,7 @@ package kabam.rotmg.fame.service
             else
             {
                 this.onFameError(_arg_2);
-            };
+            }
         }
 
         private function parseFameData(_arg_1:String):void
@@ -128,7 +128,7 @@ package kabam.rotmg.fame.service
             {
                 this.errorRetry = false;
                 this.openDialog.dispatch(new ErrorDialog(_arg_1));
-            };
+            }
         }
 
 

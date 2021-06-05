@@ -24,7 +24,7 @@ package com.company.util
             if (_arg_2 == 0)
             {
                 _arg_2 = _arg_1.width;
-            };
+            }
             var _local_3:BitmapData = new BitmapData(_arg_1.width, _arg_1.height, true, 0);
             var _local_4:int;
             while (_local_4 < _arg_2)
@@ -34,9 +34,9 @@ package com.company.util
                 {
                     _local_3.setPixel32(((_arg_2 - _local_4) - 1), _local_5, _arg_1.getPixel32(_local_4, _local_5));
                     _local_5++;
-                };
+                }
                 _local_4++;
-            };
+            }
             return (_local_3);
         }
 
@@ -73,11 +73,11 @@ package com.company.util
                     if (_local_5 == 0)
                     {
                         _local_2++;
-                    };
+                    }
                     _local_4++;
-                };
+                }
                 _local_3++;
-            };
+            }
             return (_local_2 / (_arg_1.width * _arg_1.height));
         }
 
@@ -104,12 +104,12 @@ package com.company.util
                         else
                         {
                             _local_2[_local_3]++;
-                        };
-                    };
+                        }
+                    }
                     _local_8++;
-                };
+                }
                 _local_4++;
-            };
+            }
             var _local_5:uint;
             var _local_6:uint;
             for (_local_7 in _local_2)
@@ -120,8 +120,8 @@ package com.company.util
                 {
                     _local_5 = _local_3;
                     _local_6 = _local_9;
-                };
-            };
+                }
+            }
             return (_local_5);
         }
 
@@ -149,7 +149,7 @@ package com.company.util
                 _local_11 = _local_4;
                 _local_4 = _local_5;
                 _local_5 = _local_11;
-            };
+            }
             if (_local_6 > _local_8)
             {
                 _local_11 = _local_6;
@@ -158,7 +158,7 @@ package com.company.util
                 _local_11 = _local_7;
                 _local_7 = _local_9;
                 _local_9 = _local_11;
-            };
+            }
             var _local_12:int = (_local_8 - _local_6);
             var _local_13:int = ((_local_7 > _local_9) ? (_local_7 - _local_9) : (_local_9 - _local_7));
             var _local_14:int = int((-(_local_12 + 1) / 2));
@@ -174,9 +174,9 @@ package com.company.util
                     _local_19 = int(((_local_14 / _local_12) + 1));
                     _local_17 = (_local_17 + (_local_15 * _local_19));
                     _local_14 = (_local_14 - (_local_19 * _local_12));
-                };
+                }
                 _local_18 = 0;
-            };
+            }
             if ((((_local_15 > 0) && (_local_17 < 0)) || ((_local_15 < 0) && (_local_17 >= _local_5))))
             {
                 _local_20 = ((_local_15 > 0) ? (-(_local_17) - 1) : (_local_17 - _local_5));
@@ -185,7 +185,7 @@ package com.company.util
                 _local_18 = (_local_18 + _local_21);
                 _local_14 = (_local_14 + (_local_21 * _local_13));
                 _local_17 = (_local_17 + (_local_20 * _local_15));
-            };
+            }
             while (_local_18 <= _local_16)
             {
                 if ((((_local_15 > 0) && (_local_17 >= _local_5)) || ((_local_15 < 0) && (_local_17 < 0)))) break;
@@ -194,23 +194,23 @@ package com.company.util
                     if ((((_local_17 >= 0) && (_local_17 < _local_5)) && (_arg_1.getPixel(_local_17, _local_18) == 0)))
                     {
                         return (false);
-                    };
+                    }
                 }
                 else
                 {
                     if ((((_local_17 >= 0) && (_local_17 < _local_5)) && (_arg_1.getPixel(_local_18, _local_17) == 0)))
                     {
                         return (false);
-                    };
-                };
+                    }
+                }
                 _local_14 = (_local_14 + _local_13);
                 if (_local_14 >= 0)
                 {
                     _local_17 = (_local_17 + _local_15);
                     _local_14 = (_local_14 - _local_12);
-                };
+                }
                 _local_18++;
-            };
+            }
             return (true);
         }
 

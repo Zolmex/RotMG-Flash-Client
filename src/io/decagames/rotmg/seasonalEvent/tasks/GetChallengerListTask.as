@@ -16,7 +16,7 @@ package io.decagames.rotmg.seasonalEvent.tasks
     import kabam.rotmg.legends.model.Timespan;
     import io.decagames.rotmg.seasonalEvent.signals.SeasonalLeaderBoardErrorSignal;
     import io.decagames.rotmg.seasonalEvent.SeasonalLeaderBoard.SeasonalLeaderBoard;
-    import __AS3__.vec.Vector;
+    
     import io.decagames.rotmg.seasonalEvent.SeasonalLeaderBoard.SeasonalLeaderBoardItemData;
 
     public class GetChallengerListTask extends BaseTask 
@@ -59,8 +59,8 @@ package io.decagames.rotmg.seasonalEvent.tasks
                 if (this.listType == SeasonalLeaderBoard.PLAYER_TAB_LABEL)
                 {
                     this.client.sendRequest(("/fame/challengerAccountLeaderboard?account=" + this.account.getUserName()), this.makeRequestObject());
-                };
-            };
+                }
+            }
         }
 
         private function onComplete(_arg_1:Boolean, _arg_2:*):void
@@ -72,7 +72,7 @@ package io.decagames.rotmg.seasonalEvent.tasks
             else
             {
                 this.onFameListError(_arg_2);
-            };
+            }
         }
 
         private function onFameListError(_arg_1:String):void
@@ -104,8 +104,8 @@ package io.decagames.rotmg.seasonalEvent.tasks
                     this.seasonalEventModel.leaderboardPlayerItemDatas = _local_6;
                     this.seasonalEventModel.leaderboardPlayerRefreshTime = _local_5;
                     this.seasonalEventModel.leaderboardPlayerCreateTime = _local_3;
-                };
-            };
+                }
+            }
             completeTask(true);
         }
 
@@ -114,17 +114,17 @@ package io.decagames.rotmg.seasonalEvent.tasks
             if (_arg_1.totalFame > _arg_2.totalFame)
             {
                 return (-1);
-            };
+            }
             if (_arg_1.totalFame < _arg_2.totalFame)
             {
                 return (1);
-            };
+            }
             return (0);
         }
 
         private function makeRequestObject():Object
         {
-            var _local_1:Object = {};
+            var _local_1:Object = {}
             _local_1.timespan = this.timespan.getId();
             _local_1.accountId = this.player.getAccountId();
             _local_1.charId = this.charId;

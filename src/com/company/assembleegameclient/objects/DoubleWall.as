@@ -5,14 +5,14 @@
 
 package com.company.assembleegameclient.objects
 {
-    import __AS3__.vec.Vector;
+    
     import com.company.assembleegameclient.engine3d.Face3D;
     import flash.display.BitmapData;
     import com.company.util.BitmapUtil;
     import com.company.assembleegameclient.map.Square;
     import flash.display.IGraphicsData;
     import com.company.assembleegameclient.map.Camera;
-    import __AS3__.vec.*;
+    
 
     public class DoubleWall extends GameObject 
     {
@@ -54,11 +54,11 @@ package com.company.assembleegameclient.objects
             if (texture_ == null)
             {
                 return;
-            };
+            }
             if (this.faces_.length == 0)
             {
                 this.rebuild3D();
-            };
+            }
             var _local_4:BitmapData = texture_;
             if (animations_ != null)
             {
@@ -66,8 +66,8 @@ package com.company.assembleegameclient.objects
                 if (_local_6 != null)
                 {
                     _local_4 = _local_6;
-                };
-            };
+                }
+            }
             var _local_5:int;
             while (_local_5 < this.faces_.length)
             {
@@ -83,11 +83,11 @@ package com.company.assembleegameclient.objects
                     if (animations_ != null)
                     {
                         _local_7.setTexture(_local_4);
-                    };
-                };
+                    }
+                }
                 _local_7.draw(_arg_1, _arg_2);
                 _local_5++;
-            };
+            }
             this.topFace_.draw(_arg_1, _arg_2);
         }
 

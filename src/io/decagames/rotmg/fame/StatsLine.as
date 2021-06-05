@@ -18,8 +18,8 @@ package io.decagames.rotmg.fame
     import io.decagames.rotmg.utils.colors.Tint;
     import flash.display.IGraphicsData;
     import com.company.util.GraphicsUtil;
-    import __AS3__.vec.Vector;
-    import __AS3__.vec.*;
+    
+    
 
     public class StatsLine extends Sprite 
     {
@@ -57,7 +57,7 @@ package io.decagames.rotmg.fame
             {
                 _local_6.size = 15;
                 _local_6.color = 0xFFFFFF;
-            };
+            }
             var _local_7:TextFormat = new TextFormat();
             if (_arg_4 == TYPE_BONUS)
             {
@@ -66,7 +66,7 @@ package io.decagames.rotmg.fame
             else
             {
                 _local_7.color = 5544494;
-            };
+            }
             _local_7.font = FontModel.DEFAULT_FONT_NAME;
             _local_7.size = 13;
             _local_7.bold = true;
@@ -82,7 +82,7 @@ package io.decagames.rotmg.fame
                 if (((_arg_2 == "0") || (_arg_2 == "0.00%")))
                 {
                     this.fameValue.defaultTextFormat = _local_6;
-                };
+                }
                 if (_arg_4 == TYPE_BONUS)
                 {
                     this.fameValue.text = ("+" + _arg_2);
@@ -90,7 +90,7 @@ package io.decagames.rotmg.fame
                 else
                 {
                     this.fameValue.text = _arg_2;
-                };
+                }
                 this.fameValue.x = ((this.lineWidth - 4) - this.fameValue.textWidth);
                 addChild(this.fameValue);
                 this.fameValue.y = 2;
@@ -103,7 +103,7 @@ package io.decagames.rotmg.fame
                 addChild(this.lock);
                 this.lock.x = ((this.lineWidth - _local_8) + 5);
                 this.lock.y = -8;
-            };
+            }
             this.setLabelsPosition();
             this._tooltipText = _arg_3;
         }
@@ -121,7 +121,7 @@ package io.decagames.rotmg.fame
             {
                 removeChild(this.lock);
                 this.lock.bitmapData.dispose();
-            };
+            }
         }
 
         public function drawBrightBackground():void

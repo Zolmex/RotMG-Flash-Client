@@ -88,8 +88,8 @@ package kabam.rotmg.mysterybox.components
                 else
                 {
                     this.buyButton.setPrice(this.mbi.priceAmount, this.mbi.priceCurrency);
-                };
-            };
+                }
+            }
             this.buyButton.x = (MysteryBoxSelectModal.modalWidth - 120);
             this.buyButton.y = 16;
             this.buyButton._width = 70;
@@ -97,7 +97,7 @@ package kabam.rotmg.mysterybox.components
             if (((this.mbi.unitsLeft > 0) || (this.mbi.unitsLeft == -1)))
             {
                 this.buyButton.addEventListener(MouseEvent.CLICK, this.onBoxBuy);
-            };
+            }
             addChild(this.buyButton);
             this.iconImage = this.mbi.iconImage;
             this.infoImage = this.mbi.infoImage;
@@ -108,7 +108,7 @@ package kabam.rotmg.mysterybox.components
             else
             {
                 this.addIconImageChild();
-            };
+            }
             if (this.infoImage == null)
             {
                 this.mbi.infoImageLoader.contentLoaderInfo.addEventListener(Event.COMPLETE, this.onInfoLoadComplete);
@@ -116,7 +116,7 @@ package kabam.rotmg.mysterybox.components
             else
             {
                 this.addInfoImageChild();
-            };
+            }
             this.mbi.quantity = this._quantity;
             if (((this.mbi.unitsLeft > 0) || (this.mbi.unitsLeft == -1)))
             {
@@ -130,7 +130,7 @@ package kabam.rotmg.mysterybox.components
                 this.rightNavSprite.y = ((this.buyButton.y + (this.buyButton.height / 2)) - 16);
                 this.rightNavSprite.addEventListener(MouseEvent.CLICK, this.onClick);
                 addChild(this.rightNavSprite);
-            };
+            }
             this.addUnitsLeftText();
             addEventListener(MouseEvent.ROLL_OVER, this.onHover);
             addEventListener(MouseEvent.ROLL_OUT, this.onRemoveHover);
@@ -143,7 +143,7 @@ package kabam.rotmg.mysterybox.components
             if ((((this.mbi.isNew()) || (this.mbi.isOnSale())) && (this.title.textField.numLines == 2)))
             {
                 this.title.y = (this.title.y + 6);
-            };
+            }
         }
 
         public function updateContent():void
@@ -151,7 +151,7 @@ package kabam.rotmg.mysterybox.components
             if (this.left)
             {
                 this.left.setStringBuilder(new LineBuilder().setParams(((this.mbi.unitsLeft + " ") + LineBuilder.getLocalizedStringFromKey("MysteryBoxSelectEntry.left"))));
-            };
+            }
         }
 
         private function addUnitsLeftText():void
@@ -174,11 +174,11 @@ package kabam.rotmg.mysterybox.components
                     else
                     {
                         _local_1 = 0xFF00;
-                    };
-                };
+                    }
+                }
                 this.left = this.getText((this.mbi.unitsLeft + " left"), 20, 46, 11).setColor(_local_1);
                 addChild(this.left);
-            };
+            }
         }
 
         private function markAsSold():void
@@ -189,12 +189,12 @@ package kabam.rotmg.mysterybox.components
             {
                 removeChild(this.leftNavSprite);
                 this.leftNavSprite.removeEventListener(MouseEvent.CLICK, this.onClick);
-            };
+            }
             if (((this.rightNavSprite) && (this.rightNavSprite.parent == this)))
             {
                 removeChild(this.rightNavSprite);
                 this.rightNavSprite.removeEventListener(MouseEvent.CLICK, this.onClick);
-            };
+            }
         }
 
         private function onHover(_arg_1:MouseEvent):void
@@ -223,8 +223,8 @@ package kabam.rotmg.mysterybox.components
                         if (this._quantity < 10)
                         {
                             this._quantity = (this._quantity + 5);
-                        };
-                    };
+                        }
+                    }
                     break;
                 case this.leftNavSprite:
                     if (this._quantity == 10)
@@ -236,10 +236,10 @@ package kabam.rotmg.mysterybox.components
                         if (this._quantity > 1)
                         {
                             this._quantity = (this._quantity - 4);
-                        };
-                    };
+                        }
+                    }
                     break;
-            };
+            }
             this.mbi.quantity = this._quantity;
             if (this.mbi.isOnSale())
             {
@@ -248,7 +248,7 @@ package kabam.rotmg.mysterybox.components
             else
             {
                 this.buyButton.setPrice((this.mbi.priceAmount * this._quantity), this.mbi.priceCurrency);
-            };
+            }
         }
 
         private function addNewText():void
@@ -257,7 +257,7 @@ package kabam.rotmg.mysterybox.components
             {
                 this.newText = this.getText(this.newString, 74, 0).setColor(0xFFDE00);
                 addChild(this.newText);
-            };
+            }
         }
 
         private function onEnterFrame(_arg_1:Event):void
@@ -267,17 +267,17 @@ package kabam.rotmg.mysterybox.components
             {
                 this.sale.scaleX = _local_2;
                 this.sale.scaleY = _local_2;
-            };
+            }
             if (this.newText)
             {
                 this.newText.scaleX = _local_2;
                 this.newText.scaleY = _local_2;
-            };
+            }
             if (((this.mbi.unitsLeft == 0) && (!(this.soldOut))))
             {
                 this.soldOut = true;
                 this.markAsSold();
-            };
+            }
         }
 
         private function addSaleText():void
@@ -289,7 +289,7 @@ package kabam.rotmg.mysterybox.components
                 addChild(this.sale);
                 _local_1 = this.getText(((((LineBuilder.getLocalizedStringFromKey("MysteryBoxSelectEntry.was") + " ") + this.mbi.priceAmount) + " ") + this.mbi.currencyName), this.buyButton.x, (this.buyButton.y - 14), 10).setColor(0xFF0000);
                 addChild(_local_1);
-            };
+            }
         }
 
         private function onImageLoadComplete(_arg_1:Event):void
@@ -317,7 +317,7 @@ package kabam.rotmg.mysterybox.components
             else
             {
                 _local_6.setStringBuilder(new LineBuilder().setParams(_arg_1));
-            };
+            }
             _local_6.setWordWrap(true);
             _local_6.setMultiLine(true);
             _local_6.setAutoSize(TextFieldAutoSize.LEFT);
@@ -333,7 +333,7 @@ package kabam.rotmg.mysterybox.components
             if (this.iconImage == null)
             {
                 return;
-            };
+            }
             this.iconImage.width = 58;
             this.iconImage.height = 58;
             this.iconImage.x = 14;
@@ -344,7 +344,7 @@ package kabam.rotmg.mysterybox.components
             else
             {
                 this.iconImage.y = 1;
-            };
+            }
             addChild(this.iconImage);
         }
 
@@ -355,7 +355,7 @@ package kabam.rotmg.mysterybox.components
             if (this.infoImage == null)
             {
                 return;
-            };
+            }
             var _local_1:int = 8;
             this.infoImage.width = (291 - _local_1);
             this.infoImage.height = ((598 - (_local_1 * 2)) - 2);
@@ -374,7 +374,7 @@ package kabam.rotmg.mysterybox.components
                 _local_3 = [3.0742, -1.8282, -0.246, 0, 50, -0.9258, 2.1718, -0.246, 0, 50, -0.9258, -1.8282, 3.754, 0, 50, 0, 0, 0, 1, 0];
                 _local_4 = new ColorMatrixFilter(_local_3);
                 this.redbar.filters = [_local_4];
-            };
+            }
         }
 
         private function removeInfoImageChild():void
@@ -385,7 +385,7 @@ package kabam.rotmg.mysterybox.components
                 removeChild(this.infoImage);
                 this.descriptionShowing = false;
                 this.redbar.filters = [];
-            };
+            }
         }
 
         private function onBoxBuy(_arg_1:MouseEvent):void
@@ -410,7 +410,7 @@ package kabam.rotmg.mysterybox.components
                         "left":this.mbi.unitsLeft,
                         "box":((this.mbi.unitsLeft == 1) ? LineBuilder.getLocalizedStringFromKey("MysteryBoxError.box") : LineBuilder.getLocalizedStringFromKey("MysteryBoxError.boxes"))
                     });
-                };
+                }
                 _local_4 = new Dialog("MysteryBoxRollModal.purchaseFailedString", _local_3, "MysteryBoxRollModal.okString", null, null);
                 _local_4.addEventListener(Dialog.LEFT_BUTTON, this.onErrorOk);
                 _local_2.dispatch(_local_4);
@@ -424,8 +424,8 @@ package kabam.rotmg.mysterybox.components
                     _local_5.parentSelectModal = MysteryBoxSelectModal(parent.parent);
                     _local_7 = StaticInjectorContext.getInjector().getInstance(OpenDialogSignal);
                     _local_7.dispatch(_local_5);
-                };
-            };
+                }
+            }
         }
 
         private function onErrorOk(_arg_1:Event):void

@@ -43,7 +43,7 @@ package kabam.rotmg.classes.control
             {
                 _local_3 = this.model.getCharacterClass(_local_2.ObjectType);
                 _local_3.isChallenger = (int(_local_2.IsChanllenger) == 1);
-            };
+            }
         }
 
         private function parseMaxLevelsAchieved():void
@@ -55,7 +55,7 @@ package kabam.rotmg.classes.control
             {
                 _local_3 = this.model.getCharacterClass(_local_2.@classType);
                 _local_3.setMaxLevelAchieved(_local_2.@maxLevel);
-            };
+            }
         }
 
         private function parseItemCosts():void
@@ -73,13 +73,13 @@ package kabam.rotmg.classes.control
                     if (((!(Boolean(int(_local_2.@purchasable)))) && (!(_local_3.id == 0))))
                     {
                         _local_3.setState(CharacterSkinState.UNLISTED);
-                    };
+                    }
                 }
                 else
                 {
                     this.logger.warn("Cannot set Character Skin cost: type {0} not found", [_local_2.@type]);
-                };
-            };
+                }
+            }
         }
 
         private function parseOwnership():void
@@ -97,8 +97,8 @@ package kabam.rotmg.classes.control
                 else
                 {
                     this.logger.warn("Cannot set Character Skin ownership: type {0} not found", [_local_2]);
-                };
-            };
+                }
+            }
         }
 
 

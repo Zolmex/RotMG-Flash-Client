@@ -19,7 +19,7 @@ package kabam.rotmg.util.components
             if (_arg_1 == null)
             {
                 return (null);
-            };
+            }
             var _local_2:Sprite = new Sprite();
             var _local_3:int = 8;
             _arg_1.width = (291 - _local_3);

@@ -18,7 +18,7 @@ package io.decagames.rotmg.supportCampaign.tab
     import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
     import flash.text.TextFormatAlign;
     import io.decagames.rotmg.utils.date.TimeSpan;
-    import __AS3__.vec.Vector;
+    
     import io.decagames.rotmg.supportCampaign.data.vo.RankVO;
     import io.decagames.rotmg.supportCampaign.tab.donate.DonatePanel;
 
@@ -61,13 +61,13 @@ package io.decagames.rotmg.supportCampaign.tab
                 {
                     removeChild(this.unlockScreenContainer);
                     this.unlockScreenContainer = null;
-                };
+                }
                 this.drawDonatePanel(_arg_5, _arg_6);
             }
             else
             {
                 this.showUnlockScreen(_arg_3, _arg_4, _arg_5, _arg_6, _arg_7);
-            };
+            }
         }
 
         public function updateStartCountdown(_arg_1:String):void
@@ -76,7 +76,7 @@ package io.decagames.rotmg.supportCampaign.tab
             if (_arg_1 == "")
             {
                 this._campaignTimer.text = "";
-            };
+            }
         }
 
         public function updatePoints(_arg_1:int, _arg_2:int):void
@@ -92,7 +92,7 @@ package io.decagames.rotmg.supportCampaign.tab
                 addChild(this.supportIcon);
                 this._infoButton = new SliceScalingButton(TextureParser.instance.getSliceScalingBitmap("UI", "tier_info"));
                 addChild(this._infoButton);
-            };
+            }
             this.pointsInfo.text = ((_arg_1) ? _arg_1.toString() : "0");
             this.pointsInfo.x = (((this.background.width / 2) - (this.pointsInfo.width / 2)) + 8);
             this.pointsInfo.y = (this.background.y - 8);
@@ -121,14 +121,14 @@ package io.decagames.rotmg.supportCampaign.tab
                 else
                 {
                     _local_3 = (_local_3 + (((((_local_2.days > 9) ? _local_2.days.toString() : ("0" + _local_2.days.toString())) + "d ") + ((_local_2.hours > 9) ? _local_2.hours.toString() : ("0" + _local_2.hours.toString()))) + "h"));
-                };
-            };
+                }
+            }
             if (!this.endDateInfo)
             {
                 this.endDateInfo = new UILabel();
                 DefaultLabelFormat.createLabelFormat(this.endDateInfo, 14, 0xFE9700, TextFormatAlign.CENTER, false);
                 addChild(this.endDateInfo);
-            };
+            }
             this.endDateInfo.text = _local_3;
             this.endDateInfo.wordWrap = true;
             this.endDateInfo.width = (this.background.width - 13);
@@ -144,7 +144,7 @@ package io.decagames.rotmg.supportCampaign.tab
                 this.tiersPreview.x = (this.background.x + 15);
                 this.tiersPreview.y = (this.background.y + 20);
                 addChild(this.tiersPreview);
-            };
+            }
             this.tiersPreview.showTier(_arg_1, _arg_3, _arg_4, _arg_5);
         }
 
@@ -156,7 +156,7 @@ package io.decagames.rotmg.supportCampaign.tab
                 this.progressBar.x = (this.background.x + 15);
                 this.progressBar.y = 285;
                 addChild(this.progressBar);
-            };
+            }
             this.progressBar.show(_arg_1, _arg_3, _arg_4);
         }
 
@@ -213,8 +213,8 @@ package io.decagames.rotmg.supportCampaign.tab
                     this._countdown.width = _arg_5.width;
                     this._countdown.y = 197;
                     this.unlockScreenContainer.addChild(this._countdown);
-                };
-            };
+                }
+            }
             DefaultLabelFormat.createLabelFormat(this._campaignTimer, 14, 0xFE9700, TextFormatAlign.CENTER, false);
             this._campaignTimer.wordWrap = true;
             this._campaignTimer.width = _arg_5.width;

@@ -49,7 +49,7 @@ package com.company.assembleegameclient.objects.particles
             {
                 this.timer.stop();
                 this.particleField.destroy();
-            };
+            }
         }
 
         private function onChargingComplete(_arg_1:TimerEvent):void

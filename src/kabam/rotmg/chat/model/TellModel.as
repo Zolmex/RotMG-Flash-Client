@@ -5,8 +5,8 @@
 
 package kabam.rotmg.chat.model
 {
-    import __AS3__.vec.Vector;
-    import __AS3__.vec.*;
+    
+    
 
     public class TellModel 
     {
@@ -21,7 +21,7 @@ package kabam.rotmg.chat.model
             if (_local_2 != -1)
             {
                 this.pastRecipients.splice(_local_2, 1);
-            };
+            }
             this.pastRecipients.unshift(_arg_1);
         }
 
@@ -31,7 +31,7 @@ package kabam.rotmg.chat.model
             {
                 this.index = ((this.index + 1) % this.pastRecipients.length);
                 return (this.pastRecipients[this.index]);
-            };
+            }
             return ("");
         }
 

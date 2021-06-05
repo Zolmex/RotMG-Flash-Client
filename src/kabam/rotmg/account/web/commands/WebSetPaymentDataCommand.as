@@ -26,7 +26,7 @@ package kabam.rotmg.account.web.commands
                 _local_2 = XML(this.characterListData.KabamPaymentInfo);
                 _local_1.signedRequest = _local_2.signedRequest;
                 _local_1.kabamId = _local_2.naid;
-            };
+            }
         }
 
 

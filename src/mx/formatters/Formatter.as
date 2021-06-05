@@ -37,7 +37,7 @@ package mx.formatters
             if (!_static_resourceManager)
             {
                 _static_resourceManager = ResourceManager.getInstance();
-            };
+            }
             return (_static_resourceManager);
         }
 
@@ -72,7 +72,7 @@ package mx.formatters
                 static_resourceManager.addEventListener(Event.CHANGE, static_resourceManager_changeHandler, false, 0, true);
                 static_resourcesChanged();
                 initialized = true;
-            };
+            }
         }
 
         private static function static_resourcesChanged():void

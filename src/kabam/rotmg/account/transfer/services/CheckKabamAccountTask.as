@@ -43,13 +43,13 @@ package kabam.rotmg.account.transfer.services
             else
             {
                 this.onChangeDone();
-            };
+            }
             completeTask(_arg_1, _arg_2);
         }
 
         private function makeDataPacket():Object
         {
-            var _local_1:Object = {};
+            var _local_1:Object = {}
             _local_1.kabamemail = this.data.currentEmail;
             _local_1.kabampassword = this.data.currentPassword;
             return (_local_1);

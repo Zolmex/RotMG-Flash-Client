@@ -5,7 +5,7 @@
 
 package com.company.assembleegameclient.util
 {
-    import __AS3__.vec.Vector;
+    
     import flash.geom.ColorTransform;
     import com.company.assembleegameclient.objects.ObjectLibrary;
     import flash.display.Sprite;
@@ -40,7 +40,7 @@ package com.company.assembleegameclient.util
             while (((_local_2 < STARS.length) && (_arg_1 >= STARS[_local_2])))
             {
                 _local_2++;
-            };
+            }
             return (_local_2);
         }
 
@@ -53,9 +53,9 @@ package com.company.assembleegameclient.util
                 if (STARS[_local_4] > _local_3)
                 {
                     return (STARS[_local_4]);
-                };
+                }
                 _local_4++;
-            };
+            }
             return (-1);
         }
 
@@ -73,8 +73,8 @@ package com.company.assembleegameclient.util
                 else
                 {
                     _local_4 = (_local_4 + FameUtil.numStars(_local_6.BestFame));
-                };
-            };
+                }
+            }
             _local_4 = (_local_4 + FameUtil.numStars(Math.max(_local_5, _arg_2)));
             return (_local_4);
         }
@@ -101,7 +101,7 @@ package com.company.assembleegameclient.util
                 _local_4.y = ((_local_3.height - _local_4.height) / 2);
                 _local_3.addChild(_local_4);
                 return (_local_3);
-            };
+            }
             return (getStar(_arg_1));
         }
 
@@ -135,11 +135,11 @@ package com.company.assembleegameclient.util
                             if (_arg_1 < (ObjectLibrary.playerChars_.length * 5))
                             {
                                 _local_2.transform.colorTransform = yellowCT;
-                            };
-                        };
-                    };
-                };
-            };
+                            }
+                        }
+                    }
+                }
+            }
             return (_local_2);
         }
 
@@ -163,7 +163,7 @@ package com.company.assembleegameclient.util
                 case 4:
                     _local_2 = "challenger_topPlace";
                     break;
-            };
+            }
             return (TextureParser.instance.getSliceScalingBitmap("UI", _local_2));
         }
 

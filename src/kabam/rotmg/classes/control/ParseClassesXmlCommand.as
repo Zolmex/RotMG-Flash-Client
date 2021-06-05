@@ -13,8 +13,8 @@ package kabam.rotmg.classes.control
     import kabam.rotmg.classes.model.CharacterSkinState;
     import kabam.rotmg.classes.model.CharacterClassUnlock;
     import kabam.rotmg.classes.model.CharacterClassStat;
-    import __AS3__.vec.Vector;
-    import __AS3__.vec.*;
+    
+    
 
     public class ParseClassesXmlCommand 
     {
@@ -32,7 +32,7 @@ package kabam.rotmg.classes.control
             for each (_local_2 in _local_1)
             {
                 this.parseCharacterClass(_local_2);
-            };
+            }
         }
 
         private function parseCharacterClass(_arg_1:XML):void
@@ -65,7 +65,7 @@ package kabam.rotmg.classes.control
             for each (_local_3 in _arg_2.UnlockLevel)
             {
                 _arg_1.unlocks.push(this.parseUnlock(_local_3));
-            };
+            }
             _arg_1.skins.addSkin(this.makeDefaultSkin(_arg_2), true);
         }
 
@@ -101,8 +101,8 @@ package kabam.rotmg.classes.control
                 if (_local_5.text() == _arg_2)
                 {
                     _local_4 = _local_5;
-                };
-            };
+                }
+            }
             _local_6 = new CharacterClassStat();
             _local_6.initial = int(_local_3.toString());
             _local_6.max = _local_3.@max;
@@ -121,7 +121,7 @@ package kabam.rotmg.classes.control
             {
                 _local_4[_local_5] = int(_local_2[_local_5]);
                 _local_5++;
-            };
+            }
             return (_local_4);
         }
 

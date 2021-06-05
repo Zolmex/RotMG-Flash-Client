@@ -7,8 +7,8 @@ package kabam.rotmg.mysterybox.services
 {
     import org.osflash.signals.Signal;
     import kabam.rotmg.mysterybox.model.MysteryBoxInfo;
-    import __AS3__.vec.Vector;
-    import __AS3__.vec.*;
+    
+    
 
     public class MysteryBoxModel 
     {
@@ -35,8 +35,8 @@ package kabam.rotmg.mysterybox.services
                 if (((!(_local_2.slot == 0)) && (this.isBoxValid(_local_2))))
                 {
                     _local_1[(_local_2.slot - 1)] = _local_2;
-                };
-            };
+                }
+            }
             return (_local_1);
         }
 
@@ -53,19 +53,19 @@ package kabam.rotmg.mysterybox.services
                 if (_local_2.id == _arg_1)
                 {
                     return (_local_2);
-                };
-            };
+                }
+            }
             return (null);
         }
 
         public function setMysetryBoxes(_arg_1:Array):void
         {
             var _local_2:MysteryBoxInfo;
-            this.models = {};
+            this.models = {}
             for each (_local_2 in _arg_1)
             {
                 this.models[_local_2.id] = _local_2;
-            };
+            }
             this.updateSignal.dispatch();
             this.initialized = true;
         }

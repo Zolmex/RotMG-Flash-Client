@@ -5,13 +5,13 @@
 
 package io.decagames.rotmg.dailyQuests.model
 {
-    import __AS3__.vec.Vector;
+    
     import io.decagames.rotmg.dailyQuests.view.slot.DailyQuestItemSlot;
     import kabam.rotmg.ui.model.HUDModel;
     import kabam.rotmg.ui.signals.UpdateQuestSignal;
     import kabam.rotmg.constants.GeneralConstants;
     import io.decagames.rotmg.dailyQuests.view.info.DailyQuestInfo;
-    import __AS3__.vec.*;
+    
 
     public class DailyQuestsModel 
     {
@@ -43,7 +43,7 @@ package io.decagames.rotmg.dailyQuests.model
             if (_local_2 != -1)
             {
                 this.slots.splice(_local_2, 1);
-            };
+            }
         }
 
         public function unselectAllSlots(_arg_1:int):void
@@ -54,8 +54,8 @@ package io.decagames.rotmg.dailyQuests.model
                 if (_local_2.itemID != _arg_1)
                 {
                     _local_2.selected = false;
-                };
-            };
+                }
+            }
         }
 
         public function clear():void
@@ -65,7 +65,7 @@ package io.decagames.rotmg.dailyQuests.model
             if (this._questsList)
             {
                 this._questsList.length = 0;
-            };
+            }
         }
 
         public function addQuests(_arg_1:Vector.<DailyQuest>):void
@@ -75,11 +75,11 @@ package io.decagames.rotmg.dailyQuests.model
             if (this._questsList.length > 0)
             {
                 this._hasQuests = true;
-            };
+            }
             for each (_local_2 in this._questsList)
             {
                 this.addQuestToCategoryList(_local_2);
-            };
+            }
             this.updateQuestSignal.dispatch(UpdateQuestSignal.QUEST_LIST_LOADED);
         }
 
@@ -92,7 +92,7 @@ package io.decagames.rotmg.dailyQuests.model
             else
             {
                 this._dailyQuestsList.push(_arg_1);
-            };
+            }
         }
 
         public function markAsCompleted(_arg_1:String):void
@@ -103,8 +103,8 @@ package io.decagames.rotmg.dailyQuests.model
                 if (((_local_2.id == _arg_1) && (!(_local_2.repeatable))))
                 {
                     _local_2.completed = true;
-                };
-            };
+                }
+            }
         }
 
         public function get playerItemsFromInventory():Vector.<int>
@@ -126,8 +126,8 @@ package io.decagames.rotmg.dailyQuests.model
                 if (_local_2.completed)
                 {
                     _local_1++;
-                };
-            };
+                }
+            }
             return (_local_1);
         }
 
@@ -142,7 +142,7 @@ package io.decagames.rotmg.dailyQuests.model
             if (_arg_1.name > _arg_2.name)
             {
                 return (1);
-            };
+            }
             return (-1);
         }
 
@@ -151,11 +151,11 @@ package io.decagames.rotmg.dailyQuests.model
             if (this.categoriesWeight[_arg_1.category] < this.categoriesWeight[_arg_2.category])
             {
                 return (-1);
-            };
+            }
             if (this.categoriesWeight[_arg_1.category] > this.categoriesWeight[_arg_2.category])
             {
                 return (1);
-            };
+            }
             return (this.questsNameSort(_arg_1, _arg_2));
         }
 
@@ -166,11 +166,11 @@ package io.decagames.rotmg.dailyQuests.model
             if (((_local_3) && (!(_local_4))))
             {
                 return (-1);
-            };
+            }
             if (((_local_3) && (_local_4)))
             {
                 return (this.questsNameSort(_arg_1, _arg_2));
-            };
+            }
             return (1);
         }
 
@@ -179,15 +179,15 @@ package io.decagames.rotmg.dailyQuests.model
             if (((_arg_1.completed) && (!(_arg_2.completed))))
             {
                 return (1);
-            };
+            }
             if (((_arg_1.completed) && (_arg_2.completed)))
             {
                 return (this.sortByCategory(_arg_1, _arg_2));
-            };
+            }
             if (((!(_arg_1.completed)) && (!(_arg_2.completed))))
             {
                 return (this.sortByCategory(_arg_1, _arg_2));
-            };
+            }
             return (-1);
         }
 
@@ -199,8 +199,8 @@ package io.decagames.rotmg.dailyQuests.model
                 if (_local_2.id == _arg_1)
                 {
                     return (_local_2);
-                };
-            };
+                }
+            }
             return (null);
         }
 
@@ -209,7 +209,7 @@ package io.decagames.rotmg.dailyQuests.model
             if (this._questsList.length > 0)
             {
                 return (this.questsList[0]);
-            };
+            }
             return (null);
         }
 
@@ -241,18 +241,18 @@ package io.decagames.rotmg.dailyQuests.model
                 if (_arg_1.id == this._eventQuestsList[_local_2].id)
                 {
                     this._eventQuestsList.splice(_local_2, 1);
-                };
+                }
                 _local_2++;
-            };
+            }
             var _local_3:int;
             while (_local_3 < this._questsList.length)
             {
                 if (_arg_1.id == this._questsList[_local_3].id)
                 {
                     this._questsList.splice(_local_3, 1);
-                };
+                }
                 _local_3++;
-            };
+            }
         }
 
         public function get hasQuests():Boolean

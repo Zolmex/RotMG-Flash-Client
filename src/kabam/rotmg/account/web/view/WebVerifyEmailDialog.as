@@ -40,7 +40,7 @@ package kabam.rotmg.account.web.view
             if (!_arg_2)
             {
                 this.makeVerifyEmailText(_arg_1);
-            };
+            }
             this.makeLogoutText();
         }
 
@@ -51,7 +51,7 @@ package kabam.rotmg.account.web.view
                 removeChild(this.verifyEmail);
                 removeChild(this.verifyTitle);
                 removeChild(this.verifySubtitle);
-            };
+            }
             this.verifyTitle = new TextFieldDisplayConcrete().setSize(18).setColor(0xFF00);
             this.verifyTitle.setBold(true);
             this.verifyTitle.setStringBuilder(new LineBuilder().setParams("Account created"));
@@ -82,7 +82,7 @@ package kabam.rotmg.account.web.view
             if (this.logoutText != null)
             {
                 removeChild(this.logoutText);
-            };
+            }
             this.logoutText = new DeprecatedClickableText(14, false, "Log out");
             this.logoutText.addEventListener(MouseEvent.CLICK, this.onLogout);
             addNavigationText(this.logoutText);

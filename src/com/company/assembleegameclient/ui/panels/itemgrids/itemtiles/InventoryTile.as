@@ -54,7 +54,7 @@ package com.company.assembleegameclient.ui.panels.itemgrids.itemtiles
             if (_local_2)
             {
                 this.hotKeyBMP.visible = (itemSprite.itemId <= 0);
-            };
+            }
             return (_local_2);
         }
 

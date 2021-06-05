@@ -29,7 +29,7 @@ package io.decagames.rotmg.dailyQuests.view.list
             if (((_arg_1 == "") || (_arg_2 == -1)))
             {
                 return;
-            };
+            }
             if (_arg_1 != this.view.id)
             {
                 if (((!(_arg_2 == 7)) && (!(this.view.category == 7))))
@@ -41,9 +41,9 @@ package io.decagames.rotmg.dailyQuests.view.list
                     if (_arg_2 == this.view.category)
                     {
                         this.view.isSelected = false;
-                    };
-                };
-            };
+                    }
+                }
+            }
         }
 
         override public function destroy():void

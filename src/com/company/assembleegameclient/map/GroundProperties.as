@@ -6,11 +6,9 @@
 package com.company.assembleegameclient.map
 {
     import com.company.assembleegameclient.objects.TextureData;
-    import __AS3__.vec.Vector;
     import flash.display.BitmapData;
     import com.company.assembleegameclient.objects.TextureDataConcrete;
     import com.company.util.BitmapUtil;
-    import __AS3__.vec.*;
 
     public class GroundProperties 
     {
@@ -49,37 +47,37 @@ package com.company.assembleegameclient.map
             if (_arg_1.hasOwnProperty("DisplayId"))
             {
                 this.displayId_ = String(_arg_1.DisplayId);
-            };
+            }
             this.noWalk_ = _arg_1.hasOwnProperty("NoWalk");
             if (_arg_1.hasOwnProperty("MinDamage"))
             {
                 this.minDamage_ = int(_arg_1.MinDamage);
-            };
+            }
             if (_arg_1.hasOwnProperty("MaxDamage"))
             {
                 this.maxDamage_ = int(_arg_1.MaxDamage);
-            };
+            }
             this.push_ = _arg_1.hasOwnProperty("Push");
             if (_arg_1.hasOwnProperty("Animate"))
             {
                 this.animate_.parseXML(XML(_arg_1.Animate));
-            };
+            }
             if (_arg_1.hasOwnProperty("BlendPriority"))
             {
                 this.blendPriority_ = int(_arg_1.BlendPriority);
-            };
+            }
             if (_arg_1.hasOwnProperty("CompositePriority"))
             {
                 this.compositePriority_ = int(_arg_1.CompositePriority);
-            };
+            }
             if (_arg_1.hasOwnProperty("Speed"))
             {
                 this.speed_ = Number(_arg_1.Speed);
-            };
+            }
             if (_arg_1.hasOwnProperty("SlideAmount"))
             {
                 this.slideAmount_ = Number(_arg_1.SlideAmount);
-            };
+            }
             this.xOffset_ = ((_arg_1.hasOwnProperty("XOffset")) ? Number(_arg_1.XOffset) : 0);
             this.yOffset_ = ((_arg_1.hasOwnProperty("YOffset")) ? Number(_arg_1.YOffset) : 0);
             this.push_ = _arg_1.hasOwnProperty("Push");
@@ -93,12 +91,12 @@ package com.company.assembleegameclient.map
                 if (_arg_1.hasOwnProperty("Corner"))
                 {
                     this.cornerTD_ = new TextureDataConcrete(XML(_arg_1.Corner));
-                };
+                }
                 if (_arg_1.hasOwnProperty("InnerCorner"))
                 {
                     this.innerCornerTD_ = new TextureDataConcrete(XML(_arg_1.InnerCorner));
-                };
-            };
+                }
+            }
             this.sameTypeEdgeMode_ = _arg_1.hasOwnProperty("SameTypeEdgeMode");
             if (_arg_1.hasOwnProperty("Top"))
             {
@@ -107,8 +105,8 @@ package com.company.assembleegameclient.map
                 if (_arg_1.hasOwnProperty("TopAnimate"))
                 {
                     this.topAnimate_.parseXML(XML(_arg_1.TopAnimate));
-                };
-            };
+                }
+            }
         }
 
         public function getEdges():Vector.<BitmapData>
@@ -116,7 +114,7 @@ package com.company.assembleegameclient.map
             if (((!(this.hasEdge_)) || (!(this.edges_ == null))))
             {
                 return (this.edges_);
-            };
+            }
             this.edges_ = new Vector.<BitmapData>(9);
             this.edges_[3] = this.edgeTD_.getTexture(0);
             this.edges_[1] = BitmapUtil.rotateBitmapData(this.edges_[3], 1);
@@ -128,7 +126,7 @@ package com.company.assembleegameclient.map
                 this.edges_[2] = BitmapUtil.rotateBitmapData(this.edges_[0], 1);
                 this.edges_[8] = BitmapUtil.rotateBitmapData(this.edges_[0], 2);
                 this.edges_[6] = BitmapUtil.rotateBitmapData(this.edges_[0], 3);
-            };
+            }
             return (this.edges_);
         }
 
@@ -137,7 +135,7 @@ package com.company.assembleegameclient.map
             if (((this.innerCornerTD_ == null) || (!(this.innerCorners_ == null))))
             {
                 return (this.innerCorners_);
-            };
+            }
             this.innerCorners_ = this.edges_.concat();
             this.innerCorners_[0] = this.innerCornerTD_.getTexture(0);
             this.innerCorners_[2] = BitmapUtil.rotateBitmapData(this.innerCorners_[0], 1);

@@ -17,13 +17,13 @@ package com.company.assembleegameclient.objects
     import kabam.rotmg.game.model.AddSpeechBalloonVO;
     import com.gskinner.motion.GTween;
     import com.gskinner.motion.easing.Sine;
-    import __AS3__.vec.Vector;
+    
     import com.company.assembleegameclient.ui.tooltip.EquipmentToolTip;
     import com.company.assembleegameclient.constants.InventoryOwnerTypes;
     import com.company.assembleegameclient.ui.tooltip.ToolTip;
     import com.company.ui.BaseSimpleText;
     import com.company.assembleegameclient.map.Camera;
-    import __AS3__.vec.*;
+    
 
     public class Merchant extends SellableObject implements IInteractiveObject 
     {
@@ -78,7 +78,7 @@ package com.company.assembleegameclient.objects
             if (!super.addTo(_arg_1, _arg_2, _arg_3))
             {
                 return (false);
-            };
+            }
             _arg_1.merchLookup_[new IntPoint(x_, y_)] = this;
             return (true);
         }
@@ -89,7 +89,7 @@ package com.company.assembleegameclient.objects
             if (map_.merchLookup_[_local_1] == this)
             {
                 map_.merchLookup_[_local_1] = null;
-            };
+            }
             super.removeFromMap();
         }
 
@@ -121,8 +121,8 @@ package com.company.assembleegameclient.objects
                         else
                         {
                             _local_2 = new LineBuilder().setParams("Merchant.goingInNMinutes", {"minutes":this.minsLeft_});
-                        };
-                    };
+                        }
+                    }
                     _local_3 = 5973542;
                     _local_4 = 16549442;
                     _local_5 = 16549442;
@@ -141,7 +141,7 @@ package com.company.assembleegameclient.objects
                     break;
                 default:
                     return (null);
-            };
+            }
             _local_2.setStringMap(this.stringMap);
             return (new AddSpeechBalloonVO(this, _local_2.getString(), "", false, false, _local_3, 1, _local_4, 1, _local_5, 6, true, false));
         }
@@ -157,14 +157,14 @@ package com.company.assembleegameclient.objects
                     _local_5 = new GTween(this, (0.5 * T), {"size_":150}, {"ease":Sine.easeOut});
                     _local_5.nextTween = new GTween(this, (0.5 * T), {"size_":100}, {"ease":Sine.easeIn});
                     _local_5.nextTween.paused = true;
-                };
+                }
                 this.firstUpdate_ = false;
-            };
+            }
             this.untilNextMessage_ = (this.untilNextMessage_ - _arg_2);
             if (this.untilNextMessage_ > 0)
             {
                 return (true);
-            };
+            }
             this.untilNextMessage_ = 5000;
             var _local_3:Vector.<int> = new Vector.<int>();
             if (this.minsLeft_ == 2147483647)
@@ -176,20 +176,20 @@ package com.company.assembleegameclient.objects
                 if (((this.minsLeft_ >= 0) && (this.minsLeft_ <= 5)))
                 {
                     _local_3.push(MINS_LEFT_MESSAGE);
-                };
-            };
+                }
+            }
             if (((this.count_ >= 1) && (this.count_ <= 2)))
             {
                 _local_3.push(ITEMS_LEFT_MESSAGE);
-            };
+            }
             if (this.discount_ > 0)
             {
                 _local_3.push(DISCOUNT_MESSAGE);
-            };
+            }
             if (_local_3.length == 0)
             {
                 return (true);
-            };
+            }
             this.messageIndex_ = (++this.messageIndex_ % _local_3.length);
             var _local_4:int = _local_3[this.messageIndex_];
             this.addSpeechBalloon.dispatch(this.getSpeechBalloon(_local_4));
@@ -230,7 +230,7 @@ package com.company.assembleegameclient.objects
                 _local_3.text = String(_local_2.Doses);
                 _local_3.updateMetrics();
                 _local_1.draw(_local_3, DOSE_MATRIX);
-            };
+            }
             if (_local_2.hasOwnProperty("Quantity"))
             {
                 _local_1 = _local_1.clone();
@@ -238,7 +238,7 @@ package com.company.assembleegameclient.objects
                 _local_4.text = String(_local_2.Quantity);
                 _local_4.updateMetrics();
                 _local_1.draw(_local_4, DOSE_MATRIX);
-            };
+            }
             return (_local_1);
         }
 
@@ -248,11 +248,11 @@ package com.company.assembleegameclient.objects
             if (_local_2 == null)
             {
                 return (_arg_1);
-            };
+            }
             if (((_local_2.Activate == "Dye") && (_local_2.hasOwnProperty("Tex1"))))
             {
                 return (int(_local_2.Tex1));
-            };
+            }
             return (_arg_1);
         }
 
@@ -262,11 +262,11 @@ package com.company.assembleegameclient.objects
             if (_local_2 == null)
             {
                 return (_arg_1);
-            };
+            }
             if (((_local_2.Activate == "Dye") && (_local_2.hasOwnProperty("Tex2"))))
             {
                 return (int(_local_2.Tex2));
-            };
+            }
             return (_arg_1);
         }
 
@@ -275,13 +275,13 @@ package com.company.assembleegameclient.objects
             if (((this.alpha_ == 1) && (size_ == 100)))
             {
                 return (this.merchandiseTexture_);
-            };
+            }
             var _local_3:BitmapData = ObjectLibrary.getRedrawnTextureFromType(this.merchandiseType_, size_, false, false);
             if (this.alpha_ != 1)
             {
                 this.ct_.alphaMultiplier = this.alpha_;
                 _local_3.colorTransform(_local_3.rect, this.ct_);
-            };
+            }
             return (_local_3);
         }
 

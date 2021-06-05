@@ -24,7 +24,7 @@ package kabam.lib.signals
             if (this.log)
             {
                 this.data.push(_args);
-            };
+            }
             super.dispatch.apply(this, _args);
         }
 
@@ -34,7 +34,7 @@ package kabam.lib.signals
             while (this.data.length > 0)
             {
                 _arg_1.apply(this, this.data.shift());
-            };
+            }
             this.log = false;
             return (_local_2);
         }
@@ -50,11 +50,11 @@ package kabam.lib.signals
             {
                 _local_2 = super.addOnce(_arg_1);
                 this.log = false;
-            };
+            }
             while (this.data.length > 0)
             {
                 this.data.shift();
-            };
+            }
             return (_local_2);
         }
 

@@ -42,8 +42,8 @@ package io.decagames.rotmg.pets.data.yard
                 if (_arg_1 == _local_3.value)
                 {
                     _local_2 = _local_3;
-                };
-            };
+                }
+            }
             return (_local_2);
         }
 
@@ -56,8 +56,8 @@ package io.decagames.rotmg.pets.data.yard
                 if (_arg_1 == _local_3.ordinal)
                 {
                     _local_2 = _local_3;
-                };
-            };
+                }
+            }
             return (_local_2);
         }
 

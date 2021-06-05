@@ -56,12 +56,12 @@ package com.company.assembleegameclient.account.ui
             else
             {
                 this.sendNameToServer();
-            };
+            }
         }
 
         private function sendNameToServer():void
         {
-            var _local_1:Object = {"name":this.name};
+            var _local_1:Object = {"name":this.name}
             MoreObjectUtil.addToObject(_local_1, this.account.getCredentials());
             this.client.complete.addOnce(this.onComplete);
             this.client.sendRequest("/account/setName", _local_1);
@@ -77,7 +77,7 @@ package com.company.assembleegameclient.account.ui
             else
             {
                 this.onNameChoseError(_arg_2);
-            };
+            }
         }
 
         private function onNameChoseDone():void
@@ -85,7 +85,7 @@ package com.company.assembleegameclient.account.ui
             if (this.playerModel != null)
             {
                 this.playerModel.setName(this.name);
-            };
+            }
             this.nameChanged.dispatch(this.name);
             this.closeDialogs.dispatch();
         }

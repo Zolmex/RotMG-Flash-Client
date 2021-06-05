@@ -24,11 +24,11 @@ package kabam.lib.math.easing
             if (((_arg_1 == 0) || (_arg_1 == 1)))
             {
                 return (_arg_1);
-            };
+            }
             if ((_arg_1 = (_arg_1 * 2)) < 1)
             {
                 return (0.5 * Math.pow(2, (10 * (_arg_1 - 1))));
-            };
+            }
             return (0.5 * (-(Math.pow(2, (-10 * (_arg_1 - 1)))) + 2));
         }
 

@@ -127,8 +127,8 @@ package io.decagames.rotmg.dailyQuests.view
                     this.createBuyQuestRefreshToolTip(this.noMoreRefreshToolTip());
                     this.view.refreshButton.clickSignal.remove(this.onRefreshClick);
                     this.setRefreshButtonState(true);
-                };
-            };
+                }
+            }
         }
 
         private function setRefreshButtonState(_arg_1:Boolean):void
@@ -151,7 +151,7 @@ package io.decagames.rotmg.dailyQuests.view
             {
                 this.view.refreshButton.visible = true;
                 this.setRefreshQuestsState();
-            };
+            }
         }
 
         private function onRefreshClick(_arg_1:BaseButton):void
@@ -166,7 +166,7 @@ package io.decagames.rotmg.dailyQuests.view
                 this.view.hideFade();
                 this.view.showFade(0x151515);
                 this.showPopupSignal.dispatch(this.dailyQuestRefreshPopup);
-            };
+            }
         }
 
         private function setToolTipTitle(_arg_1:String, _arg_2:String):void
@@ -245,7 +245,7 @@ package io.decagames.rotmg.dailyQuests.view
                     if (!this.dailyQuestsModel.currentQuest.repeatable)
                     {
                         this.dailyQuestsModel.currentQuest.completed = true;
-                    };
+                    }
                     completedQuests = (completedQuests + 1);
                     this.view.hideFade();
                     this.view.showFade(0x151515, (completedQuests == this.dailyQuestsModel.numberOfActiveQuests));
@@ -257,14 +257,14 @@ package io.decagames.rotmg.dailyQuests.view
                     this.showPopupSignal.dispatch(new ErrorModal(300, "Quest Error", message.message));
                     this.dailyQuestsModel.removeQuestFromlist(this.dailyQuestsModel.getQuestById(this.dailyQuestsModel.currentQuest.id));
                     this.onRedeemClose();
-                };
+                }
             }
             catch(error:Error)
             {
                 view.hideFade();
                 showPopupSignal.dispatch(new ErrorModal(300, "Quest Error", error.message));
                 onRedeemClose();
-            };
+            }
         }
 
         private function onLockScreen():void

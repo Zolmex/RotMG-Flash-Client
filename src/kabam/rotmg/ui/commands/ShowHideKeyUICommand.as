@@ -39,8 +39,8 @@ package kabam.rotmg.ui.commands
                     this.contextView.removeChild(this.view);
                     this.view = null;
                     this.hudModel.keysView = null;
-                };
-            };
+                }
+            }
         }
 
 

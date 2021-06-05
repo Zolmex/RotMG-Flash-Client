@@ -21,7 +21,7 @@ package io.decagames.rotmg.pets.windows.yard.list
     import io.decagames.rotmg.seasonalEvent.data.SeasonalEventModel;
     import com.company.assembleegameclient.ui.tooltip.TextToolTip;
     import kabam.rotmg.tooltips.HoverTooltipDelegate;
-    import __AS3__.vec.Vector;
+    
     import io.decagames.rotmg.pets.components.petItem.PetItem;
     import io.decagames.rotmg.seasonalEvent.popups.SeasonalEventErrorPopup;
     import io.decagames.rotmg.pets.data.rarity.PetRarityEnum;
@@ -30,7 +30,7 @@ package io.decagames.rotmg.pets.windows.yard.list
     import flash.events.MouseEvent;
     import io.decagames.rotmg.pets.data.vo.PetVO;
     import kabam.rotmg.messaging.impl.EvolvePetInfo;
-    import __AS3__.vec.*;
+    
 
     public class PetYardListMediator extends Mediator 
     {
@@ -90,7 +90,7 @@ package io.decagames.rotmg.pets.windows.yard.list
                 this.hoverTooltipDelegate.setHideToolTipsSignal(this.hideTooltipSignal);
                 this.hoverTooltipDelegate.setDisplayObject(this.view.upgradeButton);
                 this.hoverTooltipDelegate.tooltip = this.toolTip;
-            };
+            }
             this.release.add(this.onRelease);
         }
 
@@ -102,7 +102,7 @@ package io.decagames.rotmg.pets.windows.yard.list
             if (this.view.upgradeButton)
             {
                 this.view.upgradeButton.clickSignal.add(this.upgradeYard);
-            };
+            }
             this.release.remove(this.onRelease);
         }
 
@@ -115,7 +115,7 @@ package io.decagames.rotmg.pets.windows.yard.list
             else
             {
                 this.showDialog.dispatch(new PetYardUpgradeDialog(PetRarityEnum.selectByOrdinal(this.model.getPetYardType()), this.model.getPetYardUpgradeGoldPrice(), this.model.getPetYardUpgradeFamePrice()));
-            };
+            }
         }
 
         private function showSeasonalErrorPopUp(_arg_1:String):void
@@ -138,7 +138,7 @@ package io.decagames.rotmg.pets.windows.yard.list
             for each (_local_2 in this.petsList)
             {
                 _local_2.selected = (_local_2.getPetVO() == _arg_1);
-            };
+            }
         }
 
         private function onPetSelected(_arg_1:MouseEvent):void
@@ -154,7 +154,7 @@ package io.decagames.rotmg.pets.windows.yard.list
             for each (_local_1 in this.petsList)
             {
                 _local_1.removeEventListener(MouseEvent.CLICK, this.onPetSelected);
-            };
+            }
             this.petsList = new Vector.<PetItem>();
         }
 
@@ -173,7 +173,7 @@ package io.decagames.rotmg.pets.windows.yard.list
                 _local_3.addEventListener(MouseEvent.CLICK, this.onPetSelected);
                 this.petsList.push(_local_3);
                 this.view.addPet(_local_3);
-            };
+            }
         }
 
         private function sortByPower(_arg_1:PetVO, _arg_2:PetVO):int
@@ -181,7 +181,7 @@ package io.decagames.rotmg.pets.windows.yard.list
             if (_arg_1.totalAbilitiesLevel() < _arg_2.totalAbilitiesLevel())
             {
                 return (1);
-            };
+            }
             return (-1);
         }
 
@@ -190,11 +190,11 @@ package io.decagames.rotmg.pets.windows.yard.list
             if (_arg_1.family == _arg_2.family)
             {
                 return (this.sortByPower(_arg_1, _arg_2));
-            };
+            }
             if (_arg_1.family > _arg_2.family)
             {
                 return (1);
-            };
+            }
             return (-1);
         }
 

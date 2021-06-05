@@ -5,7 +5,6 @@
 
 package com.company.assembleegameclient.game
 {
-    import __AS3__.vec.Vector;
     import com.company.assembleegameclient.map.Map;
     import flash.filters.ColorMatrixFilter;
     import com.company.util.MoreColorUtil;
@@ -160,7 +159,7 @@ package com.company.assembleegameclient.game
             if (this.chatPlayerMenu != null)
             {
                 this.removeChatPlayerMenu();
-            };
+            }
             mui_.onMouseDown(_arg_1);
         }
 
@@ -194,10 +193,10 @@ package com.company.assembleegameclient.game
                     if (((_arg_4.length > 0) && (((_arg_4.charAt(0) == "#") || (_arg_4.charAt(0) == "*")) || (_arg_4.charAt(0) == "@"))))
                     {
                         return;
-                    };
+                    }
                     this.chatPlayerMenu.initDifferentServer(this, _arg_4, _arg_5);
-                };
-            };
+                }
+            }
             addChild(this.chatPlayerMenu);
             this.chatPlayerMenu.x = _arg_2;
             this.chatPlayerMenu.y = (_arg_3 - this.chatPlayerMenu.height);
@@ -209,7 +208,7 @@ package com.company.assembleegameclient.game
             {
                 removeChild(this.chatPlayerMenu);
                 this.chatPlayerMenu = null;
-            };
+            }
         }
 
         override public function applyMapInfo(_arg_1:MapInfo):void
@@ -236,13 +235,13 @@ package com.company.assembleegameclient.game
             if (this.evalIsNotInCombatMapArea())
             {
                 this.showSafeAreaDisplays();
-            };
+            }
             this.showHideKeyUISignal.dispatch((this.mapName == "Davy Jones' Locker"));
             if (this.mapName == "Arena")
             {
                 this.showTimer();
                 this.showWaveCounter();
-            };
+            }
             var _local_1:Account = StaticInjectorContext.getInjector().getInstance(Account);
             this.googleAnalytics = StaticInjectorContext.getInjector().getInstance(GoogleAnalytics);
             this.isNexus_ = (this.mapName == Map.NEXUS);
@@ -258,10 +257,10 @@ package com.company.assembleegameclient.game
                     else
                     {
                         this.addToQueueSignal.dispatch(PopupNamesConfig.PACKAGES_OFFER_POPUP, this.showPackage, 1, null);
-                    };
+                    }
                     this.flushQueueSignal.dispatch();
-                };
-            };
+                }
+            }
             if (((this.isNexus_) || (this.mapName == Map.DAILY_QUEST_ROOM)))
             {
                 this.creditDisplay_ = new CreditDisplay(this, true, true);
@@ -269,7 +268,7 @@ package com.company.assembleegameclient.game
             else
             {
                 this.creditDisplay_ = new CreditDisplay(this);
-            };
+            }
             this.creditDisplay_.x = 594;
             addChild(this.creditDisplay_);
             if (((!(this.evalIsNotInCombatMapArea())) && (this.canShowRealmQuestDisplay(this.mapName))))
@@ -283,13 +282,13 @@ package com.company.assembleegameclient.game
             else
             {
                 this.questModel.previousRealm = "";
-            };
+            }
             var _local_2:AppEngineClient = StaticInjectorContext.getInjector().getInstance(AppEngineClient);
             var _local_3:Object = {
                 "game_net_user_id":_local_1.gameNetworkUserId(),
                 "game_net":_local_1.gameNetwork(),
                 "play_platform":_local_1.playPlatform()
-            };
+            }
             MoreObjectUtil.addToObject(_local_3, _local_1.getCredentials());
             if (((((!(this.mapName == "Kitchen")) && (!(this.mapName == "Tutorial"))) && (!(this.mapName == "Nexus Explanation"))) && (Parameters.data_.watchForTutorialExit == true)))
             {
@@ -297,12 +296,12 @@ package com.company.assembleegameclient.game
                 this.callTracking('rotmg.Marketing.track("tutorialComplete")');
                 _local_3["fteStepCompleted"] = 9900;
                 _local_2.sendRequest("/log/logFteStep", _local_3);
-            };
+            }
             if (this.mapName == "Kitchen")
             {
                 _local_3["fteStepCompleted"] = 200;
                 _local_2.sendRequest("/log/logFteStep", _local_3);
-            };
+            }
             if (this.mapName == "Tutorial")
             {
                 if (Parameters.data_.needsTutorial == true)
@@ -311,7 +310,7 @@ package com.company.assembleegameclient.game
                     this.callTracking('rotmg.Marketing.track("install")');
                     _local_3["fteStepCompleted"] = 100;
                     _local_2.sendRequest("/log/logFteStep", _local_3);
-                };
+                }
                 this.startTutorial();
             }
             else
@@ -320,12 +319,12 @@ package com.company.assembleegameclient.game
                 {
                     _local_4 = StaticInjectorContext.getInjector().getInstance(ShowProTipSignal);
                     ((_local_4) && (_local_4.dispatch()));
-                };
-            };
+                }
+            }
             if (this.mapName == Map.DAILY_QUEST_ROOM)
             {
                 gsc_.questFetch();
-            };
+            }
             map.setHitAreaProps(map.width, map.height);
             Parameters.save();
             hidePreloader();
@@ -343,7 +342,7 @@ package com.company.assembleegameclient.game
                 {
                     this.questModel.hasOryxBeenKilled = false;
                     this.questModel.resetRequirementsStates();
-                };
+                }
                 _local_2 = true;
             }
             else
@@ -353,8 +352,8 @@ package com.company.assembleegameclient.game
                     this.questModel.requirementsStates[QuestModel.REMAINING_HEROES_REQUIREMENT] = true;
                     this.questModel.remainingHeroes = 0;
                     _local_2 = true;
-                };
-            };
+                }
+            }
             return (_local_2);
         }
 
@@ -369,7 +368,7 @@ package com.company.assembleegameclient.game
             else
             {
                 this.showShopDisplay();
-            };
+            }
             this.showChallengerLeaderBoardButton();
             this.showGiftStatusDisplay();
             this.showNewsUpdate();
@@ -386,7 +385,7 @@ package com.company.assembleegameclient.game
             else
             {
                 this.displaysPosY = 2;
-            };
+            }
         }
 
         public function positionDynamicDisplays():void
@@ -397,20 +396,20 @@ package com.company.assembleegameclient.game
             {
                 this.giftStatusDisplay.y = _local_2;
                 _local_2 = (_local_2 + DISPLAY_AREA_Y_SPACE);
-            };
+            }
             if (((this.newsModalButton) && ((NewsModalButton.showsHasUpdate) || (_local_1.hasValidModalNews()))))
             {
                 this.newsModalButton.y = _local_2;
                 _local_2 = (_local_2 + DISPLAY_AREA_Y_SPACE);
-            };
+            }
             if (((this.specialOfferButton) && (this.specialOfferButton.isSpecialOfferAvailable)))
             {
                 this.specialOfferButton.y = _local_2;
-            };
+            }
             if (((this.newsTicker) && (this.newsTicker.visible)))
             {
                 this.newsTicker.y = _local_2;
-            };
+            }
         }
 
         private function showTimer():void
@@ -481,12 +480,12 @@ package com.company.assembleegameclient.game
                 if (this.newsModalButton != null)
                 {
                     removeChild(this.newsModalButton);
-                };
+                }
                 _local_4.x = 6;
                 this.newsModalButton = _local_4;
                 addChild(this.newsModalButton);
                 this.positionDynamicDisplays();
-            };
+            }
         }
 
         public function refreshNewsUpdateButton():void
@@ -511,14 +510,14 @@ package com.company.assembleegameclient.game
                 this.specialOfferButton.x = 6;
                 addChild(this.specialOfferButton);
                 this.positionDynamicDisplays();
-            };
+            }
         }
 
         public function showPackageButtonIfSafe():void
         {
             if (this.evalIsNotInCombatMapArea())
             {
-            };
+            }
         }
 
         private function addAndPositionPackage(_arg_1:DisplayObject):void
@@ -556,14 +555,14 @@ package com.company.assembleegameclient.game
             if (ExternalInterface.available == false)
             {
                 return;
-            };
+            }
             try
             {
                 ExternalInterface.call(_arg_1);
             }
             catch(err:Error)
             {
-            };
+            }
         }
 
         private function startTutorial():void
@@ -580,7 +579,7 @@ package com.company.assembleegameclient.game
             if (((!(map)) || (!(map.player_))))
             {
                 return;
-            };
+            }
             var _local_1:Player = map.player_;
             var _local_2:Number = GeneralConstants.MAXIMUM_INTERACTION_DISTANCE;
             var _local_3:IInteractiveObject;
@@ -598,10 +597,10 @@ package com.company.assembleegameclient.game
                         {
                             _local_2 = _local_4;
                             _local_3 = _local_8;
-                        };
-                    };
-                };
-            };
+                        }
+                    }
+                }
+            }
             this.mapModel.currentInteractiveTarget = _local_3;
         }
 
@@ -617,7 +616,7 @@ package com.company.assembleegameclient.game
                 stage.addEventListener(MoneyChangedEvent.MONEY_CHANGED, this.onMoneyChanged);
                 stage.addEventListener(Event.ENTER_FRAME, this.onEnterFrame);
                 LoopedProcess.addProcess(new LoopedCallback(100, this.updateNearestInteractive));
-            };
+            }
         }
 
         public function disconnect():void
@@ -636,7 +635,7 @@ package com.company.assembleegameclient.game
                 TextureRedrawer.clearCache();
                 Projectile.dispose();
                 gsc_.disconnect();
-            };
+            }
         }
 
         private function onMoneyChanged(_arg_1:Event):void
@@ -658,7 +657,7 @@ package com.company.assembleegameclient.game
             {
                 closed.dispatch();
                 return;
-            };
+            }
             LoopedProcess.runProcesses(_local_2);
             this.frameTimeSum_ = (this.frameTimeSum_ + _local_3);
             this.frameTimeCount_ = (this.frameTimeCount_ + 1);
@@ -667,7 +666,7 @@ package com.company.assembleegameclient.game
                 _local_7 = int(Math.round(((1000 * this.frameTimeCount_) / this.frameTimeSum_)));
                 this.frameTimeCount_ = 0;
                 this.frameTimeSum_ = 0;
-            };
+            }
             var _local_4:int = getTimer();
             map.update(_local_2, _local_3);
             this.monitor.dispatch("Map.update", (getTimer() - _local_4));
@@ -677,7 +676,7 @@ package com.company.assembleegameclient.game
             {
                 camera_.configureCamera(this.focus, ((_local_5) ? _local_5.isHallucinating() : false));
                 map.draw(camera_, _local_2);
-            };
+            }
             if (_local_5 != null)
             {
                 _local_5.isNotInCombatMapArea = this.evalIsNotInCombatMapArea();
@@ -687,7 +686,7 @@ package com.company.assembleegameclient.game
                 {
                     this.rankText_.draw(_local_5.numStars_, _local_5.starsBg_);
                     this.guildText_.draw(_local_5.guildName_, _local_5.guildRank_);
-                };
+                }
                 if (_local_5.isPaused())
                 {
                     map.filters = [PAUSED_FILTER];
@@ -707,10 +706,10 @@ package com.company.assembleegameclient.game
                         map.mouseChildren = true;
                         hudView.mouseEnabled = true;
                         hudView.mouseChildren = true;
-                    };
-                };
+                    }
+                }
                 moveRecords_.addRecord(_local_2, _local_5.x_, _local_5.y_);
-            };
+            }
             lastUpdate_ = _local_2;
             var _local_6:int = (getTimer() - _local_2);
             this.monitor.dispatch("GameSprite.loop", _local_6);

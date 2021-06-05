@@ -92,7 +92,7 @@ package io.decagames.rotmg.pets.panels
             if (this.isPanelPetSameAsActivePet())
             {
                 return (PetsConstants.FOLLOWING);
-            };
+            }
             return (PetsConstants.INTERACTING);
         }
 
@@ -101,7 +101,7 @@ package io.decagames.rotmg.pets.panels
             if (((_arg_1.keyCode == Parameters.data_.interact) && (this.view.stage.focus == null)))
             {
                 this.followPet();
-            };
+            }
         }
 
         protected function onButtonClick(_arg_1:MouseEvent):void
@@ -118,7 +118,7 @@ package io.decagames.rotmg.pets.panels
             else
             {
                 this.activatePet.dispatch(this.view.petVO.getID());
-            };
+            }
         }
 
         private function onAddToolTip(_arg_1:ToolTip):void

@@ -6,8 +6,8 @@
 package kabam.lib.console.model
 {
     import org.osflash.signals.Signal;
-    import __AS3__.vec.Vector;
-    import __AS3__.vec.*;
+    
+    
     import kabam.lib.console.model.*;
 
     internal final class ActionHash 
@@ -18,8 +18,8 @@ package kabam.lib.console.model
 
         public function ActionHash()
         {
-            this.signalMap = {};
-            this.descriptionMap = {};
+            this.signalMap = {}
+            this.descriptionMap = {}
         }
 
         public function register(_arg_1:String, _arg_2:String, _arg_3:Signal):void
@@ -35,7 +35,7 @@ package kabam.lib.console.model
             for (_local_2 in this.signalMap)
             {
                 _local_1.push(((_local_2 + " - ") + this.descriptionMap[_local_2]));
-            };
+            }
             return (_local_1);
         }
 
@@ -45,13 +45,13 @@ package kabam.lib.console.model
             if (_local_2.length == 0)
             {
                 return;
-            };
+            }
             var _local_3:String = _local_2.shift();
             var _local_4:Signal = this.signalMap[_local_3];
             if (!_local_4)
             {
                 return;
-            };
+            }
             if (_local_2.length > 0)
             {
                 _local_4.dispatch.apply(this, _local_2.join(" ").split(","));
@@ -59,7 +59,7 @@ package kabam.lib.console.model
             else
             {
                 _local_4.dispatch.apply(this);
-            };
+            }
         }
 
         public function has(_arg_1:String):Boolean

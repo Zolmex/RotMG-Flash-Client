@@ -44,7 +44,7 @@ package kabam.rotmg.promotions.view
             if (!this.view.isSpecialOfferAvailable)
             {
                 this.view.destroy();
-            };
+            }
         }
 
         override public function destroy():void
@@ -62,7 +62,7 @@ package kabam.rotmg.promotions.view
             else
             {
                 this.showBeginnersPackage.dispatch();
-            };
+            }
         }
 
         private function onMarkedAsPurchased():void

@@ -55,8 +55,8 @@ package kabam.rotmg.account.kongregate.services
                 if (_arg_2 == ALREADY_REGISTERED)
                 {
                     this.alreadyRegistered.dispatch(this.data);
-                };
-            };
+                }
+            }
             completeTask(_arg_1, _arg_2);
         }
 

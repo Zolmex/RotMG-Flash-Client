@@ -65,11 +65,11 @@ package io.decagames.rotmg.pets.components.petInfoSlot
             else
             {
                 this.petPortrait.petVO = _arg_1;
-            };
+            }
             if (this.isRarityLabelHidden)
             {
                 this.petPortrait.hideRarityLabel();
-            };
+            }
             if (((this.showStats) && (_arg_2)))
             {
                 this.statsGrid = ((this._useFeedStats) ? new PetFeedStatsGrid(FEED_STATS_WIDTH, _arg_1) : new PetStatsGrid(STATS_WIDTH, _arg_1));
@@ -77,7 +77,7 @@ package io.decagames.rotmg.pets.components.petInfoSlot
                 this.statsGrid.y = ((this._useFeedStats) ? 132 : 130);
                 _local_3 = ((this._useFeedStats) ? FEED_STATS_WIDTH : STATS_WIDTH);
                 this.statsGrid.x = Math.round(((this._slotWidth - _local_3) / 2));
-            };
+            }
         }
 
         public function get slotWidth():int

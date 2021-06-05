@@ -56,7 +56,7 @@ package io.decagames.rotmg.shop.mysteryBox
                 this.hoverTooltipDelegate.setHideToolTipsSignal(this.hideTooltipSignal);
                 this.hoverTooltipDelegate.setDisplayObject(this.view.clickMask);
                 this.hoverTooltipDelegate.tooltip = this.toolTip;
-            };
+            }
         }
 
         private function changeAmountHandler(_arg_1:int):void
@@ -68,7 +68,7 @@ package io.decagames.rotmg.shop.mysteryBox
             else
             {
                 this.view.buyButton.price = (_arg_1 * int(this.view.boxInfo.priceAmount));
-            };
+            }
         }
 
         private function onBuyHandler(_arg_1:BaseButton):void
@@ -77,7 +77,7 @@ package io.decagames.rotmg.shop.mysteryBox
             if (_local_2)
             {
                 this.showPopupSignal.dispatch(new MysteryBoxRollModal(MysteryBoxInfo(this.view.boxInfo), this.view.spinner.value));
-            };
+            }
         }
 
         private function onBoxClickHandler(_arg_1:MouseEvent):void
@@ -101,7 +101,7 @@ package io.decagames.rotmg.shop.mysteryBox
                 this.toolTip = null;
                 this.hoverTooltipDelegate.removeDisplayObject();
                 this.hoverTooltipDelegate = null;
-            };
+            }
         }
 
 

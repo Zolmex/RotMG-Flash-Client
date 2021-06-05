@@ -59,17 +59,17 @@ package kabam.rotmg.appengine.impl
             {
                 if (_arg_2 == null)
                 {
-                    _arg_2 = {};
+                    _arg_2 = {}
                     _arg_2.gameClientVersion = Parameters.CLIENT_VERSION;
                 }
                 else
                 {
                     _arg_2.gameClientVersion = Parameters.CLIENT_VERSION;
-                };
+                }
             }
             catch(e:Error)
             {
-            };
+            }
             if (((!(_arg_2 == null)) && (_arg_2.guid)))
             {
                 this.loader.sendRequest(this.makeURL(((_arg_1 + "?g=") + escape(_arg_2.guid))), _arg_2);
@@ -77,7 +77,7 @@ package kabam.rotmg.appengine.impl
             else
             {
                 this.loader.sendRequest(this.makeURL(_arg_1), _arg_2);
-            };
+            }
         }
 
         private function makeURL(_arg_1:String):String
@@ -85,7 +85,7 @@ package kabam.rotmg.appengine.impl
             if (_arg_1.charAt(0) != "/")
             {
                 _arg_1 = ("/" + _arg_1);
-            };
+            }
             return (this.setup.getAppEngineUrl() + _arg_1);
         }
 

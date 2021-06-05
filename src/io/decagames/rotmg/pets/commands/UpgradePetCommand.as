@@ -43,12 +43,12 @@ package io.decagames.rotmg.pets.commands
                 if (!this.account.isRegistered())
                 {
                     this.showPromptToRegister(PET_YARD_REGISTER_STRING);
-                };
+                }
                 _local_1 = (this.messages.require(GameServerConnection.PETUPGRADEREQUEST) as PetUpgradeRequest);
                 _local_1.petTransType = 1;
                 _local_1.objectId = UpgradePetYardRequestVO(this.vo).objectID;
                 _local_1.paymentTransType = UpgradePetYardRequestVO(this.vo).paymentTransType;
-            };
+            }
             if ((this.vo is FeedPetRequestVO))
             {
                 _local_1 = (this.messages.require(GameServerConnection.PETUPGRADEREQUEST) as PetUpgradeRequest);
@@ -56,7 +56,7 @@ package io.decagames.rotmg.pets.commands
                 _local_1.PIDOne = FeedPetRequestVO(this.vo).petInstanceId;
                 _local_1.slotsObject = FeedPetRequestVO(this.vo).slotObjects;
                 _local_1.paymentTransType = FeedPetRequestVO(this.vo).paymentTransType;
-            };
+            }
             if ((this.vo is FusePetRequestVO))
             {
                 _local_1 = (this.messages.require(GameServerConnection.PETUPGRADEREQUEST) as PetUpgradeRequest);
@@ -64,11 +64,11 @@ package io.decagames.rotmg.pets.commands
                 _local_1.PIDOne = FusePetRequestVO(this.vo).petInstanceIdOne;
                 _local_1.PIDTwo = FusePetRequestVO(this.vo).petInstanceIdTwo;
                 _local_1.paymentTransType = FusePetRequestVO(this.vo).paymentTransType;
-            };
+            }
             if (_local_1)
             {
                 this.server.sendMessage(_local_1);
-            };
+            }
         }
 
         private function showPromptToRegister(_arg_1:String):void

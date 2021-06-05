@@ -60,12 +60,12 @@ package io.decagames.rotmg.supportCampaign.tab.donate
                 if (this._ratio == 0)
                 {
                     this.disableElements();
-                };
+                }
             }
             else
             {
                 this.createCompleteTextField();
-            };
+            }
         }
 
         private function disableElements():void
@@ -184,7 +184,7 @@ package io.decagames.rotmg.supportCampaign.tab.donate
             if (!this.completeTextfield)
             {
                 this.createCompleteTextField();
-            };
+            }
             this._donationContent.visible = false;
             this.completeTextfield.text = _arg_1;
             this.completeTextfield.x = Math.round(((this._mainContent.width - this.completeTextfield.width) / 2));
@@ -203,7 +203,7 @@ package io.decagames.rotmg.supportCampaign.tab.donate
             if (((_local_2.toString().length > SupporterCampaignModel.DONATE_MAX_INPUT_CHARS) || (_local_2 <= 0)))
             {
                 return;
-            };
+            }
             this._amountTextfield.text = _local_2.toString();
             this.updatePoints((_local_2 * this._ratio));
         }

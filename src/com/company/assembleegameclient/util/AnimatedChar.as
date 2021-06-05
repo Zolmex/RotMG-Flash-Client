@@ -5,14 +5,14 @@
 
 package com.company.assembleegameclient.util
 {
-    import __AS3__.vec.Vector;
+    
     import flash.utils.Dictionary;
     import flash.display.BitmapData;
     import flash.geom.Point;
     import flash.geom.Rectangle;
     import com.company.util.Trig;
     import com.company.assembleegameclient.map.Camera;
-    import __AS3__.vec.*;
+    
 
     public class AnimatedChar 
     {
@@ -54,8 +54,8 @@ package com.company.assembleegameclient.util
                     if (_local_6.images_.length >= 21)
                     {
                         this.dict_[UP] = this.loadDir(14, false, true, _local_6);
-                    };
-                };
+                    }
+                }
             }
             else
             {
@@ -69,10 +69,10 @@ package com.company.assembleegameclient.util
                         if (_local_6.images_.length >= 21)
                         {
                             this.dict_[UP] = this.loadDir(14, false, true, _local_6);
-                        };
-                    };
-                };
-            };
+                        }
+                    }
+                }
+            }
         }
 
         public function getFirstDirImage():BitmapData
@@ -83,25 +83,25 @@ package com.company.assembleegameclient.util
             if (_local_3.length > 0)
             {
                 _local_1.copyPixels(_local_3[0].image_, _local_3[0].image_.rect, new Point(0, 0));
-            };
+            }
             _local_3 = _local_2[WALK];
             if (_local_3.length > 0)
             {
                 _local_1.copyPixels(_local_3[0].image_, _local_3[0].image_.rect, new Point(this.width_, 0));
-            };
+            }
             if (_local_3.length > 1)
             {
                 _local_1.copyPixels(_local_3[1].image_, _local_3[1].image_.rect, new Point((this.width_ * 2), 0));
-            };
+            }
             _local_3 = _local_2[ATTACK];
             if (_local_3.length > 0)
             {
                 _local_1.copyPixels(_local_3[0].image_, _local_3[0].image_.rect, new Point((this.width_ * 4), 0));
-            };
+            }
             if (_local_3.length > 1)
             {
                 _local_1.copyPixels(_local_3[1].image_, new Rectangle(this.width_, 0, (this.width_ * 2), this.height_), new Point((this.width_ * 5), 0));
-            };
+            }
             return (_local_1);
         }
 
@@ -129,8 +129,8 @@ package com.company.assembleegameclient.util
                 if (_local_6 == null)
                 {
                     _local_6 = this.dict_[_local_5[2]];
-                };
-            };
+                }
+            }
             var _local_7:Vector.<MaskedImage> = _local_6[_arg_2];
             _arg_3 = Math.max(0, Math.min(0.99999, _arg_3));
             var _local_8:int = (_arg_3 * _local_7.length);
@@ -149,8 +149,8 @@ package com.company.assembleegameclient.util
                 if (_local_8 == null)
                 {
                     _local_8 = this.dict_[_local_7[2]];
-                };
-            };
+                }
+            }
             var _local_9:Vector.<MaskedImage> = _local_8[_arg_3];
             _arg_4 = Math.max(0, Math.min(0.99999, _arg_4));
             var _local_10:int = (_arg_4 * _local_9.length);
@@ -169,17 +169,17 @@ package com.company.assembleegameclient.util
             if (_local_8.amountTransparent() == 1)
             {
                 _local_8 = null;
-            };
+            }
             var _local_9:MaskedImage = _arg_4.images_[(_arg_1 + 4)];
             var _local_10:MaskedImage = _arg_4.images_[(_arg_1 + 5)];
             if (_local_9.amountTransparent() == 1)
             {
                 _local_9 = null;
-            };
+            }
             if (_local_10.amountTransparent() == 1)
             {
                 _local_10 = null;
-            };
+            }
             var _local_11:MaskedImage = _arg_4.images_[(_arg_1 + 6)];
             if (((!(_local_10 == null)) && (!(_local_11.amountTransparent() == 1))))
             {
@@ -190,17 +190,17 @@ package com.company.assembleegameclient.util
                 if (((!(_local_10.mask_ == null)) || (!(_local_11.mask_ == null))))
                 {
                     _local_16 = new BitmapDataSpy((this.width_ * 3), this.height_, true, 0);
-                };
+                }
                 if (_local_10.mask_ != null)
                 {
                     _local_16.copyPixels(_local_10.mask_, new Rectangle(0, 0, this.width_, this.height_), new Point(this.width_, 0));
-                };
+                }
                 if (_local_11.mask_ != null)
                 {
                     _local_16.copyPixels(_local_11.mask_, new Rectangle(0, 0, this.width_, this.height_), new Point((this.width_ * 2), 0));
-                };
+                }
                 _local_10 = new MaskedImage(_local_15, _local_16);
-            };
+            }
             var _local_12:Vector.<MaskedImage> = new Vector.<MaskedImage>();
             _local_12.push(((_arg_2) ? _local_6.mirror() : _local_6));
             _local_5[STAND] = _local_12;
@@ -219,8 +219,8 @@ package com.company.assembleegameclient.util
                 else
                 {
                     _local_13.push(((_arg_2) ? _local_6.mirror() : _local_6));
-                };
-            };
+                }
+            }
             _local_5[WALK] = _local_13;
             if (((_local_9 == null) && (_local_10 == null)))
             {
@@ -232,12 +232,12 @@ package com.company.assembleegameclient.util
                 if (_local_9 != null)
                 {
                     _local_14.push(((_arg_2) ? _local_9.mirror() : _local_9));
-                };
+                }
                 if (_local_10 != null)
                 {
                     _local_14.push(((_arg_2) ? _local_10.mirror() : _local_10));
-                };
-            };
+                }
+            }
             _local_5[ATTACK] = _local_14;
             return (_local_5);
         }

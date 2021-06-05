@@ -7,7 +7,7 @@ package io.decagames.rotmg.pets.components.petStatsGrid
 {
     import io.decagames.rotmg.ui.gird.UIGrid;
     import io.decagames.rotmg.pets.data.vo.IPetVO;
-    import __AS3__.vec.Vector;
+    
     import io.decagames.rotmg.ui.PetFeedProgressBar;
     import flash.display.Sprite;
     import io.decagames.rotmg.ui.labels.UILabel;
@@ -16,7 +16,7 @@ package io.decagames.rotmg.pets.components.petStatsGrid
     import io.decagames.rotmg.pets.data.vo.AbilityVO;
     import io.decagames.rotmg.pets.data.ability.AbilitiesUtil;
     import flash.text.TextFormatAlign;
-    import __AS3__.vec.*;
+    
 
     public class PetFeedStatsGrid extends UIGrid 
     {
@@ -50,7 +50,7 @@ package io.decagames.rotmg.pets.components.petStatsGrid
             {
                 this._maxLevel = this._petVO.maxAbilityPower;
                 this.refreshAbilities(this._petVO);
-            };
+            }
         }
 
         private function createPlusLabels():void
@@ -69,7 +69,7 @@ package io.decagames.rotmg.pets.components.petStatsGrid
                 addChild(_local_2);
                 this._plusLabels.push(_local_2);
                 _local_1++;
-            };
+            }
         }
 
         private function createLabels():void
@@ -96,7 +96,7 @@ package io.decagames.rotmg.pets.components.petStatsGrid
             {
                 this.renderAbilitySimulation(_local_3, _local_2);
                 _local_2++;
-            };
+            }
         }
 
         private function refreshAbilities(_arg_1:IPetVO):void
@@ -114,7 +114,7 @@ package io.decagames.rotmg.pets.components.petStatsGrid
                 this._plusLabels[_local_2].visible = false;
                 this.renderAbility(_local_3, _local_2);
                 _local_2++;
-            };
+            }
         }
 
         private function renderAbilitySimulation(_arg_1:AbilityVO, _arg_2:int):void
@@ -133,8 +133,8 @@ package io.decagames.rotmg.pets.components.petStatsGrid
                 else
                 {
                     this._plusLabels[_arg_2].visible = false;
-                };
-            };
+                }
+            }
         }
 
         private function renderAbility(_arg_1:AbilityVO, _arg_2:int):void
@@ -149,8 +149,8 @@ package io.decagames.rotmg.pets.components.petStatsGrid
                     if (((!(_local_3.maxValue == _local_4)) || (!(_local_3.value == _arg_1.points))))
                     {
                         this.updateProgressBarValues(_local_3, _arg_1, _local_4);
-                    };
-                };
+                    }
+                }
             }
             else
             {
@@ -163,7 +163,7 @@ package io.decagames.rotmg.pets.components.petStatsGrid
                 _local_3.simulatedValueTextFormat = DefaultLabelFormat.createTextFormat(12, 6538829, TextFormatAlign.RIGHT, true);
                 this.abilityBars.push(_local_3);
                 addGridElement(_local_3);
-            };
+            }
             if (!_arg_1.getUnlocked())
             {
                 _local_3.alpha = 0.4;
@@ -174,9 +174,9 @@ package io.decagames.rotmg.pets.components.petStatsGrid
                 {
                     _local_3.maxValue = _local_4;
                     _local_3.value = _arg_1.points;
-                };
+                }
                 _local_3.alpha = 1;
-            };
+            }
         }
 
         private function updateProgressBarValues(_arg_1:PetFeedProgressBar, _arg_2:AbilityVO, _arg_3:int):void
@@ -194,12 +194,12 @@ package io.decagames.rotmg.pets.components.petStatsGrid
                 this.abilityBars.length = 0;
                 this._labelContainer.visible = false;
                 clearGrid();
-            };
+            }
             this._petVO = _arg_1;
             if (this._petVO != null)
             {
                 this.refreshAbilities(_arg_1);
-            };
+            }
         }
 
         public function get petVO():IPetVO

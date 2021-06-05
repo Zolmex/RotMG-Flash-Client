@@ -9,7 +9,7 @@ package com.company.assembleegameclient.ui.panels.itemgrids.itemtiles
     import com.company.assembleegameclient.ui.panels.itemgrids.ItemGrid;
     import flash.display.GraphicsSolidFill;
     import flash.display.GraphicsPath;
-    import __AS3__.vec.Vector;
+    
     import flash.display.IGraphicsData;
     import flash.display.Shape;
     import io.decagames.rotmg.ui.labels.UILabel;
@@ -20,7 +20,7 @@ package com.company.assembleegameclient.ui.panels.itemgrids.itemtiles
     import com.company.assembleegameclient.util.TierUtil;
     import com.company.assembleegameclient.util.FilterUtil;
     import com.company.assembleegameclient.parameters.Parameters;
-    import __AS3__.vec.*;
+    
 
     public class ItemTile extends Sprite 
     {
@@ -80,11 +80,11 @@ package com.company.assembleegameclient.ui.panels.itemgrids.itemtiles
             if (_arg_1 == this.itemSprite.itemId)
             {
                 return (false);
-            };
+            }
             if (this.blockingItemUpdates)
             {
                 return (true);
-            };
+            }
             this.itemSprite.setType(_arg_1);
             this.setTierTag();
             this.updateUseability(this.ownerGrid.curPlayer);
@@ -97,7 +97,7 @@ package com.company.assembleegameclient.ui.panels.itemgrids.itemtiles
             {
                 this.itemContainer = new Sprite();
                 addChild(this.itemContainer);
-            };
+            }
             this.itemSprite = _arg_1;
             this.itemSprite.x = (WIDTH / 2);
             this.itemSprite.y = (HEIGHT / 2);
@@ -114,7 +114,7 @@ package com.company.assembleegameclient.ui.panels.itemgrids.itemtiles
             else
             {
                 this.restrictedUseIndicator.visible = false;
-            };
+            }
         }
 
         public function canHoldItem(_arg_1:int):Boolean
@@ -150,14 +150,14 @@ package com.company.assembleegameclient.ui.panels.itemgrids.itemtiles
                     {
                         this.tagContainer = new Sprite();
                         addChild(this.tagContainer);
-                    };
+                    }
                     this.tierText.filters = FilterUtil.getTextOutlineFilter();
                     this.tierText.x = (WIDTH - this.tierText.width);
                     this.tierText.y = ((HEIGHT / 2) + 5);
                     this.toggleTierTag(Parameters.data_.showTierTag);
                     this.tagContainer.addChild(this.tierText);
-                };
-            };
+                }
+            }
         }
 
         private function clearTierTag():void
@@ -166,7 +166,7 @@ package com.company.assembleegameclient.ui.panels.itemgrids.itemtiles
             {
                 this.tagContainer.removeChild(this.tierText);
                 this.tierText = null;
-            };
+            }
         }
 
         public function toggleTierTag(_arg_1:Boolean):void
@@ -174,7 +174,7 @@ package com.company.assembleegameclient.ui.panels.itemgrids.itemtiles
             if (this.tierText)
             {
                 this.tierText.visible = _arg_1;
-            };
+            }
         }
 
         protected function toggleDragState(_arg_1:Boolean):void
@@ -182,11 +182,11 @@ package com.company.assembleegameclient.ui.panels.itemgrids.itemtiles
             if (((this.tierText) && (Parameters.data_.showTierTag)))
             {
                 this.tierText.visible = _arg_1;
-            };
+            }
             if (((!(this.isItemUsable)) && (!(_arg_1))))
             {
                 this.restrictedUseIndicator.visible = _arg_1;
-            };
+            }
         }
 
 

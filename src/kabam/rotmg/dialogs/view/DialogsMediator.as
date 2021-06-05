@@ -68,8 +68,8 @@ package kabam.rotmg.dialogs.view
                 else
                 {
                     _local_1.signal.dispatch();
-                };
-            };
+                }
+            }
         }
 
         private function onAddToQueue(_arg_1:String, _arg_2:Signal, _arg_3:int, _arg_4:Object):void

@@ -6,7 +6,7 @@
 package kabam.rotmg.news.view
 {
     import flash.display.Sprite;
-    import __AS3__.vec.Vector;
+    
     import kabam.rotmg.news.model.NewsCellVO;
 
     public class NewsView extends Sprite 

@@ -69,11 +69,11 @@ package io.decagames.rotmg.seasonalEvent.SeasonalLeaderBoard
             if (this._top20Grid)
             {
                 this._top20Grid.clearGrid();
-            };
+            }
             if (this._yourPositionGrid)
             {
                 this._yourPositionGrid.clearGrid();
-            };
+            }
         }
 
         public function setErrorMessage(_arg_1:String):void

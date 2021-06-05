@@ -7,10 +7,10 @@ package io.decagames.rotmg.shop.packages
 {
     import io.decagames.rotmg.ui.popups.modal.TextModal;
     import io.decagames.rotmg.ui.buttons.BaseButton;
-    import __AS3__.vec.Vector;
+    
     import io.decagames.rotmg.ui.popups.modal.buttons.ClosePopupButton;
     import kabam.rotmg.packages.model.PackageInfo;
-    import __AS3__.vec.*;
+    
 
     public class PurchaseCompleteModal extends TextModal 
     {
@@ -31,7 +31,7 @@ package io.decagames.rotmg.shop.packages
                 case PackageInfo.PURCHASE_TYPE_MIXED:
                     _local_3 = "Your purchase has been validated! You will find your items in the Gift Chest.";
                     break;
-            };
+            }
             super(300, "Package Purchased", _local_3, _local_2);
         }
 

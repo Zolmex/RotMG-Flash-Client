@@ -5,13 +5,13 @@
 
 package kabam.rotmg.messaging.impl.incoming
 {
-    import __AS3__.vec.Vector;
+    
     import kabam.rotmg.messaging.impl.data.GroundTileData;
     import kabam.rotmg.messaging.impl.data.ObjectData;
     import kabam.rotmg.messaging.impl.data.CompressedInt;
     import com.company.assembleegameclient.util.FreeList;
     import flash.utils.IDataInput;
-    import __AS3__.vec.*;
+    
 
     public class Update extends IncomingMessage 
     {
@@ -34,18 +34,18 @@ package kabam.rotmg.messaging.impl.incoming
             {
                 FreeList.deleteObject(this.tiles_[_local_2]);
                 _local_2++;
-            };
+            }
             this.tiles_.length = Math.min(_local_3, this.tiles_.length);
             while (this.tiles_.length < _local_3)
             {
                 this.tiles_.push((FreeList.newObject(GroundTileData) as GroundTileData));
-            };
+            }
             _local_2 = 0;
             while (_local_2 < _local_3)
             {
                 this.tiles_[_local_2].parseFromInput(_arg_1);
                 _local_2++;
-            };
+            }
             this.newObjs_.length = 0;
             _local_3 = CompressedInt.Read(_arg_1);
             _local_2 = _local_3;
@@ -53,18 +53,18 @@ package kabam.rotmg.messaging.impl.incoming
             {
                 FreeList.deleteObject(this.newObjs_[_local_2]);
                 _local_2++;
-            };
+            }
             this.newObjs_.length = Math.min(_local_3, this.newObjs_.length);
             while (this.newObjs_.length < _local_3)
             {
                 this.newObjs_.push((FreeList.newObject(ObjectData) as ObjectData));
-            };
+            }
             _local_2 = 0;
             while (_local_2 < _local_3)
             {
                 this.newObjs_[_local_2].parseFromInput(_arg_1);
                 _local_2++;
-            };
+            }
             this.drops_.length = 0;
             var _local_4:int = CompressedInt.Read(_arg_1);
             _local_2 = 0;
@@ -72,7 +72,7 @@ package kabam.rotmg.messaging.impl.incoming
             {
                 this.drops_.push(CompressedInt.Read(_arg_1));
                 _local_2++;
-            };
+            }
         }
 
         override public function toString():String

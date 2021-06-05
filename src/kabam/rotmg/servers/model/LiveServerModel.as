@@ -6,14 +6,14 @@
 package kabam.rotmg.servers.model
 {
     import kabam.rotmg.servers.api.ServerModel;
-    import __AS3__.vec.Vector;
+    
     import kabam.rotmg.servers.api.Server;
     import kabam.rotmg.core.model.PlayerModel;
     import io.decagames.rotmg.seasonalEvent.data.SeasonalEventModel;
     import com.company.assembleegameclient.appengine.SavedCharacter;
     import kabam.rotmg.servers.api.LatLong;
     import com.company.assembleegameclient.parameters.Parameters;
-    import __AS3__.vec.*;
+    
 
     public class LiveServerModel implements ServerModel 
     {
@@ -35,7 +35,7 @@ package kabam.rotmg.servers.model
             for each (_local_2 in _arg_1)
             {
                 this.servers.push(_local_2);
-            };
+            }
             this._descendingFlag = false;
             this.servers.sort(this.compareServerName);
         }
@@ -60,7 +60,7 @@ package kabam.rotmg.servers.model
             else
             {
                 _local_2 = Boolean(this.seasonalEventModel.isChallenger);
-            };
+            }
             var _local_4:int = ((_local_2) ? Server.CHALLENGER_SERVER : Server.NORMAL_SERVER);
             this.setAvailableServers(_local_4);
             var _local_5:LatLong = this.model.getMyPos();
@@ -75,7 +75,7 @@ package kabam.rotmg.servers.model
                     if (_local_10.name == _local_9)
                     {
                         return (_local_10);
-                    };
+                    }
                     _local_11 = _local_10.priority();
                     _local_12 = LatLong.distance(_local_5, _local_10.latLong);
                     if (((_local_11 < _local_8) || ((_local_11 == _local_8) && (_local_12 < _local_7))))
@@ -90,11 +90,11 @@ package kabam.rotmg.servers.model
                         else
                         {
                             Parameters.data_.bestServer = _local_6.name;
-                        };
+                        }
                         Parameters.save();
-                    };
-                };
-            };
+                    }
+                }
+            }
             return (_local_6);
         }
 
@@ -106,8 +106,8 @@ package kabam.rotmg.servers.model
                 if (_local_2.address == _arg_1)
                 {
                     return (_local_2.name);
-                };
-            };
+                }
+            }
             return ("");
         }
 
@@ -121,11 +121,11 @@ package kabam.rotmg.servers.model
             if (_arg_1.name < _arg_2.name)
             {
                 return ((this._descendingFlag) ? -1 : 1);
-            };
+            }
             if (_arg_1.name > _arg_2.name)
             {
                 return ((this._descendingFlag) ? 1 : -1);
-            };
+            }
             return (0);
         }
 
@@ -140,7 +140,7 @@ package kabam.rotmg.servers.model
             else
             {
                 this.availableServers.length = 0;
-            };
+            }
             if (_arg_1 != 0)
             {
                 for each (_local_2 in this.servers)
@@ -148,8 +148,8 @@ package kabam.rotmg.servers.model
                     if (_local_2.name.charAt(0) == "C")
                     {
                         this.availableServers.push(_local_2);
-                    };
-                };
+                    }
+                }
             }
             else
             {
@@ -158,9 +158,9 @@ package kabam.rotmg.servers.model
                     if (_local_3.name.charAt(0) != "C")
                     {
                         this.availableServers.push(_local_3);
-                    };
-                };
-            };
+                    }
+                }
+            }
         }
 
         public function getAvailableServers():Vector.<Server>

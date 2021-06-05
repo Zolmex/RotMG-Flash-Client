@@ -55,7 +55,7 @@ package io.decagames.rotmg.pets.components.selectedPetSkinInfo
             if (this.currentPet)
             {
                 this.currentPet.updated.add(this.currentPetUpdate);
-            };
+            }
         }
 
         private function currentPetUpdate():void
@@ -86,9 +86,9 @@ package io.decagames.rotmg.pets.components.selectedPetSkinInfo
                     else
                     {
                         this.setAction(SelectedPetButtonType.NONE, _arg_1);
-                    };
-                };
-            };
+                    }
+                }
+            }
         }
 
         private function onPetSelected(_arg_1:PetVO):void
@@ -102,20 +102,20 @@ package io.decagames.rotmg.pets.components.selectedPetSkinInfo
             if (this.view.goldActionButton)
             {
                 this.view.goldActionButton.clickSignal.remove(this.onActionButtonClickHandler);
-            };
+            }
             if (this.view.fameActionButton)
             {
                 this.view.fameActionButton.clickSignal.remove(this.onActionButtonClickHandler);
-            };
+            }
             this.view.actionButtonType = _arg_1;
             if (this.view.goldActionButton)
             {
                 this.view.goldActionButton.clickSignal.add(this.onActionButtonClickHandler);
-            };
+            }
             if (this.view.fameActionButton)
             {
                 this.view.fameActionButton.clickSignal.add(this.onActionButtonClickHandler);
-            };
+            }
         }
 
         private function get currentPet():PetVO
@@ -129,11 +129,11 @@ package io.decagames.rotmg.pets.components.selectedPetSkinInfo
             if (_local_1 != null)
             {
                 return (_local_1.credits_);
-            };
+            }
             if (this.playerModel != null)
             {
                 return (this.playerModel.getCredits());
-            };
+            }
             return (0);
         }
 
@@ -143,11 +143,11 @@ package io.decagames.rotmg.pets.components.selectedPetSkinInfo
             if (_local_1 != null)
             {
                 return (_local_1.fame_);
-            };
+            }
             if (this.playerModel != null)
             {
                 return (this.playerModel.getFame());
-            };
+            }
             return (0);
         }
 
@@ -162,9 +162,9 @@ package io.decagames.rotmg.pets.components.selectedPetSkinInfo
                     {
                         this.showPopupSignal.dispatch(new NotEnoughResources(300, _local_2.currency));
                         return;
-                    };
+                    }
                     break;
-            };
+            }
             this.hudModel.gameSprite.gsc_.changePetSkin(this.currentPet.getID(), this.selectedSkin.skinType, _local_2.currency);
             this.onSkinSelected(null);
         }
@@ -175,7 +175,7 @@ package io.decagames.rotmg.pets.components.selectedPetSkinInfo
             if (this.currentPet)
             {
                 this.currentPet.updated.remove(this.currentPetUpdate);
-            };
+            }
             this.selectPetSignal.remove(this.onPetSelected);
         }
 

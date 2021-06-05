@@ -8,12 +8,12 @@ package kabam.rotmg.fortune.model
     import flash.display.DisplayObject;
     import kabam.display.Loader.LoaderProxy;
     import kabam.display.Loader.LoaderProxyConcrete;
-    import __AS3__.vec.Vector;
+    
     import flash.events.Event;
     import flash.events.IOErrorEvent;
     import flash.net.URLRequest;
     import flash.utils.Dictionary;
-    import __AS3__.vec.*;
+    
 
     public class FortuneInfo 
     {
@@ -237,11 +237,11 @@ package kabam.rotmg.fortune.model
                     {
                         _local_2[int(_local_6)] = true;
                         this._rollsWithContentsUnique.push(int(_local_6));
-                    };
+                    }
                     _local_4.push(int(_local_6));
-                };
+                }
                 this._rollsWithContents.push(_local_4);
-            };
+            }
         }
 
         public function get infoImage():DisplayObject

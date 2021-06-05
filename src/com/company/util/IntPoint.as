@@ -136,91 +136,91 @@ class UnitTest
         if (((!(_local_2.x() == 1000)) || (!(_local_2.y() == 1000))))
         {
             trace("ERROR IN UNITTEST: IntPoint1");
-        };
+        }
         _local_1 = new IntPoint(500, 400);
         _local_2 = _local_1.round1000();
         if (((!(_local_2.x() == 1000)) || (!(_local_2.y() == 0))))
         {
             trace("ERROR IN UNITTEST: IntPoint2");
-        };
+        }
         _local_1 = new IntPoint(-400, -500);
         _local_2 = _local_1.round1000();
         if (((!(_local_2.x() == 0)) || (!(_local_2.y() == 0))))
         {
             trace("ERROR IN UNITTEST: IntPoint3");
-        };
+        }
         _local_1 = new IntPoint(-501, -999);
         _local_2 = _local_1.round1000();
         if (((!(_local_2.x() == -1000)) || (!(_local_2.y() == -1000))))
         {
             trace("ERROR IN UNITTEST: IntPoint4");
-        };
+        }
         _local_1 = new IntPoint(-1000, -1001);
         _local_2 = _local_1.round1000();
         if (((!(_local_2.x() == -1000)) || (!(_local_2.y() == -1000))))
         {
             trace("ERROR IN UNITTEST: IntPoint5");
-        };
+        }
         _local_1 = new IntPoint(999, 1001);
         _local_2 = _local_1.trunc1000();
         if (((!(_local_2.x() == 0)) || (!(_local_2.y() == 1000))))
         {
             trace("ERROR IN UNITTEST: IntPoint6");
-        };
+        }
         _local_1 = new IntPoint(500, 400);
         _local_2 = _local_1.trunc1000();
         if (((!(_local_2.x() == 0)) || (!(_local_2.y() == 0))))
         {
             trace("ERROR IN UNITTEST: IntPoint7");
-        };
+        }
         _local_1 = new IntPoint(-400, -500);
         _local_2 = _local_1.trunc1000();
         if (((!(_local_2.x() == 0)) || (!(_local_2.y() == 0))))
         {
             trace("ERROR IN UNITTEST: IntPoint8");
-        };
+        }
         _local_1 = new IntPoint(-501, -999);
         _local_2 = _local_1.trunc1000();
         if (((!(_local_2.x() == 0)) || (!(_local_2.y() == 0))))
         {
             trace("ERROR IN UNITTEST: IntPoint9");
-        };
+        }
         _local_1 = new IntPoint(-1000, -1001);
         _local_2 = _local_1.trunc1000();
         if (((!(_local_2.x() == -1000)) || (!(_local_2.y() == -1000))))
         {
             trace("ERROR IN UNITTEST: IntPoint10");
-        };
+        }
         _local_3 = 0.9999998;
         if (int(_local_3) != 0)
         {
             trace("ERROR IN UNITTEST: IntPoint40");
-        };
+        }
         _local_3 = 0.5;
         if (int(_local_3) != 0)
         {
             trace("ERROR IN UNITTEST: IntPoint41");
-        };
+        }
         _local_3 = 0.499999;
         if (int(_local_3) != 0)
         {
             trace("ERROR IN UNITTEST: IntPoint42");
-        };
+        }
         _local_3 = -0.499999;
         if (int(_local_3) != 0)
         {
             trace("ERROR IN UNITTEST: IntPoint43");
-        };
+        }
         _local_3 = -0.5;
         if (int(_local_3) != 0)
         {
             trace("ERROR IN UNITTEST: IntPoint44");
-        };
+        }
         _local_3 = -0.99999;
         if (int(_local_3) != 0)
         {
             trace("ERROR IN UNITTEST: IntPoint45");
-        };
+        }
         trace("FINISHED UNITTEST: IntPoint");
     }
 

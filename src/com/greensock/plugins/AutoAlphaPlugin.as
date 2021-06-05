@@ -32,7 +32,7 @@ package com.greensock.plugins
             if (!_ignoreVisible)
             {
                 _target.visible = (!(_target.alpha == 0));
-            };
+            }
         }
 
         override public function _onInitTween(_arg_1:Object, _arg_2:*, _arg_3:TweenLite):Boolean

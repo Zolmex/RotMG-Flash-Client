@@ -46,11 +46,11 @@ package kabam.rotmg.classes.view
             if (!_arg_1)
             {
                 _local_2 = (_local_2 + VerticalScrollingList.SCROLLBAR_GUTTER);
-            };
+            }
             for each (_local_3 in this.items)
             {
                 _local_3.setWidth(_local_2);
-            };
+            }
         }
 
         public function getListHeight():Number

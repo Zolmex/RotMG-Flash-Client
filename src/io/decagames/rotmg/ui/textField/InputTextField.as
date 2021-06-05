@@ -48,7 +48,7 @@ package io.decagames.rotmg.ui.textField
             {
                 this._wasModified = true;
                 this.text = "";
-            };
+            }
         }
 
         public function get wasModified():Boolean

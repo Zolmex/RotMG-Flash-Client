@@ -41,7 +41,7 @@ package com.company.assembleegameclient.ui
             if (((this.name_ == _arg_1) && (_arg_2 == _arg_2)))
             {
                 return;
-            };
+            }
             this.name_ = _arg_1;
             this.rank_ = _arg_2;
             if (((this.name_ == null) || (this.name_ == "")))
@@ -55,7 +55,7 @@ package com.company.assembleegameclient.ui
                 SpriteUtil.safeAddChild(this, this.icon_);
                 this.guildName_.setStringBuilder(new StaticStringBuilder(this.name_));
                 SpriteUtil.safeAddChild(this, this.guildName_);
-            };
+            }
         }
 
 

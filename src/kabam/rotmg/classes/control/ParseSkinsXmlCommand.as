@@ -35,10 +35,10 @@ package kabam.rotmg.classes.control
                     if (_local_3.attribute("color").length() != 0)
                     {
                         _local_5 = int(_local_3.@color);
-                    };
+                    }
                     ObjectLibrary.skinSetXMLDataLibrary_[_local_4] = _local_3;
-                };
-            };
+                }
+            }
         }
 
 
@@ -52,13 +52,13 @@ package kabam.rotmg.classes.control
             for each (_local_3 in _local_2)
             {
                 this.parseNode(_local_3);
-            };
+            }
             _local_1 = EmbeddedData.skinsEquipmentSetsXML;
             _local_2 = _local_1.children();
             for each (_local_3 in _local_2)
             {
                 parseNodeEquipment(_local_3);
-            };
+            }
         }
 
         private function parseNode(_arg_1:XML):void
@@ -72,16 +72,16 @@ package kabam.rotmg.classes.control
             if (_arg_1.hasOwnProperty("NoSkinSelect"))
             {
                 _local_4.skinSelectEnabled = false;
-            };
+            }
             if (_arg_1.hasOwnProperty("UnlockSpecial"))
             {
                 _local_4.unlockSpecial = _arg_1.UnlockSpecial;
-            };
+            }
             _local_4.template = new CharacterTemplate(_local_2, _local_3);
             if (_local_2.indexOf("16") >= 0)
             {
                 _local_4.is16x16 = true;
-            };
+            }
             var _local_5:CharacterClass = this.model.getCharacterClass(_arg_1.PlayerClassType);
             _local_5.skins.addSkin(_local_4);
         }

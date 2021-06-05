@@ -40,12 +40,12 @@ package io.decagames.rotmg.pets.tasks
             {
                 this.client.complete.addOnce(this.onComplete);
                 this.client.sendRequest("/account/getOwnedPetSkins", this.makeDataPacket());
-            };
+            }
         }
 
         private function makeDataPacket():Object
         {
-            var _local_1:Object = {};
+            var _local_1:Object = {}
             MoreObjectUtil.addToObject(_local_1, this.account.getCredentials());
             _local_1.isChallenger = this.seasonalEventModel.isChallenger;
             return (_local_1);
@@ -63,9 +63,9 @@ package io.decagames.rotmg.pets.tasks
                 catch(e:Error)
                 {
                     logger.error(((e.message + " ") + e.getStackTrace()));
-                };
+                }
                 this.petModel.parsePetsData();
-            };
+            }
             completeTask(isOK, data);
         }
 

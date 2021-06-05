@@ -59,7 +59,7 @@ package kabam.rotmg.account.core.view
             {
                 this.emailInput.inputText_.setText("");
                 this.isKabam = true;
-            };
+            }
             addTextInputField(this.emailInput);
             this.closeButton = new DialogCloseButton();
             this.closeButton.y = -2;
@@ -85,7 +85,7 @@ package kabam.rotmg.account.core.view
             if (((parent) && (parent.contains(this))))
             {
                 parent.removeChild(this);
-            };
+            }
         }
 
         private function onVerify(_arg_1:MouseEvent):void
@@ -96,11 +96,11 @@ package kabam.rotmg.account.core.view
             {
                 _local_2 = StaticInjectorContext.getInjector().getInstance(AppEngineClient);
                 _local_2.complete.addOnce(this.onComplete);
-                _local_3 = {"newGuid":this.emailInput.text()};
+                _local_3 = {"newGuid":this.emailInput.text()}
                 MoreObjectUtil.addToObject(_local_3, this.account.getCredentials());
                 _local_2.sendRequest("account/changeEmail", _local_3);
                 rightButton_.removeEventListener(MouseEvent.CLICK, this.onVerify);
-            };
+            }
         }
 
         private function onComplete(_arg_1:Boolean, _arg_2:*):void
@@ -112,7 +112,7 @@ package kabam.rotmg.account.core.view
             else
             {
                 this.onError(_arg_2);
-            };
+            }
             rightButton_.addEventListener(MouseEvent.CLICK, this.onVerify);
         }
 
@@ -122,7 +122,7 @@ package kabam.rotmg.account.core.view
             if (!this.isKabam)
             {
                 _local_1.updateUser(this.emailInput.text(), _local_1.getPassword(), _local_1.getToken());
-            };
+            }
             removeChild(titleText_);
             titleText_ = new TextFieldDisplayConcrete().setSize(12).setColor(0xB3B3B3);
             titleText_.setStringBuilder(new LineBuilder().setParams("WebAccountDetailDialog.sent"));
@@ -151,7 +151,7 @@ package kabam.rotmg.account.core.view
             if (!_local_1)
             {
                 this.emailInput.setError(TextKey.INVALID_EMAIL_ADDRESS);
-            };
+            }
             return (_local_1);
         }
 

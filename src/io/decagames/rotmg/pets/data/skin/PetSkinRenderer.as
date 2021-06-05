@@ -27,7 +27,7 @@ package io.decagames.rotmg.pets.data.skin
             if (this.skin == null)
             {
                 return (null);
-            };
+            }
             var _local_1:MaskedImage = this.skin.imageFromAngle(0, AnimatedChar.STAND, 0);
             var _local_2:int = ((this.skin.getHeight() == 16) ? 40 : 80);
             var _local_3:BitmapData = TextureRedrawer.resize(_local_1.image_, _local_1.mask_, _local_2, true, 0, 0);
@@ -41,7 +41,7 @@ package io.decagames.rotmg.pets.data.skin
             if (_local_1 == null)
             {
                 return;
-            };
+            }
             var _local_2:String = _local_1.AnimatedTexture.File;
             var _local_3:int = _local_1.AnimatedTexture.Index;
             this.skin = AnimatedChars.getAnimatedChar(_local_2, _local_3);

@@ -28,7 +28,7 @@ package kabam.rotmg.ui.view
                 _local_2.x = (_local_1 * (PotionSlotView.BUTTON_WIDTH + BUTTON_SPACE));
                 addChild(_local_2);
                 _local_1++;
-            };
+            }
         }
 
     }

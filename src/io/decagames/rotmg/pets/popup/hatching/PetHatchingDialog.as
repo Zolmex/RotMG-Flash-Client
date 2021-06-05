@@ -166,7 +166,7 @@ package io.decagames.rotmg.pets.popup.hatching
                         textInfo.wordWrap = true;
                         textInfo.text = "New Pet Skin added to your Wardrobe!";
                         animationContainer.addChild(textInfo);
-                    };
+                    }
                     animationContainer.addChild(whiteRectangle);
                     TweenLite.to(animationSpiral, spinDuration, {
                         "transformAroundCenter":{"rotation":spinAngle},

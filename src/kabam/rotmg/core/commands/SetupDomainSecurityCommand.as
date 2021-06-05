@@ -22,7 +22,7 @@ package kabam.rotmg.core.commands
             if (this.client.isWeb())
             {
                 this.domains.applyDomainSecurity();
-            };
+            }
         }
 
 

@@ -40,7 +40,7 @@ package io.decagames.rotmg.shop.packages
             else
             {
                 _local_1 = PackageInfo(_boxInfo).loader;
-            };
+            }
             if (((_local_1) && (!(_local_1.parent == backgroundContainer))))
             {
                 backgroundContainer.addChild(_local_1);
@@ -49,7 +49,7 @@ package io.decagames.rotmg.shop.packages
                 addChild(this.imageMask);
                 this.imageMask.cacheAsBitmap = true;
                 backgroundContainer.mask = this.imageMask;
-            };
+            }
             if (this.imageMask)
             {
                 this.imageMask.width = (background.width - 6);
@@ -57,7 +57,7 @@ package io.decagames.rotmg.shop.packages
                 this.imageMask.x = (background.x + 3);
                 this.imageMask.y = (background.y + 3);
                 this.imageMask.cacheAsBitmap = true;
-            };
+            }
         }
 
         override public function dispose():void
@@ -73,7 +73,7 @@ package io.decagames.rotmg.shop.packages
             {
                 backgroundTitle.width = _arg_1;
                 backgroundTitle.y = 2;
-            };
+            }
             backgroundButton.width = 158;
             if (_arg_2 == -1)
             {
@@ -82,7 +82,7 @@ package io.decagames.rotmg.shop.packages
             else
             {
                 background.height = _arg_2;
-            };
+            }
             titleLabel.x = Math.round(((_arg_1 - titleLabel.textWidth) / 2));
             titleLabel.y = 6;
             backgroundButton.y = (background.height - 51);
@@ -93,7 +93,7 @@ package io.decagames.rotmg.shop.packages
             {
                 _infoButton.x = ((background.width - _infoButton.width) - 3);
                 _infoButton.y = 2;
-            };
+            }
             _spinner.x = (backgroundButton.x + 34);
             _spinner.y = (background.height - 53);
             this.resizeBackgroundImage();

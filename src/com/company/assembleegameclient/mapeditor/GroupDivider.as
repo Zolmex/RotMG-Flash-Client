@@ -5,7 +5,7 @@
 
 package com.company.assembleegameclient.mapeditor
 {
-    import __AS3__.vec.Vector;
+    
     import flash.utils.Dictionary;
     import kabam.rotmg.core.StaticInjectorContext;
     import kabam.rotmg.core.model.PlayerModel;
@@ -13,7 +13,7 @@ package com.company.assembleegameclient.mapeditor
     import com.company.assembleegameclient.map.GroundLibrary;
     import com.company.assembleegameclient.map.RegionLibrary;
     import com.company.util.MoreStringUtil;
-    import __AS3__.vec.*;
+    
 
     public class GroupDivider 
     {
@@ -87,32 +87,32 @@ package com.company.assembleegameclient.mapeditor
                                     {
                                         _local_7[_local_10] = _local_14;
                                         _local_12 = true;
-                                    };
-                                };
-                            };
-                        };
+                                    }
+                                }
+                            }
+                        }
                         _local_16 = ObjectLibrary.propsLibrary_[_local_10].belonedDungeon;
                         if (((_local_12) && (!(_local_16 == ""))))
                         {
                             if (_local_9[_local_16] == null)
                             {
                                 _local_9[_local_16] = new Dictionary(true);
-                            };
+                            }
                             _local_9[_local_16][_local_10] = _local_14;
-                        };
-                    };
-                };
-            };
+                        }
+                    }
+                }
+            }
             for each (_local_15 in GroundLibrary.xmlLibrary_)
             {
                 _local_1[int(_local_15.@type)] = _local_15;
-            };
+            }
             if (_local_13.isAdmin())
             {
                 for each (_local_17 in RegionLibrary.xmlLibrary_)
                 {
                     _local_2[int(_local_17.@type)] = _local_17;
-                };
+                }
             }
             else
             {
@@ -124,7 +124,7 @@ package com.company.assembleegameclient.mapeditor
                 _local_2[RegionLibrary.idToType_["Hallway 3"]] = RegionLibrary.xmlLibrary_[RegionLibrary.idToType_["Hallway 3"]];
                 _local_2[RegionLibrary.idToType_["Quest Monster Region"]] = RegionLibrary.xmlLibrary_[RegionLibrary.idToType_["Quest Monster Region"]];
                 _local_2[RegionLibrary.idToType_["Quest Monster Region 2"]] = RegionLibrary.xmlLibrary_[RegionLibrary.idToType_["Quest Monster Region 2"]];
-            };
+            }
             GROUPS[GROUP_LABELS[0]] = _local_1;
             GROUPS[GROUP_LABELS[1]] = _local_3;
             GROUPS[GROUP_LABELS[2]] = _local_4;
@@ -143,7 +143,7 @@ package com.company.assembleegameclient.mapeditor
             for (_local_2 in ObjectLibrary.dungeonsXMLLibrary_)
             {
                 _local_1.push(_local_2);
-            };
+            }
             _local_1.sort(MoreStringUtil.cmp);
             return (_local_1);
         }
@@ -160,36 +160,36 @@ package com.company.assembleegameclient.mapeditor
             if (_arg_2 == Layer.REGION)
             {
                 return (GROUP_LABELS[6]);
-            };
+            }
             if (_arg_2 == Layer.GROUND)
             {
                 return (GROUP_LABELS[0]);
-            };
+            }
             if (_local_3.isAdmin())
             {
                 return (GROUP_LABELS[5]);
-            };
+            }
             _local_4 = ObjectLibrary.xmlLibrary_[_arg_1];
             if ((((((_local_4.hasOwnProperty("Item")) || (_local_4.hasOwnProperty("Player"))) || (_local_4.Class == "Projectile")) || (_local_4.Class == "PetSkin")) || (_local_4.Class == "Pet")))
             {
                 return ("");
-            };
+            }
             if (_local_4.hasOwnProperty("Enemy"))
             {
                 return (GROUP_LABELS[2]);
-            };
+            }
             if (_local_4.hasOwnProperty("Model"))
             {
                 return (GROUP_LABELS[4]);
-            };
+            }
             if (((_local_4.hasOwnProperty("Class")) && (String(_local_4.Class).match(/wall$/i))))
             {
                 return (GROUP_LABELS[3]);
-            };
+            }
             if (((_local_4.hasOwnProperty("Static")) && (!(_local_4.hasOwnProperty("Price")))))
             {
                 return (GROUP_LABELS[1]);
-            };
+            }
             return ("");
         }
 

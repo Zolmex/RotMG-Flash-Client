@@ -23,7 +23,7 @@ package com.greensock.plugins
             if (((!(_arg_3.target)) is MovieClip))
             {
                 return (false);
-            };
+            }
             _target = (_arg_1 as MovieClip);
             this.frame = _target.currentFrame;
             var _local_4:Array = _target.currentLabels;
@@ -36,12 +36,12 @@ package com.greensock.plugins
                 {
                     _local_6 = _local_4[_local_7].frame;
                     break;
-                };
-            };
+                }
+            }
             if (this.frame != _local_6)
             {
                 _addTween(this, "frame", this.frame, _local_6, "frame", true);
-            };
+            }
             return (true);
         }
 

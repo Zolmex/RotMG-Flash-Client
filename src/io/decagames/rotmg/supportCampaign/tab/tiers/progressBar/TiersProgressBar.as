@@ -6,14 +6,14 @@
 package io.decagames.rotmg.supportCampaign.tab.tiers.progressBar
 {
     import flash.display.Sprite;
-    import __AS3__.vec.Vector;
+    
     import io.decagames.rotmg.supportCampaign.data.vo.RankVO;
     import io.decagames.rotmg.supportCampaign.tab.tiers.button.TierButton;
     import io.decagames.rotmg.ui.ProgressBar;
     import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
     import io.decagames.rotmg.ui.texture.TextureParser;
     import io.decagames.rotmg.supportCampaign.tab.tiers.button.status.TierButtonStatus;
-    import __AS3__.vec.*;
+    
 
     public class TiersProgressBar extends Sprite 
     {
@@ -45,7 +45,7 @@ package io.decagames.rotmg.supportCampaign.tab.tiers.progressBar
             {
                 this.renderProgressBar();
                 this.renderButtons();
-            };
+            }
             this.updateProgressBar();
             this.updateButtons();
         }
@@ -55,11 +55,11 @@ package io.decagames.rotmg.supportCampaign.tab.tiers.progressBar
             if (this._claimed >= _arg_1)
             {
                 return (TierButtonStatus.CLAIMED);
-            };
+            }
             if (this._currentRank >= _arg_1)
             {
                 return (TierButtonStatus.UNLOCKED);
-            };
+            }
             return (TierButtonStatus.LOCKED);
         }
 
@@ -78,8 +78,8 @@ package io.decagames.rotmg.supportCampaign.tab.tiers.progressBar
                 else
                 {
                     _local_2.selected = false;
-                };
-            };
+                }
+            }
             if (!_local_1)
             {
                 if (this._currentRank != 0)
@@ -90,14 +90,14 @@ package io.decagames.rotmg.supportCampaign.tab.tiers.progressBar
                         {
                             _local_1 = true;
                             _local_2.selected = true;
-                        };
-                    };
-                };
-            };
+                        }
+                    }
+                }
+            }
             if (!_local_1)
             {
                 this._buttons[0].selected = true;
-            };
+            }
         }
 
         private function updateProgressBar():void
@@ -112,8 +112,8 @@ package io.decagames.rotmg.supportCampaign.tab.tiers.progressBar
                 else
                 {
                     this._progressBar.value = _local_1;
-                };
-            };
+                }
+            }
         }
 
         private function renderProgressBar():void
@@ -142,7 +142,7 @@ package io.decagames.rotmg.supportCampaign.tab.tiers.progressBar
                 _local_7 = new TierButton(_local_1, this.getStatusByTier(_local_1));
                 this._buttons.push(_local_7);
                 _local_1++;
-            };
+            }
             _local_3 = this._buttons.length;
             _local_4 = int((this._componentWidth / _local_3));
             _local_5 = 1;
@@ -154,7 +154,7 @@ package io.decagames.rotmg.supportCampaign.tab.tiers.progressBar
                 addChild(_local_8);
                 _local_5++;
                 _local_6--;
-            };
+            }
             this.buttonAreReady = true;
         }
 

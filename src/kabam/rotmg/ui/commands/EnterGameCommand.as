@@ -68,10 +68,10 @@ package kabam.rotmg.ui.commands
                         else
                         {
                             this.showCurrentCharacterScreen();
-                        };
-                    };
-                };
-            };
+                        }
+                    }
+                }
+            }
         }
 
         private function showCharacterTypeSelectionScreen():void

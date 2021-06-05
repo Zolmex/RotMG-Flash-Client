@@ -38,7 +38,7 @@ package com.company.assembleegameclient.objects.particles
                 _local_6 = new SparkParticle(100, this.color_, 700, 0.5, RandomUtil.plusMinus(1), RandomUtil.plusMinus(1));
                 map_.addObj(_local_6, _local_5.x, _local_5.y);
                 _local_4++;
-            };
+            }
             return (false);
         }
 
@@ -56,7 +56,7 @@ package com.company.assembleegameclient.objects.particles
                 _local_6 = new SparkParticle(100, this.color_, 200, 0.5, RandomUtil.plusMinus(1), RandomUtil.plusMinus(1));
                 map_.addObj(_local_6, _local_5.x, _local_5.y);
                 _local_4++;
-            };
+            }
             return (false);
         }
 

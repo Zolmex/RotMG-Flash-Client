@@ -44,16 +44,16 @@ package com.company.assembleegameclient.objects
             if (!super.addTo(_arg_1, _arg_2, _arg_3))
             {
                 return (false);
-            };
+            }
             if (map_.player_ == null)
             {
                 return (true);
-            };
+            }
             var _local_4:Number = PointUtil.distanceXY(map_.player_.x_, map_.player_.y_, _arg_2, _arg_3);
             if (((this.isLoot_) && (_local_4 < 10)))
             {
                 SoundEffectLibrary.play("loot_appears");
-            };
+            }
             return (true);
         }
 

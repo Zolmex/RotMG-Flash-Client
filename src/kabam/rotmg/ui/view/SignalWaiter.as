@@ -29,7 +29,7 @@ package kabam.rotmg.ui.view
             for each (_local_2 in _args)
             {
                 this.push(_local_2);
-            };
+            }
             return (this);
         }
 
@@ -40,7 +40,7 @@ package kabam.rotmg.ui.view
             {
                 delete texts[value];
                 checkEmpty();
-            };
+            }
             value.addOnce(onTextChanged);
         }
 
@@ -49,7 +49,7 @@ package kabam.rotmg.ui.view
             if (this.isEmpty())
             {
                 this.complete.dispatch();
-            };
+            }
         }
 
         public function isEmpty():Boolean

@@ -6,11 +6,11 @@
 package io.decagames.rotmg.seasonalEvent.data
 {
     import robotlegs.bender.framework.api.IContext;
-    import __AS3__.vec.Vector;
+    
     import com.company.assembleegameclient.screens.LeagueData;
     import io.decagames.rotmg.seasonalEvent.SeasonalLeaderBoard.SeasonalLeaderBoardItemData;
     import io.decagames.rotmg.seasonalEvent.config.SeasonalConfig;
-    import __AS3__.vec.*;
+    
 
     public class SeasonalEventModel 
     {
@@ -80,18 +80,18 @@ package io.decagames.rotmg.seasonalEvent.data
                         else
                         {
                             this._isSeasonalMode = false;
-                        };
-                    };
-                };
+                        }
+                    }
+                }
                 if (this._leagueDatas.length > 0)
                 {
                     this._leagueDatas.unshift(this.addLegacyLeagueData());
-                };
-            };
+                }
+            }
             if (this._isSeasonalMode)
             {
                 this.context.configure(SeasonalConfig);
-            };
+            }
         }
 
         public function parseLegacySeasonsData(_arg_1:XML):void
@@ -113,8 +113,8 @@ package io.decagames.rotmg.seasonalEvent.data
                     _local_4.startTime = new Date((int(_local_3.StartTime) * 1000));
                     _local_4.endTime = new Date((int(_local_3.EndTime) * 1000));
                     this._legacySeasons.push(_local_4);
-                };
-            };
+                }
+            }
         }
 
         public function getSeasonIdByTitle(_arg_1:String):String
@@ -130,9 +130,9 @@ package io.decagames.rotmg.seasonalEvent.data
                 {
                     _local_2 = _local_5.seasonId;
                     break;
-                };
+                }
                 _local_4++;
-            };
+            }
             return (_local_2);
         }
 

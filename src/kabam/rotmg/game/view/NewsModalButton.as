@@ -79,7 +79,7 @@ package kabam.rotmg.game.view
                 showsHasUpdate = false;
                 StaticInjectorContext.getInjector().getInstance(DisplayAreaChangedSignal).dispatch();
                 addChild(this.background2);
-            };
+            }
             addChild(this.bitmap);
         }
 

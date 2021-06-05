@@ -50,14 +50,14 @@ package kabam.rotmg.account.core.view
                 if (_local_2 == null)
                 {
                     return;
-                };
+                }
                 _local_1 = this.playerModel.getName();
                 if ((((!(_local_1)) && (!(_local_2.userDisplayName == null))) && (_local_2.userDisplayName.length > 0)))
                 {
                     _local_1 = _local_2.userDisplayName;
-                };
+                }
                 this.view.setInfo(_local_1, this.account.isRegistered());
-            };
+            }
         }
 
         override public function destroy():void

@@ -42,7 +42,7 @@ package com.company.assembleegameclient.tutorial
             {
                 _local_4 = (this.rect_.x + (_arg_1 / 2));
                 _local_5 = (this.rect_.y + (_arg_1 / 2));
-            };
+            }
             _arg_2.lineStyle(_arg_1, this.color_);
             _arg_2.drawRect(_local_4, _local_5, _local_6, _local_7);
         }

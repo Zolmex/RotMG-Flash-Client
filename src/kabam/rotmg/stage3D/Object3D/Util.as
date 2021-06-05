@@ -7,7 +7,7 @@ package kabam.rotmg.stage3D.Object3D
 {
     import flash.geom.Matrix3D;
     import flash.utils.ByteArray;
-    import __AS3__.vec.*;
+    
 
     public class Util 
     {
@@ -40,10 +40,10 @@ package kabam.rotmg.stage3D.Object3D
                 {
                     _arg_1.position = (_arg_1.position + Math.max(0, (_arg_2 - (_local_4 + 1))));
                     break;
-                };
+                }
                 _local_3 = (_local_3 + String.fromCharCode(_local_5));
                 _local_4++;
-            };
+            }
             return (_local_3);
         }
 

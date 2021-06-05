@@ -58,7 +58,7 @@ package kabam.rotmg.account.steam.services
             else
             {
                 this.showErrorDialog();
-            };
+            }
         }
 
         private function showErrorDialog():void

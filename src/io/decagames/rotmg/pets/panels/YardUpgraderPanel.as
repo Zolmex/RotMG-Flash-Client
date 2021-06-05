@@ -74,7 +74,7 @@ package io.decagames.rotmg.pets.panels
             if (_arg_1)
             {
                 this.handleUpgradeYardButton();
-            };
+            }
         }
 
         private function handleIcon():void
@@ -101,8 +101,8 @@ package io.decagames.rotmg.pets.panels
                 {
                     this.petsButton.x = (((WIDTH / 4) * 2.75) - (this.petsButton.width / 2));
                     this.petsButton.y = ((HEIGHT - this.petsButton.height) - 4);
-                };
-            };
+                }
+            }
         }
 
 

@@ -27,7 +27,7 @@ package kabam.rotmg.util.components
             else
             {
                 _local_4 = AssetLibrary.getImageFromSet("lofiInterface", 54);
-            };
+            }
             var _local_5:Bitmap = new Bitmap(_local_4);
             _local_5.scaleX = _arg_2;
             _local_5.scaleY = _arg_2;

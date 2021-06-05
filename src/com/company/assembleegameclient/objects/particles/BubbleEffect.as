@@ -41,12 +41,12 @@ package com.company.assembleegameclient.objects.particles
             if (this.go_.map_ == null)
             {
                 return (false);
-            };
+            }
             if (!this.lastUpdate_)
             {
                 this.lastUpdate_ = _arg_1;
                 return (true);
-            };
+            }
             _local_3 = int(int((this.lastUpdate_ / this.rate_)));
             var _local_4:int = int(int((_arg_1 / this.rate_)));
             _local_8 = this.go_.x_;
@@ -54,7 +54,7 @@ package com.company.assembleegameclient.objects.particles
             if (this.lastUpdate_ < 0)
             {
                 this.lastUpdate_ = Math.max(0, (_arg_1 - PERIOD_MAX));
-            };
+            }
             x_ = _local_8;
             y_ = _local_9;
             var _local_10:int = _local_3;
@@ -69,7 +69,7 @@ package com.company.assembleegameclient.objects.particles
                 _local_13 = (_local_9 + (_local_7 * Math.sin(_local_6)));
                 map_.addObj(_local_11, _local_12, _local_13);
                 _local_10++;
-            };
+            }
             this.lastUpdate_ = _arg_1;
             return (true);
         }

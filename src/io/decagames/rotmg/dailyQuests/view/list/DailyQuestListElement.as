@@ -82,8 +82,8 @@ package io.decagames.rotmg.dailyQuests.view.list
                 else
                 {
                     this.icon = TextureParser.instance.getTexture("UI", "daily_quest_list_element_available_icon");
-                };
-            };
+                }
+            }
             this.icon.x = 5;
             this.icon.y = 5;
             if (this._isSelected)
@@ -99,8 +99,8 @@ package io.decagames.rotmg.dailyQuests.view.list
                 else
                 {
                     this.background = TextureParser.instance.getSliceScalingBitmap("UI", "daily_quest_list_element_grey", 190);
-                };
-            };
+                }
+            }
             DefaultLabelFormat.questNameListLabel(this.questNameTextfield, ((this._category == 7) ? 2201331 : (((this._completed) || (this._isSelected)) ? 0xFFFFFF : 0xCFCFCF)));
             this.questNameTextfield.alpha = (((this._completed) || (this._isSelected)) ? 1 : 0.5);
             this.background.height = 30;

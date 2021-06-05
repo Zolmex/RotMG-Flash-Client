@@ -27,7 +27,7 @@ package io.decagames.rotmg.characterMetrics.tracker
             while (_local_5--)
             {
                 _arg_2 = (_arg_2 + "=");
-            };
+            }
             _arg_2 = _arg_2.replace(_local_3, "+").replace(_local_4, "/");
             this.setBinaryData(_arg_1, Base64.decodeToByteArray(_arg_2));
         }
@@ -39,17 +39,17 @@ package io.decagames.rotmg.characterMetrics.tracker
             if (!this.charactersStats)
             {
                 this.charactersStats = new Dictionary();
-            };
+            }
             if (!this.charactersStats[_arg_1])
             {
                 this.charactersStats[_arg_1] = new CharacterMetricsData();
-            };
+            }
             while (_arg_2.bytesAvailable >= STATS_SIZE)
             {
                 _local_3 = _arg_2.readByte();
                 _local_4 = _arg_2.readInt();
                 this.charactersStats[_arg_1].setStat(_local_3, _local_4);
-            };
+            }
             this._lastUpdate = new Date();
         }
 
@@ -63,11 +63,11 @@ package io.decagames.rotmg.characterMetrics.tracker
             if (!this.charactersStats)
             {
                 this.charactersStats = new Dictionary();
-            };
+            }
             if (!this.charactersStats[_arg_1])
             {
                 return (0);
-            };
+            }
             return (this.charactersStats[_arg_1].getStat(_arg_2));
         }
 
@@ -77,7 +77,7 @@ package io.decagames.rotmg.characterMetrics.tracker
             for each (_local_2 in _arg_1.Char)
             {
                 this.setBinaryStringData(int(_local_2.@id), _local_2.PCStats);
-            };
+            }
         }
 
 

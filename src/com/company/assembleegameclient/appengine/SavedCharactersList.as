@@ -7,7 +7,6 @@ package com.company.assembleegameclient.appengine
 {
     import flash.events.Event;
     import kabam.rotmg.servers.api.LatLong;
-    import __AS3__.vec.Vector;
     import kabam.rotmg.account.core.Account;
     import kabam.rotmg.core.StaticInjectorContext;
     import org.swiftsuspenders.Injector;
@@ -16,7 +15,6 @@ package com.company.assembleegameclient.appengine
     import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
     import io.decagames.rotmg.tos.popups.ToSPopup;
     import com.company.assembleegameclient.objects.ObjectLibrary;
-    import __AS3__.vec.*;
     import kabam.rotmg.account.core.*;
 
     public class SavedCharactersList extends Event 
@@ -36,7 +34,7 @@ package com.company.assembleegameclient.appengine
         public var maxNumChars_:int;
         public var numChars_:int = 0;
         public var savedChars_:Vector.<SavedCharacter> = new Vector.<SavedCharacter>();
-        public var charStats_:Object = {};
+        public var charStats_:Object = {}
         public var totalFame_:int = 0;
         public var bestCharFame_:int = 0;
         public var fame_:int = 0;
@@ -85,12 +83,12 @@ package com.company.assembleegameclient.appengine
                 _local_5.reportIntStat("BestFame", this.bestOverallFame());
                 _local_5.reportIntStat("NumStars", this.numStars_);
                 _local_5.verify(_local_2.hasOwnProperty("VerifiedEmail"));
-            };
+            }
             this.classAvailability = new Object();
             for each (_local_4 in this.charsXML_.ClassAvailabilityList.ClassAvailability)
             {
                 this.classAvailability[_local_4.@id.toString()] = _local_4.toString();
-            };
+            }
         }
 
         public function getCharById(_arg_1:int):SavedCharacter
@@ -101,8 +99,8 @@ package com.company.assembleegameclient.appengine
                 if (_local_2.charId() == _arg_1)
                 {
                     return (_local_2);
-                };
-            };
+                }
+            }
             return (null);
         }
 
@@ -138,7 +136,7 @@ package com.company.assembleegameclient.appengine
             else
             {
                 _local_2.status = BeginnersPackageModel.STATUS_CANNOT_BUY;
-            };
+            }
         }
 
         private function getBeginnerModel():BeginnersPackageModel
@@ -155,7 +153,7 @@ package com.company.assembleegameclient.appengine
                 _local_2 = XML(_arg_1.Guild);
                 this.guildName_ = _local_2.Name;
                 this.guildRank_ = int(_local_2.Rank);
-            };
+            }
         }
 
         private function parseCharacterData():void
@@ -167,7 +165,7 @@ package com.company.assembleegameclient.appengine
             {
                 this.savedChars_.push(new SavedCharacter(_local_1, this.name_));
                 this.numChars_++;
-            };
+            }
             this.savedChars_.sort(SavedCharacter.compare);
         }
 
@@ -183,7 +181,7 @@ package com.company.assembleegameclient.appengine
                 _local_4 = new CharacterStats(_local_2);
                 this.numStars_ = (this.numStars_ + _local_4.numStars());
                 this.charStats_[_local_3] = _local_4;
-            };
+            }
         }
 
         private function parseNewsData():void
@@ -193,7 +191,7 @@ package com.company.assembleegameclient.appengine
             for each (_local_2 in _local_1.Item)
             {
                 this.news_.push(new SavedNewsItem(_local_2.Icon, _local_2.Title, _local_2.TagLine, _local_2.Link, int(_local_2.Date)));
-            };
+            }
         }
 
         private function parseGeoPositioningData():void
@@ -205,7 +203,7 @@ package com.company.assembleegameclient.appengine
             else
             {
                 this.myPos_ = DEFAULT_LATLONG;
-            };
+            }
         }
 
         private function parseSalesForceData():void
@@ -213,7 +211,7 @@ package com.company.assembleegameclient.appengine
             if (((this.charsXML_.hasOwnProperty("SalesForce")) && (this.charsXML_.hasOwnProperty("SalesForce"))))
             {
                 this.salesForceData_ = String(this.charsXML_.SalesForce);
-            };
+            }
         }
 
         private function parseTOSPopup():void
@@ -221,7 +219,7 @@ package com.company.assembleegameclient.appengine
             if (this.charsXML_.hasOwnProperty("TOSPopup"))
             {
                 StaticInjectorContext.getInjector().getInstance(ShowPopupSignal).dispatch(new ToSPopup());
-            };
+            }
         }
 
         public function isFirstTimeLogin():Boolean
@@ -244,8 +242,8 @@ package com.company.assembleegameclient.appengine
                 if (_local_2.bestLevel() > _local_1)
                 {
                     _local_1 = _local_2.bestLevel();
-                };
-            };
+                }
+            }
             return (_local_1);
         }
 
@@ -264,8 +262,8 @@ package com.company.assembleegameclient.appengine
                 if (_local_2.bestFame() > _local_1)
                 {
                     _local_1 = _local_2.bestFame();
-                };
-            };
+                }
+            }
             return (_local_1);
         }
 
@@ -280,8 +278,8 @@ package com.company.assembleegameclient.appengine
                 if (this.bestLevel(_local_4) < int(_local_3.@level))
                 {
                     return (false);
-                };
-            };
+                }
+            }
             return (true);
         }
 
@@ -324,17 +322,17 @@ package com.company.assembleegameclient.appengine
                             {
                                 _local_7 = false;
                                 break;
-                            };
+                            }
                             _local_8 = true;
-                        };
-                    };
+                        }
+                    }
                     if (((_local_7) && (_local_8)))
                     {
                         _local_3.push(_local_6);
-                    };
-                };
+                    }
+                }
                 _local_4++;
-            };
+            }
             return (_local_3);
         }
 
@@ -355,7 +353,7 @@ package com.company.assembleegameclient.appengine
             {
                 this.account = _local_1.getInstance(Account);
                 ((this.account) && (this.updateAccount()));
-            };
+            }
         }
 
         private function updateAccount():void
@@ -372,9 +370,9 @@ package com.company.assembleegameclient.appengine
                 {
                     this.account.reportIntStat((_local_3.@id + "Unlocked"), 1);
                     _local_1++;
-                };
+                }
                 _local_2++;
-            };
+            }
             this.account.reportIntStat("ClassesUnlocked", _local_1);
         }
 

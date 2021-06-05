@@ -6,9 +6,9 @@
 package com.company.assembleegameclient.objects.particles
 {
     import com.company.assembleegameclient.objects.GameObject;
-    import __AS3__.vec.Vector;
+    
     import kabam.lib.math.easing.Back;
-    import __AS3__.vec.*;
+    
 
     public class InspireEffect extends ParticleEffect 
     {
@@ -34,7 +34,7 @@ package com.company.assembleegameclient.objects.particles
                 _local_4 = new InspireParticle(_arg_2, 100);
                 this.parts2_.push(_local_4);
                 _local_5++;
-            };
+            }
         }
 
         override public function update(_arg_1:int, _arg_2:int):Boolean
@@ -43,19 +43,19 @@ package com.company.assembleegameclient.objects.particles
             {
                 this.endEffect();
                 return (false);
-            };
+            }
             x_ = this.go_.x_;
             y_ = this.go_.y_;
             if (this.startTime_ < 0)
             {
                 this.startTime_ = _arg_1;
-            };
+            }
             var _local_3:Number = ((_arg_1 - this.startTime_) / LIFETIME);
             if (_local_3 >= 1)
             {
                 this.endEffect();
                 return (false);
-            };
+            }
             this.updateSwirl(this.parts1_, 1, 0, _local_3);
             this.updateSwirl(this.parts2_, 1, Math.PI, _local_3);
             return (true);
@@ -67,11 +67,11 @@ package com.company.assembleegameclient.objects.particles
             for each (_local_1 in this.parts1_)
             {
                 _local_1.alive_ = false;
-            };
+            }
             for each (_local_1 in this.parts2_)
             {
                 _local_1.alive_ = false;
-            };
+            }
         }
 
         public function updateSwirl(_arg_1:Vector.<InspireParticle>, _arg_2:Number, _arg_3:Number, _arg_4:Number):void
@@ -104,11 +104,11 @@ package com.company.assembleegameclient.objects.particles
                         else
                         {
                             _local_6.moveTo(_local_8, _local_9);
-                        };
-                    };
-                };
+                        }
+                    }
+                }
                 _local_5++;
-            };
+            }
         }
 
 

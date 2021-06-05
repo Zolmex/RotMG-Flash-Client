@@ -38,7 +38,7 @@ package io.decagames.rotmg.shop
                 this.hoverTooltipDelegate.setHideToolTipsSignal(this.hideTooltipSignal);
                 this.hoverTooltipDelegate.setDisplayObject(this.view);
                 this.hoverTooltipDelegate.tooltip = this.toolTip;
-            };
+            }
         }
 
         override public function destroy():void
@@ -47,7 +47,7 @@ package io.decagames.rotmg.shop
             {
                 this.hoverTooltipDelegate = null;
                 this.toolTip = null;
-            };
+            }
         }
 
 

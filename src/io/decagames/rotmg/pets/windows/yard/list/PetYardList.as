@@ -80,7 +80,7 @@ package io.decagames.rotmg.pets.windows.yard.list
                 this._upgradeButton.x = (((_local_3.x + _local_3.width) - this._upgradeButton.width) + 8);
                 this._upgradeButton.y = ((_local_3.y - (this._upgradeButton.height / 2)) + 8);
                 addChild(this._upgradeButton);
-            };
+            }
         }
 
         private function createScrollview():void

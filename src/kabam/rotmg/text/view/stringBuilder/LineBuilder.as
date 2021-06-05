@@ -43,7 +43,7 @@ package kabam.rotmg.text.view.stringBuilder
                 _local_3 = StaticInjectorContext.getInjector().getInstance(StringMap);
                 _local_2.setStringMap(_local_3);
                 return (_local_2.getString());
-            };
+            }
             return (_arg_1);
         }
 
@@ -60,8 +60,8 @@ package kabam.rotmg.text.view.stringBuilder
                 while (_local_5.indexOf(_local_8) != -1)
                 {
                     _local_5 = _local_5.replace(_local_8, _local_7);
-                };
-            };
+                }
+            }
             _local_5 = _local_5.replace(/\\n/g, "\n");
             return ((_arg_3 + _local_5) + _arg_4);
         }
@@ -127,13 +127,13 @@ package kabam.rotmg.text.view.stringBuilder
                 if (((_local_4.charAt(0) == "{") && (_local_4.charAt((_local_4.length - 1)) == "}")))
                 {
                     _local_4 = this.map.getValue(_local_4.substr(1, (_local_4.length - 2)));
-                };
+                }
                 _local_5 = (("{" + _local_3) + "}");
                 while (_local_2.indexOf(_local_5) != -1)
                 {
                     _local_2 = _local_2.replace(_local_5, _local_4);
-                };
-            };
+                }
+            }
             _local_2 = _local_2.replace(/\\n/g, "\n");
             return ((this.prefix + _local_2) + this.postfix);
         }

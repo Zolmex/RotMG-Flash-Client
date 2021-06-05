@@ -23,11 +23,11 @@ package io.decagames.rotmg.dailyQuests.view.info
     import kabam.rotmg.messaging.impl.data.SlotObjectData;
     import com.company.assembleegameclient.ui.panels.itemgrids.itemtiles.InventoryTile;
     import io.decagames.rotmg.dailyQuests.view.popup.DailyQuestExpiredPopup;
-    import __AS3__.vec.Vector;
+    
     import kabam.rotmg.game.view.components.BackpackTabContent;
     import kabam.rotmg.game.view.components.InventoryTabContent;
     import io.decagames.rotmg.dailyQuests.model.DailyQuest;
-    import __AS3__.vec.*;
+    
 
     public class DailyQuestInfoMediator extends Mediator 
     {
@@ -77,7 +77,7 @@ package io.decagames.rotmg.dailyQuests.view.info
             else
             {
                 this.hoverTooltipDelegate.removeDisplayObject();
-            };
+            }
         }
 
         override public function destroy():void
@@ -95,7 +95,7 @@ package io.decagames.rotmg.dailyQuests.view.info
                 if (this.view.hasEventListener(Event.ENTER_FRAME))
                 {
                     this.view.removeEventListener(Event.ENTER_FRAME, this.updateQuestAvailable);
-                };
+                }
             }
             else
             {
@@ -107,8 +107,8 @@ package io.decagames.rotmg.dailyQuests.view.info
                 else
                 {
                     this.view.eventQuestsCompleted();
-                };
-            };
+                }
+            }
         }
 
         private function updateQuestAvailable(_arg_1:Event):void
@@ -127,7 +127,7 @@ package io.decagames.rotmg.dailyQuests.view.info
             {
                 this.view.completeButton.disabled = true;
                 this.hoverTooltipDelegate.setDisplayObject(this.view.completeButton);
-            };
+            }
         }
 
         private function tileToSlot(_arg_1:InventoryTile):SlotObjectData
@@ -148,7 +148,7 @@ package io.decagames.rotmg.dailyQuests.view.info
             else
             {
                 this.completeQuest();
-            };
+            }
         }
 
         private function completeQuest():void
@@ -170,11 +170,11 @@ package io.decagames.rotmg.dailyQuests.view.info
                 if (_local_2)
                 {
                     _local_5 = _local_5.concat(_local_2.backpack.tiles);
-                };
+                }
                 if (_local_3)
                 {
                     _local_5 = _local_5.concat(_local_3.storage.tiles);
-                };
+                }
                 for each (_local_6 in _local_4)
                 {
                     for each (_local_7 in _local_5)
@@ -184,18 +184,18 @@ package io.decagames.rotmg.dailyQuests.view.info
                             _local_5.splice(_local_5.indexOf(_local_7), 1);
                             _local_1.push(this.tileToSlot(_local_7));
                             break;
-                        };
-                    };
-                };
+                        }
+                    }
+                }
                 this.lockScreen.dispatch();
                 this.hud.gameSprite.gsc_.questRedeem(this.model.currentQuest.id, _local_1, this.model.selectedItem);
                 if (!this.model.currentQuest.repeatable)
                 {
                     this.model.currentQuest.completed = true;
-                };
+                }
                 this.view.completeButton.completed = true;
                 this.view.completeButton.disabled = true;
-            };
+            }
         }
 
         private function checkIfQuestHasExpired():Boolean
@@ -206,7 +206,7 @@ package io.decagames.rotmg.dailyQuests.view.info
             if (_local_1.expiration != "")
             {
                 _local_3 = ((Number(_local_1.expiration) - (_local_2.time / 1000)) < 0);
-            };
+            }
             return (_local_3);
         }
 

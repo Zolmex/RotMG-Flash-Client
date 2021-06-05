@@ -60,7 +60,7 @@ package kabam.rotmg.account.steam.services
                     "steamid":this.steam.getSteamId(),
                     "data":this.offer.data_
                 });
-            };
+            }
         }
 
         private function onComplete(_arg_1:Boolean, _arg_2:*):void
@@ -72,7 +72,7 @@ package kabam.rotmg.account.steam.services
             else
             {
                 this.reportError(_arg_2);
-            };
+            }
         }
 
         private function onPurchaseOfferComplete():void
@@ -107,7 +107,7 @@ package kabam.rotmg.account.steam.services
                     "orderid":_arg_2,
                     "authorized":((_arg_3) ? 1 : 0)
                 });
-            };
+            }
         }
 
         private function onAuthorized(_arg_1:Boolean, _arg_2:*):void
@@ -119,7 +119,7 @@ package kabam.rotmg.account.steam.services
             else
             {
                 this.reportError(_arg_2);
-            };
+            }
         }
 
         private function onPurchaseFinalizeComplete():void

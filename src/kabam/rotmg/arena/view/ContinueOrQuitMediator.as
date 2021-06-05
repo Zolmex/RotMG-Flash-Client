@@ -75,7 +75,7 @@ package kabam.rotmg.arena.view
             {
                 this.view.setProcessing(true);
                 this.openMoneyWindow.dispatch();
-            };
+            }
         }
 
         private function onQuit():void

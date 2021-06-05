@@ -19,7 +19,7 @@ package com.company.util
             {
                 _local_2.writeByte(parseInt(_arg_1.substr(_local_3, 2), 16));
                 _local_3 = (_local_3 + 2);
-            };
+            }
             return (_local_2);
         }
 

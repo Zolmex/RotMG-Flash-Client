@@ -6,10 +6,10 @@
 package com.company.assembleegameclient.mapeditor
 {
     import flash.utils.Dictionary;
-    import __AS3__.vec.Vector;
+    
     import com.company.util.MoreStringUtil;
     import com.company.assembleegameclient.objects.ObjectLibrary;
-    import __AS3__.vec.*;
+    
 
     public class DungeonChooser extends Chooser 
     {
@@ -43,7 +43,7 @@ package com.company.assembleegameclient.mapeditor
             if (_arg_2 != "")
             {
                 _local_4 = new RegExp(_arg_2, "gix");
-            };
+            }
             var _local_5:Dictionary = GroupDivider.getDungeonsXML(this.currentDungon);
             for each (_local_7 in _local_5)
             {
@@ -51,8 +51,8 @@ package com.company.assembleegameclient.mapeditor
                 if (((_local_4 == null) || (_local_6.search(_local_4) >= 0)))
                 {
                     _local_3.push(_local_6);
-                };
-            };
+                }
+            }
             _local_3.sort(MoreStringUtil.cmp);
             for each (_local_6 in _local_3)
             {
@@ -66,9 +66,9 @@ package com.company.assembleegameclient.mapeditor
                 else
                 {
                     _local_9 = this.cache[_local_8];
-                };
+                }
                 addElement(_local_9);
-            };
+            }
             hasBeenLoaded = true;
             scrollBar_.setIndicatorSize(HEIGHT, elementContainer_.height, true);
         }

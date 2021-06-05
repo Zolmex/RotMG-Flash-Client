@@ -74,7 +74,7 @@ package kabam.rotmg.ui.view
             if (_arg_1.objectType() == 796)
             {
                 return;
-            };
+            }
             var _local_2:CharacterClass = this.classesModel.getCharacterClass(_arg_1.objectType());
             _local_2.setIsSelected(true);
             _local_2.skins.getSkin(_arg_1.skinType()).setIsSelected(true);

@@ -66,8 +66,8 @@ package com.company.assembleegameclient.ui
                 {
                     this.destroyBoostTimers();
                     this.createBoostTimers();
-                };
-            };
+                }
+            }
         }
 
         private function createHeader():void
@@ -111,7 +111,7 @@ package com.company.assembleegameclient.ui
             else
             {
                 _local_1.complete.addOnce(this.createBackground);
-            };
+            }
         }
 
         private function addTierBoostIfAble(_arg_1:SignalWaiter):void
@@ -120,7 +120,7 @@ package com.company.assembleegameclient.ui
             {
                 this.tierBoostTimer = this.returnBoostTimer(new LineBuilder().setParams(TextKey.BOOSTPANEL_TIERLEVELINCREASED), this.player.tierBoost);
                 this.addTimer(_arg_1, this.tierBoostTimer);
-            };
+            }
         }
 
         private function addDropTimerIfAble(_arg_1:SignalWaiter):void
@@ -131,7 +131,7 @@ package com.company.assembleegameclient.ui
                 _local_2 = "1.5x";
                 this.dropBoostTimer = this.returnBoostTimer(new LineBuilder().setParams(TextKey.BOOSTPANEL_DROPRATE, {"rate":_local_2}), this.player.dropBoost);
                 this.addTimer(_arg_1, this.dropBoostTimer);
-            };
+            }
         }
 
         private function addTimer(_arg_1:SignalWaiter, _arg_2:BoostTimer):void
@@ -148,11 +148,11 @@ package com.company.assembleegameclient.ui
             if (((this.tierBoostTimer) && (this.tierBoostTimer.parent)))
             {
                 removeChild(this.tierBoostTimer);
-            };
+            }
             if (((this.dropBoostTimer) && (this.dropBoostTimer.parent)))
             {
                 removeChild(this.dropBoostTimer);
-            };
+            }
             this.tierBoostTimer = null;
             this.dropBoostTimer = null;
         }

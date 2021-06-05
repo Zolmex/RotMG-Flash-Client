@@ -45,7 +45,7 @@ package kabam.rotmg.assets.services
             if (_arg_2)
             {
                 return (cropAndGlowIcon(TextureRedrawer.redraw(AssetLibrary.getImageFromSet("lofiInterfaceBig", 43), _arg_1, true, 0xFFFFFFFF, false, 5, 0x666666)));
-            };
+            }
             return (cropAndGlowIcon(TextureRedrawer.resize(AssetLibrary.getImageFromSet("lofiInterfaceBig", 43), null, _arg_1, true, 0, 0)));
         }
 

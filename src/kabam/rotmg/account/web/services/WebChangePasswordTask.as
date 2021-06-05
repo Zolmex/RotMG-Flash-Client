@@ -36,7 +36,7 @@ package kabam.rotmg.account.web.services
 
         private function makeDataPacket():Object
         {
-            var _local_1:Object = {};
+            var _local_1:Object = {}
             _local_1.guid = this.account.getUserId();
             _local_1.password = this.data.currentPassword;
             _local_1.newPassword = this.data.newPassword;

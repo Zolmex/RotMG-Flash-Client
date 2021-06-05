@@ -6,7 +6,7 @@
 package com.company.assembleegameclient.mapeditor
 {
     import flash.display.Sprite;
-    import __AS3__.vec.Vector;
+    
     import flash.display.IGraphicsData;
     import com.company.util.GraphicsUtil;
     import com.company.assembleegameclient.mapeditor.Element;
@@ -24,7 +24,7 @@ package com.company.assembleegameclient.mapeditor
     import flash.net.FileReference;
     import flash.display.BitmapData;
     import com.adobe.images.PNGEncoder;
-    import __AS3__.vec.*;
+    
     import com.company.assembleegameclient.mapeditor.*;
 
     internal class Chooser extends Sprite 
@@ -67,8 +67,8 @@ package com.company.assembleegameclient.mapeditor
                 {
                     this.setSelected(_local_2);
                     return;
-                };
-            };
+                }
+            }
         }
 
         protected function addElement(_arg_1:Element):void
@@ -80,7 +80,7 @@ package com.company.assembleegameclient.mapeditor
             if (_local_2 == 0)
             {
                 this.setSelected(_arg_1);
-            };
+            }
             _arg_1.addEventListener(MouseEvent.MOUSE_DOWN, this.onMouseDown);
             this.elements_.push(_arg_1);
         }
@@ -95,7 +95,7 @@ package com.company.assembleegameclient.mapeditor
             else
             {
                 this.cleanupElements();
-            };
+            }
             this._hasBeenLoaded = false;
         }
 
@@ -108,7 +108,7 @@ package com.company.assembleegameclient.mapeditor
                 _local_2 = this.elements_.pop();
                 _local_2.removeEventListener(MouseEvent.MOUSE_DOWN, this.onMouseDown);
                 _local_1--;
-            };
+            }
         }
 
         protected function setSelected(_arg_1:Element):void
@@ -116,7 +116,7 @@ package com.company.assembleegameclient.mapeditor
             if (this.selected_ != null)
             {
                 this.selected_.setSelected(false);
-            };
+            }
             this.selected_ = _arg_1;
             this.selected_.setSelected(true);
         }
@@ -150,7 +150,7 @@ package com.company.assembleegameclient.mapeditor
                 _local_3 = PNGEncoder.encode(_arg_1.objectBitmap);
                 _local_4 = new FileReference();
                 _local_4.save(_local_3, (_arg_1.type_ + ".png"));
-            };
+            }
         }
 
         private function drawBackground():void
@@ -170,7 +170,7 @@ package com.company.assembleegameclient.mapeditor
             else
             {
                 this.setSelected(_local_2);
-            };
+            }
         }
 
         protected function onScrollBarChange(_arg_1:Event):void

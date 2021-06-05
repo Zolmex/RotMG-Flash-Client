@@ -5,9 +5,6 @@
 
 package com.company.assembleegameclient.editor
 {
-    import __AS3__.vec.Vector;
-    import __AS3__.vec.*;
-
     public class CommandQueue 
     {
 
@@ -28,7 +25,7 @@ package com.company.assembleegameclient.editor
             if (this.currPos == 0)
             {
                 return;
-            };
+            }
             this.list_[--this.currPos].unexecute();
         }
 
@@ -37,7 +34,7 @@ package com.company.assembleegameclient.editor
             if (this.currPos == this.list_.length)
             {
                 return;
-            };
+            }
             this.list_[this.currPos++].execute();
         }
 

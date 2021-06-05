@@ -18,11 +18,11 @@ package io.decagames.rotmg.pets.data.ability
             if (_arg_1.ordinal >= PetRarityEnum.LEGENDARY.ordinal)
             {
                 return (true);
-            };
+            }
             if (_arg_1.ordinal >= PetRarityEnum.UNCOMMON.ordinal)
             {
                 return (_arg_2 <= 1);
-            };
+            }
             return (_arg_2 == 0);
         }
 
@@ -54,12 +54,12 @@ package io.decagames.rotmg.pets.data.ability
                     {
                         _local_6 = _arg_1.maxAbilityPower;
                         _local_5.points = abilityPowerToMinPoints(_local_6);
-                    };
+                    }
                     _local_5.level = _local_6;
-                };
+                }
                 _local_3.push(_local_5);
                 _local_4++;
-            };
+            }
             return (_local_3);
         }
 

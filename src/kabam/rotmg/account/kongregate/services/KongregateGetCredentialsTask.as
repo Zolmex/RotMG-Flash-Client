@@ -33,7 +33,7 @@ package kabam.rotmg.account.kongregate.services
             else
             {
                 this.verifyCredentials();
-            };
+            }
         }
 
         private function verifyCredentials():void

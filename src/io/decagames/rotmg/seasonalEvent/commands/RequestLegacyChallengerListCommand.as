@@ -48,7 +48,7 @@ package io.decagames.rotmg.seasonalEvent.commands
             if (((this.player.hasAccount()) && (this.death.getIsDeathViewPending())))
             {
                 return (this.death.getLastDeath().charId_);
-            };
+            }
             return (-1);
         }
 

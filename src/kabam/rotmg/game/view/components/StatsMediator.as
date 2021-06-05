@@ -48,7 +48,7 @@ package kabam.rotmg.game.view.components
             {
                 this.view.undock();
                 this.statsUndocked.dispatch(this.view);
-            };
+            }
         }
 
         private function onStatsDock():void

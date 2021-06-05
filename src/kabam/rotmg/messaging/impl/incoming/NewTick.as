@@ -5,11 +5,11 @@
 
 package kabam.rotmg.messaging.impl.incoming
 {
-    import __AS3__.vec.Vector;
+    
     import kabam.rotmg.messaging.impl.data.ObjectStatusData;
     import com.company.assembleegameclient.util.FreeList;
     import flash.utils.IDataInput;
-    import __AS3__.vec.*;
+    
 
     public class NewTick extends IncomingMessage 
     {
@@ -38,18 +38,18 @@ package kabam.rotmg.messaging.impl.incoming
             {
                 FreeList.deleteObject(this.statuses_[_local_3]);
                 _local_3++;
-            };
+            }
             this.statuses_.length = Math.min(_local_2, this.statuses_.length);
             while (this.statuses_.length < _local_2)
             {
                 this.statuses_.push((FreeList.newObject(ObjectStatusData) as ObjectStatusData));
-            };
+            }
             _local_3 = 0;
             while (_local_3 < _local_2)
             {
                 this.statuses_[_local_3].parseFromInput(_arg_1);
                 _local_3++;
-            };
+            }
         }
 
         override public function toString():String

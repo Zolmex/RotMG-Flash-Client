@@ -7,7 +7,6 @@ package com.company.assembleegameclient.background
 {
     import flash.geom.Point;
     import flash.display.BitmapData;
-    import __AS3__.vec.Vector;
     import flash.display.IGraphicsData;
     import flash.display.GraphicsBitmapFill;
     import flash.geom.Matrix;
@@ -16,7 +15,6 @@ package com.company.assembleegameclient.background
     import flash.display.BitmapDataChannel;
     import flash.geom.Rectangle;
     import com.company.assembleegameclient.map.Camera;
-    import __AS3__.vec.*;
 
     public class NexusBackground extends Background 
     {
@@ -64,7 +62,7 @@ package com.company.assembleegameclient.background
                 _local_4 = this.islands_[_local_3];
                 _local_4.draw(_arg_1, _arg_2, this.graphicsData_);
                 _local_3++;
-            };
+            }
         }
 
 
@@ -80,9 +78,7 @@ import com.company.util.GraphicsUtil;
 import com.company.util.AssetLibrary;
 import com.company.assembleegameclient.background.NexusBackground;
 import com.company.assembleegameclient.map.Camera;
-import __AS3__.vec.Vector;
 import flash.display.IGraphicsData;
-import __AS3__.vec.*;
 
 class Island 
 {
@@ -90,8 +86,8 @@ class Island
     public var center_:Point;
     public var startTime_:int;
     public var bitmapData_:BitmapData;
-    /*private*/ var bitmapFill_:GraphicsBitmapFill = new GraphicsBitmapFill(null, new Matrix(), true, false);
-    /*private*/ var path_:GraphicsPath = new GraphicsPath(GraphicsUtil.QUAD_COMMANDS, new Vector.<Number>());
+    private var bitmapFill_:GraphicsBitmapFill = new GraphicsBitmapFill(null, new Matrix(), true, false);
+    private var path_:GraphicsPath = new GraphicsPath(GraphicsUtil.QUAD_COMMANDS, new Vector.<Number>());
 
     public function Island(_arg_1:Number, _arg_2:Number, _arg_3:int):void
     {

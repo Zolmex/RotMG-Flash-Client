@@ -18,7 +18,7 @@ package io.decagames.rotmg.utils.dictionary
             for (_local_3 in _arg_1)
             {
                 _local_2++;
-            };
+            }
             return (_local_2);
         }
 

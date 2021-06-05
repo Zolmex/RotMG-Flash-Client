@@ -80,7 +80,7 @@ package io.decagames.rotmg.classes
             else
             {
                 this._timeLineMax.play(0);
-            };
+            }
         }
 
         private function resetAnimation():void
@@ -93,7 +93,7 @@ package io.decagames.rotmg.classes
             else
             {
                 this._timeLineMax.reverse();
-            };
+            }
         }
 
         private function createCharacter():void
@@ -105,7 +105,7 @@ package io.decagames.rotmg.classes
                 this._contentContainer.removeChild(this._newClass);
                 this._newClass.bitmapData.dispose();
                 this._newClass = null;
-            };
+            }
             var _local_1:int = ObjectLibrary.playerChars_.length;
             var _local_2:int = this._objectTypes.shift();
             var _local_4:int;
@@ -117,9 +117,9 @@ package io.decagames.rotmg.classes
                 {
                     this._newClass = new Bitmap(this.getImageBitmapData(_local_3));
                     break;
-                };
+                }
                 _local_4++;
-            };
+            }
             if (this._newClass)
             {
                 this._newClass.x = ((this.WIDTH - this._newClass.width) / 2);
@@ -128,11 +128,11 @@ package io.decagames.rotmg.classes
                 if (!this._characterName)
                 {
                     this.createCharacterName();
-                };
+                }
                 this._characterName.text = _local_3.@id;
                 this._characterName.x = ((this.WIDTH - this._characterName.width) / 2);
                 this._characterName.y = (((this.HEIGHT - this._characterName.height) / 2) + 20);
-            };
+            }
         }
 
         private function createCharacterName():void

@@ -50,7 +50,7 @@ package io.decagames.rotmg.shop.mysteryBox.contentPopup
             else
             {
                 _arg_1.x = Math.round(((this.background.width - ((5 * 40) + (4 * 4))) / 2));
-            };
+            }
             addChild(_arg_1);
         }
 

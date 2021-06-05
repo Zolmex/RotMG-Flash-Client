@@ -50,7 +50,7 @@ package kabam.rotmg.account.steam
 
         public function getCredentials():Object
         {
-            var _local_1:Object = {};
+            var _local_1:Object = {}
             _local_1.guid = this.getUserId();
             _local_1.secret = this.getSecret();
             _local_1.steamid = this.api.getSteamId();

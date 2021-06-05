@@ -30,7 +30,7 @@ package kabam.rotmg.stage3D.graphic3D
             if ((_arg_1 in flippedTextures))
             {
                 return (flippedTextures[_arg_1]);
-            };
+            }
             _local_2 = flipBitmapData(_arg_1, "y");
             flippedTextures[_arg_1] = _local_2;
             return (_local_2);
@@ -47,7 +47,7 @@ package kabam.rotmg.stage3D.graphic3D
             else
             {
                 _local_4 = new Matrix(1, 0, 0, -1, 0, _arg_1.height);
-            };
+            }
             _local_3.draw(_arg_1, _local_4, null, null, null, true);
             return (_local_3);
         }
@@ -70,12 +70,12 @@ package kabam.rotmg.stage3D.graphic3D
             for each (_local_1 in textures)
             {
                 _local_1.dispose();
-            };
+            }
             textures = new Dictionary();
             for each (_local_2 in flippedTextures)
             {
                 _local_2.dispose();
-            };
+            }
             flippedTextures = new Dictionary();
             count = 0;
         }
@@ -86,7 +86,7 @@ package kabam.rotmg.stage3D.graphic3D
             for each (_local_1 in textures)
             {
                 _local_1.dispose();
-            };
+            }
             textures = new Dictionary();
         }
 
@@ -100,11 +100,11 @@ package kabam.rotmg.stage3D.graphic3D
             if (_arg_1 == null)
             {
                 return (null);
-            };
+            }
             if ((_arg_1 in textures))
             {
                 return (textures[_arg_1]);
-            };
+            }
             _local_2 = getNextPowerOf2(_arg_1.width);
             _local_3 = getNextPowerOf2(_arg_1.height);
             _local_4 = this.context3D.createTexture(_local_2, _local_3, Context3DTextureFormat.BGRA, false);
@@ -115,7 +115,7 @@ package kabam.rotmg.stage3D.graphic3D
             {
                 disposeNormalTextures();
                 count = 0;
-            };
+            }
             textures[_arg_1] = _local_4;
             count++;
             return (_local_4);

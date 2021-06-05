@@ -5,11 +5,11 @@
 
 package com.company.assembleegameclient.ui.panels.itemgrids
 {
-    import __AS3__.vec.Vector;
+    
     import com.company.assembleegameclient.ui.panels.itemgrids.itemtiles.InteractiveItemTile;
     import com.company.assembleegameclient.objects.GameObject;
     import com.company.assembleegameclient.objects.Player;
-    import __AS3__.vec.*;
+    
 
     public class ContainerGrid extends ItemGrid 
     {
@@ -30,7 +30,7 @@ package com.company.assembleegameclient.ui.panels.itemgrids
                 addToGrid(_local_4, 2, _local_3);
                 this.tiles[_local_3] = _local_4;
                 _local_3++;
-            };
+            }
         }
 
         override public function setItems(_arg_1:Vector.<int>, _arg_2:int=0):void
@@ -50,22 +50,22 @@ package com.company.assembleegameclient.ui.panels.itemgrids
                         if (this.tiles[_local_5].setItem(_arg_1[(_local_5 + indexOffset)]))
                         {
                             _local_3 = true;
-                        };
+                        }
                     }
                     else
                     {
                         if (this.tiles[_local_5].setItem(-1))
                         {
                             _local_3 = true;
-                        };
-                    };
+                        }
+                    }
                     _local_5++;
-                };
+                }
                 if (_local_3)
                 {
                     refreshTooltip();
-                };
-            };
+                }
+            }
         }
 
 

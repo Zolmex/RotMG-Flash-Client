@@ -78,8 +78,8 @@ package kabam.rotmg.legends.view
                 else
                 {
                     this.label.setColor(OUT_COLOR);
-                };
-            };
+                }
+            }
         }
 
         public function setIsSelected(_arg_1:Boolean):void

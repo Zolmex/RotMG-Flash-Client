@@ -5,9 +5,9 @@
 
 package kabam.rotmg.messaging.impl.incoming
 {
-    import __AS3__.vec.Vector;
+    
     import flash.utils.IDataInput;
-    import __AS3__.vec.*;
+    
 
     public class AccountList extends IncomingMessage 
     {
@@ -32,7 +32,7 @@ package kabam.rotmg.messaging.impl.incoming
             {
                 this.accountIds_.push(_arg_1.readUTF());
                 _local_2++;
-            };
+            }
             this.lockAction_ = _arg_1.readInt();
         }
 

@@ -47,12 +47,12 @@ package kabam.rotmg.ui.view
                 if (this.expTimer)
                 {
                     this.expTimer.update(_arg_1.xpTimer);
-                };
+                }
                 if (!this.expBar_.visible)
                 {
                     this.expBar_.visible = true;
                     this.fameBar_.visible = false;
-                };
+                }
                 this.expBar_.draw(_arg_1.exp_, _arg_1.nextLevelExp_, 0);
                 if (this.curXPBoost != _arg_1.xpBoost_)
                 {
@@ -64,8 +64,8 @@ package kabam.rotmg.ui.view
                     else
                     {
                         this.expBar_.hideMultiplierText();
-                    };
-                };
+                    }
+                }
                 if (_arg_1.xpTimer)
                 {
                     if (!this.areTempXpListenersAdded)
@@ -73,7 +73,7 @@ package kabam.rotmg.ui.view
                         this.expBar_.addEventListener("MULTIPLIER_OVER", this.onExpBarOver);
                         this.expBar_.addEventListener("MULTIPLIER_OUT", this.onExpBarOut);
                         this.areTempXpListenersAdded = true;
-                    };
+                    }
                 }
                 else
                 {
@@ -82,13 +82,13 @@ package kabam.rotmg.ui.view
                         this.expBar_.removeEventListener("MULTIPLIER_OVER", this.onExpBarOver);
                         this.expBar_.removeEventListener("MULTIPLIER_OUT", this.onExpBarOut);
                         this.areTempXpListenersAdded = false;
-                    };
+                    }
                     if (((this.expTimer) && (this.expTimer.parent)))
                     {
                         removeChild(this.expTimer);
                         this.expTimer = null;
-                    };
-                };
+                    }
+                }
             }
             else
             {
@@ -96,9 +96,9 @@ package kabam.rotmg.ui.view
                 {
                     this.fameBar_.visible = true;
                     this.expBar_.visible = false;
-                };
+                }
                 this.fameBar_.draw(_arg_1.currFame_, _arg_1.nextClassQuestFame_, 0);
-            };
+            }
             this.hpBar_.draw(_arg_1.hp_, _arg_1.maxHP_, _arg_1.maxHPBoost_, _arg_1.maxHPMax_, _arg_1.level_);
             this.mpBar_.draw(_arg_1.mp_, _arg_1.maxMP_, _arg_1.maxMPBoost_, _arg_1.maxMPMax_, _arg_1.level_);
         }
@@ -114,7 +114,7 @@ package kabam.rotmg.ui.view
             {
                 removeChild(this.expTimer);
                 this.expTimer = null;
-            };
+            }
         }
 
 

@@ -36,14 +36,14 @@ package com.company.assembleegameclient.objects
             if (_arg_1 < (this.lastUpdate_ + 500))
             {
                 return;
-            };
+            }
             this.lastUpdate_ = _arg_1;
             this.members_.length = 0;
             var _local_3:Player = this.map_.player_;
             if (_local_3 == null)
             {
                 return;
-            };
+            }
             for each (_local_4 in this.map_.goDict_)
             {
                 _local_5 = (_local_4 as Player);
@@ -55,14 +55,14 @@ package com.company.assembleegameclient.objects
                     if (!((_local_5.distSqFromThisPlayer_ > PARTY_DISTANCE_SQ) && (!(_local_5.starred_))))
                     {
                         this.members_.push(_local_5);
-                    };
-                };
-            };
+                    }
+                }
+            }
             this.members_.sortOn(SORT_ON_FIELDS, SORT_ON_PARAMS);
             if (this.members_.length > NUM_MEMBERS)
             {
                 this.members_.length = NUM_MEMBERS;
-            };
+            }
         }
 
         public function lockPlayer(_arg_1:Player):void
@@ -90,7 +90,7 @@ package com.company.assembleegameclient.objects
                 this.starred_[_local_3] = 1;
                 this.lastUpdate_ = int.MIN_VALUE;
                 _local_2++;
-            };
+            }
         }
 
         public function removeStars(_arg_1:AccountList):void
@@ -103,7 +103,7 @@ package com.company.assembleegameclient.objects
                 delete this.starred_[_local_3];
                 this.lastUpdate_ = int.MIN_VALUE;
                 _local_2++;
-            };
+            }
         }
 
         public function ignorePlayer(_arg_1:Player):void
@@ -132,7 +132,7 @@ package com.company.assembleegameclient.objects
                 this.ignored_[_local_3] = 1;
                 this.lastUpdate_ = int.MIN_VALUE;
                 _local_2++;
-            };
+            }
         }
 
 

@@ -6,7 +6,7 @@
 package com.company.assembleegameclient.mapeditor
 {
     import com.company.assembleegameclient.mapeditor.Element;
-    import __AS3__.vec.Vector;
+    
     import flash.display.Shape;
     import flash.display.BitmapData;
     import flash.display.IGraphicsData;
@@ -17,7 +17,7 @@ package com.company.assembleegameclient.mapeditor
     import com.company.assembleegameclient.map.AnimateProperties;
     import com.company.assembleegameclient.mapeditor.GroundTypeToolTip;
     import com.company.assembleegameclient.ui.tooltip.ToolTip;
-    import __AS3__.vec.*;
+    
     import com.company.assembleegameclient.mapeditor.*;
 
     internal class GroundElement extends Element 

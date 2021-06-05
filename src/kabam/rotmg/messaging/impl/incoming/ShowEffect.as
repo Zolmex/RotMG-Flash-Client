@@ -78,7 +78,7 @@ package kabam.rotmg.messaging.impl.incoming
             else
             {
                 this.targetObjectId_ = 0;
-            };
+            }
             if ((_local_2 & EFFECT_BIT_POS1_X))
             {
                 this.pos1_.x_ = _arg_1.readFloat();
@@ -86,7 +86,7 @@ package kabam.rotmg.messaging.impl.incoming
             else
             {
                 this.pos1_.x_ = 0;
-            };
+            }
             if ((_local_2 & EFFECT_BIT_POS1_Y))
             {
                 this.pos1_.y_ = _arg_1.readFloat();
@@ -94,7 +94,7 @@ package kabam.rotmg.messaging.impl.incoming
             else
             {
                 this.pos1_.y_ = 0;
-            };
+            }
             if ((_local_2 & EFFECT_BIT_POS2_X))
             {
                 this.pos2_.x_ = _arg_1.readFloat();
@@ -102,7 +102,7 @@ package kabam.rotmg.messaging.impl.incoming
             else
             {
                 this.pos2_.x_ = 0;
-            };
+            }
             if ((_local_2 & EFFECT_BIT_POS2_Y))
             {
                 this.pos2_.y_ = _arg_1.readFloat();
@@ -110,7 +110,7 @@ package kabam.rotmg.messaging.impl.incoming
             else
             {
                 this.pos2_.y_ = 0;
-            };
+            }
             if ((_local_2 & EFFECT_BIT_COLOR))
             {
                 this.color_ = _arg_1.readInt();
@@ -118,7 +118,7 @@ package kabam.rotmg.messaging.impl.incoming
             else
             {
                 this.color_ = 0xFFFFFFFF;
-            };
+            }
             if ((_local_2 & EFFECT_BIT_DURATION))
             {
                 this.duration_ = _arg_1.readFloat();
@@ -126,7 +126,7 @@ package kabam.rotmg.messaging.impl.incoming
             else
             {
                 this.duration_ = 1;
-            };
+            }
         }
 
         override public function toString():String

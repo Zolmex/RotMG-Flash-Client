@@ -8,7 +8,7 @@ package io.decagames.rotmg.dailyQuests.view.info
     import flash.display.Sprite;
     import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
     import io.decagames.rotmg.ui.labels.UILabel;
-    import __AS3__.vec.Vector;
+    
     import io.decagames.rotmg.dailyQuests.view.slot.DailyQuestItemSlot;
     import io.decagames.rotmg.ui.texture.TextureParser;
     import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
@@ -16,7 +16,7 @@ package io.decagames.rotmg.dailyQuests.view.info
     import io.decagames.rotmg.dailyQuests.utils.SlotsRendered;
     import io.decagames.rotmg.dailyQuests.data.DailyQuestItemSlotType;
     import io.decagames.rotmg.dailyQuests.model.DailyQuest;
-    import __AS3__.vec.*;
+    
 
     public class DailyQuestInfo extends Sprite 
     {
@@ -60,8 +60,8 @@ package io.decagames.rotmg.dailyQuests.view.info
                 if (_local_5 >= 0)
                 {
                     _local_3.splice(_local_5, 1);
-                };
-            };
+                }
+            }
             return (_local_3.length == 0);
         }
 
@@ -212,7 +212,7 @@ package io.decagames.rotmg.dailyQuests.view.info
             for each (_local_1 in this.slots)
             {
                 _local_1.parent.removeChild(_local_1);
-            };
+            }
             if (!this.slots)
             {
                 this.slots = new Vector.<DailyQuestItemSlot>();
@@ -220,7 +220,7 @@ package io.decagames.rotmg.dailyQuests.view.info
             else
             {
                 this.slots.length = 0;
-            };
+            }
         }
 
         public function eventQuestsCompleted():void
@@ -232,7 +232,7 @@ package io.decagames.rotmg.dailyQuests.view.info
             for each (_local_1 in this.slots)
             {
                 _local_1.parent.removeChild(_local_1);
-            };
+            }
             if (!this.slots)
             {
                 this.slots = new Vector.<DailyQuestItemSlot>();
@@ -240,7 +240,7 @@ package io.decagames.rotmg.dailyQuests.view.info
             else
             {
                 this.slots.length = 0;
-            };
+            }
         }
 
         private function showQuestsCompleteInfo(_arg_1:Boolean, _arg_2:Boolean=true):void

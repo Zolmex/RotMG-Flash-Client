@@ -76,7 +76,7 @@ package kabam.rotmg.classes.view
             if (_local_2 != null)
             {
                 _local_1.draw(_local_2.getCredits(), _local_2.getFame(), _local_2.getTokens());
-            };
+            }
             _local_1.x = 800;
             _local_1.y = 20;
             addChild(_local_1);
@@ -146,7 +146,7 @@ package kabam.rotmg.classes.view
                 _local_4.x = 351;
                 _local_4.y = 110;
                 addChild(_local_4);
-            };
+            }
         }
 
         private function makeClassDetailView():void
@@ -163,7 +163,7 @@ package kabam.rotmg.classes.view
             if (!_arg_1)
             {
                 this.playBtn.deactivate();
-            };
+            }
         }
 
         private function makeSignalWaiter():SignalWaiter

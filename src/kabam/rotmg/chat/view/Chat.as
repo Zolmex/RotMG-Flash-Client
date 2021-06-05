@@ -36,7 +36,7 @@ package kabam.rotmg.chat.view
             else
             {
                 this.addInputNotAllowed();
-            };
+            }
         }
 
         private function addChatInput():void
@@ -57,11 +57,11 @@ package kabam.rotmg.chat.view
             if (((!(this.notAllowed == null)) && (contains(this.notAllowed))))
             {
                 removeChild(this.notAllowed);
-            };
+            }
             if (((this.input == null) || (!(contains(this.input)))))
             {
                 this.addChatInput();
-            };
+            }
         }
 
 

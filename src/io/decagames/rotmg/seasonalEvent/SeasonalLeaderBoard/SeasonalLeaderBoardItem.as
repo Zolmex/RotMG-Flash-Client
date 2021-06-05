@@ -104,7 +104,7 @@ package io.decagames.rotmg.seasonalEvent.SeasonalLeaderBoard
             {
                 _local_2 = InteractiveItemTile(_local_1.next());
                 _local_2.setInteractive(false);
-            };
+            }
             this.inventoryGrid.setItems(this._seasonalLeaderBoardItemData.equipment);
             this.inventoryGrid.scaleX = (this.inventoryGrid.scaleY = 0.7);
             this.inventoryGrid.x = (this.nameText.x + 140);
@@ -148,8 +148,8 @@ package io.decagames.rotmg.seasonalEvent.SeasonalLeaderBoard
                 else
                 {
                     _local_1 = 0xEE00FF;
-                };
-            };
+                }
+            }
             return (_local_1);
         }
 

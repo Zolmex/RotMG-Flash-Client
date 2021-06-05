@@ -59,7 +59,7 @@ package kabam.rotmg.ui.view
             if (this.googleAnalytics)
             {
                 this.googleAnalytics.trackPageView(NotEnoughGoldDialog.TRACKING_TAG);
-            };
+            }
         }
 
 

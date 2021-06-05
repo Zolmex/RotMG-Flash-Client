@@ -5,9 +5,9 @@
 
 package kabam.rotmg.arena.model
 {
-    import __AS3__.vec.Vector;
+    
     import kabam.rotmg.text.model.TextKey;
-    import __AS3__.vec.*;
+    
 
     public class ArenaLeaderboardModel 
     {
@@ -21,7 +21,7 @@ package kabam.rotmg.arena.model
             for each (_local_1 in FILTERS)
             {
                 _local_1.clearEntries();
-            };
+            }
         }
 
 

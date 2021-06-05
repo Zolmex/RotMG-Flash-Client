@@ -19,7 +19,7 @@ package io.decagames.rotmg.pets.windows.yard.fuse
     import kabam.rotmg.game.model.GameModel;
     import kabam.rotmg.core.model.PlayerModel;
     import io.decagames.rotmg.seasonalEvent.data.SeasonalEventModel;
-    import __AS3__.vec.Vector;
+    
     import io.decagames.rotmg.pets.components.petItem.PetItem;
     import io.decagames.rotmg.pets.data.vo.PetVO;
     import io.decagames.rotmg.pets.data.rarity.PetRarityEnum;
@@ -35,7 +35,7 @@ package io.decagames.rotmg.pets.windows.yard.fuse
     import flash.events.MouseEvent;
     import io.decagames.rotmg.pets.utils.FeedFuseCostModel;
     import io.decagames.rotmg.pets.utils.FusionCalculator;
-    import __AS3__.vec.*;
+    
 
     public class FuseTabMediator extends Mediator 
     {
@@ -106,8 +106,8 @@ package io.decagames.rotmg.pets.windows.yard.fuse
                 for each (_local_2 in this.petsList)
                 {
                     _local_2.selected = false;
-                };
-            };
+                }
+            }
         }
 
         private function get currentGold():int
@@ -116,11 +116,11 @@ package io.decagames.rotmg.pets.windows.yard.fuse
             if (_local_1 != null)
             {
                 return (_local_1.credits_);
-            };
+            }
             if (this.playerModel != null)
             {
                 return (this.playerModel.getCredits());
-            };
+            }
             return (0);
         }
 
@@ -130,11 +130,11 @@ package io.decagames.rotmg.pets.windows.yard.fuse
             if (_local_1 != null)
             {
                 return (_local_1.fame_);
-            };
+            }
             if (this.playerModel != null)
             {
                 return (this.playerModel.getFame());
-            };
+            }
             return (0);
         }
 
@@ -161,18 +161,18 @@ package io.decagames.rotmg.pets.windows.yard.fuse
                 {
                     this.showPopup.dispatch(new NotEnoughResources(300, Currency.GOLD));
                     return;
-                };
+                }
                 if (((_arg_1 == PetUpgradeRequest.FAME_PAYMENT_TYPE) && (this.currentFame < _arg_2)))
                 {
                     this.showPopup.dispatch(new NotEnoughResources(300, Currency.FAME));
                     return;
-                };
+                }
                 this.newAbilityUnlocked.add(this.abilityUnlocked);
                 this.evolvePetSignal.add(this.evolvePetHandler);
                 _local_3 = new FusePetRequestVO(this.currentSelectedPet.getID(), this.fusePet.getID(), _arg_1);
                 this.showFade.dispatch();
                 this.upgradePet.dispatch(_local_3);
-            };
+            }
         }
 
         private function purchaseFame(_arg_1:BaseButton):void
@@ -191,7 +191,7 @@ package io.decagames.rotmg.pets.windows.yard.fuse
             {
                 this.showPopup.dispatch(new ErrorModal(350, "Fuse Pets", LineBuilder.getLocalizedStringFromKey("server.upgrade_petyard_first")));
                 return (false);
-            };
+            }
             return (true);
         }
 
@@ -209,7 +209,7 @@ package io.decagames.rotmg.pets.windows.yard.fuse
             for each (_local_1 in this.petsList)
             {
                 _local_1.removeEventListener(MouseEvent.CLICK, this.onFusePetSelected);
-            };
+            }
             this.view.clearGrid();
         }
 
@@ -220,13 +220,13 @@ package io.decagames.rotmg.pets.windows.yard.fuse
             if (_arg_1 == null)
             {
                 return;
-            };
+            }
             this.currentSelectedPet = _arg_1;
             if (_arg_1.rarity.ordinal == PetRarityEnum.DIVINE.ordinal)
             {
                 this.view.setStrengthPercentage(-1, (_arg_1.rarity.ordinal == PetRarityEnum.DIVINE.ordinal));
                 return;
-            };
+            }
             for each (_local_2 in this.model.getAllPets(_arg_1.family, _arg_1.rarity))
             {
                 if (_local_2 != _arg_1)
@@ -235,8 +235,8 @@ package io.decagames.rotmg.pets.windows.yard.fuse
                     _local_3.addEventListener(MouseEvent.CLICK, this.onFusePetSelected);
                     this.petsList.push(_local_3);
                     this.view.addPet(_local_3);
-                };
-            };
+                }
+            }
         }
 
         private function onFusePetSelected(_arg_1:MouseEvent):void
@@ -265,7 +265,7 @@ package io.decagames.rotmg.pets.windows.yard.fuse
             for each (_local_2 in this.petsList)
             {
                 _local_2.selected = (_local_2 == _arg_1);
-            };
+            }
         }
 
 

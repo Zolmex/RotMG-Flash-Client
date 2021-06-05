@@ -54,7 +54,7 @@ package com.company.assembleegameclient.ui
             if (this.boostPanel)
             {
                 removeChild(this.boostPanel);
-            };
+            }
         }
 
 

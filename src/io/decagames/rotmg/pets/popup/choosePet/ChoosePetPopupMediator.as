@@ -11,7 +11,7 @@ package io.decagames.rotmg.pets.popup.choosePet
     import io.decagames.rotmg.pets.data.PetsModel;
     import io.decagames.rotmg.pets.signals.SelectPetSignal;
     import io.decagames.rotmg.pets.signals.ActivatePet;
-    import __AS3__.vec.Vector;
+    
     import io.decagames.rotmg.pets.components.petItem.PetItem;
     import io.decagames.rotmg.ui.buttons.SliceScalingButton;
     import io.decagames.rotmg.pets.data.vo.PetVO;
@@ -19,7 +19,7 @@ package io.decagames.rotmg.pets.popup.choosePet
     import io.decagames.rotmg.ui.popups.header.PopupHeader;
     import flash.events.MouseEvent;
     import io.decagames.rotmg.ui.buttons.BaseButton;
-    import __AS3__.vec.*;
+    
 
     public class ChoosePetPopupMediator extends Mediator 
     {
@@ -54,7 +54,7 @@ package io.decagames.rotmg.pets.popup.choosePet
                 _local_2.addEventListener(MouseEvent.CLICK, this.onPetSelected);
                 this.petsList.push(_local_2);
                 this.view.addPet(_local_2);
-            };
+            }
         }
 
         private function onPetSelected(_arg_1:MouseEvent):void
@@ -72,7 +72,7 @@ package io.decagames.rotmg.pets.popup.choosePet
             for each (_local_1 in this.petsList)
             {
                 _local_1.removeEventListener(MouseEvent.CLICK, this.onPetSelected);
-            };
+            }
             this.petsList = new Vector.<PetItem>();
         }
 

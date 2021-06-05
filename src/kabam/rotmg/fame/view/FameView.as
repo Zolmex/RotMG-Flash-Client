@@ -91,7 +91,7 @@ package kabam.rotmg.fame.view
             if (this.isDataPopulated)
             {
                 this.makeContinueButton();
-            };
+            }
         }
 
         public function setCharacterInfo(_arg_1:String, _arg_2:int, _arg_3:int):void
@@ -126,7 +126,7 @@ package kabam.rotmg.fame.view
             else
             {
                 _local_3.setParams(TextKey.DEATH_INFO_SHORT, {"date":_arg_1});
-            };
+            }
             this.date.setStringBuilder(_local_3);
             this.date.x = (stage.stageWidth / 2);
             this.date.y = 272;
@@ -179,7 +179,7 @@ package kabam.rotmg.fame.view
                     case "lod cream tile":
                         _local_4 = "lod Cream Tile";
                         break;
-                };
+                }
             }
             else
             {
@@ -187,7 +187,7 @@ package kabam.rotmg.fame.view
                 _local_4 = _local_4.replace(/_/g, " ");
                 _local_4 = _local_4.replace(/APOS/g, "'");
                 _local_4 = _local_4.replace(/BANG/g, "!");
-            };
+            }
             if (ObjectLibrary.getPropsFromId(_local_4) != null)
             {
                 _local_4 = ObjectLibrary.getPropsFromId(_local_4).displayId_;
@@ -197,8 +197,8 @@ package kabam.rotmg.fame.view
                 if (GroundLibrary.getPropsFromId(_local_4) != null)
                 {
                     _local_4 = GroundLibrary.getPropsFromId(_local_4).displayId_;
-                };
-            };
+                }
+            }
             return (_local_4);
         }
 
@@ -235,7 +235,7 @@ package kabam.rotmg.fame.view
             if (((!(this.isAnimation)) || (this.isFadeComplete)))
             {
                 this.makeContinueButton();
-            };
+            }
         }
 
         public function addRemainingChallengerCharacters(_arg_1:int):void
@@ -262,7 +262,7 @@ package kabam.rotmg.fame.view
             else
             {
                 this.scoringBox.showScore();
-            };
+            }
         }
 
         public function get remainingChallengerCharacters():UILabel

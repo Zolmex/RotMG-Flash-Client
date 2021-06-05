@@ -8,7 +8,7 @@ package com.company.assembleegameclient.ui
     import flash.display.Sprite;
     import flash.display.Shape;
     import kabam.rotmg.text.view.StaticTextDisplay;
-    import __AS3__.vec.Vector;
+    
     import flash.display.IGraphicsData;
     import flash.utils.getTimer;
     import flash.text.TextFieldAutoSize;
@@ -102,7 +102,7 @@ package com.company.assembleegameclient.ui
             if (_arg_1 == mouseEnabled)
             {
                 return;
-            };
+            }
             mouseEnabled = _arg_1;
             mouseChildren = _arg_1;
             graphicsData_[0] = ((_arg_1) ? enabledFill_ : disabledFill_);
@@ -183,8 +183,8 @@ package com.company.assembleegameclient.ui
                 {
                     this.state_ = NORMAL_STATE;
                     this.setEnabled(true);
-                };
-            };
+                }
+            }
             switch (this.state_)
             {
                 case COUNTDOWN_STATE:
@@ -197,7 +197,7 @@ package com.company.assembleegameclient.ui
                 case WAITING_STATE:
                     this.statusBar_.visible = false;
                     break;
-            };
+            }
             graphics.clear();
             graphics.drawGraphicsData(graphicsData_);
         }

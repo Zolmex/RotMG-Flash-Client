@@ -63,8 +63,8 @@ package io.decagames.rotmg.shop.packages.contentPopup
                     else
                     {
                         _local_8[_local_9] = 1;
-                    };
-                };
+                    }
+                }
                 _local_10 = [];
                 for each (_local_11 in _local_7)
                 {
@@ -73,24 +73,24 @@ package io.decagames.rotmg.shop.packages.contentPopup
                         _local_12 = new ItemBox(_local_11, _local_8[_local_11], true, "", false);
                         this.contentGrids.addGridElement(_local_12);
                         _local_10.push(_local_11);
-                    };
-                };
-            };
+                    }
+                }
+            }
             if (_arg_2 > 0)
             {
                 _local_13 = new SlotBox(SlotBox.CHAR_SLOT, _arg_2, true, "", false);
                 this.contentGrids.addGridElement(_local_13);
-            };
+            }
             if (_arg_3 > 0)
             {
                 _local_14 = new SlotBox(SlotBox.VAULT_SLOT, _arg_3, true, "", false);
                 this.contentGrids.addGridElement(_local_14);
-            };
+            }
             if (_arg_4 > 0)
             {
                 _local_15 = new SlotBox(SlotBox.GOLD_SLOT, _arg_4, true, "", false);
                 this.contentGrids.addGridElement(_local_15);
-            };
+            }
             this.contentGrids.y = (this.view.infoLabel.textHeight + 8);
             this.contentGrids.x = 10;
             this.view.addChild(this.contentGrids);

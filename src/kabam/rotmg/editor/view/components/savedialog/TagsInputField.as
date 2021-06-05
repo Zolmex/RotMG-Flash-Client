@@ -57,7 +57,7 @@ package kabam.rotmg.editor.view.components.savedialog
             if (this.inputText_.text == "")
             {
                 addChild(this.instructionsText_);
-            };
+            }
         }
 
         public function text():String
@@ -70,7 +70,7 @@ package kabam.rotmg.editor.view.components.savedialog
             if (contains(this.instructionsText_))
             {
                 removeChild(this.instructionsText_);
-            };
+            }
         }
 
         private function onFocusOut(_arg_1:FocusEvent):void
@@ -78,7 +78,7 @@ package kabam.rotmg.editor.view.components.savedialog
             if (((!(contains(this.instructionsText_))) && (this.inputText_.text == "")))
             {
                 addChild(this.instructionsText_);
-            };
+            }
         }
 
 

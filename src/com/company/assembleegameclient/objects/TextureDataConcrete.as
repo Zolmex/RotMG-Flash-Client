@@ -16,7 +16,7 @@ package com.company.assembleegameclient.objects
     import com.company.assembleegameclient.util.AnimatedChar;
     import com.company.assembleegameclient.util.AssetLoader;
     import flash.utils.Dictionary;
-    import __AS3__.vec.*;
+    
     import com.company.assembleegameclient.appengine.*;
 
     public class TextureDataConcrete extends TextureData 
@@ -56,22 +56,22 @@ package com.company.assembleegameclient.objects
                         else
                         {
                             this.parse(_arg_1);
-                        };
-                    };
-                };
-            };
+                        }
+                    }
+                }
+            }
             for each (_local_2 in _arg_1.AltTexture)
             {
                 this.parse(_local_2);
-            };
+            }
             if (_arg_1.hasOwnProperty("Mask"))
             {
                 this.parse(XML(_arg_1.Mask));
-            };
+            }
             if (_arg_1.hasOwnProperty("Effect"))
             {
                 this.parse(XML(_arg_1.Effect));
-            };
+            }
         }
 
         override public function getTexture(_arg_1:int=0):BitmapData
@@ -79,7 +79,7 @@ package com.company.assembleegameclient.objects
             if (randomTextureData_ == null)
             {
                 return (texture_);
-            };
+            }
             var _local_2:TextureData = randomTextureData_[(_arg_1 % randomTextureData_.length)];
             return (_local_2.getTexture(_arg_1));
         }
@@ -89,7 +89,7 @@ package com.company.assembleegameclient.objects
             if (altTextures_ == null)
             {
                 return (null);
-            };
+            }
             return (altTextures_[_arg_1]);
         }
 
@@ -114,7 +114,7 @@ package com.company.assembleegameclient.objects
                     catch(error:Error)
                     {
                         throw (new Error(((((("Error loading Texture for " + id) + " - name: ") + String(xml.File)) + " - idx: ") + int(xml.Index))));
-                    };
+                    }
                     return;
                 case "Mask":
                     mask_ = AssetLibrary.getImageFromSet(String(xml.File), int(xml.Index));
@@ -133,7 +133,7 @@ package com.company.assembleegameclient.objects
                     catch(error:Error)
                     {
                         throw (new Error(((((("Error loading AnimatedTexture for " + id) + " - name: ") + String(xml.File)) + " - idx: ") + int(xml.Index))));
-                    };
+                    }
                     return;
                 case "RemoteTexture":
                     texture_ = AssetLibrary.getImageFromSet("lofiObj3", 0xFF);
@@ -144,8 +144,8 @@ package com.company.assembleegameclient.objects
                         if (!AssetLoader.currentXmlIsTesting)
                         {
                             remoteTexturesUsed = true;
-                        };
-                    };
+                        }
+                    }
                     remoteTextureDir_ = ((xml.hasOwnProperty("Right")) ? AnimatedChar.RIGHT : AnimatedChar.DOWN);
                     return;
                 case "RandomTexture":
@@ -155,21 +155,21 @@ package com.company.assembleegameclient.objects
                         for each (childXML in xml.children())
                         {
                             randomTextureData_.push(new TextureDataConcrete(childXML));
-                        };
+                        }
                     }
                     catch(error:Error)
                     {
                         throw (new Error(("Error loading RandomTexture for " + id)));
-                    };
+                    }
                     return;
                 case "AltTexture":
                     if (altTextures_ == null)
                     {
                         altTextures_ = new Dictionary();
-                    };
+                    }
                     altTextures_[int(xml.@id)] = new TextureDataConcrete(xml);
                     return;
-            };
+            }
         }
 
         private function onRemoteTexture(_arg_1:BitmapData):void
@@ -185,8 +185,8 @@ package com.company.assembleegameclient.objects
                 else
                 {
                     texture_ = _arg_1;
-                };
-            };
+                }
+            }
         }
 
 

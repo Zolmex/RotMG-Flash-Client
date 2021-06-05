@@ -75,7 +75,7 @@ package io.decagames.rotmg.supportCampaign.tab.tiers.preview
             if (((this.background) && (this.background.parent)))
             {
                 removeChild(this.background);
-            };
+            }
             this.background = _arg_4;
             addChildAt(this.background, 0);
             this.renderButtons(this._tier, this._currentRank, this._claimed);
@@ -88,15 +88,15 @@ package io.decagames.rotmg.supportCampaign.tab.tiers.preview
             if (((this.donateButtonBackground) && (this.donateButtonBackground.parent)))
             {
                 removeChild(this.donateButtonBackground);
-            };
+            }
             if (((this._claimButton) && (this._claimButton.parent)))
             {
                 removeChild(this._claimButton);
-            };
+            }
             if (((this.requiredPointsContainer) && (this.requiredPointsContainer.parent)))
             {
                 removeChild(this.requiredPointsContainer);
-            };
+            }
             if (((_arg_1 > _arg_3) && (!(_arg_1 == (this._ranks.length + 1)))))
             {
                 this.donateButtonBackground = TextureParser.instance.getSliceScalingBitmap("UI", "main_button_decoration_dark", 160);
@@ -124,7 +124,7 @@ package io.decagames.rotmg.supportCampaign.tab.tiers.preview
                     this.supportIcon.y = (_local_4.y + 3);
                     this.supportIcon.x = (_local_4.x + _local_4.width);
                     addChild(this.requiredPointsContainer);
-                };
+                }
             }
             else
             {
@@ -138,8 +138,8 @@ package io.decagames.rotmg.supportCampaign.tab.tiers.preview
                     _local_5.x = Math.round(((this._componentWidth - _local_5.width) / 2));
                     _local_5.y = 190;
                     addChild(this.requiredPointsContainer);
-                };
-            };
+                }
+            }
         }
 
         public function selectAnimation():void
@@ -156,7 +156,7 @@ package io.decagames.rotmg.supportCampaign.tab.tiers.preview
             else
             {
                 this.selectTween.play(0);
-            };
+            }
         }
 
         public function get leftArrow():SliceScalingButton

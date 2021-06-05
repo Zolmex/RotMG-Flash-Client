@@ -8,7 +8,7 @@ package io.decagames.rotmg.shop.mysteryBox.rollModal
     import io.decagames.rotmg.ui.popups.modal.ModalPopup;
     import flash.display.Sprite;
     import kabam.rotmg.mysterybox.model.MysteryBoxInfo;
-    import __AS3__.vec.Vector;
+    
     import flash.display.Bitmap;
     import io.decagames.rotmg.ui.gird.UIGrid;
     import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
@@ -27,7 +27,7 @@ package io.decagames.rotmg.shop.mysteryBox.rollModal
     import flash.utils.setTimeout;
     import flash.utils.clearTimeout;
     import flash.utils.Dictionary;
-    import __AS3__.vec.*;
+    
 
     public class MysteryBoxRollModal extends ModalPopup 
     {
@@ -95,11 +95,11 @@ package io.decagames.rotmg.shop.mysteryBox.rollModal
             if ((_local_2 * _arg_1.x) > this.maxResultWidth)
             {
                 _local_2 = int(Math.floor((this.maxResultWidth / _arg_1.x)));
-            };
+            }
             if ((_local_2 * _arg_1.y) > this.maxResultHeight)
             {
                 return (-1);
-            };
+            }
             return (_local_2);
         }
 
@@ -112,7 +112,7 @@ package io.decagames.rotmg.shop.mysteryBox.rollModal
             if (_arg_1 >= (_local_2.x * _local_2.y))
             {
                 return (_local_2);
-            };
+            }
             var _local_4:int = 11;
             while (_local_4 >= 1)
             {
@@ -137,15 +137,15 @@ package io.decagames.rotmg.shop.mysteryBox.rollModal
                                     {
                                         _local_3 = _local_6;
                                         _local_2 = new Point(_local_4, _local_5);
-                                    };
-                                };
-                            };
-                        };
-                    };
+                                    }
+                                }
+                            }
+                        }
+                    }
                     _local_5--;
-                };
+                }
                 _local_4--;
-            };
+            }
             return (_local_2);
         }
 
@@ -192,7 +192,7 @@ package io.decagames.rotmg.shop.mysteryBox.rollModal
             else
             {
                 this.buyButton = new ShopBuyButton(this.info.priceAmount, this.info.priceCurrency);
-            };
+            }
             this.buyButton.width = 95;
             this.buyButton.showCampaignTooltip = true;
             this.buyButtonBackground = TextureParser.instance.getSliceScalingBitmap("UI", "buy_button_background", (this.buyButton.width + 60));
@@ -218,7 +218,7 @@ package io.decagames.rotmg.shop.mysteryBox.rollModal
             if (element.quantity > 1)
             {
                 resultGridElement.showQuantityLabel(element.quantity);
-            };
+            }
             resultGridElement.showTooltip = false;
             this.resultGrid.addGridElement(resultGridElement);
             var scale:Number = (this.resultElementWidth / this.iconSize);
@@ -240,8 +240,8 @@ package io.decagames.rotmg.shop.mysteryBox.rollModal
                 if (triggerEventOnEnd)
                 {
                     finishedShowingResult.dispatch();
-                };
-            };
+                }
+            }
             timeout = setTimeout(function ():void
             {
                 particleModalMap.doLightning(((rollGrid.x + element.x) + (element.width / 2)), ((rollGrid.y + element.y) + (element.height / 2)), ((resultGrid.x + resultGridElement.x) + (resultGridElement.width / 2)), ((resultGrid.y + resultGridElement.y) + (resultGridElement.height / 2)), 115, 15787660, movingDuration);
@@ -268,8 +268,8 @@ package io.decagames.rotmg.shop.mysteryBox.rollModal
                 {
                     _local_2 = elements.indexOf(_local_1);
                     animateGridElement(_local_1, (_local_2 * movingDelay), (_local_2 == (elements.length - 1)));
-                };
-            };
+                }
+            }
             var blinkTween:GTween = new GTween(this.rollGrid, this.exposeDuration, {
                 "x":(this.rollGrid.x - ((this.rollGrid.width * (this.exposeScale - 1)) / 2)),
                 "y":(this.rollGrid.y - ((this.rollGrid.height * (this.exposeScale - 1)) / 2)),
@@ -296,17 +296,17 @@ package io.decagames.rotmg.shop.mysteryBox.rollModal
                     if (_local_6 > 1)
                     {
                         _local_5.showQuantityLabel(_local_6);
-                    };
+                    }
                     _local_5.showTooltip = false;
                     _local_2.push(_local_5);
                     this.rollGrid.addGridElement(_local_5);
-                };
-            };
+                }
+            }
             this.rollGrid.render();
             if (!this.rollGrid.parent)
             {
                 addChild(this.rollGrid);
-            };
+            }
             this.rollGrid.x = (this.spinnersContainer.x - (this.rollGrid.width / 2));
             this.rollGrid.y = (this.spinnersContainer.y - (this.rollGrid.height / 2));
             return (_local_2);
@@ -334,7 +334,7 @@ package io.decagames.rotmg.shop.mysteryBox.rollModal
             if (this.resultGrid)
             {
                 this.resultGrid.dispose();
-            };
+            }
             this.buyButtonBackground.dispose();
             this.buyButton.dispose();
             this.spinner.dispose();

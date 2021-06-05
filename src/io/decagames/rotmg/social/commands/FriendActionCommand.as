@@ -38,7 +38,7 @@ package io.decagames.rotmg.social.commands
             if (this.vo.request == FriendsActions.INVITE)
             {
                 this.addTextLine.dispatch(ChatMessage.make("", "Friend request sent"));
-            };
+            }
             var _local_1:String = FriendsActions.getURL(this.vo.request);
             var _local_2:Object = this.account.getCredentials();
             _local_2["targetName"] = this.vo.target;
@@ -58,8 +58,8 @@ package io.decagames.rotmg.social.commands
                 {
                     this.showPopup.dispatch(new ErrorModal(350, "Friends List Error", LineBuilder.getLocalizedStringFromKey(_arg_2)));
                     this.removeFade.dispatch();
-                };
-            };
+                }
+            }
         }
 
 

@@ -8,7 +8,7 @@ package io.decagames.rotmg.pets.data
     import io.decagames.rotmg.pets.signals.NotifyActivePetUpdated;
     import io.decagames.rotmg.seasonalEvent.data.SeasonalEventModel;
     import kabam.rotmg.core.model.PlayerModel;
-    import __AS3__.vec.Vector;
+    
     import io.decagames.rotmg.pets.data.vo.PetVO;
     import flash.utils.Dictionary;
     import com.company.assembleegameclient.objects.ObjectLibrary;
@@ -17,7 +17,7 @@ package io.decagames.rotmg.pets.data
     import io.decagames.rotmg.pets.data.vo.SkinVO;
     import io.decagames.rotmg.pets.data.rarity.PetRarityEnum;
     import com.company.assembleegameclient.appengine.SavedCharacter;
-    import __AS3__.vec.*;
+    
 
     public class PetsModel 
     {
@@ -31,7 +31,7 @@ package io.decagames.rotmg.pets.data
         public var seasonalEventModel:SeasonalEventModel;
         [Inject]
         public var playerModel:PlayerModel;
-        private var hash:Object = {};
+        private var hash:Object = {}
         private var pets:Vector.<PetVO> = new Vector.<PetVO>();
         private var skins:Dictionary = new Dictionary();
         private var familySkins:Dictionary = new Dictionary();
@@ -96,17 +96,17 @@ package io.decagames.rotmg.pets.data
                 if (((this._activeUIVO) && (this._activeUIVO.getID() == _arg_1)))
                 {
                     this._activeUIVO = null;
-                };
+                }
                 if (((this.activePet) && (this.activePet.getID() == _arg_1)))
                 {
                     this.removeActivePet();
-                };
-            };
+                }
+            }
         }
 
         public function clearPets():void
         {
-            this.hash = {};
+            this.hash = {}
             this.pets = new Vector.<PetVO>();
             this.petsData = null;
             this.skins = new Dictionary();
@@ -141,13 +141,13 @@ package io.decagames.rotmg.pets.data
                             if (!this.familySkins[_local_4.family])
                             {
                                 this.familySkins[_local_4.family] = new Vector.<SkinVO>();
-                            };
+                            }
                             this.familySkins[_local_4.family].push(_local_4);
-                        };
-                    };
+                        }
+                    }
                     _local_2++;
-                };
-            };
+                }
+            }
         }
 
         public function unlockSkin(_arg_1:int):void
@@ -157,7 +157,7 @@ package io.decagames.rotmg.pets.data
             if (this.ownedSkinsIDs.indexOf(_arg_1) == -1)
             {
                 this.ownedSkinsIDs.push(_arg_1);
-            };
+            }
         }
 
         public function getSkinVOById(_arg_1:int):SkinVO
@@ -175,7 +175,7 @@ package io.decagames.rotmg.pets.data
             if (_arg_1.toString() != "")
             {
                 this.ownedSkinsIDs = Vector.<int>(_arg_1.toString().split(","));
-            };
+            }
         }
 
         public function getPetVO(_arg_1:int):PetVO
@@ -184,7 +184,7 @@ package io.decagames.rotmg.pets.data
             if (this.hash[_arg_1] != null)
             {
                 return (this.hash[_arg_1]);
-            };
+            }
             _local_2 = new PetVO(_arg_1);
             this.pets.push(_local_2);
             this.hash[_arg_1] = _local_2;
@@ -225,14 +225,14 @@ package io.decagames.rotmg.pets.data
                 {
                     return (_arg_1.family == family);
                 });
-            };
+            }
             if (rarity != null)
             {
                 petsList = petsList.filter(function (_arg_1:PetVO, _arg_2:int, _arg_3:Vector.<PetVO>):Boolean
                 {
                     return (_arg_1.rarity == rarity);
                 });
-            };
+            }
             return (petsList);
         }
 
@@ -248,7 +248,7 @@ package io.decagames.rotmg.pets.data
             if (_local_2)
             {
                 _local_2.setPetVO(this.activePet);
-            };
+            }
             this.notifyActivePetUpdated.dispatch();
         }
 
@@ -262,12 +262,12 @@ package io.decagames.rotmg.pets.data
             if (this.activePet == null)
             {
                 return;
-            };
+            }
             var _local_1:SavedCharacter = this.playerModel.getCharacterById(this.playerModel.currentCharId);
             if (_local_1)
             {
                 _local_1.setPetVO(null);
-            };
+            }
             this.activePet = null;
             this.notifyActivePetUpdated.dispatch();
         }
@@ -278,7 +278,7 @@ package io.decagames.rotmg.pets.data
             if (_local_2 == -1)
             {
                 return (null);
-            };
+            }
             return (this.pets[_local_2]);
         }
 
@@ -292,9 +292,9 @@ package io.decagames.rotmg.pets.data
                 if (_local_2.getID() == _arg_1)
                 {
                     return (_local_3);
-                };
+                }
                 _local_3++;
-            };
+            }
             return (-1);
         }
 

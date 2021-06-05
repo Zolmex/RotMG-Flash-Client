@@ -39,7 +39,7 @@ package kabam.rotmg.death.control
             else
             {
                 this.updateModelAndHandleDeath();
-            };
+            }
         }
 
         private function isZombieDeathPending():Boolean
@@ -68,8 +68,8 @@ package kabam.rotmg.death.control
                 else
                 {
                     this.normal.dispatch(this.death);
-                };
-            };
+                }
+            }
         }
 
 

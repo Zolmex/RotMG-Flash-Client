@@ -35,7 +35,7 @@ package kabam.rotmg.classes.view
             if (_local_1)
             {
                 this.view.play.addOnce(this.onPlay);
-            };
+            }
             this.view.back.addOnce(this.onBack);
         }
 

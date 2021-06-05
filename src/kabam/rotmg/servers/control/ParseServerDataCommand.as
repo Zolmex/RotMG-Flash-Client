@@ -7,9 +7,9 @@ package kabam.rotmg.servers.control
 {
     import kabam.rotmg.servers.api.ServerModel;
     import kabam.rotmg.servers.api.Server;
-    import __AS3__.vec.Vector;
+    
     import com.company.assembleegameclient.parameters.Parameters;
-    import __AS3__.vec.*;
+    
 
     public class ParseServerDataCommand 
     {
@@ -33,7 +33,7 @@ package kabam.rotmg.servers.control
             for each (_local_3 in _local_1)
             {
                 _local_2.push(this.makeServer(_local_3));
-            };
+            }
             return (_local_2);
         }
 

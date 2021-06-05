@@ -43,12 +43,12 @@ package com.company.assembleegameclient.util
                     {
                         _local_10 = TooltipHelper.UNTIERED_COLOR;
                         _local_11 = "UT";
-                    };
-                };
+                    }
+                }
                 _local_9.text = _local_11;
                 DefaultLabelFormat.tierLevelLabel(_local_9, _arg_2, _local_10);
                 return (_local_9);
-            };
+            }
             return (null);
         }
 

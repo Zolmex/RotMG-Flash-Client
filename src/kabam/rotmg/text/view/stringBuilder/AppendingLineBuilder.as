@@ -5,9 +5,9 @@
 
 package kabam.rotmg.text.view.stringBuilder
 {
-    import __AS3__.vec.Vector;
+    
     import kabam.rotmg.language.model.StringMap;
-    import __AS3__.vec.*;
+    
 
     public class AppendingLineBuilder implements StringBuilder 
     {
@@ -41,7 +41,7 @@ package kabam.rotmg.text.view.stringBuilder
             for each (_local_2 in this.data)
             {
                 _local_1.push(_local_2.getString(this.provider));
-            };
+            }
             return (_local_1.join(this.delimiter));
         }
 
@@ -106,7 +106,7 @@ class LineData
         if ((_local_3 = _arg_1.getValue(TextKey.stripCurlyBrackets(this.key))) == null)
         {
             _local_3 = this.key;
-        };
+        }
         _local_2 = _local_2.concat(_local_3);
         for (_local_4 in this.tokens)
         {
@@ -122,10 +122,10 @@ class LineData
                 if ((((_local_6.length > 0) && (_local_6.charAt(0) == "{")) && (_local_6.charAt((_local_6.length - 1)) == "}")))
                 {
                     _local_6 = _arg_1.getValue(_local_6.substr(1, (_local_6.length - 2)));
-                };
+                }
                 _local_2 = _local_2.replace((("{" + _local_4) + "}"), _local_6);
-            };
-        };
+            }
+        }
         _local_2 = _local_2.replace(/\\n/g, "\n");
         return (_local_2.concat(this.closingHTMLTags));
     }

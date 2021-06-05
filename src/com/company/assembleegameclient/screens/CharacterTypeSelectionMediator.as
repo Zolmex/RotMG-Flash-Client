@@ -83,7 +83,7 @@ package com.company.assembleegameclient.screens
             {
                 this.showInfo();
                 Parameters.data_.showChallengerInfo = false;
-            };
+            }
         }
 
         private function onSeasonEnded():void
@@ -129,9 +129,9 @@ package com.company.assembleegameclient.screens
                     else
                     {
                         this.showSeasonalErrorPopUp((("Your account must be created before: " + this.seasonalEventModel.accountCreatedBefore.toString()) + " to play a Seasonal Event!"));
-                    };
-                };
-            };
+                    }
+                }
+            }
         }
 
         private function runTasks():void
@@ -150,7 +150,7 @@ package com.company.assembleegameclient.screens
             if ((this.seasonalEventModel.accountCreatedBefore.getTime() - this.account.creationDate.getTime()) > 0)
             {
                 _local_1 = true;
-            };
+            }
             return (_local_1);
         }
 

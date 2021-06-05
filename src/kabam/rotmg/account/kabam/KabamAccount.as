@@ -36,11 +36,11 @@ package kabam.rotmg.account.kabam
                 if (_local_1 != null)
                 {
                     this.entryTag = _local_1;
-                };
+                }
             }
             catch(error:Error)
             {
-            };
+            }
         }
 
         public function updateUser(_arg_1:String, _arg_2:String, _arg_3:String):void
@@ -78,7 +78,7 @@ package kabam.rotmg.account.kabam
             if (((this.userSession == null) || (this.userSession["kabam_naid"] == null)))
             {
                 return ("");
-            };
+            }
             return (this.userSession["kabam_naid"]);
         }
 
@@ -92,13 +92,13 @@ package kabam.rotmg.account.kabam
             if ((((this.userSession == null) || (this.userSession["user"] == null)) || (this.userSession["user"]["email"] == null)))
             {
                 return ("");
-            };
+            }
             var _local_1:String = this.userSession["user"]["email"];
             var _local_2:Array = _local_1.split("@", 2);
             if (_local_2.length != 2)
             {
                 return ("");
-            };
+            }
             return (_local_2[0]);
         }
 

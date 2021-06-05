@@ -8,7 +8,7 @@ package com.company.assembleegameclient.objects.particles
     import com.company.assembleegameclient.objects.thrown.BitmapParticle;
     import com.company.assembleegameclient.objects.GameObject;
     import com.company.assembleegameclient.parameters.Parameters;
-    import __AS3__.vec.Vector;
+    
     import flash.display.BitmapData;
     import flash.geom.Point;
     import kabam.lib.math.easing.Expo;
@@ -57,7 +57,7 @@ package com.company.assembleegameclient.objects.particles
             if (this.numFramesRemaining <= 0)
             {
                 return (false);
-            };
+            }
             this.percentageDone = (1 - (this.numFramesRemaining / this.duration));
             this.plusX = (Expo.easeOut(this.percentageDone) * this.dx_);
             this.plusY = (Expo.easeOut(this.percentageDone) * this.dy_);
@@ -65,7 +65,7 @@ package com.company.assembleegameclient.objects.particles
             {
                 this.cameraAngle = Parameters.data_.cameraAngle;
                 _rotation = (-(this.radians) - this.cameraAngle);
-            };
+            }
             moveTo(((this.go.x_ + this.originX) + this.plusX), ((this.go.y_ + this.originY) + this.plusY));
             return (true);
         }

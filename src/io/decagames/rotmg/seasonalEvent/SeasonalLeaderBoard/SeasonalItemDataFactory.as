@@ -8,11 +8,11 @@ package io.decagames.rotmg.seasonalEvent.SeasonalLeaderBoard
     import kabam.rotmg.core.model.PlayerModel;
     import kabam.rotmg.classes.model.ClassesModel;
     import kabam.rotmg.assets.services.CharacterFactory;
-    import __AS3__.vec.Vector;
+    
     import kabam.rotmg.classes.model.CharacterClass;
     import kabam.rotmg.classes.model.CharacterSkin;
     import com.company.util.ConversionUtil;
-    import __AS3__.vec.*;
+    
 
     public class SeasonalItemDataFactory 
     {
@@ -44,8 +44,8 @@ package io.decagames.rotmg.seasonalEvent.SeasonalLeaderBoard
                     _local_3 = this.createSeasonalLeaderBoardItemData(_local_2);
                     _local_3.isOwn = (_local_2.Name == this.playerModel.getName());
                     this.seasonalLeaderBoardItemDatas.push(_local_3);
-                };
-            };
+                }
+            }
         }
 
         private function seasonalLeaderBoardItemDatasContains(_arg_1:XML):Boolean
@@ -56,8 +56,8 @@ package io.decagames.rotmg.seasonalEvent.SeasonalLeaderBoard
                 if (((_local_2.accountId == _arg_1.@accountId) && (_local_2.charId == _arg_1.@charId)))
                 {
                     return (true);
-                };
-            };
+                }
+            }
             return (false);
         }
 

@@ -21,14 +21,14 @@ package kabam.rotmg.ui.view
     import flash.display.GraphicsPath;
     import flash.display.IGraphicsData;
     import com.company.util.GraphicsUtil;
-    import __AS3__.vec.Vector;
+    
     import flash.events.Event;
     import com.company.assembleegameclient.game.AGameSprite;
     import kabam.rotmg.messaging.impl.incoming.TradeStart;
     import kabam.rotmg.messaging.impl.incoming.TradeChanged;
     import kabam.rotmg.messaging.impl.incoming.TradeAccepted;
     import com.company.util.SpriteUtil;
-    import __AS3__.vec.*;
+    
 
     public class HUDView extends Sprite implements UnFocusAble 
     {
@@ -67,7 +67,7 @@ package kabam.rotmg.ui.view
             if (!Boolean(StaticInjectorContext.injector.getInstance(SeasonalEventModel).isChallenger))
             {
                 this.newClassUnlockNotification = new NewClassUnlockNotification();
-            };
+            }
             this.tabStrip = new TabStripView();
             this.characterDetails = new CharacterDetailsView();
             this.statMeters = new StatMetersView();
@@ -80,7 +80,7 @@ package kabam.rotmg.ui.view
             if (this.newClassUnlockNotification)
             {
                 addChild(this.newClassUnlockNotification);
-            };
+            }
             addChild(this.tabStrip);
             addChild(this.characterDetails);
             addChild(this.statMeters);
@@ -96,7 +96,7 @@ package kabam.rotmg.ui.view
             {
                 this.newClassUnlockNotification.x = this.MAP_POSITION.x;
                 this.newClassUnlockNotification.y = this.MAP_POSITION.y;
-            };
+            }
             this.tabStrip.x = this.TAB_STRIP_POSITION.x;
             this.tabStrip.y = this.TAB_STRIP_POSITION.y;
             this.characterDetails.x = this.CHARACTER_DETAIL_PANEL_POSITION.x;
@@ -147,11 +147,11 @@ package kabam.rotmg.ui.view
             if (this.equippedGrid)
             {
                 this.equippedGrid.draw();
-            };
+            }
             if (this.interactPanel)
             {
                 this.interactPanel.draw();
-            };
+            }
         }
 
         public function startTrade(_arg_1:AGameSprite, _arg_2:TradeStart):void
@@ -163,7 +163,7 @@ package kabam.rotmg.ui.view
                 this.tradePanel.addEventListener(Event.CANCEL, this.onTradeCancel);
                 addChild(this.tradePanel);
                 this.setNonTradePanelAssetsVisible(false);
-            };
+            }
         }
 
         private function setNonTradePanelAssetsVisible(_arg_1:Boolean):void
@@ -186,7 +186,7 @@ package kabam.rotmg.ui.view
             if (this.tradePanel)
             {
                 this.tradePanel.setYourOffer(_arg_1.offer_);
-            };
+            }
         }
 
         public function tradeAccepted(_arg_1:TradeAccepted):void
@@ -194,7 +194,7 @@ package kabam.rotmg.ui.view
             if (this.tradePanel)
             {
                 this.tradePanel.youAccepted(_arg_1.myOffer_, _arg_1.yourOffer_);
-            };
+            }
         }
 
         private function onTradeCancel(_arg_1:Event):void
@@ -210,7 +210,7 @@ package kabam.rotmg.ui.view
                 this.tradePanel.removeEventListener(Event.CANCEL, this.onTradeCancel);
                 this.tradePanel = null;
                 this.setNonTradePanelAssetsVisible(true);
-            };
+            }
         }
 
 

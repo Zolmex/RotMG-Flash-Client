@@ -49,7 +49,7 @@ package com.company.assembleegameclient.ui.tooltip
                 this.guildText_.y = (_local_2 - 2);
                 addChild(this.guildText_);
                 _local_2 = (_local_2 + 30);
-            };
+            }
             this.hpBar_ = new StatusBar(176, 16, 14693428, 0x545454, TextKey.STATUS_BAR_HEALTH_POINTS);
             this.hpBar_.x = 6;
             this.hpBar_.y = _local_2;

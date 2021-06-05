@@ -62,7 +62,7 @@ package io.decagames.rotmg.pets.data.vo
             for each (_local_1 in this._abilityList)
             {
                 _local_1.updated.add(this.onAbilityUpdate);
-            };
+            }
         }
 
         public function maxedAvailableAbilities():Boolean
@@ -73,8 +73,8 @@ package io.decagames.rotmg.pets.data.vo
                 if (((_local_1.getUnlocked()) && (_local_1.level < this.maxAbilityPower)))
                 {
                     return (false);
-                };
-            };
+                }
+            }
             return (true);
         }
 
@@ -87,8 +87,8 @@ package io.decagames.rotmg.pets.data.vo
                 if (((_local_2.getUnlocked()) && (_local_2.level)))
                 {
                     _local_1 = (_local_1 + _local_2.level);
-                };
-            };
+                }
+            }
             return (_local_1);
         }
 
@@ -101,8 +101,8 @@ package io.decagames.rotmg.pets.data.vo
                 if (_local_2.getUnlocked())
                 {
                     _local_1 = (_local_1 + this._maxAbilityPower);
-                };
-            };
+                }
+            }
             return (_local_1);
         }
 
@@ -115,8 +115,8 @@ package io.decagames.rotmg.pets.data.vo
                 if (((_local_2.getUnlocked()) && (_local_2.level == this.maxAbilityPower)))
                 {
                     _local_1++;
-                };
-            };
+                }
+            }
             return (_local_1 == this._abilityList.length);
         }
 
@@ -158,7 +158,7 @@ package io.decagames.rotmg.pets.data.vo
                 _local_4.level = _arg_1.Abilities.Ability[_local_2].@power;
                 _local_4.points = _arg_1.Abilities.Ability[_local_2].@points;
                 _local_2++;
-            };
+            }
         }
 
         public function get family():String
@@ -167,7 +167,7 @@ package io.decagames.rotmg.pets.data.vo
             if (_local_1)
             {
                 return (_local_1.family);
-            };
+            }
             return (this.staticData.Family);
         }
 
@@ -222,7 +222,7 @@ package io.decagames.rotmg.pets.data.vo
             if (((this._name == null) || (this._name == "")))
             {
                 this._name = ObjectLibrary.typeToDisplayId_[this.getType()];
-            };
+            }
             this._updated.dispatch();
         }
 

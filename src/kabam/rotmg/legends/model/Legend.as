@@ -6,7 +6,7 @@
 package kabam.rotmg.legends.model
 {
     import kabam.rotmg.fame.model.FameVO;
-    import __AS3__.vec.Vector;
+    
     import flash.display.BitmapData;
 
     public class Legend implements FameVO 

@@ -22,7 +22,7 @@ package com.company.assembleegameclient.mapeditor
             if (_arg_1 != null)
             {
                 this.objectName_.inputText_.text = _arg_1;
-            };
+            }
             addTextInputField(this.objectName_);
             leftButton_.addEventListener(MouseEvent.CLICK, this.onCancel);
             rightButton_.addEventListener(MouseEvent.CLICK, this.onDone);

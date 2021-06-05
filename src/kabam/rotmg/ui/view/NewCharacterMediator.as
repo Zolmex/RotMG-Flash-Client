@@ -60,7 +60,7 @@ package kabam.rotmg.ui.view
             if (this.securityQuestionsModel.showSecurityQuestionsOnStartup)
             {
                 this.openDialog.dispatch(new SecurityQuestionsInfoDialog());
-            };
+            }
         }
 
         private function onBuyCharacterPending(_arg_1:int):void
@@ -97,7 +97,7 @@ package kabam.rotmg.ui.view
             else
             {
                 this.hideTooltips.dispatch();
-            };
+            }
         }
 
         private function onUpdate():void

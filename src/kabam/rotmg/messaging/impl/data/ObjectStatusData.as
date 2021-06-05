@@ -5,11 +5,11 @@
 
 package kabam.rotmg.messaging.impl.data
 {
-    import __AS3__.vec.Vector;
+    
     import com.company.assembleegameclient.util.FreeList;
     import flash.utils.IDataInput;
     import flash.utils.IDataOutput;
-    import __AS3__.vec.*;
+    
 
     public class ObjectStatusData 
     {
@@ -30,18 +30,18 @@ package kabam.rotmg.messaging.impl.data
             {
                 FreeList.deleteObject(this.stats_[_local_3]);
                 _local_3++;
-            };
+            }
             this.stats_.length = Math.min(_local_2, this.stats_.length);
             while (this.stats_.length < _local_2)
             {
                 this.stats_.push((FreeList.newObject(StatData) as StatData));
-            };
+            }
             _local_3 = 0;
             while (_local_3 < _local_2)
             {
                 this.stats_[_local_3].parseFromInput(_arg_1);
                 _local_3++;
-            };
+            }
         }
 
         public function writeToOutput(_arg_1:IDataOutput):void
@@ -54,7 +54,7 @@ package kabam.rotmg.messaging.impl.data
             {
                 this.stats_[_local_2].writeToOutput(_arg_1);
                 _local_2++;
-            };
+            }
         }
 
         public function toString():String

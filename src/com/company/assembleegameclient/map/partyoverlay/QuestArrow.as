@@ -42,7 +42,7 @@ package com.company.assembleegameclient.map.partyoverlay
                 this.questArrowTween.pause(0);
                 this.scaleX = 1;
                 this.scaleY = 1;
-            };
+            }
             setToolTip(this.getToolTip(go_, getTimer()));
         }
 
@@ -63,15 +63,15 @@ package com.company.assembleegameclient.map.partyoverlay
             if (((_arg_1 == null) || (_arg_1.texture_ == null)))
             {
                 return (null);
-            };
+            }
             if (this.shouldShowFullQuest(_arg_2))
             {
                 return (new QuestToolTip(go_));
-            };
+            }
             if (Parameters.data_.showQuestPortraits)
             {
                 return (new PortraitToolTip(_arg_1));
-            };
+            }
             return (null);
         }
 
@@ -95,8 +95,8 @@ package com.company.assembleegameclient.map.partyoverlay
                 if (_local_5 != this.questModel.currentQuestHero)
                 {
                     this.questModel.currentQuestHero = _local_5;
-                };
-            };
+                }
+            }
             if (_local_3 != go_)
             {
                 setGameObject(_local_3);
@@ -121,7 +121,7 @@ package com.company.assembleegameclient.map.partyoverlay
                 else
                 {
                     this.questArrowTween.play(0);
-                };
+                }
             }
             else
             {
@@ -132,9 +132,9 @@ package com.company.assembleegameclient.map.partyoverlay
                     if (_local_6 != _local_7)
                     {
                         setToolTip(this.getToolTip(_local_3, _arg_1));
-                    };
-                };
-            };
+                    }
+                }
+            }
             super.draw(_arg_1, _arg_2);
         }
 

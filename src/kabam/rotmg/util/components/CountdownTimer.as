@@ -41,7 +41,7 @@ package kabam.rotmg.util.components
             if (((!(this.text == null)) && (!(this.text.parent == null))))
             {
                 removeChild(this.text);
-            };
+            }
             this.text.setStringBuilder(new StaticStringBuilder(("" + _arg_1)));
             this.text.alpha = 0.5;
             this.text.scaleX = 1;
@@ -64,18 +64,18 @@ package kabam.rotmg.util.components
             if (((!(this.background == null)) && (!(this.background.parent == null))))
             {
                 removeChild(this.background);
-            };
+            }
             if (((!(this.text == null)) && (!(this.text.parent == null))))
             {
                 removeChild(this.text);
-            };
+            }
             this.countdownSeconds = 0;
             this.timerComplete.dispatch();
             if (this.myTimer != null)
             {
                 this.myTimer.removeEventListener(TimerEvent.TIMER, this.countdown);
                 this.myTimer.reset();
-            };
+            }
         }
 
         public function remove():void
@@ -83,11 +83,11 @@ package kabam.rotmg.util.components
             if (((!(this.background == null)) && (!(this.background.parent == null))))
             {
                 removeChild(this.background);
-            };
+            }
             if (((!(this.text == null)) && (!(this.text.parent == null))))
             {
                 removeChild(this.text);
-            };
+            }
             this.countdownSeconds = 0;
             this.myTimer.removeEventListener(TimerEvent.TIMER, this.countdown);
             this.myTimer.reset();
@@ -114,13 +114,13 @@ package kabam.rotmg.util.components
                 if (((this.countdownSeconds == 9) || (this.countdownSeconds == 99)))
                 {
                     this.reAlign();
-                };
+                }
                 new GTween(this.text, 0.25, {
                     "scaleX":1.25,
                     "scaleY":1.25,
                     "alpha":1
                 });
-            };
+            }
         }
 
         public function setXPos(_arg_1:Number):void

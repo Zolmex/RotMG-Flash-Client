@@ -38,7 +38,7 @@ package kabam.rotmg.core.service
 
         public function makeRequestPacket():Object
         {
-            var _local_1:Object = {};
+            var _local_1:Object = {}
             _local_1.game_net_user_id = this.account.gameNetworkUserId();
             _local_1.game_net = this.account.gameNetwork();
             _local_1.play_platform = this.account.playPlatform();

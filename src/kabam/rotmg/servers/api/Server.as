@@ -60,11 +60,11 @@ package kabam.rotmg.servers.api
             if (this.isAdminOnly)
             {
                 return (2);
-            };
+            }
             if (this.isCrowded())
             {
                 return (1);
-            };
+            }
             return (0);
         }
 

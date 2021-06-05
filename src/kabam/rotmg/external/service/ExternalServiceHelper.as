@@ -20,7 +20,7 @@ package kabam.rotmg.external.service
             if (ExternalInterface.available)
             {
                 ExternalInterface.addCallback("updatePlayerCredits", this.updatePlayerCredits);
-            };
+            }
         }
 
         private function updatePlayerCredits():void

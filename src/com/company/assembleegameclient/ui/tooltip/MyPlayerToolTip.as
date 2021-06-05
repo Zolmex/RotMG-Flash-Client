@@ -104,7 +104,7 @@ package com.company.assembleegameclient.ui.tooltip
                 addChild(this.bGrid);
                 this.bGrid.setItems(this.player_.equipment_);
                 _local_5 = (_local_5 + 88);
-            };
+            }
             _local_5 = (_local_5 + 8);
             this.lineBreak_ = new LineBreakDesign(100, 0x1C1C1C);
             this.lineBreak_.x = 6;
@@ -117,7 +117,7 @@ package com.company.assembleegameclient.ui.tooltip
             if (_local_6 > 0)
             {
                 this.makeNextClassQuestText(_local_6, _local_2);
-            };
+            }
         }
 
         public function makeNextClassQuestText(_arg_1:int, _arg_2:XML):void
@@ -154,7 +154,7 @@ package com.company.assembleegameclient.ui.tooltip
             {
                 this.nextClassQuest_.x = 8;
                 this.nextClassQuest_.y = (this.bestLevel_.getBounds(this).bottom - 2);
-            };
+            }
         }
 
         override public function draw():void

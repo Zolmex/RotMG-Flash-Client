@@ -32,11 +32,11 @@ package com.company.assembleegameclient.objects.particles
             if (this.go_.map_ == null)
             {
                 return (false);
-            };
+            }
             if (this.lastUpdate_ < 0)
             {
                 this.lastUpdate_ = Math.max(0, (_arg_1 - 400));
-            };
+            }
             x_ = this.go_.x_;
             y_ = this.go_.y_;
             var _local_3:int = int(int((this.lastUpdate_ / BUBBLE_PERIOD)));
@@ -51,7 +51,7 @@ package com.company.assembleegameclient.objects.particles
                 _local_9 = (this.go_.y_ + (_local_7 * Math.sin(_local_6)));
                 map_.addObj(_local_5, _local_8, _local_9);
                 _local_3++;
-            };
+            }
             this.lastUpdate_ = _arg_1;
             return (true);
         }

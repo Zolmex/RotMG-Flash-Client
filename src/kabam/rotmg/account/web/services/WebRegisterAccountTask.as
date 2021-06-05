@@ -33,7 +33,7 @@ package kabam.rotmg.account.web.services
 
         private function makeDataPacket():Object
         {
-            var _local_1:Object = {};
+            var _local_1:Object = {}
             _local_1.guid = this.account.getUserId();
             _local_1.newGUID = this.data.username;
             _local_1.newPassword = this.data.password;
@@ -57,7 +57,7 @@ package kabam.rotmg.account.web.services
             {
                 this.model.setName(this.data.name);
                 this.model.isNameChosen = true;
-            };
+            }
             var _local_2:XML = new XML(_arg_1);
             if (_local_2.hasOwnProperty("token"))
             {
@@ -67,7 +67,7 @@ package kabam.rotmg.account.web.services
             else
             {
                 this.account.updateUser(this.data.username, this.data.password, "");
-            };
+            }
         }
 
 

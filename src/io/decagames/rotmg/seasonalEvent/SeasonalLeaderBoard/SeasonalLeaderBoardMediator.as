@@ -20,7 +20,7 @@ package io.decagames.rotmg.seasonalEvent.SeasonalLeaderBoard
     import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
     import io.decagames.rotmg.ui.texture.TextureParser;
     import io.decagames.rotmg.ui.popups.header.PopupHeader;
-    import __AS3__.vec.Vector;
+    
     import io.decagames.rotmg.ui.buttons.BaseButton;
 
     public class SeasonalLeaderBoardMediator extends Mediator 
@@ -87,7 +87,7 @@ package io.decagames.rotmg.seasonalEvent.SeasonalLeaderBoard
             else
             {
                 this.updateRefreshTime();
-            };
+            }
         }
 
         private function updateRefreshTime():void
@@ -126,9 +126,9 @@ package io.decagames.rotmg.seasonalEvent.SeasonalLeaderBoard
                     if (_arg_1 == SeasonalLeaderBoard.PLAYER_TAB_LABEL)
                     {
                         this.upDatePlayerPosition();
-                    };
-                };
-            };
+                    }
+                }
+            }
         }
 
         private function timeToRefresh():Number
@@ -139,7 +139,7 @@ package io.decagames.rotmg.seasonalEvent.SeasonalLeaderBoard
             {
                 _local_2 = new Date();
                 return (_local_1.time - _local_2.time);
-            };
+            }
             return (0);
         }
 
@@ -156,7 +156,7 @@ package io.decagames.rotmg.seasonalEvent.SeasonalLeaderBoard
                 if (this.seasonalEventModel.leaderboardTop20ItemDatas)
                 {
                     this.upDateTop20();
-                };
+                }
             }
             else
             {
@@ -165,13 +165,13 @@ package io.decagames.rotmg.seasonalEvent.SeasonalLeaderBoard
                     if (this.seasonalEventModel.leaderboardPlayerItemDatas)
                     {
                         this.upDatePlayerPosition();
-                    };
+                    }
                 }
                 else
                 {
                     this.onTabSelected(this.view.tabs.currentTabLabel);
-                };
-            };
+                }
+            }
         }
 
         private function upDateTop20():void
@@ -184,7 +184,7 @@ package io.decagames.rotmg.seasonalEvent.SeasonalLeaderBoard
             for each (_local_2 in _local_1)
             {
                 this.view.addTop20Item(_local_2);
-            };
+            }
             this.view.refreshTime.visible = true;
             this.setGeneratedTime();
             this.view.lastUpdatedTime.visible = true;
@@ -201,7 +201,7 @@ package io.decagames.rotmg.seasonalEvent.SeasonalLeaderBoard
             for each (_local_2 in _local_1)
             {
                 this.view.addPlayerListItem(_local_2);
-            };
+            }
             this.view.refreshTime.visible = true;
             this.setGeneratedTime();
             this.view.lastUpdatedTime.visible = true;

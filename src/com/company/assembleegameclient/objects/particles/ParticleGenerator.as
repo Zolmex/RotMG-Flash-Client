@@ -5,12 +5,12 @@
 
 package com.company.assembleegameclient.objects.particles
 {
-    import __AS3__.vec.Vector;
+    
     import com.company.assembleegameclient.objects.GameObject;
     import flash.display.BitmapData;
     import com.company.util.AssetLibrary;
     import com.company.assembleegameclient.util.TextureRedrawer;
-    import __AS3__.vec.*;
+    
 
     public class ParticleGenerator extends ParticleEffect 
     {
@@ -38,7 +38,7 @@ package com.company.assembleegameclient.objects.particles
             else
             {
                 this.bitmapData = TextureRedrawer.redrawSolidSquare(this.effectProps.color, this.effectProps.size);
-            };
+            }
         }
 
         public static function attachParticleGenerator(_arg_1:EffectProperties, _arg_2:GameObject):ParticleGenerator
@@ -57,7 +57,7 @@ package com.company.assembleegameclient.objects.particles
             if (this.targetGO.map_ == null)
             {
                 return (false);
-            };
+            }
             x_ = this.targetGO.x_;
             y_ = this.targetGO.y_;
             z_ = (this.targetGO.z_ + this.effectProps.zOffset);
@@ -74,12 +74,12 @@ package com.company.assembleegameclient.objects.particles
                 else
                 {
                     _local_9 = new BaseParticle(this.bitmapData);
-                };
+                }
                 _local_9.initialize((this.effectProps.life + (this.effectProps.lifeVariance * ((2 * Math.random()) - 1))), (this.effectProps.speed + (this.effectProps.speedVariance * ((2 * Math.random()) - 1))), (this.effectProps.speed + (this.effectProps.speedVariance * ((2 * Math.random()) - 1))), (this.effectProps.rise + (this.effectProps.riseVariance * ((2 * Math.random()) - 1))), z_);
                 map_.addObj(_local_9, (x_ + (this.effectProps.rangeX * ((2 * Math.random()) - 1))), (y_ + (this.effectProps.rangeY * ((2 * Math.random()) - 1))));
                 this.liveParticles.push(_local_9);
                 _local_7++;
-            };
+            }
             this.generatedParticles = (this.generatedParticles + _local_6);
             var _local_8:int;
             while (_local_8 < this.liveParticles.length)
@@ -99,9 +99,9 @@ package com.company.assembleegameclient.objects.particles
                     _local_10.x_ = (_local_10.x_ + (_local_10.spdX * _local_4));
                     _local_10.y_ = (_local_10.y_ + (_local_10.spdY * _local_4));
                     _local_10.z_ = (_local_10.z_ + (_local_10.spdZ * _local_4));
-                };
+                }
                 _local_8++;
-            };
+            }
             return (true);
         }
 
@@ -111,7 +111,7 @@ package com.company.assembleegameclient.objects.particles
             for each (_local_1 in this.liveParticles)
             {
                 map_.removeObj(_local_1.objectId_);
-            };
+            }
             this.liveParticles = null;
             this.particlePool = null;
             super.removeFromMap();

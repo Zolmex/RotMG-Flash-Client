@@ -76,7 +76,7 @@ package kabam.rotmg.arena.view
             if (!this.isSelected)
             {
                 this.selected.dispatch(this);
-            };
+            }
         }
 
         private function redraw():void
@@ -94,8 +94,8 @@ package kabam.rotmg.arena.view
                 else
                 {
                     this.label.setColor(OUT_COLOR);
-                };
-            };
+                }
+            }
         }
 
         private function onMouseUp(_arg_1:MouseEvent):void

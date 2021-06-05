@@ -43,7 +43,7 @@ package com.company.assembleegameclient.ui.options
             if (this.callbackFunc != null)
             {
                 this.callbackFunc(this.sliderBar.currentVolume);
-            };
+            }
             Parameters.save();
         }
 

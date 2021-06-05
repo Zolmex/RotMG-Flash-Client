@@ -93,7 +93,7 @@ package io.decagames.rotmg.ui
             if (isNaN(_local_5))
             {
                 _local_5 = 0;
-            };
+            }
             if (_arg_3)
             {
                 TweenLite.to(this.progressShape, 1, {
@@ -107,12 +107,12 @@ package io.decagames.rotmg.ui
                 this.progressShape.graphics.beginFill((((this.useMaxColor) && (_arg_1 >= (this._maxValue - this._minValue))) ? this._maxColor : this.progressBarColor), 1);
                 this.progressShape.graphics.drawRect(0, 0, _local_5, this.componentHeight);
                 this.progressShape.width = _local_5;
-            };
+            }
             if (_local_4)
             {
                 this.progressShape.graphics.beginFill((((this.useMaxColor) && ((this._maxValue - this._minValue) == _arg_2)) ? this._maxColor : this.simulationColor), 1);
                 this.progressShape.graphics.drawRect(_local_5, 0, (((this.componentWidth * _arg_2) / (this._maxValue - this._minValue)) - _local_5), this.componentHeight);
-            };
+            }
             var _local_6:String = this._dynamicLabelString.replace(DYNAMIC_LABEL_TOKEN, ((_local_4) ? _arg_2 : _arg_1));
             this._dynamicLabel.text = _local_6.replace(MAX_VALUE_TOKEN, this._maxValue);
             this._maxLabel.text = "";
@@ -123,8 +123,8 @@ package io.decagames.rotmg.ui
                 if (((this._showMaxLabel) && (this._maxValue == _arg_2)))
                 {
                     this._maxLabel.text = "MAX";
-                };
-            };
+                }
+            }
             this._dynamicLabel.x = ((this.componentWidth - this._dynamicLabel.width) + 2);
             this._maxLabel.x = (this._dynamicLabel.x + this._dynamicLabel.width);
             this._staticLabel.x = -2;
@@ -192,11 +192,11 @@ package io.decagames.rotmg.ui
             if (((_arg_1) && (!(this._maxLabel.parent))))
             {
                 addChild(this._maxLabel);
-            };
+            }
             if (((!(_arg_1)) && (this._maxLabel.parent)))
             {
                 removeChild(this._maxLabel);
-            };
+            }
             this._showMaxLabel = _arg_1;
         }
 

@@ -39,11 +39,11 @@ package io.decagames.rotmg.ui.popups
             if (this.footer)
             {
                 this.footer.dispose();
-            };
+            }
             if (this._background)
             {
                 this._background.dispose();
-            };
+            }
         }
 
 

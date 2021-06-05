@@ -22,7 +22,7 @@ package kabam.rotmg.game.view.components
             if (_arg_3)
             {
                 this.initIcon(_arg_3);
-            };
+            }
         }
 
         private function initBackground(_arg_1:Sprite):void

@@ -26,7 +26,7 @@ package com.company.assembleegameclient.sound
             var _local_2:GoogleAnalytics = StaticInjectorContext.getInjector().getInstance(GoogleAnalytics);
             if (_local_2)
             {
-            };
+            }
             Parameters.data_.playSFX = _arg_1;
             Parameters.save();
             SoundEffectLibrary.updateTransform();

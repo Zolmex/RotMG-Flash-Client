@@ -5,7 +5,7 @@
 
 package com.company.assembleegameclient.ui.panels.itemgrids
 {
-    import __AS3__.vec.Vector;
+    
     import com.company.assembleegameclient.ui.panels.itemgrids.itemtiles.EquipmentTile;
     import com.company.assembleegameclient.objects.GameObject;
     import com.company.assembleegameclient.objects.Player;
@@ -14,7 +14,7 @@ package com.company.assembleegameclient.ui.panels.itemgrids
     import kabam.lib.util.VectorAS3Util;
     import com.company.util.IIterator;
     import com.company.assembleegameclient.ui.panels.itemgrids.itemtiles.ItemTile;
-    import __AS3__.vec.*;
+    
 
     public class EquippedGrid extends ItemGrid 
     {
@@ -42,7 +42,7 @@ package com.company.assembleegameclient.ui.panels.itemgrids
                 _local_3.setType(this._invTypes[_local_2]);
                 this.tiles[_local_2] = _local_3;
                 _local_2++;
-            };
+            }
         }
 
         public function createInteractiveItemTileIterator():IIterator
@@ -55,7 +55,7 @@ package com.company.assembleegameclient.ui.panels.itemgrids
             if (!_arg_1)
             {
                 return;
-            };
+            }
             var _local_3:int = _arg_1.length;
             var _local_4:int;
             while (_local_4 < this.tiles.length)
@@ -67,10 +67,10 @@ package com.company.assembleegameclient.ui.panels.itemgrids
                 else
                 {
                     this.tiles[_local_4].setItem(-1);
-                };
+                }
                 this.tiles[_local_4].updateDim(curPlayer);
                 _local_4++;
-            };
+            }
         }
 
         public function toggleTierTags(_arg_1:Boolean):void
@@ -79,7 +79,7 @@ package com.company.assembleegameclient.ui.panels.itemgrids
             for each (_local_2 in this.tiles)
             {
                 _local_2.toggleTierTag(_arg_1);
-            };
+            }
         }
 
 

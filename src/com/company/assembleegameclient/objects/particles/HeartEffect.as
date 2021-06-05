@@ -6,9 +6,7 @@
 package com.company.assembleegameclient.objects.particles
 {
     import com.company.assembleegameclient.objects.GameObject;
-    import __AS3__.vec.Vector;
     import com.company.assembleegameclient.util.ColorUtil;
-    import __AS3__.vec.*;
 
     public class HeartEffect extends ParticleEffect 
     {
@@ -49,11 +47,11 @@ package com.company.assembleegameclient.objects.particles
             if (this.go_.map_ == null)
             {
                 return (false);
-            };
+            }
             if (this.lastUpdate_ < 0)
             {
                 this.lastUpdate_ = Math.max(0, (_arg_1 - 400));
-            };
+            }
             x_ = this.go_.x_;
             y_ = this.go_.y_;
             if (!this.bInitialized_)
@@ -72,13 +70,13 @@ package com.company.assembleegameclient.objects.particles
                     map_.addObj(_local_5, x_, y_);
                     _local_5.z_ = (0.4 + (Math.sin(((_local_7 * _local_4) * 1.5)) * 0.05));
                     _local_4++;
-                };
+                }
                 this.bInitialized_ = true;
-            };
+            }
             for each (_local_3 in this.parts_)
             {
                 _local_3.rad_ = this.rad_;
-            };
+            }
             if (this.maxLife_ <= 500)
             {
                 this.rad_ = Math.max((this.rad_ - ((2 * this.maxRad_) * (_arg_2 / 1000))), 0);
@@ -86,13 +84,13 @@ package com.company.assembleegameclient.objects.particles
             else
             {
                 this.rad_ = Math.min((this.rad_ + (this.rise_ * (_arg_2 / 1000))), this.maxRad_);
-            };
+            }
             this.maxLife_ = (this.maxLife_ - _arg_2);
             if (this.maxLife_ <= 0)
             {
                 this.endEffect();
                 return (false);
-            };
+            }
             this.lastUpdate_ = _arg_1;
             return (true);
         }
@@ -103,7 +101,7 @@ package com.company.assembleegameclient.objects.particles
             for each (_local_1 in this.parts_)
             {
                 _local_1.alive_ = false;
-            };
+            }
         }
 
         override public function removeFromMap():void
@@ -128,14 +126,14 @@ class HeartParticle extends Particle
     public var rad_:Number;
     public var alive_:Boolean = true;
     public var speed_:Number;
-    /*private*/ var radVar_:Number = (0.97 + (Math.random() * 0.06));
+    private var radVar_:Number = (0.97 + (Math.random() * 0.06));
 
     public function HeartParticle(_arg_1:uint=0xFF0000)
     {
         super(_arg_1, 0, (140 + (Math.random() * 40)));
     }
 
-    /*private*/ function move(_arg_1:Number):void
+    private function move(_arg_1:Number):void
     {
         x_ = (this.cX_ + (((((16 * Math.sin(_arg_1)) * Math.sin(_arg_1)) * Math.sin(_arg_1)) / 16) * (this.rad_ * this.radVar_)));
         y_ = (this.cY_ - ((((((13 * Math.cos(_arg_1)) - (5 * Math.cos((2 * _arg_1)))) - (2 * Math.cos((3 * _arg_1)))) - Math.cos((4 * _arg_1))) / 16) * (this.rad_ * this.radVar_)));

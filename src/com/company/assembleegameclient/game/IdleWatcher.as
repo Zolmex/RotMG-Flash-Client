@@ -44,22 +44,22 @@ package com.company.assembleegameclient.game
             if (this.idleTime_ < (FIRST_WARNING_MINUTES * MINUTE_IN_MS))
             {
                 return (false);
-            };
+            }
             if (((this.idleTime_ >= (FIRST_WARNING_MINUTES * MINUTE_IN_MS)) && (_local_2 < (FIRST_WARNING_MINUTES * MINUTE_IN_MS))))
             {
                 this.addTextLine.dispatch(this.makeFirstWarning());
                 return (false);
-            };
+            }
             if (((this.idleTime_ >= (SECOND_WARNING_MINUTES * MINUTE_IN_MS)) && (_local_2 < (SECOND_WARNING_MINUTES * MINUTE_IN_MS))))
             {
                 this.addTextLine.dispatch(this.makeSecondWarning());
                 return (false);
-            };
+            }
             if (((this.idleTime_ >= (KICK_MINUTES * MINUTE_IN_MS)) && (_local_2 < (KICK_MINUTES * MINUTE_IN_MS))))
             {
                 this.addTextLine.dispatch(this.makeThirdWarning());
                 return (true);
-            };
+            }
             return (false);
         }
 

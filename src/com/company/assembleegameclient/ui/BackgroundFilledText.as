@@ -9,11 +9,11 @@ package com.company.assembleegameclient.ui
     import kabam.rotmg.text.view.TextFieldDisplayConcrete;
     import flash.display.GraphicsSolidFill;
     import flash.display.GraphicsPath;
-    import __AS3__.vec.Vector;
+    
     import flash.display.IGraphicsData;
     import com.company.util.GraphicsUtil;
     import flash.text.TextFieldAutoSize;
-    import __AS3__.vec.*;
+    
 
     public class BackgroundFilledText extends Sprite 
     {

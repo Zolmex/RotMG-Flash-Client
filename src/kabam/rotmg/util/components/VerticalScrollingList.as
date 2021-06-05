@@ -12,7 +12,7 @@ package kabam.rotmg.util.components
     import kabam.lib.ui.impl.LayoutList;
     import kabam.lib.ui.api.Size;
     import flash.display.DisplayObject;
-    import __AS3__.vec.Vector;
+    
 
     public class VerticalScrollingList extends Sprite implements List 
     {
@@ -52,7 +52,7 @@ package kabam.rotmg.util.components
             if (this.isScrollbarVisible())
             {
                 _arg_1 = new Size((_arg_1.width - SCROLLBAR_GUTTER), _arg_1.height);
-            };
+            }
             this.list.setSize(_arg_1);
             this.refreshScrollbar();
         }

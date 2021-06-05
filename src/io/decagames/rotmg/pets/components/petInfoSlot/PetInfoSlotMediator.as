@@ -26,7 +26,7 @@ package io.decagames.rotmg.pets.components.petInfoSlot
             if (this.view.showCurrentPet)
             {
                 this.view.showPetInfo(this.petModel.getActivePet());
-            };
+            }
             this.changePetSkinSignal.add(this.onSkinUpdate);
         }
 

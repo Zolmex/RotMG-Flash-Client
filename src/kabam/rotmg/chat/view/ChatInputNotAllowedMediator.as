@@ -43,7 +43,7 @@ package kabam.rotmg.chat.view
             {
                 this.view.mouseEnabled = false;
                 this.view.mouseChildren = false;
-            };
+            }
         }
 
         override public function destroy():void

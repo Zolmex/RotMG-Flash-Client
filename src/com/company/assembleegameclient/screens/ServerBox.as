@@ -38,7 +38,7 @@ package com.company.assembleegameclient.screens
             else
             {
                 this.nameText_.setStringBuilder(new StaticStringBuilder(_arg_1.name));
-            };
+            }
             this.nameText_.filters = [new DropShadowFilter(0, 0, 0, 1, 8, 8)];
             this.nameText_.x = 18;
             this.nameText_.setVerticalAlign(TextFieldDisplayConcrete.MIDDLE);
@@ -58,7 +58,7 @@ package com.company.assembleegameclient.screens
             onTextChanged = function ():void
             {
                 makeStatusText(color, text);
-            };
+            }
             if (server != null)
             {
                 color = 0xFF00;
@@ -74,10 +74,10 @@ package com.company.assembleegameclient.screens
                     {
                         color = 16549442;
                         text = "ServerBox.crowded";
-                    };
-                };
+                    }
+                }
                 this.nameText_.textChanged.addOnce(onTextChanged);
-            };
+            }
         }
 
         private function makeStatusText(_arg_1:uint, _arg_2:String):void
@@ -114,13 +114,13 @@ package com.company.assembleegameclient.screens
             if (this.selected_)
             {
                 graphics.lineStyle(2, 16777103);
-            };
+            }
             graphics.beginFill(((this.over_) ? 0x6B6B6B : 0x5C5C5C), 1);
             graphics.drawRect(0, 0, WIDTH, HEIGHT);
             if (this.selected_)
             {
                 graphics.lineStyle();
-            };
+            }
         }
 
 

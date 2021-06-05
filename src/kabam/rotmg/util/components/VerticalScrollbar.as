@@ -54,8 +54,8 @@ package kabam.rotmg.util.components
                 else
                 {
                     this.removeMouseListeners();
-                };
-            };
+                }
+            }
         }
 
         private function addMouseListeners():void
@@ -113,8 +113,8 @@ package kabam.rotmg.util.components
                 if (_arg_1 > 1)
                 {
                     _arg_1 = 1;
-                };
-            };
+                }
+            }
             this.position = _arg_1;
             this.bar.y = (PADDING + (this.range * this.position));
             ((this._positionChanged) && (this._positionChanged.dispatch(this.position)));

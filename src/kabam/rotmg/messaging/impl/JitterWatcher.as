@@ -8,13 +8,13 @@ package kabam.rotmg.messaging.impl
     import flash.display.Sprite;
     import kabam.rotmg.text.view.stringBuilder.LineBuilder;
     import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-    import __AS3__.vec.Vector;
+    
     import flash.text.TextFieldAutoSize;
     import flash.filters.DropShadowFilter;
     import flash.events.Event;
     import flash.utils.getTimer;
     import kabam.rotmg.text.model.TextKey;
-    import __AS3__.vec.*;
+    
 
     public class JitterWatcher extends Sprite 
     {
@@ -44,7 +44,7 @@ package kabam.rotmg.messaging.impl
             {
                 this.lastRecord_ = _local_1;
                 return;
-            };
+            }
             var _local_2:int = (_local_1 - this.lastRecord_);
             this.ticks_.push(_local_2);
             this.sum_ = (this.sum_ + _local_2);
@@ -52,7 +52,7 @@ package kabam.rotmg.messaging.impl
             {
                 _local_3 = this.ticks_.shift();
                 this.sum_ = (this.sum_ - _local_3);
-            };
+            }
             this.lastRecord_ = _local_1;
         }
 
@@ -78,13 +78,13 @@ package kabam.rotmg.messaging.impl
             if (_local_1 == 0)
             {
                 return (0);
-            };
+            }
             var _local_2:Number = (this.sum_ / _local_1);
             var _local_3:Number = 0;
             for each (_local_4 in this.ticks_)
             {
                 _local_3 = (_local_3 + ((_local_4 - _local_2) * (_local_4 - _local_2)));
-            };
+            }
             return (Math.sqrt((_local_3 / _local_1)));
         }
 

@@ -60,9 +60,9 @@ package io.decagames.rotmg.social.widgets
                     this.toolTip_ = new TextToolTip(0x363636, 0x9B9B9B, "", "", 200);
                     this.hoverTooltipDelegate.setDisplayObject(this._characterContainer);
                     this.hoverTooltipDelegate.tooltip = this.toolTip_;
-                };
+                }
                 this.toolTip_.setTitle(new LineBuilder().setParams(_arg_1, _arg_2));
-            };
+            }
         }
 
         public function setToolTipText(_arg_1:String, _arg_2:Object=null):void
@@ -74,9 +74,9 @@ package io.decagames.rotmg.social.widgets
                     this.toolTip_ = new TextToolTip(0x363636, 0x9B9B9B, "", "", 200);
                     this.hoverTooltipDelegate.setDisplayObject(this._characterContainer);
                     this.hoverTooltipDelegate.tooltip = this.toolTip_;
-                };
+                }
                 this.toolTip_.setText(new LineBuilder().setParams(_arg_1, _arg_2));
-            };
+            }
         }
 
         protected function init():void
@@ -104,7 +104,7 @@ package io.decagames.rotmg.social.widgets
                     this.listBackground = TextureParser.instance.getSliceScalingBitmap("UI", "listitem_content_background_indicator");
                     addChild(this.listBackground);
                     break;
-            };
+            }
             this.listBackground.height = this.LIST_ITEM_HEIGHT;
             this.listBackground.width = this.LIST_ITEM_WIDTH;
         }
@@ -127,7 +127,7 @@ package io.decagames.rotmg.social.widgets
             if (this.listPortrait)
             {
                 this._characterContainer.addChild(this.listPortrait);
-            };
+            }
         }
 
         protected function setLabelColorByState(_arg_1:UILabel):void
@@ -142,7 +142,7 @@ package io.decagames.rotmg.social.widgets
                     return;
                 default:
                     DefaultLabelFormat.defaultSmallPopupTitle(_arg_1);
-            };
+            }
         }
 
         protected function addButton(_arg_1:String, _arg_2:int, _arg_3:int, _arg_4:int, _arg_5:String, _arg_6:String=""):IconButton

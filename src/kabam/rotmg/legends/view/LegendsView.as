@@ -9,7 +9,7 @@ package kabam.rotmg.legends.view
     import org.osflash.signals.Signal;
     import kabam.rotmg.legends.model.Timespan;
     import kabam.rotmg.legends.model.Legend;
-    import __AS3__.vec.Vector;
+    
     import kabam.rotmg.text.view.TextFieldDisplayConcrete;
     import com.company.assembleegameclient.screens.TitleMenuOption;
     import com.company.assembleegameclient.ui.Scrollbar;
@@ -23,7 +23,7 @@ package kabam.rotmg.legends.view
     import com.company.rotmg.graphics.ScreenGraphic;
     import flash.events.MouseEvent;
     import flash.events.Event;
-    import __AS3__.vec.*;
+    
 
     public class LegendsView extends Sprite 
     {
@@ -32,7 +32,7 @@ package kabam.rotmg.legends.view
         public const showDetail:Signal = new Signal(Legend);
         public const close:Signal = new Signal();
         private const items:Vector.<LegendListItem> = new Vector.<LegendListItem>(0);
-        private const tabs:Object = {};
+        private const tabs:Object = {}
 
         private var title:TextFieldDisplayConcrete;
         private var loadingBanner:TextFieldDisplayConcrete;
@@ -150,7 +150,7 @@ package kabam.rotmg.legends.view
             {
                 this.makeTab(_local_1[_local_3], _local_3);
                 _local_3++;
-            };
+            }
         }
 
         private function makeTab(_arg_1:Timespan, _arg_2:int):LegendsTab
@@ -169,7 +169,7 @@ package kabam.rotmg.legends.view
             if (this.selectedTab != _arg_1)
             {
                 this.updateTabAndSelectTimespan(_arg_1);
-            };
+            }
         }
 
         private function updateTabAndSelectTimespan(_arg_1:LegendsTab):void
@@ -214,7 +214,7 @@ package kabam.rotmg.legends.view
             for each (_local_1 in this.items)
             {
                 _local_1.selected.remove(this.onItemSelected);
-            };
+            }
             this.items.length = 0;
             this.mainContainer.removeChild(this.listContainer);
             this.listContainer = null;
@@ -241,7 +241,7 @@ package kabam.rotmg.legends.view
             {
                 this.items[_local_1] = this.makeItemFromLegend(_local_1);
                 _local_1++;
-            };
+            }
         }
 
         private function makeItemFromLegend(_arg_1:int):LegendListItem
@@ -267,7 +267,7 @@ package kabam.rotmg.legends.view
             {
                 this.scrollBar.removeEventListener(Event.CHANGE, this.onScrollBarChange);
                 this.scrollBar.visible = false;
-            };
+            }
         }
 
         private function positionScrollbarToDisplayFocussedLegend():void
@@ -280,7 +280,7 @@ package kabam.rotmg.legends.view
                 _local_2 = this.legends.indexOf(_local_1);
                 _local_3 = ((_local_2 + 0.5) * LegendListItem.HEIGHT);
                 this.scrollBar.setPos(((_local_3 - 200) / (this.listContainer.height - 400)));
-            };
+            }
         }
 
         private function getLegendFocus():Legend
@@ -293,8 +293,8 @@ package kabam.rotmg.legends.view
                 {
                     _local_1 = _local_2;
                     break;
-                };
-            };
+                }
+            }
             return (_local_1);
         }
 

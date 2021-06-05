@@ -119,7 +119,7 @@ package io.decagames.rotmg.unity.popup
                 _local_1.lineTo((this._boxSize - 2), 2);
                 _local_1.lineStyle();
                 this.hasError = false;
-            };
+            }
             if (this.hasError)
             {
                 _local_2 = 16549442;
@@ -127,7 +127,7 @@ package io.decagames.rotmg.unity.popup
             else
             {
                 _local_2 = 0x454545;
-            };
+            }
             _local_1.lineStyle(2, _local_2, 1, false, LineScaleMode.NORMAL, CapsStyle.ROUND, JointStyle.ROUND);
             _local_1.drawRect(0, 0, this._boxSize, this._boxSize);
             _local_1.lineStyle();

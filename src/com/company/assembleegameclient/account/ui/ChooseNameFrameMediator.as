@@ -61,7 +61,7 @@ package com.company.assembleegameclient.account.ui
             else
             {
                 this.handleFailedNameChange(_arg_1.m_.errorText_);
-            };
+            }
         }
 
         private function handleSuccessfulNameChange():void
@@ -69,7 +69,7 @@ package com.company.assembleegameclient.account.ui
             if (this.view.isPurchase)
             {
                 this.trackPurchase();
-            };
+            }
             this.gameSprite.model.setName(this.name);
             this.gameSprite.map.player_.name_ = this.name;
             this.closeDialogs.dispatch();

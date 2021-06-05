@@ -13,14 +13,14 @@ package com.company.assembleegameclient.ui.tooltip
     import flash.display.CapsStyle;
     import flash.display.JointStyle;
     import flash.display.GraphicsPath;
-    import __AS3__.vec.Vector;
+    
     import flash.display.IGraphicsData;
     import com.company.util.GraphicsUtil;
     import kabam.rotmg.ui.view.SignalWaiter;
     import flash.filters.DropShadowFilter;
     import flash.events.Event;
     import flash.events.MouseEvent;
-    import __AS3__.vec.*;
+    
 
     public class ToolTip extends Sprite 
     {
@@ -75,7 +75,7 @@ package com.company.assembleegameclient.ui.tooltip
             {
                 this.targetObj = _arg_1;
                 this.targetObj.addEventListener(MouseEvent.ROLL_OUT, this.onLeaveTarget);
-            };
+            }
         }
 
         public function detachFromTarget():void
@@ -86,9 +86,9 @@ package com.company.assembleegameclient.ui.tooltip
                 if (parent)
                 {
                     parent.removeChild(this);
-                };
+                }
                 this.targetObj = null;
-            };
+            }
         }
 
         public function forcePostionLeft():void
@@ -113,12 +113,12 @@ package com.company.assembleegameclient.ui.tooltip
             if (this.waiter.isEmpty())
             {
                 this.draw();
-            };
+            }
             if (this._followMouse)
             {
                 this.position();
                 addEventListener(Event.ENTER_FRAME, this.onEnterFrame);
-            };
+            }
         }
 
         private function onRemovedFromStage(_arg_1:Event):void
@@ -126,7 +126,7 @@ package com.company.assembleegameclient.ui.tooltip
             if (this._followMouse)
             {
                 removeEventListener(Event.ENTER_FRAME, this.onEnterFrame);
-            };
+            }
         }
 
         private function onEnterFrame(_arg_1:Event):void
@@ -139,7 +139,7 @@ package com.company.assembleegameclient.ui.tooltip
             if (stage == null)
             {
                 return;
-            };
+            }
             if ((((!(this.forcePositionLeft_)) && (stage.mouseX < (stage.stageWidth / 2))) || (this.forcePositionRight_)))
             {
                 x = (stage.mouseX + 12);
@@ -147,11 +147,11 @@ package com.company.assembleegameclient.ui.tooltip
             else
             {
                 x = ((stage.mouseX - width) - 1);
-            };
+            }
             if (x < 12)
             {
                 x = 12;
-            };
+            }
             if ((((!(this.forcePositionLeft_)) && (stage.mouseY < (stage.stageHeight / 3))) || (this.forcePositionRight_)))
             {
                 y = (stage.mouseY + 12);
@@ -159,11 +159,11 @@ package com.company.assembleegameclient.ui.tooltip
             else
             {
                 y = ((stage.mouseY - height) - 1);
-            };
+            }
             if (y < 12)
             {
                 y = 12;
-            };
+            }
         }
 
         public function draw():void

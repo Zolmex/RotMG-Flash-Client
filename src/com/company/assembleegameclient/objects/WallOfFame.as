@@ -5,7 +5,7 @@
 
 package com.company.assembleegameclient.objects
 {
-    import __AS3__.vec.Vector;
+    
     import flash.display.IGraphicsData;
     import com.company.assembleegameclient.map.Camera;
 

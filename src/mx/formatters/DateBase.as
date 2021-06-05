@@ -35,7 +35,7 @@ package mx.formatters
             if (!_resourceManager)
             {
                 _resourceManager = ResourceManager.getInstance();
-            };
+            }
             return (_resourceManager);
         }
 
@@ -93,9 +93,9 @@ package mx.formatters
                     {
                         _monthNamesLong[_local_4] = (_monthNamesLong[_local_4] + _local_2);
                         _local_4++;
-                    };
-                };
-            };
+                    }
+                }
+            }
         }
 
         public static function get monthNamesShort():Array
@@ -122,9 +122,9 @@ package mx.formatters
                     {
                         _monthNamesShort[_local_4] = (_monthNamesShort[_local_4] + _local_2);
                         _local_4++;
-                    };
-                };
-            };
+                    }
+                }
+            }
         }
 
         public static function get timeOfDay():Array
@@ -148,7 +148,7 @@ package mx.formatters
                 resourceManager.addEventListener(Event.CHANGE, static_resourceManager_changeHandler, false, 0, true);
                 static_resourcesChanged();
                 initialized = true;
-            };
+            }
         }
 
         private static function static_resourcesChanged():void
@@ -179,22 +179,22 @@ package mx.formatters
                     if (_local_4 < 3)
                     {
                         return (_local_7.substr(2));
-                    };
+                    }
                     if (_local_4 > 4)
                     {
                         return (setValue(Number(_local_7), _local_4));
-                    };
+                    }
                     return (_local_7);
                 case "M":
                     _local_8 = int(_arg_1.getMonth());
                     if (_local_4 < 3)
                     {
                         return (_local_3 + setValue(++_local_8, _local_4));
-                    };
+                    }
                     if (_local_4 == 3)
                     {
                         return (monthNamesShort[_local_8]);
-                    };
+                    }
                     return (monthNamesLong[_local_8]);
                 case "D":
                     _local_5 = int(_arg_1.getDate());
@@ -204,25 +204,25 @@ package mx.formatters
                     if (_local_4 < 3)
                     {
                         return (_local_3 + setValue(_local_5, _local_4));
-                    };
+                    }
                     if (_local_4 == 3)
                     {
                         return (dayNamesShort[_local_5]);
-                    };
+                    }
                     return (dayNamesLong[_local_5]);
                 case "A":
                     _local_6 = int(_arg_1.getHours());
                     if (_local_6 < 12)
                     {
                         return (timeOfDay[0]);
-                    };
+                    }
                     return (timeOfDay[1]);
                 case "H":
                     _local_6 = int(_arg_1.getHours());
                     if (_local_6 == 0)
                     {
                         _local_6 = 24;
-                    };
+                    }
                     return (_local_3 + setValue(_local_6, _local_4));
                 case "J":
                     _local_6 = int(_arg_1.getHours());
@@ -232,7 +232,7 @@ package mx.formatters
                     if (_local_6 >= 12)
                     {
                         _local_6 = (_local_6 - 12);
-                    };
+                    }
                     return (_local_3 + setValue(_local_6, _local_4));
                 case "L":
                     _local_6 = int(_arg_1.getHours());
@@ -245,8 +245,8 @@ package mx.formatters
                         if (_local_6 > 12)
                         {
                             _local_6 = (_local_6 - 12);
-                        };
-                    };
+                        }
+                    }
                     return (_local_3 + setValue(_local_6, _local_4));
                 case "N":
                     _local_9 = int(_arg_1.getMinutes());
@@ -257,7 +257,7 @@ package mx.formatters
                 case "Q":
                     _local_11 = int(_arg_1.getMilliseconds());
                     return (_local_3 + setValue(_local_11, _local_4));
-            };
+            }
             return (_local_3);
         }
 
@@ -275,8 +275,8 @@ package mx.formatters
                 {
                     _local_3 = (_local_3 + "0");
                     _local_6++;
-                };
-            };
+                }
+            }
             return (_local_3 + _arg_1.toString());
         }
 

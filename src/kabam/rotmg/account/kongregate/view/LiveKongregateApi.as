@@ -60,7 +60,7 @@ package kabam.rotmg.account.kongregate.view
             {
                 this.logger.info("kongregate guest detected - listening for external login");
                 this.api.services.addEventListener("login", this.onExternalLogin);
-            };
+            }
         }
 
         private function onExternalLogin(_arg_1:Event):void
@@ -87,7 +87,7 @@ package kabam.rotmg.account.kongregate.view
 
         public function getAuthentication():Object
         {
-            var _local_1:Object = {};
+            var _local_1:Object = {}
             _local_1.userId = this.api.services.getUserId();
             _local_1.username = this.api.services.getUsername();
             _local_1.gameAuthToken = this.api.services.getGameAuthToken();

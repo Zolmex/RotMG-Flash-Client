@@ -41,7 +41,7 @@ package io.decagames.rotmg.seasonalEvent.tasks
             else
             {
                 this.onTextError(_arg_2);
-            };
+            }
         }
 
         private function onTextError(_arg_1:String):void
@@ -62,7 +62,7 @@ package io.decagames.rotmg.seasonalEvent.tasks
                 logger.error(("Error parsing seasonal data: " + data));
                 completeTask(true);
                 return;
-            };
+            }
             this.logger.info("GetSeasonalEvent update");
             this.logger.info(xmlData);
             this.model.parseConfigData(xmlData);

@@ -5,7 +5,7 @@
 
 package com.company.assembleegameclient.objects.particles
 {
-    import __AS3__.vec.Vector;
+    
     import flash.display.BitmapData;
     import com.company.assembleegameclient.objects.GameObject;
     import flash.geom.Point;
@@ -14,7 +14,7 @@ package com.company.assembleegameclient.objects.particles
     import com.company.util.AssetLibrary;
     import com.company.util.ImageSet;
     import com.company.assembleegameclient.util.TextureRedrawer;
-    import __AS3__.vec.*;
+    
 
     public class OrbEffect extends ParticleEffect 
     {
@@ -72,10 +72,10 @@ package com.company.assembleegameclient.objects.particles
                 else
                 {
                     _local_6 = apply(_local_6, 3675232);
-                };
+                }
                 _local_2.push(_local_6);
                 _local_4++;
-            };
+            }
             return (_local_2);
         }
 

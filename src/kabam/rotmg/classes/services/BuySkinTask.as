@@ -57,7 +57,7 @@ package kabam.rotmg.classes.services
             else
             {
                 this.abandonPurchase(_arg_2);
-            };
+            }
             completeTask(_arg_1, _arg_2);
         }
 

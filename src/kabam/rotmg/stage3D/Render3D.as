@@ -9,7 +9,7 @@ package kabam.rotmg.stage3D
     import flash.display.IGraphicsData;
     import kabam.rotmg.stage3D.Object3D.Object3DStage3D;
     import com.company.assembleegameclient.map.Camera;
-    import __AS3__.vec.*;
+    
 
     public class Render3D extends Signal 
     {

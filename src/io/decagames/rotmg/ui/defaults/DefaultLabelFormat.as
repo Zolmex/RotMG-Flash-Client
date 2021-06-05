@@ -23,7 +23,7 @@ package io.decagames.rotmg.ui.defaults
             if (_arg_6)
             {
                 _arg_1.filters = _arg_6;
-            };
+            }
         }
 
         public static function defaultButtonLabel(_arg_1:UILabel):void

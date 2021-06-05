@@ -59,7 +59,7 @@ package com.company.assembleegameclient.ui.board
             else
             {
                 this.reportError(_arg_2);
-            };
+            }
         }
 
         private function showGuildBoard(_arg_1:String):void
@@ -108,7 +108,7 @@ package com.company.assembleegameclient.ui.board
         private function onEditComplete(_arg_1:Event):void
         {
             var _local_2:Account = StaticInjectorContext.getInjector().getInstance(Account);
-            var _local_3:Object = {"board":this.editBoard_.getText()};
+            var _local_3:Object = {"board":this.editBoard_.getText()}
             MoreObjectUtil.addToObject(_local_3, _local_2.getCredentials());
             this.client = StaticInjectorContext.getInjector().getInstance(AppEngineClient);
             this.client.complete.addOnce(this.onSetBoardComplete);
@@ -129,7 +129,7 @@ package com.company.assembleegameclient.ui.board
             else
             {
                 this.onSaveError(_arg_2);
-            };
+            }
         }
 
         private function onSaveDone(_arg_1:String):void

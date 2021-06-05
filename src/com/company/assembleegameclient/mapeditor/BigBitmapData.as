@@ -5,13 +5,13 @@
 
 package com.company.assembleegameclient.mapeditor
 {
-    import __AS3__.vec.Vector;
+    
     import flash.display.BitmapData;
     import flash.geom.Rectangle;
     import flash.geom.Matrix;
     import flash.display.Bitmap;
     import flash.display.Sprite;
-    import __AS3__.vec.*;
+    
 
     public class BigBitmapData 
     {
@@ -47,9 +47,9 @@ package com.company.assembleegameclient.mapeditor
                     _local_8 = Math.min(CHUNK_SIZE, (this.height_ - (_local_6 * CHUNK_SIZE)));
                     this.chunks_[(_local_5 + (_local_6 * this.maxChunkX_))] = new BitmapDataSpy(_local_7, _local_8, _arg_3, this.fillColor_);
                     _local_6++;
-                };
+                }
                 _local_5++;
-            };
+            }
         }
 
         public function copyTo(_arg_1:BitmapData, _arg_2:Rectangle, _arg_3:Rectangle):void
@@ -77,9 +77,9 @@ package com.company.assembleegameclient.mapeditor
                     _local_14 = new Rectangle((_arg_3.x - (_local_11 * CHUNK_SIZE)), (_arg_3.y - (_local_12 * CHUNK_SIZE)), _arg_3.width, _arg_3.height);
                     _local_13.draw(_arg_1, _local_10, null, null, _local_14, false);
                     _local_12++;
-                };
+                }
                 _local_11++;
-            };
+            }
         }
 
         public function copyFrom(_arg_1:Rectangle, _arg_2:BitmapData, _arg_3:Rectangle):void
@@ -106,9 +106,9 @@ package com.company.assembleegameclient.mapeditor
                     _local_11.scale(_local_4, _local_5);
                     _arg_2.draw(_local_14, _local_11, null, null, _arg_3, false);
                     _local_13++;
-                };
+                }
                 _local_12++;
-            };
+            }
         }
 
         public function erase(_arg_1:Rectangle):void
@@ -133,9 +133,9 @@ package com.company.assembleegameclient.mapeditor
                     _local_6.bottom = (_arg_1.bottom - (_local_8 * CHUNK_SIZE));
                     _local_9.fillRect(_local_6, this.fillColor_);
                     _local_8++;
-                };
+                }
                 _local_7++;
-            };
+            }
         }
 
         public function getDebugSprite():Sprite
@@ -156,9 +156,9 @@ package com.company.assembleegameclient.mapeditor
                     _local_5.y = (_local_3 * CHUNK_SIZE);
                     _local_1.addChild(_local_5);
                     _local_3++;
-                };
+                }
                 _local_2++;
-            };
+            }
             return (_local_1);
         }
 

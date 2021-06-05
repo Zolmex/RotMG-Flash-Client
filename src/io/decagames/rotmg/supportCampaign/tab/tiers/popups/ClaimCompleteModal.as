@@ -7,9 +7,9 @@ package io.decagames.rotmg.supportCampaign.tab.tiers.popups
 {
     import io.decagames.rotmg.ui.popups.modal.TextModal;
     import io.decagames.rotmg.ui.buttons.BaseButton;
-    import __AS3__.vec.Vector;
+    
     import io.decagames.rotmg.ui.popups.modal.buttons.ClosePopupButton;
-    import __AS3__.vec.*;
+    
 
     public class ClaimCompleteModal extends TextModal 
     {

@@ -6,9 +6,9 @@
 package com.company.assembleegameclient.ui.dialogs
 {
     import org.osflash.signals.Signal;
-    import __AS3__.vec.Vector;
+    
     import flash.events.Event;
-    import __AS3__.vec.*;
+    
 
     public class CloseDialogComponent 
     {
@@ -32,7 +32,7 @@ package com.company.assembleegameclient.ui.dialogs
             for each (_local_2 in this.types)
             {
                 this.dialog.removeEventListener(_local_2, this.onButtonType);
-            };
+            }
             this.dialog.getCloseSignal().dispatch();
         }
 

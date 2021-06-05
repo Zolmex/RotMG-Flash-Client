@@ -10,7 +10,7 @@ package kabam.rotmg.arena.service
     import kabam.rotmg.appengine.api.AppEngineClient;
     import kabam.rotmg.arena.control.ReloadLeaderboard;
     import kabam.rotmg.arena.model.ArenaLeaderboardFilter;
-    import __AS3__.vec.Vector;
+    
     import kabam.rotmg.arena.model.ArenaLeaderboardEntry;
     import com.company.util.MoreObjectUtil;
 
@@ -51,7 +51,7 @@ package kabam.rotmg.arena.service
 
         private function makeRequestObject():Object
         {
-            var _local_1:Object = {"type":this.filter.getKey()};
+            var _local_1:Object = {"type":this.filter.getKey()}
             MoreObjectUtil.addToObject(_local_1, this.account.getCredentials());
             return (_local_1);
         }

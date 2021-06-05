@@ -9,11 +9,11 @@ package kabam.rotmg.news.model
     import kabam.rotmg.news.controller.NewsButtonRefreshSignal;
     import kabam.rotmg.account.core.Account;
     import io.decagames.rotmg.seasonalEvent.data.SeasonalEventModel;
-    import __AS3__.vec.Vector;
+    
     import kabam.rotmg.constants.GeneralConstants;
     import com.company.assembleegameclient.parameters.Parameters;
     import kabam.rotmg.news.view.NewsModalPage;
-    import __AS3__.vec.*;
+    
 
     public class NewsModel 
     {
@@ -39,7 +39,7 @@ package kabam.rotmg.news.model
             if (((this.isInModeToBeShown(_arg_1.showInModes)) && (this.isValidForPlatform(_arg_1))))
             {
                 this.inGameNews.push(_arg_1);
-            };
+            }
             this.sortNews();
         }
 
@@ -48,7 +48,7 @@ package kabam.rotmg.news.model
             if (this.inGameNews)
             {
                 this.inGameNews.length = 0;
-            };
+            }
         }
 
         public function isInModeToBeShown(_arg_1:int):Boolean
@@ -68,7 +68,7 @@ package kabam.rotmg.news.model
                     break;
                 default:
                     _local_2 = true;
-            };
+            }
             return (_local_2);
         }
 
@@ -79,11 +79,11 @@ package kabam.rotmg.news.model
                 if (_arg_1.weight > _arg_2.weight)
                 {
                     return (-1);
-                };
+                }
                 if (_arg_1.weight == _arg_2.weight)
                 {
                     return (0);
-                };
+                }
                 return (1);
             });
         }
@@ -95,7 +95,7 @@ package kabam.rotmg.news.model
             {
                 Parameters.data_["lastNewsKey"] = _local_1.newsKey;
                 Parameters.save();
-            };
+            }
         }
 
         public function hasUpdates():Boolean
@@ -104,7 +104,7 @@ package kabam.rotmg.news.model
             if (((_local_1 == null) || (Parameters.data_["lastNewsKey"] == _local_1.newsKey)))
             {
                 return (false);
-            };
+            }
             return (true);
         }
 
@@ -113,7 +113,7 @@ package kabam.rotmg.news.model
             if (((this.inGameNews) && (this.inGameNews.length > 0)))
             {
                 return (this.inGameNews[0]);
-            };
+            }
             return (null);
         }
 
@@ -125,7 +125,7 @@ package kabam.rotmg.news.model
             {
                 this.news[_local_1] = new DefaultNewsCellVO(_local_1);
                 _local_1++;
-            };
+            }
         }
 
         public function updateNews(_arg_1:Vector.<NewsCellVO>):void
@@ -151,9 +151,9 @@ package kabam.rotmg.news.model
                     {
                         Parameters.data_[("newsTimestamp" + _local_5)] = _local_3.endDate;
                         Parameters.data_[("hasNewsUpdate" + _local_5)] = true;
-                    };
-                };
-            };
+                    }
+                }
+            }
             this.sortByPriority(_local_2);
             this.update.dispatch(this.news);
             this.updateNoParams.dispatch();
@@ -167,8 +167,8 @@ package kabam.rotmg.news.model
                 if (((this.isNewsTimely(_local_2)) && (this.isValidForPlatformGlobal(_local_2))))
                 {
                     this.prioritize(_local_2);
-                };
-            };
+                }
+            }
         }
 
         private function prioritize(_arg_1:NewsCellVO):void
@@ -177,7 +177,7 @@ package kabam.rotmg.news.model
             if (this.news[_local_2])
             {
                 _arg_1 = this.comparePriority(this.news[_local_2], _arg_1);
-            };
+            }
             this.news[_local_2] = _arg_1;
         }
 
@@ -214,7 +214,7 @@ package kabam.rotmg.news.model
             {
                 _local_2 = this.inGameNews[(_arg_1 - 1)];
                 return (new NewsModalPage(_local_2.title, _local_2.text));
-            };
+            }
             return (new NewsModalPage("No new information", "Please check back later."));
         }
 

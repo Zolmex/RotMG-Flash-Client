@@ -35,8 +35,8 @@ package kabam.rotmg.account.web.commands
                 else
                 {
                     this.openDialog.dispatch(new WebRegisterDialog());
-                };
-            };
+                }
+            }
         }
 
 

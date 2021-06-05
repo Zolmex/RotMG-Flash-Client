@@ -53,7 +53,7 @@ package kabam.rotmg.dailyLogin.controller
             {
                 this.view.claimButton.addEventListener(MouseEvent.CLICK, this.onClaimClickHandler);
                 this.view.addEventListener(MouseEvent.CLICK, this.onPopupClickHandler);
-            };
+            }
             Parameters.data_.calendarShowOnDay = this.dailyLoginModel.getTimestampDay();
             Parameters.save();
             this.dailyLoginModel.shouldDisplayCalendarAtStartup = false;
@@ -73,7 +73,7 @@ package kabam.rotmg.dailyLogin.controller
             {
                 this.view.claimButton.removeEventListener(MouseEvent.CLICK, this.onClaimClickHandler);
                 this.view.removeEventListener(MouseEvent.CLICK, this.onPopupClickHandler);
-            };
+            }
             super.destroy();
         }
 
@@ -93,7 +93,7 @@ package kabam.rotmg.dailyLogin.controller
             if (_arg_1.target != DialogCloseButton)
             {
                 this.enterPortal();
-            };
+            }
         }
 
 

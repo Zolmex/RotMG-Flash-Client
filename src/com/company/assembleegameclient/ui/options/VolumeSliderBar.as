@@ -95,7 +95,7 @@ package com.company.assembleegameclient.ui.options
             {
                 stage.addEventListener(MouseEvent.MOUSE_MOVE, this.onMouseMove);
                 stage.addEventListener(MouseEvent.MOUSE_UP, this.onMouseUp);
-            };
+            }
         }
 
         private function onMouseUp(_arg_1:MouseEvent):void
@@ -104,7 +104,7 @@ package com.company.assembleegameclient.ui.options
             if (stage)
             {
                 stage.removeEventListener(MouseEvent.MOUSE_MOVE, this.onMouseMove);
-            };
+            }
         }
 
         private function onMouseMove(_arg_1:MouseEvent):void
@@ -112,7 +112,7 @@ package com.company.assembleegameclient.ui.options
             if (!this._isMouseDown)
             {
                 return;
-            };
+            }
             this._mousePoint.x = _arg_1.currentTarget.mouseX;
             this._localPoint = this.globalToLocal(this._mousePoint);
             this.currentVolume = (this._localPoint.x / 100);

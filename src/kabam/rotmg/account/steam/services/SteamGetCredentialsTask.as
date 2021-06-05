@@ -44,7 +44,7 @@ package kabam.rotmg.account.steam.services
             else
             {
                 this.onGetCredentialsError(_arg_2);
-            };
+            }
             completeTask(_arg_1, _arg_2);
         }
 

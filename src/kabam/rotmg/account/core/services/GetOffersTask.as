@@ -43,7 +43,7 @@ package kabam.rotmg.account.core.services
             {
                 this.model.lastOfferRequestGUID = this.guid;
                 this.model.lastOfferRequestTime = _local_1;
-            };
+            }
         }
 
         private function sendGetOffersRequest():void
@@ -72,7 +72,7 @@ package kabam.rotmg.account.core.services
             else
             {
                 this.onTextError(_arg_2);
-            };
+            }
             completeTask(_arg_1);
         }
 

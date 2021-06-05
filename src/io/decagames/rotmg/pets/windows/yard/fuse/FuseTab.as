@@ -67,23 +67,23 @@ package io.decagames.rotmg.pets.windows.yard.fuse
             if (isMaxed(_arg_1))
             {
                 return (MAXED);
-            };
+            }
             if (_arg_1 > 0.8)
             {
                 return (FANTASTIC);
-            };
+            }
             if (_arg_1 > 0.6)
             {
                 return (GREAT);
-            };
+            }
             if (_arg_1 > 0.4)
             {
                 return (GOOD);
-            };
+            }
             if (_arg_1 > 0.2)
             {
                 return (LOW);
-            };
+            }
             return (BAD);
         }
 
@@ -116,8 +116,8 @@ package io.decagames.rotmg.pets.windows.yard.fuse
                     _local_3 = LineBuilder.getLocalizedStringFromKey(getKeyFor(_arg_1));
                     this.fusionStrengthLabel.text = (_local_3 + " Fusion");
                     DefaultLabelFormat.fusionStrengthLabel(this.fusionStrengthLabel, this.colorText(_arg_1), _local_3.length);
-                };
-            };
+                }
+            }
         }
 
         public function clearGrid():void
@@ -147,11 +147,11 @@ package io.decagames.rotmg.pets.windows.yard.fuse
             if (isMaxed(_arg_1))
             {
                 return (MAXED_COLOR);
-            };
+            }
             if (isBad(_arg_1))
             {
                 return (BAD_COLOR);
-            };
+            }
             return (DEFAULT_COLOR);
         }
 

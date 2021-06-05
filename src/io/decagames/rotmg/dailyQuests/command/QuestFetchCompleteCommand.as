@@ -8,10 +8,10 @@ package io.decagames.rotmg.dailyQuests.command
     import robotlegs.bender.bundles.mvcs.Command;
     import io.decagames.rotmg.dailyQuests.messages.incoming.QuestFetchResponse;
     import io.decagames.rotmg.dailyQuests.model.DailyQuestsModel;
-    import __AS3__.vec.Vector;
+    
     import io.decagames.rotmg.dailyQuests.model.DailyQuest;
     import io.decagames.rotmg.dailyQuests.messages.data.QuestData;
-    import __AS3__.vec.*;
+    
 
     public class QuestFetchCompleteCommand extends Command 
     {
@@ -47,10 +47,10 @@ package io.decagames.rotmg.dailyQuests.command
                     _local_2.repeatable = _local_1.repeatable;
                     _local_2.weight = _local_1.weight;
                     this._questsList.push(_local_2);
-                };
+                }
                 this._questsList.sort(this.questWeightSort);
                 this.model.addQuests(this._questsList);
-            };
+            }
         }
 
         private function questWeightSort(_arg_1:DailyQuest, _arg_2:DailyQuest):int
@@ -58,11 +58,11 @@ package io.decagames.rotmg.dailyQuests.command
             if (_arg_1.weight > _arg_2.weight)
             {
                 return (-1);
-            };
+            }
             if (_arg_1.weight < _arg_2.weight)
             {
                 return (1);
-            };
+            }
             return (0);
         }
 

@@ -40,12 +40,12 @@ package com.greensock.plugins
             var _local_7:PropTween;
             var _local_1:Array = ((_tween.vars.roundProps is Array) ? _tween.vars.roundProps : _tween.vars.roundProps.split(","));
             var _local_2:int = _local_1.length;
-            var _local_3:Object = {};
+            var _local_3:Object = {}
             var _local_4:PropTween = _tween._propLookup.roundProps;
             while (--_local_2 > -1)
             {
                 _local_3[_local_1[_local_2]] = 1;
-            };
+            }
             _local_2 = _local_1.length;
             while (--_local_2 > -1)
             {
@@ -66,7 +66,7 @@ package com.greensock.plugins
                             if (_local_7)
                             {
                                 _local_7._prev = _local_6._prev;
-                            };
+                            }
                             if (_local_6._prev)
                             {
                                 _local_6._prev._next = _local_7;
@@ -76,15 +76,15 @@ package com.greensock.plugins
                                 if (_tween._firstPT == _local_6)
                                 {
                                     _tween._firstPT = _local_7;
-                                };
-                            };
+                                }
+                            }
                             _local_6._next = (_local_6._prev = null);
                             _tween._propLookup[_local_5] = _local_4;
-                        };
-                    };
+                        }
+                    }
                     _local_6 = _local_7;
-                };
-            };
+                }
+            }
             return (false);
         }
 

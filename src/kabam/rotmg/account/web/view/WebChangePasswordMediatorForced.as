@@ -54,14 +54,14 @@ package kabam.rotmg.account.web.view
                 this.view.clearError();
                 this.view.disable();
                 _local_1 = StaticInjectorContext.getInjector().getInstance(AppEngineClient);
-                _local_2 = {};
+                _local_2 = {}
                 _local_2.password = this.view.password_.text();
                 this.newPassword = this.view.newPassword_.text();
                 _local_2.newPassword = this.view.newPassword_.text();
                 _local_2.guid = this.account.getUserId();
                 _local_1.sendRequest("/account/changePassword", _local_2);
                 _local_1.complete.addOnce(this.onComplete);
-            };
+            }
         }
 
         private function isCurrentPasswordValid():Boolean
@@ -70,7 +70,7 @@ package kabam.rotmg.account.web.view
             if (!_local_1)
             {
                 this.view.password_.setError(TextKey.WEB_CHANGE_PASSWORD_INCORRECT);
-            };
+            }
             return (_local_1);
         }
 
@@ -80,7 +80,7 @@ package kabam.rotmg.account.web.view
             if (!_local_1)
             {
                 this.view.newPassword_.setError(TextKey.REGISTER_WEB_SHORT_ERROR);
-            };
+            }
             return (_local_1);
         }
 
@@ -90,7 +90,7 @@ package kabam.rotmg.account.web.view
             if (!_local_1)
             {
                 this.view.retypeNewPassword_.setError(TextKey.REGISTER_WEB_MATCH_ERROR);
-            };
+            }
             return (_local_1);
         }
 
@@ -104,7 +104,7 @@ package kabam.rotmg.account.web.view
             {
                 this.account.updateUser(this.account.getUserId(), this.newPassword, this.account.getToken());
                 this.closeDialogs.dispatch();
-            };
+            }
         }
 
         private function onError(_arg_1:String):void

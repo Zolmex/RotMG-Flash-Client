@@ -66,7 +66,7 @@ package kabam.rotmg.fame.view
             {
                 this.view.remainingChallengerCharacters.text = "";
                 this.view.remainingChallengerCharacters = null;
-            };
+            }
         }
 
         private function setViewDataFromDeath():void
@@ -77,7 +77,7 @@ package kabam.rotmg.fame.view
             if (((this.death) && (this.death.background)))
             {
                 this.view.setBackground(this.death.background);
-            };
+            }
         }
 
         private function requestFameData():void
@@ -101,9 +101,9 @@ package kabam.rotmg.fame.view
                 if (this.seasonalEventModel.remainingCharacters < 0)
                 {
                     this.seasonalEventModel.remainingCharacters = 0;
-                };
+                }
                 this.view.addRemainingChallengerCharacters(this.seasonalEventModel.remainingCharacters);
-            };
+            }
         }
 
         private function makeIcon():BitmapData
@@ -111,7 +111,7 @@ package kabam.rotmg.fame.view
             if (((this.isFreshDeath) && (this.death.isZombie)))
             {
                 return (this.makeZombieTexture());
-            };
+            }
             return (this.makeNormalTexture());
         }
 
@@ -137,7 +137,7 @@ package kabam.rotmg.fame.view
             else
             {
                 this.gotoPrevious.dispatch();
-            };
+            }
         }
 
 

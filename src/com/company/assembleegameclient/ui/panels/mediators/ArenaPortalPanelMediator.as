@@ -71,7 +71,7 @@ package com.company.assembleegameclient.ui.panels.mediators
             else
             {
                 this.purchaseWithFame();
-            };
+            }
         }
 
         private function purchaseWithFame():void
@@ -93,7 +93,7 @@ package com.company.assembleegameclient.ui.panels.mediators
                 this.dialog = new Dialog(TextKey.MUST_BE_NAMED_TITLE, TextKey.MUST_BE_NAMED_DESC, TextKey.ERRORDIALOG_OK, null, null);
                 this.dialog.addEventListener(Dialog.LEFT_BUTTON, this.onNoNameDialogClose);
                 this.openDialog.dispatch(this.dialog);
-            };
+            }
         }
 
         private function purchaseWithGold():void
@@ -127,9 +127,9 @@ package com.company.assembleegameclient.ui.panels.mediators
                         _local_2.currency = Currency.GOLD;
                         this.socketServer.sendMessage(_local_2);
                         this.exitSignal.dispatch();
-                    };
-                };
-            };
+                    }
+                }
+            }
         }
 
         private function onNoNameDialogClose(_arg_1:Event):void
@@ -137,7 +137,7 @@ package com.company.assembleegameclient.ui.panels.mediators
             if (((this.dialog) && (this.dialog.hasEventListener(Dialog.LEFT_BUTTON))))
             {
                 this.dialog.removeEventListener(Dialog.LEFT_BUTTON, this.onNoNameDialogClose);
-            };
+            }
             this.dialog = null;
             this.closeDialog.dispatch();
         }

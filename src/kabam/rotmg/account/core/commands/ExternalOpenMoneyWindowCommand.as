@@ -72,7 +72,7 @@ package kabam.rotmg.account.core.commands
             else
             {
                 this.handleInvalidMoneyWindowRequest();
-            };
+            }
         }
 
         private function handleInvalidMoneyWindowRequest():void
@@ -86,8 +86,8 @@ package kabam.rotmg.account.core.commands
                 if (!this.account.isRegistered())
                 {
                     this.openDialogSignal.dispatch(new ErrorDialog(this.REGISTRATION_ERROR_MESSAGE));
-                };
-            };
+                }
+            }
         }
 
         private function handleValidMoneyWindowRequest():void
@@ -105,8 +105,8 @@ package kabam.rotmg.account.core.commands
                 catch(e:Error)
                 {
                     openKabamMoneyWindowFromStandalonePlayer();
-                };
-            };
+                }
+            }
         }
 
         private function openKabamMoneyWindowFromStandalonePlayer():void
@@ -123,7 +123,7 @@ package kabam.rotmg.account.core.commands
             else
             {
                 _local_2.createdat = 0;
-            };
+            }
             _local_3.url = (_local_1 + "/credits/kabamadd");
             _local_3.method = URLRequestMethod.POST;
             _local_3.data = _local_2;
@@ -156,10 +156,10 @@ package kabam.rotmg.account.core.commands
                 else
                 {
                     _local_1 = 0;
-                };
+                }
                 ExternalInterface.call(this.moneyConfig.jsInitializeFunction(), this.account.getMoneyUserId(), this.account.getMoneyAccessToken(), _local_1);
                 this.moneyWindowModel.isInitialized = true;
-            };
+            }
         }
 
         private function openKabamMoneyWindowFromBrowser():void
@@ -198,13 +198,13 @@ package kabam.rotmg.account.core.commands
                     catch(e:Error)
                     {
                         openPaymentwallMoneyWindowFromStandalonePlayer(tokenInformation);
-                    };
-                };
+                    }
+                }
             }
             else
             {
                 this.showPopup.dispatch(new ErrorModal(350, "Payment Error", "Unable to fetch payment information. Try again later."));
-            };
+            }
         }
 
         private function isGoldPurchaseEnabled():Boolean

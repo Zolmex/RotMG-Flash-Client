@@ -51,7 +51,7 @@ package io.decagames.rotmg.pets.components.tooltip
             if (this.hasAbilities)
             {
                 this.addAbilities();
-            };
+            }
             this.positionChildren();
             this.updateTextFields();
         }
@@ -71,15 +71,15 @@ package io.decagames.rotmg.pets.components.tooltip
             if (_local_1 == null)
             {
                 return ("");
-            };
+            }
             if (_local_1.hasOwnProperty("NoHatchOrFuse"))
             {
                 return (this.makeProbabilityTipLine("not", TooltipHelper.WORSE_COLOR));
-            };
+            }
             if (_local_1.hasOwnProperty("BasicPet"))
             {
                 return (this.makeProbabilityTipLine("commonly", TooltipHelper.BETTER_COLOR));
-            };
+            }
             return (this.makeProbabilityTipLine("rarely", TooltipHelper.NO_DIFF_COLOR));
         }
 
@@ -101,11 +101,11 @@ package io.decagames.rotmg.pets.components.tooltip
             if (this.hasAbilities)
             {
                 this.petsContent.addChild(this.lineBreak);
-            };
+            }
             if (!contains(this.petsContent))
             {
                 addChild(this.petsContent);
-            };
+            }
         }
 
         private function clearChildren():void
@@ -114,7 +114,7 @@ package io.decagames.rotmg.pets.components.tooltip
             while (this.petsContent.numChildren > 0)
             {
                 this.petsContent.removeChildAt(0);
-            };
+            }
         }
 
         private function get hasAbilities():Boolean
@@ -125,8 +125,8 @@ package io.decagames.rotmg.pets.components.tooltip
                 if (((_local_1.getUnlocked()) && (_local_1.level > 0)))
                 {
                     return (true);
-                };
-            };
+                }
+            }
             return (false);
         }
 
@@ -144,7 +144,7 @@ package io.decagames.rotmg.pets.components.tooltip
             if (_local_1)
             {
                 return (2);
-            };
+            }
             return (3);
         }
 

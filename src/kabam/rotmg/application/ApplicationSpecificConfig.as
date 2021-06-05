@@ -24,7 +24,7 @@ package kabam.rotmg.application
             if (this.applicationSetup.isDebug())
             {
                 this.context.extend(ConsoleExtension);
-            };
+            }
         }
 
 

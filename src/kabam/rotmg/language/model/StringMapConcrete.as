@@ -8,14 +8,14 @@ package kabam.rotmg.language.model
     public class StringMapConcrete implements StringMap 
     {
 
-        private var valueMap:Object = {};
-        private var languageFamilyMap:Object = {};
+        private var valueMap:Object = {}
+        private var languageFamilyMap:Object = {}
 
 
         public function clear():void
         {
-            this.valueMap = {};
-            this.languageFamilyMap = {};
+            this.valueMap = {}
+            this.languageFamilyMap = {}
         }
 
         public function setValue(_arg_1:String, _arg_2:String, _arg_3:String):void

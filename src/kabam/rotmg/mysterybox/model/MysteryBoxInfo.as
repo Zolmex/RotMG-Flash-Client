@@ -9,13 +9,13 @@ package kabam.rotmg.mysterybox.model
     import flash.display.DisplayObject;
     import kabam.display.Loader.LoaderProxy;
     import kabam.display.Loader.LoaderProxyConcrete;
-    import __AS3__.vec.Vector;
+    
     import flash.events.Event;
     import flash.events.IOErrorEvent;
     import flash.net.URLRequest;
     import flash.utils.Dictionary;
     import kabam.rotmg.text.view.stringBuilder.LineBuilder;
-    import __AS3__.vec.*;
+    
 
     public class MysteryBoxInfo extends GenericBoxInfo 
     {
@@ -131,13 +131,13 @@ package kabam.rotmg.mysterybox.model
                     {
                         _local_2[int(_local_7)] = true;
                         this._rollsWithContentsUnique.push(int(_local_7));
-                    };
+                    }
                     _local_5.push(int(_local_7));
-                };
+                }
                 this._rollsWithContents.push(_local_5);
                 this._rollsContents[_local_3] = _local_5;
                 _local_3++;
-            };
+            }
         }
 
         public function get currencyName():String
@@ -148,7 +148,7 @@ package kabam.rotmg.mysterybox.model
                     return (LineBuilder.getLocalizedStringFromKey("Currency.gold").toLowerCase());
                 case "1":
                     return (LineBuilder.getLocalizedStringFromKey("Currency.fame").toLowerCase());
-            };
+            }
             return ("");
         }
 

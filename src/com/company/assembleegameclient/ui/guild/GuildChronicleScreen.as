@@ -51,7 +51,7 @@ package com.company.assembleegameclient.ui.guild
             if (((this.guildPlayerList_) && (this.guildPlayerList_.parent)))
             {
                 this.container.removeChild(this.guildPlayerList_);
-            };
+            }
             var _local_1:Player = this.gs_.map.player_;
             this.guildPlayerList_ = new GuildPlayerList(50, 0, ((_local_1 == null) ? "" : _local_1.name_), _local_1.guildRank_);
             this.guildPlayerList_.addEventListener(GuildPlayerListEvent.SET_RANK, this.onSetRank);
@@ -84,7 +84,7 @@ package com.company.assembleegameclient.ui.guild
             else
             {
                 this.addList();
-            };
+            }
         }
 
         private function onRemoveMember(_arg_1:GuildPlayerListEvent):void
@@ -104,7 +104,7 @@ package com.company.assembleegameclient.ui.guild
             else
             {
                 this.addList();
-            };
+            }
         }
 
         private function showError(_arg_1:String):void

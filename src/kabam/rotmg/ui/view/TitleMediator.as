@@ -85,19 +85,19 @@ package kabam.rotmg.ui.view
             if (this.playerModel.isNewToEditing())
             {
                 this.view.putNoticeTagToOption(this.view.buttonFactory.getEditorButton(), "new");
-            };
+            }
             if (this.securityQuestionsModel.showSecurityQuestionsOnStartup)
             {
                 this.openDialog.dispatch(new SecurityQuestionsInfoDialog());
-            };
+            }
             if (!Parameters.sessionStarted)
             {
                 Parameters.sessionStarted = true;
-            };
+            }
             if (((this.account.isRegistered()) && (!(this.account.isVerified()))))
             {
                 this.openVerifyEmailSignal.dispatch(false);
-            };
+            }
         }
 
         private function openSupportPage():void
@@ -116,8 +116,8 @@ package kabam.rotmg.ui.view
                 if (((_local_3.hasOwnProperty("mp")) && (_local_3.hasOwnProperty("sg"))))
                 {
                     this.toSupportPage(_local_3.mp, _local_3.sg);
-                };
-            };
+                }
+            }
         }
 
         private function toSupportPage(_arg_1:String, _arg_2:String):void
@@ -130,7 +130,7 @@ package kabam.rotmg.ui.view
             if (((DynamicSettings.settingExists("SalesforceMobile")) && (DynamicSettings.getSettingValue("SalesforceMobile") == 1)))
             {
                 _local_5 = true;
-            };
+            }
             var _local_6:String = this.playerModel.getSalesForceData();
             if (((_local_6 == "unavailable") || (!(_local_5))))
             {
@@ -151,7 +151,7 @@ package kabam.rotmg.ui.view
                     else
                     {
                         ExternalInterface.call("reopenSalesForce");
-                    };
+                    }
                 }
                 else
                 {
@@ -160,8 +160,8 @@ package kabam.rotmg.ui.view
                     _local_4.method = URLRequestMethod.GET;
                     _local_4.data = _local_3;
                     navigateToURL(_local_4, "_blank");
-                };
-            };
+                }
+            }
         }
 
         private function onOptionalButtonsAdded():void
@@ -199,7 +199,7 @@ package kabam.rotmg.ui.view
             else
             {
                 this.openAccountInfo.dispatch(false);
-            };
+            }
         }
 
         private function handleIntentionToReviewAccount():void

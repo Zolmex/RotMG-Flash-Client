@@ -68,7 +68,7 @@ package kabam.rotmg.account.kongregate.view
             else
             {
                 this.refreshUnregisteredAccount();
-            };
+            }
         }
 
         private function removeUIElements():void
@@ -76,7 +76,7 @@ package kabam.rotmg.account.kongregate.view
             while (numChildren)
             {
                 removeChildAt(0);
-            };
+            }
         }
 
         public function get register():Signal
@@ -105,7 +105,7 @@ package kabam.rotmg.account.kongregate.view
             {
                 _local_3 = _args[_local_2];
                 addChild(_local_3);
-            };
+            }
         }
 
 

@@ -49,7 +49,7 @@ package kabam.rotmg.account.web.view
             if (_arg_2)
             {
                 this.makeVerifyEmailText();
-            };
+            }
             this.makeChangeText();
             this.makeLogoutText();
         }
@@ -59,7 +59,7 @@ package kabam.rotmg.account.web.view
             if (this.verifyEmail != null)
             {
                 removeChild(this.verifyTitle);
-            };
+            }
             this.verifyTitle = new TextFieldDisplayConcrete().setSize(18).setColor(0xFF00);
             this.verifyTitle.setBold(true);
             this.verifyTitle.setStringBuilder(new LineBuilder().setParams("Email verified!"));
@@ -74,7 +74,7 @@ package kabam.rotmg.account.web.view
             if (this.changeText != null)
             {
                 removeChild(this.changeText);
-            };
+            }
             this.changeText = new DeprecatedClickableText(12, false, "Change password");
             this.changeText.addEventListener(MouseEvent.CLICK, this.onChange);
             addNavigationText(this.changeText);
@@ -90,7 +90,7 @@ package kabam.rotmg.account.web.view
             if (this.logoutText != null)
             {
                 removeChild(this.logoutText);
-            };
+            }
             this.logoutText = new DeprecatedClickableText(12, false, "Not you? Log out");
             this.logoutText.addEventListener(MouseEvent.CLICK, this.onLogout);
             addNavigationText(this.logoutText);

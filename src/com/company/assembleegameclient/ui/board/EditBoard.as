@@ -15,7 +15,7 @@ package com.company.assembleegameclient.ui.board
     import flash.display.CapsStyle;
     import flash.display.JointStyle;
     import flash.display.GraphicsPath;
-    import __AS3__.vec.Vector;
+    
     import flash.display.IGraphicsData;
     import com.company.util.GraphicsUtil;
     import flash.display.Shape;
@@ -23,7 +23,7 @@ package com.company.assembleegameclient.ui.board
     import flash.events.Event;
     import kabam.rotmg.text.model.TextKey;
     import flash.events.MouseEvent;
-    import __AS3__.vec.*;
+    
     import com.company.assembleegameclient.ui.board.*;
 
     internal class EditBoard extends Sprite 
@@ -127,7 +127,7 @@ package com.company.assembleegameclient.ui.board
             if (this.scrollBar_ == null)
             {
                 return;
-            };
+            }
             this.scrollBar_.setIndicatorSize(TEXT_HEIGHT, this.boardText_.textHeight, false);
             if (this.boardText_.maxScrollV == 1)
             {
@@ -136,7 +136,7 @@ package com.company.assembleegameclient.ui.board
             else
             {
                 this.scrollBar_.setPos(((this.boardText_.scrollV - 1) / (this.boardText_.maxScrollV - 1)));
-            };
+            }
         }
 
 

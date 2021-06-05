@@ -101,12 +101,12 @@ package kabam.rotmg.account.core.services
             else
             {
                 this.onTextError(_arg_2);
-            };
+            }
         }
 
         public function makeRequestData():Object
         {
-            var _local_1:Object = {};
+            var _local_1:Object = {}
             _local_1.game_net_user_id = this.account.gameNetworkUserId();
             _local_1.game_net = this.account.gameNetwork();
             _local_1.play_platform = this.account.playPlatform();
@@ -128,7 +128,7 @@ package kabam.rotmg.account.core.services
                 if (_local_3 == 5)
                 {
                     this.sendRequest();
-                };
+                }
                 _local_4 = new MigrationDialog(this.account, _local_3);
                 this.fromMigration = true;
                 _local_4.done.addOnce(this.sendRequest);
@@ -146,8 +146,8 @@ package kabam.rotmg.account.core.services
                         if (_local_2.Account[0].hasOwnProperty("PaymentData"))
                         {
                             WebAccount(this.account).paymentData = _local_2.Account[0].PaymentData;
-                        };
-                    };
+                        }
+                    }
                     this.account.creationDate = new Date((_local_2.Account[0].CreationTimestamp * 1000));
                     if (_local_2.Account[0].hasOwnProperty("SecurityQuestions"))
                     {
@@ -156,30 +156,30 @@ package kabam.rotmg.account.core.services
                         for each (_local_5 in _local_2.Account[0].SecurityQuestions[0].SecurityQuestionsKeys[0].SecurityQuestionsKey)
                         {
                             this.securityQuestionsModel.addSecurityQuestion(_local_5.toString());
-                        };
-                    };
-                };
+                        }
+                    }
+                }
                 if ((((_local_2) && (Boolean(this.seasonalEventModel.isChallenger))) && (_local_2.Account[0].hasOwnProperty("RemainingLives"))))
                 {
                     this.seasonalEventModel.remainingCharacters = _local_2.Account[0].RemainingLives;
-                };
+                }
                 this.charListData.dispatch(_local_2);
                 if (!this.model.isLogOutLogIn)
                 {
                     this.charListLoadedSignal.dispatch();
-                };
+                }
                 this.model.isLogOutLogIn = false;
                 completeTask(true);
                 if ((((!(this.model.hasShownUnitySignUp)) && (Parameters.data_.unitySignUp)) && (_local_2.hasOwnProperty("DecaSignupPopup"))))
                 {
                     this.model.hasShownUnitySignUp = true;
                     this.showPopupSignal.dispatch(new UnitySignUpPopup());
-                };
-            };
+                }
+            }
             if (this.retryTimer != null)
             {
                 this.stopRetryTimer();
-            };
+            }
         }
 
         private function onTextError(_arg_1:String):void
@@ -192,7 +192,7 @@ package kabam.rotmg.account.core.services
             else
             {
                 this.setLoadingMessage.dispatch("error.loadError");
-            };
+            }
             if (_arg_1 == "Account credentials not valid")
             {
                 if (this.fromMigration)
@@ -201,7 +201,7 @@ package kabam.rotmg.account.core.services
                     _local_2.setError(TextKey.WEB_LOGIN_DIALOG_PASSWORD_INVALID);
                     _local_2.setEmail(this.account.getUserId());
                     StaticInjectorContext.getInjector().getInstance(OpenDialogSignal).dispatch(_local_2);
-                };
+                }
                 this.clearAccountAndReloadCharacters();
             }
             else
@@ -226,10 +226,10 @@ package kabam.rotmg.account.core.services
                         else
                         {
                             this.waitForASecondThenRetryRequest();
-                        };
-                    };
-                };
-            };
+                        }
+                    }
+                }
+            }
         }
 
         private function showSeasonalErrorPopUp(_arg_1:String):void
@@ -249,7 +249,7 @@ package kabam.rotmg.account.core.services
             if (((_local_2 == "Account has fame lower than minimal for the season") || (_local_2 == "No more live left for the current season.")))
             {
                 this.setScreenWithValidData.dispatch(new CharacterSelectionAndNewsScreen());
-            };
+            }
         }
 
         private function clearAccountAndReloadCharacters():void
@@ -288,7 +288,7 @@ package kabam.rotmg.account.core.services
             {
                 this.clearAccountAndReloadCharacters();
                 this.setLoadingMessage.dispatch("LoginError.tooManyFails");
-            };
+            }
         }
 
 

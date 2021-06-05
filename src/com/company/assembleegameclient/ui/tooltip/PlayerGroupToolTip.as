@@ -5,14 +5,14 @@
 
 package com.company.assembleegameclient.ui.tooltip
 {
-    import __AS3__.vec.Vector;
+    
     import com.company.assembleegameclient.objects.Player;
     import com.company.assembleegameclient.ui.GameObjectListItem;
     import kabam.rotmg.text.view.TextFieldDisplayConcrete;
     import kabam.rotmg.text.view.stringBuilder.LineBuilder;
     import kabam.rotmg.text.model.TextKey;
     import flash.filters.DropShadowFilter;
-    import __AS3__.vec.*;
+    
 
     public class PlayerGroupToolTip extends ToolTip 
     {
@@ -32,7 +32,7 @@ package com.company.assembleegameclient.ui.tooltip
             if (!_arg_2)
             {
                 filters = [];
-            };
+            }
             waiter.push(this.clickMessage_.textChanged);
         }
 
@@ -45,7 +45,7 @@ package com.company.assembleegameclient.ui.tooltip
             if (((this.players_ == null) || (this.players_.length == 0)))
             {
                 return;
-            };
+            }
             var _local_2:int;
             for each (_local_3 in _arg_1)
             {
@@ -56,7 +56,7 @@ package com.company.assembleegameclient.ui.tooltip
                 this.playerPanels_.push(_local_4);
                 _local_4.textReady.addOnce(this.onTextChanged);
                 _local_2 = (_local_2 + 32);
-            };
+            }
             this.clickMessage_.x = ((width / 2) - (this.clickMessage_.width / 2));
             this.clickMessage_.y = _local_2;
             draw();
@@ -70,7 +70,7 @@ package com.company.assembleegameclient.ui.tooltip
             for each (_local_1 in this.playerPanels_)
             {
                 _local_1.textReady.remove(this.onTextChanged);
-            };
+            }
         }
 
         private function clear():void
@@ -80,7 +80,7 @@ package com.company.assembleegameclient.ui.tooltip
             for each (_local_1 in this.playerPanels_)
             {
                 removeChild(_local_1);
-            };
+            }
             this.playerPanels_.length = 0;
         }
 

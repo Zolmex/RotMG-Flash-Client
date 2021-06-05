@@ -36,8 +36,8 @@ package com.company.assembleegameclient.mapeditor
                 if (_local_7 != null)
                 {
                     _local_2 = _local_7;
-                };
-            };
+                }
+            }
             _local_5 = new Bitmap(_local_2);
             var _local_6:Number = ((WIDTH - 4) / Math.max(_local_5.width, _local_5.height));
             _local_5.scaleX = (_local_5.scaleY = _local_6);

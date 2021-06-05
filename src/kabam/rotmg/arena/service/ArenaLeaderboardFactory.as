@@ -9,12 +9,12 @@ package kabam.rotmg.arena.service
     import kabam.rotmg.assets.services.CharacterFactory;
     import kabam.rotmg.arena.model.CurrentArenaRunModel;
     import kabam.rotmg.arena.model.ArenaLeaderboardEntry;
-    import __AS3__.vec.Vector;
+    
     import io.decagames.rotmg.pets.data.vo.PetVO;
     import kabam.rotmg.classes.model.CharacterClass;
     import kabam.rotmg.classes.model.CharacterSkin;
     import com.company.util.ConversionUtil;
-    import __AS3__.vec.*;
+    
 
     public class ArenaLeaderboardFactory 
     {
@@ -36,7 +36,7 @@ package kabam.rotmg.arena.service
             {
                 _local_2.push(this.makeArenaEntry(_local_4, _local_3));
                 _local_3++;
-            };
+            }
             _local_2 = this.removeDuplicateUser(_local_2);
             return (this.addCurrentRun(_local_2));
         }
@@ -58,23 +58,23 @@ package kabam.rotmg.arena.service
                         this.currentRunModel.entry.rank = _local_5.rank;
                         _local_2.push(this.currentRunModel.entry);
                         _local_3 = true;
-                    };
+                    }
                     if (_local_5.isPersonalRecord)
                     {
                         _local_4 = true;
-                    };
+                    }
                     if (_local_3)
                     {
                         _local_5.rank++;
-                    };
+                    }
                     _local_2.push(_local_5);
-                };
+                }
                 if ((((_local_2.length < 20) && (!(_local_3))) && (!(_local_4))))
                 {
                     this.currentRunModel.entry.rank = (_local_2.length + 1);
                     _local_2.push(this.currentRunModel.entry);
-                };
-            };
+                }
+            }
             return ((_local_2.length > 0) ? _local_2 : _arg_1);
         }
 
@@ -100,14 +100,14 @@ package kabam.rotmg.arena.service
                         if (_local_3)
                         {
                             _local_5.rank--;
-                        };
-                    };
-                };
-            };
+                        }
+                    }
+                }
+            }
             if (_local_2 != -1)
             {
                 _arg_1.splice(_local_2, 1);
-            };
+            }
             return (_arg_1);
         }
 
@@ -138,7 +138,7 @@ package kabam.rotmg.arena.service
                 _local_11 = new XML(_arg_1.PlayData.Pet);
                 _local_10.apply(_local_11);
                 _local_3.pet = _local_10;
-            };
+            }
             return (_local_3);
         }
 

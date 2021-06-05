@@ -48,7 +48,7 @@ package io.decagames.rotmg.dailyQuests.view.panel
             if (this.view.feedButton)
             {
                 this.view.feedButton.removeEventListener(MouseEvent.CLICK, this.onButtonLeftClick);
-            };
+            }
             WebMain.STAGE.removeEventListener(KeyboardEvent.KEY_DOWN, this.onKeyDown);
             this.closePopupByClassSignal.dispatch(DailyQuestWindow);
         }
@@ -58,7 +58,7 @@ package io.decagames.rotmg.dailyQuests.view.panel
             if (!this.questModel.isPopupOpened)
             {
                 this.openDialogSignal.dispatch(new DailyQuestWindow());
-            };
+            }
         }
 
         private function onKeyDown(_arg_1:KeyboardEvent):void
@@ -66,7 +66,7 @@ package io.decagames.rotmg.dailyQuests.view.panel
             if (((_arg_1.keyCode == Parameters.data_.interact) && (WebMain.STAGE.focus == null)))
             {
                 this.onButtonLeftClick(null);
-            };
+            }
         }
 
 

@@ -5,7 +5,7 @@
 
 package com.company.assembleegameclient.objects.particles
 {
-    import __AS3__.vec.Vector;
+    
     import flash.display.BitmapData;
     import com.company.assembleegameclient.objects.GameObject;
     import com.company.util.MoreColorUtil;
@@ -13,7 +13,7 @@ package com.company.assembleegameclient.objects.particles
     import com.company.util.AssetLibrary;
     import com.company.util.ImageSet;
     import com.company.assembleegameclient.util.TextureRedrawer;
-    import __AS3__.vec.*;
+    
 
     public class ThunderEffect extends ParticleEffect 
     {
@@ -55,10 +55,10 @@ package com.company.assembleegameclient.objects.particles
                     else
                     {
                         _arg_1[_local_3] = applyColorTransform(_arg_1[_local_3], 0xFF9A00);
-                    };
-                };
+                    }
+                }
                 _local_3++;
-            };
+            }
             return (_arg_1);
         }
 
@@ -85,10 +85,10 @@ package com.company.assembleegameclient.objects.particles
                 if (_arg_3 != 0)
                 {
                     _local_8 = applyColorTransform(_local_8, _arg_3);
-                };
+                }
                 _local_4.push(_local_8);
                 _local_6++;
-            };
+            }
             return (_local_4);
         }
 

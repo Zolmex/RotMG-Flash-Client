@@ -6,7 +6,6 @@
 package com.company.assembleegameclient.engine3d
 {
     import flash.display.BitmapData;
-    import __AS3__.vec.Vector;
     import flash.geom.Vector3D;
     import flash.display.GraphicsPath;
     import flash.display.GraphicsSolidFill;
@@ -20,7 +19,6 @@ package com.company.assembleegameclient.engine3d
     import com.company.util.GraphicsUtil;
     import kabam.rotmg.stage3D.GraphicsFillExtra;
     import flash.display.IGraphicsData;
-    import __AS3__.vec.*;
 
     public class ObjectFace3D 
     {
@@ -53,7 +51,7 @@ package com.company.assembleegameclient.engine3d
             {
                 _local_4.push(((_local_5 == 0) ? GraphicsPathCommand.MOVE_TO : GraphicsPathCommand.LINE_TO));
                 _local_5++;
-            };
+            }
             var _local_6:Vector.<Number> = new Vector.<Number>();
             _local_6.length = (this.indices_.length * 2);
             this.path_ = new GraphicsPath(_local_4, _local_6);
@@ -75,7 +73,7 @@ package com.company.assembleegameclient.engine3d
             if (this.normalL_ != null)
             {
                 this.normalW_ = this.obj_.lToW_.deltaTransformVector(this.normalL_);
-            };
+            }
         }
 
         public function draw(_arg_1:Vector.<IGraphicsData>, _arg_2:uint, _arg_3:BitmapData):void
@@ -92,7 +90,7 @@ package com.company.assembleegameclient.engine3d
             if (((_local_8 * _local_11) - (_local_9 * _local_10)) < 0)
             {
                 return;
-            };
+            }
             if (((!(Parameters.data_.GPURender)) && ((!(this.useTexture_)) || (_arg_3 == null))))
             {
                 this.solidFill_.color = MoreColorUtil.transformColor(new ColorTransform(this.shade_, this.shade_, this.shade_), _arg_2);
@@ -107,11 +105,11 @@ package com.company.assembleegameclient.engine3d
                 else
                 {
                     _arg_3 = TextureRedrawer.redrawFace(_arg_3, this.shade_);
-                };
+                }
                 this.bitmapFill_.bitmapData = _arg_3;
                 this.bitmapFill_.matrix = this.tToS(_arg_3);
                 _arg_1.push(this.bitmapFill_);
-            };
+            }
             var _local_12:int;
             while (_local_12 < this.indices_.length)
             {
@@ -119,13 +117,13 @@ package com.company.assembleegameclient.engine3d
                 this.path_.data[(_local_12 * 2)] = _local_7[(_local_13 * 2)];
                 this.path_.data[((_local_12 * 2) + 1)] = _local_7[((_local_13 * 2) + 1)];
                 _local_12++;
-            };
+            }
             _arg_1.push(this.path_);
             _arg_1.push(GraphicsUtil.END_FILL);
             if ((((this.softwareException_) && (Parameters.isGpuRender())) && (!(this.bitmapFill_ == null))))
             {
                 GraphicsFillExtra.setSoftwareDraw(this.bitmapFill_, true);
-            };
+            }
         }
 
         private function tToS(_arg_1:BitmapData):Matrix

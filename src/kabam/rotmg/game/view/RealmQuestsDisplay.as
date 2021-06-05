@@ -6,7 +6,7 @@
 package kabam.rotmg.game.view
 {
     import flash.display.Sprite;
-    import __AS3__.vec.Vector;
+    
     import io.decagames.rotmg.ui.labels.UILabel;
     import flash.display.Graphics;
     import flash.display.Bitmap;
@@ -21,7 +21,7 @@ package kabam.rotmg.game.view
     import flash.filters.DropShadowFilter;
     import com.greensock.TweenMax;
     import kabam.rotmg.game.model.QuestModel;
-    import __AS3__.vec.*;
+    
 
     public class RealmQuestsDisplay extends Sprite 
     {
@@ -75,7 +75,7 @@ package kabam.rotmg.game.view
             if (_local_1)
             {
                 this._currentQuestHero = this._map.quest_.getObject(int(getTimer())).name_;
-            };
+            }
             this.createContainers();
             this.createArrow();
             this.createRealmLabel();
@@ -84,7 +84,7 @@ package kabam.rotmg.game.view
             if (Parameters.data_.expandRealmQuestsDisplay)
             {
                 this.toggleOpenState();
-            };
+            }
         }
 
         private function createContainers():void
@@ -145,7 +145,7 @@ package kabam.rotmg.game.view
                 this.setHitArea(this._buttonContainer);
                 this._realmQuestDiamonds.push(_local_3);
                 _local_1++;
-            };
+            }
         }
 
         private function disposeDiamonds():void
@@ -159,7 +159,7 @@ package kabam.rotmg.game.view
                 this._buttonDiamondContainer.removeChild(_local_2);
                 _local_2 = null;
                 _local_1--;
-            };
+            }
         }
 
         private function createRealmQuestItems():void
@@ -178,7 +178,7 @@ package kabam.rotmg.game.view
                 this._buttonContent.addChild(_local_3);
                 this._realmQuestItems.push(_local_3);
                 _local_2++;
-            };
+            }
         }
 
         private function createQuestDescription():void
@@ -197,7 +197,7 @@ package kabam.rotmg.game.view
             if (TweenMax.isTweening(this._content))
             {
                 TweenMax.killTweensOf(this._content);
-            };
+            }
             TweenMax.to(this._content, 0.3, {"alpha":_arg_1});
         }
 
@@ -232,7 +232,7 @@ package kabam.rotmg.game.view
             if (TweenMax.isTweening(this._content))
             {
                 TweenMax.killTweensOf(this._content);
-            };
+            }
             TweenMax.to(this._content, 0.3, {"alpha":1});
         }
 
@@ -250,7 +250,7 @@ package kabam.rotmg.game.view
             else
             {
                 this._map.dispatchEvent(_arg_1);
-            };
+            }
         }
 
         private function onMouseDown(_arg_1:MouseEvent):void
@@ -262,7 +262,7 @@ package kabam.rotmg.game.view
             else
             {
                 this._map.dispatchEvent(_arg_1);
-            };
+            }
         }
 
         public function set realmName(_arg_1:String):void
@@ -285,7 +285,7 @@ package kabam.rotmg.game.view
             else
             {
                 _local_2.updateItemState(false);
-            };
+            }
             this.updateDiamonds();
         }
 
@@ -302,7 +302,7 @@ package kabam.rotmg.game.view
             else
             {
                 _local_2.updateItemState(false);
-            };
+            }
             this.updateDiamonds();
         }
 

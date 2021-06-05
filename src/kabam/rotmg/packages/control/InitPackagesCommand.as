@@ -33,8 +33,8 @@ package kabam.rotmg.packages.control
                 if (this.packageModel.hasPackages())
                 {
                     this.packageAvailable.dispatch();
-                };
-            };
+                }
+            }
         }
 
 

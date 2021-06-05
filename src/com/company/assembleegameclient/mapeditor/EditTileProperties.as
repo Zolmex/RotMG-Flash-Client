@@ -6,7 +6,7 @@
 package com.company.assembleegameclient.mapeditor
 {
     import flash.display.Sprite;
-    import __AS3__.vec.Vector;
+    
     import com.company.util.IntPoint;
     import flash.display.Shape;
     import flash.display.Graphics;
@@ -40,7 +40,7 @@ package com.company.assembleegameclient.mapeditor
             if (this.frame_.objectName_.text() == "")
             {
                 return (null);
-            };
+            }
             return (this.frame_.objectName_.text());
         }
 

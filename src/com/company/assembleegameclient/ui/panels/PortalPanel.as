@@ -92,7 +92,7 @@ package com.company.assembleegameclient.ui.panels
             if (((_arg_1.keyCode == Parameters.data_.interact) && (stage.focus == null)))
             {
                 this.enterPortal();
-            };
+            }
         }
 
         private function enterPortal():void
@@ -101,7 +101,7 @@ package com.company.assembleegameclient.ui.panels
             if (((this.googleAnalytics) && ((((_local_1 == "Kitchen Portal") || (_local_1 == "Vault Explanation")) || (_local_1 == "Guild Explanation")) || (_local_1 == "Nexus Explanation"))))
             {
                 this.googleAnalytics.trackEvent("enterPortal", _local_1);
-            };
+            }
             doneAction(gs_, Tutorial.ENTER_PORTAL_ACTION);
             gs_.gsc_.usePortal(this.owner_.objectId_);
             this.exitGameSignal.dispatch();
@@ -121,8 +121,8 @@ package com.company.assembleegameclient.ui.panels
                 {
                     removeChild(this._enterButton_);
                     addChild(this.fullText_);
-                };
-            };
+                }
+            }
         }
 
         private function updateNameText():void
@@ -140,7 +140,7 @@ package com.company.assembleegameclient.ui.panels
             if (((this.owner_.lockedPortal_) && (_local_1.indexOf(this.LOCKED) == 0)))
             {
                 return (_local_1.substr(this.LOCKED.length));
-            };
+            }
             return (this.parseJson(_local_1));
         }
 

@@ -5,9 +5,6 @@
 
 package com.company.assembleegameclient.editor
 {
-    import __AS3__.vec.Vector;
-    import __AS3__.vec.*;
-
     public class CommandList 
     {
 
@@ -30,7 +27,7 @@ package com.company.assembleegameclient.editor
             for each (_local_1 in this.list_)
             {
                 _local_1.execute();
-            };
+            }
         }
 
         public function unexecute():void
@@ -39,7 +36,7 @@ package com.company.assembleegameclient.editor
             for each (_local_1 in this.list_)
             {
                 _local_1.unexecute();
-            };
+            }
         }
 
 

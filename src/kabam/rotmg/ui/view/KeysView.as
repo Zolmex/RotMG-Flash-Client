@@ -7,9 +7,9 @@ package kabam.rotmg.ui.view
 {
     import flash.display.Sprite;
     import mx.core.BitmapAsset;
-    import __AS3__.vec.Vector;
+    
     import kabam.rotmg.ui.model.Key;
-    import __AS3__.vec.*;
+    
 
     public class KeysView extends Sprite 
     {
@@ -38,7 +38,7 @@ package kabam.rotmg.ui.view
                 this.keys[_local_1].x = (12 + (40 * _local_1));
                 this.keys[_local_1].y = 12;
                 _local_1++;
-            };
+            }
         }
 
         public function showKey(_arg_1:Key):void
@@ -47,7 +47,7 @@ package kabam.rotmg.ui.view
             if (!contains(_local_2))
             {
                 addChild(_local_2);
-            };
+            }
         }
 
         public function hideKey(_arg_1:Key):void
@@ -56,7 +56,7 @@ package kabam.rotmg.ui.view
             if (contains(_local_2))
             {
                 removeChild(_local_2);
-            };
+            }
         }
 
 

@@ -7,12 +7,12 @@ package io.decagames.rotmg.pets.components.petStatsGrid
 {
     import io.decagames.rotmg.ui.gird.UIGrid;
     import io.decagames.rotmg.pets.data.vo.IPetVO;
-    import __AS3__.vec.Vector;
+    
     import io.decagames.rotmg.ui.ProgressBar;
     import io.decagames.rotmg.pets.data.vo.AbilityVO;
     import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
     import flash.text.TextFormatAlign;
-    import __AS3__.vec.*;
+    
 
     public class PetStatsGrid extends UIGrid 
     {
@@ -28,7 +28,7 @@ package io.decagames.rotmg.pets.components.petStatsGrid
             if (_arg_2)
             {
                 this.refreshAbilities(_arg_2);
-            };
+            }
         }
 
         public function renderSimulation(_arg_1:Array):void
@@ -39,7 +39,7 @@ package io.decagames.rotmg.pets.components.petStatsGrid
             {
                 this.renderAbilitySimulation(_local_3, _local_2);
                 _local_2++;
-            };
+            }
         }
 
         private function refreshAbilities(_arg_1:IPetVO):void
@@ -50,7 +50,7 @@ package io.decagames.rotmg.pets.components.petStatsGrid
             {
                 this.renderAbility(_local_3, _local_2);
                 _local_2++;
-            };
+            }
         }
 
         private function renderAbilitySimulation(_arg_1:AbilityVO, _arg_2:int):void
@@ -58,7 +58,7 @@ package io.decagames.rotmg.pets.components.petStatsGrid
             if (_arg_1.getUnlocked())
             {
                 this.abilityBars[_arg_2].simulatedValue = _arg_1.level;
-            };
+            }
         }
 
         private function renderAbility(_arg_1:AbilityVO, _arg_2:int):void
@@ -71,12 +71,12 @@ package io.decagames.rotmg.pets.components.petStatsGrid
                 {
                     _local_3.maxValue = this._petVO.maxAbilityPower;
                     _local_3.value = _arg_1.level;
-                };
+                }
                 if (((!(_local_3.value == _arg_1.level)) && (_arg_1.getUnlocked())))
                 {
                     _local_3.dynamicLabelString = ((("Lvl. " + ProgressBar.DYNAMIC_LABEL_TOKEN) + "/") + ProgressBar.MAX_VALUE_TOKEN);
                     _local_3.value = _arg_1.level;
-                };
+                }
             }
             else
             {
@@ -89,7 +89,7 @@ package io.decagames.rotmg.pets.components.petStatsGrid
                 _local_3.simulatedValueTextFormat = DefaultLabelFormat.createTextFormat(12, 6538829, TextFormatAlign.RIGHT, true);
                 this.abilityBars.push(_local_3);
                 addGridElement(_local_3);
-            };
+            }
             if (!_arg_1.getUnlocked())
             {
                 _local_3.alpha = 0.4;
@@ -101,9 +101,9 @@ package io.decagames.rotmg.pets.components.petStatsGrid
                     _local_3.dynamicLabelString = ((("Lvl. " + ProgressBar.DYNAMIC_LABEL_TOKEN) + "/") + ProgressBar.MAX_VALUE_TOKEN);
                     _local_3.maxValue = this._petVO.maxAbilityPower;
                     _local_3.value = _arg_1.level;
-                };
+                }
                 _local_3.alpha = 1;
-            };
+            }
         }
 
         public function updateVO(_arg_1:IPetVO):void
@@ -112,12 +112,12 @@ package io.decagames.rotmg.pets.components.petStatsGrid
             {
                 this.abilityBars = new Vector.<ProgressBar>();
                 clearGrid();
-            };
+            }
             this._petVO = _arg_1;
             if (this._petVO != null)
             {
                 this.refreshAbilities(_arg_1);
-            };
+            }
         }
 
         public function get petVO():IPetVO

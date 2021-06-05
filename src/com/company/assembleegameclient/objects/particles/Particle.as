@@ -9,14 +9,14 @@ package com.company.assembleegameclient.objects.particles
     import flash.display.GraphicsBitmapFill;
     import flash.display.GraphicsPath;
     import com.company.util.GraphicsUtil;
-    import __AS3__.vec.Vector;
+    
     import flash.geom.Matrix;
     import com.company.assembleegameclient.map.Square;
     import com.company.assembleegameclient.util.TextureRedrawer;
     import flash.display.BitmapData;
     import flash.display.IGraphicsData;
     import com.company.assembleegameclient.map.Camera;
-    import __AS3__.vec.*;
+    
 
     public class Particle extends BasicObject 
     {
@@ -43,7 +43,7 @@ package com.company.assembleegameclient.objects.particles
             if (_local_3 == null)
             {
                 return (false);
-            };
+            }
             x_ = _arg_1;
             y_ = _arg_2;
             square_ = _local_3;

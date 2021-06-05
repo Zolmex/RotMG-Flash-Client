@@ -86,7 +86,7 @@ package io.decagames.rotmg.supportCampaign.tab.tiers.preview
                 this.inProgressModal = new PurchaseInProgressModal();
                 this.showPopupSignal.dispatch(this.inProgressModal);
                 this.sendClaimRequest();
-            };
+            }
         }
 
         private function sendClaimRequest():void
@@ -113,7 +113,7 @@ package io.decagames.rotmg.supportCampaign.tab.tiers.preview
                 {
                     showPopupSignal.dispatch(new ErrorModal(300, "Campaign Error", "General campaign error."));
                     return;
-                };
+                }
                 this.showPopupSignal.dispatch(new ClaimCompleteModal());
             }
             else
@@ -127,8 +127,8 @@ package io.decagames.rotmg.supportCampaign.tab.tiers.preview
                 catch(e:Error)
                 {
                     showPopupSignal.dispatch(new ErrorModal(300, "Campaign Error", "General campaign error."));
-                };
-            };
+                }
+            }
         }
 
         private function onTierSelected(_arg_1:int):void
@@ -142,12 +142,12 @@ package io.decagames.rotmg.supportCampaign.tab.tiers.preview
             {
                 this.view.leftArrow.disabled = true;
                 this.view.leftArrow.alpha = 0.2;
-            };
+            }
             if (this.displayedTier == this.model.ranks.length)
             {
                 this.view.rightArrow.disabled = true;
                 this.view.rightArrow.alpha = 0.2;
-            };
+            }
             this.showTier(_arg_1);
             this.view.selectAnimation();
             this.checkClaimedTiers();
@@ -169,7 +169,7 @@ package io.decagames.rotmg.supportCampaign.tab.tiers.preview
             {
                 this._imageLoader = new ImageLoader();
                 this._imageLoader.loadImage(_local_2, this.onCampaignTierImageLoaded);
-            };
+            }
         }
 
         private function onCampaignTierImageLoaded(_arg_1:Event):void
@@ -211,21 +211,21 @@ package io.decagames.rotmg.supportCampaign.tab.tiers.preview
             if (this.displayedTier <= 1)
             {
                 this.displayedTier = 1;
-            };
+            }
             if (this.displayedTier == 1)
             {
                 this.view.leftArrow.disabled = true;
                 this.view.leftArrow.alpha = 0.2;
-            };
+            }
             if (this.displayedTier > this.model.ranks.length)
             {
                 this.displayedTier = this.model.ranks.length;
-            };
+            }
             if (this.displayedTier == this.model.ranks.length)
             {
                 this.view.rightArrow.disabled = true;
                 this.view.rightArrow.alpha = 0.2;
-            };
+            }
         }
 
         private function disableArrows(_arg_1:Boolean):void
@@ -247,7 +247,7 @@ package io.decagames.rotmg.supportCampaign.tab.tiers.preview
             {
                 this.view.claimButton.disabled = false;
                 this.hoverTooltipDelegate.removeDisplayObject();
-            };
+            }
         }
 
 

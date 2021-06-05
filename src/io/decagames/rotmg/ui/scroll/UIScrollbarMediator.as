@@ -54,7 +54,7 @@ package io.decagames.rotmg.ui.scroll
             if (this.view.scrollObject)
             {
                 this.view.scrollObject.removeEventListener(MouseEvent.MOUSE_WHEEL, this.onMouseWheel);
-            };
+            }
             WebMain.STAGE.removeEventListener(MouseEvent.MOUSE_UP, this.onMouseUp);
             WebMain.STAGE.removeEventListener(MouseEvent.MOUSE_WHEEL, this.onMouseWheel);
             this.view.dispose();
@@ -65,12 +65,12 @@ package io.decagames.rotmg.ui.scroll
             if (((this.view.scrollObject) && (!(this.view.scrollObject.hasEventListener(MouseEvent.MOUSE_WHEEL)))))
             {
                 this.view.scrollObject.addEventListener(MouseEvent.MOUSE_WHEEL, this.onMouseWheel);
-            };
+            }
             if (this.startDragging)
             {
                 this.view.updatePosition((WebMain.STAGE.mouseY - this.startY));
                 this.startY = WebMain.STAGE.mouseY;
-            };
+            }
             this.view.update();
         }
 

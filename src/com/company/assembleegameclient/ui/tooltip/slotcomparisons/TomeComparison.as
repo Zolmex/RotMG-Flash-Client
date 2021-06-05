@@ -37,7 +37,7 @@ package com.company.assembleegameclient.ui.tooltip.slotcomparisons
                         "damage":nova.@damage,
                         "range":nova.@range
                     });
-                };
+                }
                 range = Number(nova.@range);
                 otherRange = Number(otherNova.@range);
                 amount = Number(nova.@amount);
@@ -50,7 +50,7 @@ package com.company.assembleegameclient.ui.tooltip.slotcomparisons
                 }).setPrefix(TooltipHelper.getOpenTag(getTextColor((wavg - otherWavg)))).setPostfix(TooltipHelper.getCloseTag());
                 comparisonStringBuilder.pushParams(TextKey.PARTY_HEAL, {"effect":innerStringBuilder});
                 processedTags[nova.toXMLString()] = true;
-            };
+            }
             if (itemXML.@id == "Tome of Purification")
             {
                 tag = itemXML.Activate.(text() == "RemoveNegativeConditions")[0];
@@ -68,8 +68,8 @@ package com.company.assembleegameclient.ui.tooltip.slotcomparisons
                         "duration":tag.@duration
                     }, TooltipHelper.getOpenTag(UNTIERED_COLOR), TooltipHelper.getCloseTag());
                     processedTags[tag.toXMLString()] = true;
-                };
-            };
+                }
+            }
         }
 
 

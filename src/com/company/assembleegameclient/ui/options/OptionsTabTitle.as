@@ -60,7 +60,7 @@ package com.company.assembleegameclient.ui.options
             if (this.selected_)
             {
                 return (0xFFC800);
-            };
+            }
             return ((_arg_1) ? 0xFFFFFF : 0xB3B3B3);
         }
 

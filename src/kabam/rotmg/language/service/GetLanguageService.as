@@ -46,7 +46,7 @@ package kabam.rotmg.language.service
             else
             {
                 this.onLanguageError();
-            };
+            }
             completeTask(_arg_1, _arg_2);
         }
 
@@ -58,7 +58,7 @@ package kabam.rotmg.language.service
             for each (_local_3 in _local_2)
             {
                 this.strings.setValue(_local_3[0], _local_3[1], _local_3[2]);
-            };
+            }
             PetRarityEnum.parseNames();
         }
 

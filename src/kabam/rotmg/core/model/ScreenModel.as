@@ -18,7 +18,7 @@ package kabam.rotmg.core.model
             if (_arg_1 != AccountLoadingScreen)
             {
                 this.currentType = _arg_1;
-            };
+            }
         }
 
         public function getCurrentScreenType():Class

@@ -127,7 +127,7 @@ package io.decagames.rotmg.social
             if (_local_3)
             {
                 _local_3.showIndicator = _arg_1;
-            };
+            }
         }
 
         public function clearFriendsList():void
@@ -221,7 +221,7 @@ package io.decagames.rotmg.social
             if (_arg_4)
             {
                 this.createSearchAndAdd();
-            };
+            }
             _arg_2.y = ((_arg_4) ? 50 : 85);
             _arg_2.addChild(_arg_3);
             var _local_6:int = ((_arg_4) ? 410 : 375);

@@ -107,7 +107,7 @@ package com.company.assembleegameclient.mapeditor
                 "totalTiles":this.mapInfo.numTiles,
                 "thumbnail":this.mapInfo.thumbnail,
                 "overwrite":((this.checkbox.isChecked()) ? "on" : "off")
-            };
+            }
             if (this.validated(_local_9))
             {
                 _local_6.addEventListener(Event.COMPLETE, this.onComplete);
@@ -117,7 +117,7 @@ package com.company.assembleegameclient.mapeditor
             else
             {
                 this.enableButtons();
-            };
+            }
         }
 
         private function onCompleteException(_arg_1:IOErrorEvent):void
@@ -141,7 +141,7 @@ package com.company.assembleegameclient.mapeditor
                 _local_3 = _local_2.loader.data.match("<.*>(.*)</.*>");
                 _local_4 = ((_local_3.length > 1) ? _local_3[1] : _local_2.loader.data);
                 this.descr.setError(_local_4);
-            };
+            }
             this.enableButtons();
         }
 
@@ -151,7 +151,7 @@ package com.company.assembleegameclient.mapeditor
             if (parent)
             {
                 parent.removeChild(this);
-            };
+            }
         }
 
         private function onRemovedFromStage(_arg_1:Event):void
@@ -159,12 +159,12 @@ package com.company.assembleegameclient.mapeditor
             if (rightButton_)
             {
                 rightButton_.removeEventListener(MouseEvent.CLICK, this.onSubmit);
-            };
+            }
             if (cancel)
             {
                 cancel.removeAll();
                 cancel = null;
-            };
+            }
         }
 
         private function validated(_arg_1:Object):Boolean
@@ -173,12 +173,12 @@ package com.company.assembleegameclient.mapeditor
             {
                 this.mapName.setError("Map name length out of range (6-24 chars)");
                 return (false);
-            };
+            }
             if (((_arg_1["description"].length < 10) || (_arg_1["description"].length > 250)))
             {
                 this.descr.setError("Description length out of range (10-250 chars)");
                 return (false);
-            };
+            }
             return (this.isValidMap());
         }
 
@@ -188,12 +188,12 @@ package com.company.assembleegameclient.mapeditor
             {
                 this.descr.setError("Must have at least one User Dungeon End region drawn in this dungeon. (tmp)");
                 return (false);
-            };
+            }
             if (this.mapInfo.numEntries < 1)
             {
                 this.descr.setError("Must have at least one Spawn Region drawn in this dungeon. (tmp)");
                 return (false);
-            };
+            }
             return (true);
         }
 

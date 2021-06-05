@@ -7,7 +7,7 @@ package kabam.lib.ui.impl
 {
     import kabam.lib.ui.api.Layout;
     import flash.display.DisplayObject;
-    import __AS3__.vec.Vector;
+    
 
     public class VerticalLayout implements Layout 
     {
@@ -37,7 +37,7 @@ package kabam.lib.ui.impl
                 _local_6.y = _local_3;
                 _local_3 = (_local_3 + (_local_6.height + this.padding));
                 _local_5++;
-            };
+            }
         }
 
 

@@ -35,7 +35,7 @@ package com.company.assembleegameclient.ui
                 this.prefix_.filters = [new DropShadowFilter(0, 0, 0)];
                 this.prefix_.textChanged.addOnce(this.position);
                 addChild(this.prefix_);
-            };
+            }
             mouseEnabled = false;
             mouseChildren = false;
             this.draw(_arg_1, _arg_4);
@@ -66,21 +66,21 @@ package com.company.assembleegameclient.ui
                 background.graphics.drawRoundRect(-2, _local_3, (_local_1 + 6), _local_2, 12, 12);
                 background.graphics.endFill();
                 position();
-            };
+            }
             if (((numStars == this.numStars_) && (starBg == this.starBg_)))
             {
                 return;
-            };
+            }
             this.numStars_ = numStars;
             this.starBg_ = ((starBg >= 0) ? starBg : 0);
             if (((!(this.background == null)) && (contains(this.background))))
             {
                 removeChild(this.background);
-            };
+            }
             if (this.numStars_ < 0)
             {
                 return;
-            };
+            }
             this.background = new Sprite();
             text = this.makeText();
             text.setVerticalAlign(TextFieldDisplayConcrete.BOTTOM);
@@ -94,7 +94,7 @@ package com.company.assembleegameclient.ui
             if (this.prefix_ != null)
             {
                 this.positionWhenTextIsReady();
-            };
+            }
         }
 
         private function positionWhenTextIsReady():void
@@ -106,7 +106,7 @@ package com.company.assembleegameclient.ui
             else
             {
                 this.waiter.complete.addOnce(this.position);
-            };
+            }
         }
 
         private function position():void
@@ -118,8 +118,8 @@ package com.company.assembleegameclient.ui
                 if (((!(this.largeText_)) && (this.starBg_ > 0)))
                 {
                     this.background.y = (this.background.y - 3);
-                };
-            };
+                }
+            }
         }
 
 

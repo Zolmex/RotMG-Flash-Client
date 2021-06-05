@@ -5,9 +5,9 @@
 
 package kabam.rotmg.messaging.impl.incoming
 {
-    import __AS3__.vec.Vector;
+    
     import flash.utils.IDataInput;
-    import __AS3__.vec.*;
+    
 
     public class Damage extends IncomingMessage 
     {
@@ -35,7 +35,7 @@ package kabam.rotmg.messaging.impl.incoming
             {
                 this.effects_.push(_arg_1.readUnsignedByte());
                 _local_3++;
-            };
+            }
             this.damageAmount_ = _arg_1.readUnsignedShort();
             this.kill_ = _arg_1.readBoolean();
             this.armorPierce_ = _arg_1.readBoolean();

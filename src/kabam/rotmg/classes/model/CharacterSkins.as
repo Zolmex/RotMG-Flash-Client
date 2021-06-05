@@ -5,14 +5,14 @@
 
 package kabam.rotmg.classes.model
 {
-    import __AS3__.vec.Vector;
-    import __AS3__.vec.*;
+    
+    
 
     public class CharacterSkins 
     {
 
         private const skins:Vector.<CharacterSkin> = new Vector.<CharacterSkin>(0);
-        private const map:Object = {};
+        private const map:Object = {}
 
         private var defaultSkin:CharacterSkin;
         private var selectedSkin:CharacterSkin;
@@ -31,13 +31,13 @@ package kabam.rotmg.classes.model
                 if (this.selectedSkin)
                 {
                     this.selectedSkin.setIsSelected(false);
-                };
+                }
                 if (this.defaultSkin)
                 {
                     this.defaultSkin.setIsSelected(true);
-                };
+                }
                 this.selectedSkin = this.defaultSkin;
-            };
+            }
         }
 
         public function getDefaultSkin():CharacterSkin
@@ -68,15 +68,15 @@ package kabam.rotmg.classes.model
                 {
                     this.selectedSkin = _arg_1;
                     _arg_1.setIsSelected(true);
-                };
+                }
             }
             else
             {
                 if (_arg_1.getIsSelected())
                 {
                     this.selectedSkin = _arg_1;
-                };
-            };
+                }
+            }
         }
 
         private function onSkinChanged(_arg_1:CharacterSkin):void
@@ -85,7 +85,7 @@ package kabam.rotmg.classes.model
             {
                 ((this.selectedSkin) && (this.selectedSkin.setIsSelected(false)));
                 this.selectedSkin = _arg_1;
-            };
+            }
         }
 
         public function updateSkins(_arg_1:int):void
@@ -95,7 +95,7 @@ package kabam.rotmg.classes.model
             for each (_local_2 in this.skins)
             {
                 this.updateSkinState(_local_2);
-            };
+            }
         }
 
         private function updateSkinState(_arg_1:CharacterSkin):void
@@ -109,8 +109,8 @@ package kabam.rotmg.classes.model
                 if (_arg_1.getState().isSkinStateDeterminedByLevel())
                 {
                     _arg_1.setState(this.getSkinState(_arg_1));
-                };
-            };
+                }
+            }
         }
 
         private function getSkinState(_arg_1:CharacterSkin):CharacterSkinState
@@ -118,11 +118,11 @@ package kabam.rotmg.classes.model
             if (!_arg_1.skinSelectEnabled)
             {
                 return (CharacterSkinState.UNLISTED);
-            };
+            }
             if (((this.maxLevelAchieved >= _arg_1.unlockLevel) && (_arg_1.unlockSpecial == null)))
             {
                 return (CharacterSkinState.PURCHASABLE);
-            };
+            }
             return (CharacterSkinState.LOCKED);
         }
 
@@ -140,8 +140,8 @@ package kabam.rotmg.classes.model
                 if (_local_2.getState() != CharacterSkinState.UNLISTED)
                 {
                     _local_1.push(_local_2);
-                };
-            };
+                }
+            }
             return (_local_1);
         }
 

@@ -8,7 +8,7 @@ package io.decagames.rotmg.ui.popups.modal
     import io.decagames.rotmg.ui.labels.UILabel;
     import io.decagames.rotmg.ui.buttons.BaseButton;
     import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
-    import __AS3__.vec.Vector;
+    
 
     public class TextModal extends ModalPopup 
     {
@@ -33,14 +33,14 @@ package io.decagames.rotmg.ui.popups.modal
             else
             {
                 _local_6.text = _arg_3;
-            };
+            }
             _local_6.wordWrap = true;
             addChild(_local_6);
             var _local_7:int;
             for each (_local_8 in _arg_4)
             {
                 _local_7 = (_local_7 + _local_8.width);
-            };
+            }
             _local_7 = (_local_7 + (this.buttonsMargin * (_arg_4.length - 1)));
             _local_9 = int(((_arg_1 - _local_7) / 2));
             for each (_local_8 in _arg_4)
@@ -50,7 +50,7 @@ package io.decagames.rotmg.ui.popups.modal
                 _local_8.y = ((_local_6.y + _local_6.textHeight) + 15);
                 addChild(_local_8);
                 registerButton(_local_8);
-            };
+            }
         }
 
     }

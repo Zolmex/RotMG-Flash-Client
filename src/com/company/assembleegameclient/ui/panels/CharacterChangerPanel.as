@@ -42,7 +42,7 @@ package com.company.assembleegameclient.ui.panels
             if (((_arg_1.keyCode == Parameters.data_.interact) && (stage.focus == null)))
             {
                 gs_.closed.dispatch();
-            };
+            }
         }
 
 

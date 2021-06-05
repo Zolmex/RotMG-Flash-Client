@@ -55,7 +55,7 @@ package kabam.rotmg.game.view
             if (((this.questModel.previousRealm == Map.REALM) && (this.view.requirementsStates[QuestModel.REMAINING_HEROES_REQUIREMENT])))
             {
                 this.view.remainingHeroes = 0;
-            };
+            }
         }
 
         private function onToggleDisplay():void
@@ -83,7 +83,7 @@ package kabam.rotmg.game.view
                 this.questModel.remainingHeroes = _arg_1;
                 this.view.remainingHeroes = _arg_1;
                 this.questModel.requirementsStates = this.view.requirementsStates;
-            };
+            }
         }
 
 

@@ -12,12 +12,10 @@ package com.company.assembleegameclient.map
     import com.company.assembleegameclient.background.Background;
     import com.company.assembleegameclient.map.mapoverlay.MapOverlay;
     import com.company.assembleegameclient.map.partyoverlay.PartyOverlay;
-    import __AS3__.vec.Vector;
     import com.company.assembleegameclient.objects.Party;
     import org.osflash.signals.Signal;
     import com.company.assembleegameclient.objects.BasicObject;
     import flash.geom.Point;
-    import __AS3__.vec.*;
 
     public class AbstractMap extends Sprite 
     {

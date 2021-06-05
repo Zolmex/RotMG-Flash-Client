@@ -25,7 +25,7 @@ package com.company.assembleegameclient.ui
             else
             {
                 text_.setStringBuilder(new LineBuilder().setParams(_arg_2));
-            };
+            }
             text_.textChanged.addOnce(this.onTextChanged);
         }
 

@@ -7,7 +7,7 @@ package com.company.assembleegameclient.objects.particles
 {
     import com.company.assembleegameclient.objects.GameObject;
     import com.company.assembleegameclient.parameters.Parameters;
-    import __AS3__.vec.Vector;
+    
     import flash.display.IGraphicsData;
     import com.company.assembleegameclient.map.Camera;
 
@@ -29,7 +29,7 @@ package com.company.assembleegameclient.objects.particles
             if (((Parameters.data_.noParticlesMaster) && (!((_arg_1.id == "Vortex") || (_arg_1.id == "Vent")))))
             {
                 return (null);
-            };
+            }
             switch (_arg_1.id)
             {
                 case "Healing":
@@ -60,7 +60,7 @@ package com.company.assembleegameclient.objects.particles
                     return (new XMLEffect(_arg_2, _arg_1));
                 case "CustomParticles":
                     return (ParticleGenerator.attachParticleGenerator(_arg_1, _arg_2));
-            };
+            }
             return (null);
         }
 
@@ -70,7 +70,7 @@ package com.company.assembleegameclient.objects.particles
             if (this.reducedDrawEnabled)
             {
                 return (this.runEasyRendering(_arg_1, _arg_2));
-            };
+            }
             return (this.runNormalRendering(_arg_1, _arg_2));
         }
 

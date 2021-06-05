@@ -65,7 +65,7 @@ package kabam.rotmg.application
                     return (new Testing3Setup());
                 default:
                     return (new ProductionSetup());
-            };
+            }
         }
 
         private function makeFixedIPSetup():FixedIPSetup

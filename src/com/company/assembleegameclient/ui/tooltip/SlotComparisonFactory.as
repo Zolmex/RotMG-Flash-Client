@@ -24,7 +24,7 @@ package com.company.assembleegameclient.ui.tooltip
         {
             var _local_1:GeneralProjectileComparison = new GeneralProjectileComparison();
             var _local_2:GenericArmorComparison = new GenericArmorComparison();
-            this.hash = {};
+            this.hash = {}
             this.hash[ItemConstants.TOME_TYPE] = new TomeComparison();
             this.hash[ItemConstants.LEATHER_TYPE] = _local_2;
             this.hash[ItemConstants.PLATE_TYPE] = _local_2;
@@ -45,7 +45,7 @@ package com.company.assembleegameclient.ui.tooltip
                 _local_4.compare(_arg_1, _arg_2);
                 _local_5.lineBuilder = _local_4.comparisonStringBuilder;
                 _local_5.processedTags = _local_4.processedTags;
-            };
+            }
             return (_local_5);
         }
 

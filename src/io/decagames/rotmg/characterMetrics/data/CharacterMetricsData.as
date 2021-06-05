@@ -27,7 +27,7 @@ package io.decagames.rotmg.characterMetrics.data
             if (!this.stats[_arg_1])
             {
                 return (0);
-            };
+            }
             return (this.stats[_arg_1]);
         }
 

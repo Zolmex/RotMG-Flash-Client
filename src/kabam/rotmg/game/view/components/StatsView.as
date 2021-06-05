@@ -8,12 +8,12 @@ package kabam.rotmg.game.view.components
     import flash.display.Sprite;
     import kabam.rotmg.game.model.StatModel;
     import kabam.rotmg.text.model.TextKey;
-    import __AS3__.vec.Vector;
+    
     import org.osflash.signals.natives.NativeSignal;
     import flash.events.MouseEvent;
     import com.company.assembleegameclient.objects.Player;
     import flash.filters.GlowFilter;
-    import __AS3__.vec.*;
+    
 
     public class StatsView extends Sprite 
     {
@@ -63,7 +63,7 @@ package kabam.rotmg.game.view.components
                 this.containerSprite.addChild(_local_3);
                 _local_1 = (_local_1 + (_local_2 % 2));
                 _local_2++;
-            };
+            }
         }
 
         private function createStat(_arg_1:int, _arg_2:int):StatView
@@ -82,11 +82,11 @@ package kabam.rotmg.game.view.components
             {
                 this.setBackgroundVisibility();
                 this.drawStats(_arg_1);
-            };
+            }
             if (_arg_2)
             {
                 this.containerSprite.x = ((this.WIDTH - this.containerSprite.width) / 2);
-            };
+            }
         }
 
         private function drawStats(_arg_1:Player):void
@@ -131,8 +131,8 @@ package kabam.rotmg.game.view.components
                 if (this.currentState == STATE_DOCKED)
                 {
                     this.background.alpha = 0;
-                };
-            };
+                }
+            }
         }
 
 

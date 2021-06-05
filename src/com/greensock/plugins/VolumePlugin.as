@@ -33,7 +33,7 @@ package com.greensock.plugins
             if ((((isNaN(_arg_2)) || (_arg_1.hasOwnProperty("volume"))) || (!(_arg_1.hasOwnProperty("soundTransform")))))
             {
                 return (false);
-            };
+            }
             _target = _arg_1;
             _st = _target.soundTransform;
             _addTween(_st, "volume", _st.volume, _arg_2, "volume");

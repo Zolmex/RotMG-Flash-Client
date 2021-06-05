@@ -31,7 +31,7 @@ package com.company.assembleegameclient.background
                     return (new StarBackground());
                 case NEXUS_BACKGROUND:
                     return (new NexusBackground());
-            };
+            }
             return (null);
         }
 

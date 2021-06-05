@@ -41,8 +41,8 @@ package kabam.rotmg.characters.reskin.control
                 else
                 {
                     _local_2.size_ = 100;
-                };
-            };
+                }
+            }
             this.server.sendMessage(_local_1);
         }
 

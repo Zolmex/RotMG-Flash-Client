@@ -27,7 +27,7 @@ package com.company.assembleegameclient.screens
                 this._timer = new Timer(1000);
                 this._timer.addEventListener(TimerEvent.TIMER, this.onTime);
                 this._timer.start();
-            };
+            }
         }
 
         override public function destroy():void
@@ -37,7 +37,7 @@ package com.company.assembleegameclient.screens
             {
                 this._timer.removeEventListener(TimerEvent.TIMER, this.onTime);
                 this._timer = null;
-            };
+            }
         }
 
         private function onTime(_arg_1:TimerEvent):void
@@ -49,7 +49,7 @@ package com.company.assembleegameclient.screens
                 this._timer.stop();
                 this._timer.removeEventListener(TimerEvent.TIMER, this.onTime);
                 this.showSeasonHasEndedPopupSignal.dispatch();
-            };
+            }
         }
 
 

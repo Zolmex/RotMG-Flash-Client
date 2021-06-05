@@ -67,7 +67,7 @@ package io.decagames.rotmg.pets.components.guiTab
             if (_local_1)
             {
                 return (2);
-            };
+            }
             return (3);
         }
 

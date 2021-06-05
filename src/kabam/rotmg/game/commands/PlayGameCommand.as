@@ -47,7 +47,7 @@ package kabam.rotmg.game.commands
             if (!this.data.isNewGame)
             {
                 this.socketServerModel.connectDelayMS = PlayGameCommand.RECONNECT_DELAY;
-            };
+            }
             this.recordCharacterUseInSharedObject();
             this.makeGameView();
             this.updatePet();
@@ -65,9 +65,9 @@ package kabam.rotmg.game.commands
                 if ((((this.model.currentCharId) && (this.petsModel.getActivePet())) && (!(this.data.isNewGame))))
                 {
                     return;
-                };
+                }
                 this.petsModel.setActivePet(null);
-            };
+            }
         }
 
         private function recordCharacterUseInSharedObject():void
@@ -87,7 +87,7 @@ package kabam.rotmg.game.commands
             else
             {
                 _local_1 = Boolean(this.seasonalEventModel.isChallenger);
-            };
+            }
             var _local_3:int = ((_local_1) ? Server.CHALLENGER_SERVER : Server.NORMAL_SERVER);
             this.serverModel.setAvailableServers(_local_3);
             var _local_4:Server = ((this.data.server) || (this.serverModel.getServer()));
@@ -116,8 +116,8 @@ package kabam.rotmg.game.commands
                 else
                 {
                     _local_1 = Parameters.NEXUS_GAMEID;
-                };
-            };
+                }
+            }
             return (_local_1);
         }
 

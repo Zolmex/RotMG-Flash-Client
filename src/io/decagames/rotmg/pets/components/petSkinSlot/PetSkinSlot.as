@@ -49,9 +49,9 @@ package io.decagames.rotmg.pets.components.petSkinSlot
                 if (!this.hoverTooltipDelegate.getDisplayObject())
                 {
                     this.hoverTooltipDelegate.setDisplayObject(this);
-                };
+                }
                 this.hoverTooltipDelegate.tooltip = new PetTooltip(this._skinVO);
-            };
+            }
         }
 
         public function set selected(_arg_1:Boolean):void
@@ -86,13 +86,13 @@ package io.decagames.rotmg.pets.components.petSkinSlot
             {
                 this.graphics.clear();
                 return;
-            };
+            }
             this.renderSlotBackground();
             this.clearNewLabel();
             if (((this._isSkinSelectableSlot) && (!(this._skinVO.isOwned))))
             {
                 _arg_1 = GreyScale.setGreyScale(_arg_1);
-            };
+            }
             this.skinBitmap = new Bitmap(_arg_1);
             this.skinBitmap.x = Math.round(((SLOT_SIZE - _arg_1.width) / 2));
             this.skinBitmap.y = Math.round(((SLOT_SIZE - _arg_1.height) / 2));
@@ -101,7 +101,7 @@ package io.decagames.rotmg.pets.components.petSkinSlot
             {
                 this.newLabel = this.createNewLabel(24);
                 addChild(this.newLabel);
-            };
+            }
         }
 
         private function createNewLabel(_arg_1:int):Sprite
@@ -125,7 +125,7 @@ package io.decagames.rotmg.pets.components.petSkinSlot
             if (((this.newLabel) && (this.newLabel.parent)))
             {
                 removeChild(this.newLabel);
-            };
+            }
         }
 
         override public function dispose():void
@@ -164,7 +164,7 @@ package io.decagames.rotmg.pets.components.petSkinSlot
             if (((this.skinBitmap) && (this.skinBitmap.bitmapData)))
             {
                 this.skinBitmap.bitmapData.dispose();
-            };
+            }
         }
 
         public function get manualUpdate():Boolean

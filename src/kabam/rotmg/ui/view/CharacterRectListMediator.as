@@ -55,7 +55,7 @@ package kabam.rotmg.ui.view
             else
             {
                 this.setScreenWithValidData.dispatch(new NewCharacterScreen());
-            };
+            }
         }
 
         private function showSeasonalErrorPopUp(_arg_1:String):void

@@ -16,7 +16,7 @@ package io.decagames.rotmg.pets.utils
 
         private static function makeRanges():Object
         {
-            ranges = {};
+            ranges = {}
             ranges[PetRarityEnum.COMMON.rarityKey] = 30;
             ranges[PetRarityEnum.UNCOMMON.rarityKey] = 20;
             ranges[PetRarityEnum.RARE.rarityKey] = 20;

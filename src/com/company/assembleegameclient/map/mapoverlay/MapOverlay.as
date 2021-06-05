@@ -16,8 +16,8 @@ package com.company.assembleegameclient.map.mapoverlay
     public class MapOverlay extends Sprite 
     {
 
-        private const speechBalloons:Object = {};
-        private const queuedText:Object = {};
+        private const speechBalloons:Object = {}
+        private const queuedText:Object = {}
 
         public function MapOverlay()
         {
@@ -31,7 +31,7 @@ package com.company.assembleegameclient.map.mapoverlay
             if (Parameters.isGpuRender())
             {
                 (parent as Map).mapHitArea.dispatchEvent(_arg_1);
-            };
+            }
         }
 
         public function addSpeechBalloon(_arg_1:SpeechBalloon):void
@@ -41,7 +41,7 @@ package com.company.assembleegameclient.map.mapoverlay
             if (((_local_3) && (contains(_local_3))))
             {
                 removeChild(_local_3);
-            };
+            }
             this.speechBalloons[_local_2] = _arg_1;
             addChild(_arg_1);
         }
@@ -79,8 +79,8 @@ package com.company.assembleegameclient.map.mapoverlay
                 else
                 {
                     _local_4.dispose();
-                };
-            };
+                }
+            }
         }
 
 

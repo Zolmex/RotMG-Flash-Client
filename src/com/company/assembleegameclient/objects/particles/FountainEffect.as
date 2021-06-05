@@ -28,11 +28,11 @@ package com.company.assembleegameclient.objects.particles
             if (this.go_.map_ == null)
             {
                 return (false);
-            };
+            }
             if (this.lastUpdate_ < 0)
             {
                 this.lastUpdate_ = Math.max(0, (_arg_1 - 400));
-            };
+            }
             x_ = this.go_.x_;
             y_ = this.go_.y_;
             var _local_3:int = int((this.lastUpdate_ / 50));
@@ -44,7 +44,7 @@ package com.company.assembleegameclient.objects.particles
                 _local_5.restart(_local_4, _arg_1);
                 map_.addObj(_local_5, x_, y_);
                 _local_3++;
-            };
+            }
             this.lastUpdate_ = _arg_1;
             return (true);
         }
@@ -60,9 +60,9 @@ import com.company.assembleegameclient.util.FreeList;
 class FountainParticle extends Particle 
 {
 
-    /*private*/ static const G:Number = -4.9;
-    /*private*/ static const VI:Number = 6.5;
-    /*private*/ static const ZI:Number = 0.75;
+    private static const G:Number = -4.9;
+    private static const VI:Number = 6.5;
+    private static const ZI:Number = 0.75;
 
     public var startTime_:int;
     protected var moveVec_:Vector3D = new Vector3D();

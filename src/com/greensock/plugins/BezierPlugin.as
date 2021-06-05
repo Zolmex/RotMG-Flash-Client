@@ -16,7 +16,7 @@ package com.greensock.plugins
         protected static var _r1:Array = [];
         protected static var _r2:Array = [];
         protected static var _r3:Array = [];
-        protected static var _corProps:Object = {};
+        protected static var _corProps:Object = {}
 
         protected var _startRatio:int;
         protected var _beziers:Object;
@@ -44,8 +44,8 @@ package com.greensock.plugins
         {
             super("bezier");
             this._overwriteProps.pop();
-            this._func = {};
-            this._round = {};
+            this._func = {}
+            this._round = {}
         }
 
         protected static function _parseLengthData(_arg_1:Object, _arg_2:uint=6):Object
@@ -64,7 +64,7 @@ package com.greensock.plugins
             for (_local_10 in _arg_1)
             {
                 _addCubicLengths(_arg_1[_local_10], _local_3, _arg_2);
-            };
+            }
             _local_12 = _local_3.length;
             _local_11 = 0;
             while (_local_11 < _local_12)
@@ -80,9 +80,9 @@ package com.greensock.plugins
                     _local_4[_local_13] = _local_6;
                     _local_5 = 0;
                     _local_9 = [];
-                };
+                }
                 _local_11++;
-            };
+            }
             return ({
                 "length":_local_6,
                 "lengths":_local_4,
@@ -101,7 +101,7 @@ package com.greensock.plugins
             var _local_15:Number;
             var _local_16:Boolean;
             var _local_17:Object;
-            var _local_7:Object = {};
+            var _local_7:Object = {}
             var _local_8:Object = ((_arg_6) || (_arg_1[0]));
             _arg_5 = (("," + _arg_5) + ",");
             if ((_local_8 is Point))
@@ -114,8 +114,8 @@ package com.greensock.plugins
                 for (_local_11 in _local_8)
                 {
                     _local_9.push(_local_11);
-                };
-            };
+                }
+            }
             if (_arg_1.length > 1)
             {
                 _local_17 = _arg_1[(_arg_1.length - 1)];
@@ -128,19 +128,19 @@ package com.greensock.plugins
                     {
                         _local_16 = false;
                         break;
-                    };
-                };
+                    }
+                }
                 if (_local_16)
                 {
                     _arg_1 = _arg_1.concat();
                     if (_arg_6)
                     {
                         _arg_1.unshift(_arg_6);
-                    };
+                    }
                     _arg_1.push(_arg_1[1]);
                     _arg_6 = _arg_1[(_arg_1.length - 3)];
-                };
-            };
+                }
+            }
             _r1.length = (_r2.length = (_r3.length = 0));
             _local_10 = _local_9.length;
             while (--_local_10 > -1)
@@ -148,13 +148,13 @@ package com.greensock.plugins
                 _local_11 = _local_9[_local_10];
                 _corProps[_local_11] = (!(_arg_5.indexOf((("," + _local_11) + ",")) === -1));
                 _local_7[_local_11] = _parseAnchors(_arg_1, _local_11, _corProps[_local_11], _arg_6);
-            };
+            }
             _local_10 = _r1.length;
             while (--_local_10 > -1)
             {
                 _r1[_local_10] = Math.sqrt(_r1[_local_10]);
                 _r2[_local_10] = Math.sqrt(_r2[_local_10]);
-            };
+            }
             if (!_arg_4)
             {
                 _local_10 = _local_9.length;
@@ -170,15 +170,15 @@ package com.greensock.plugins
                             _local_15 = ((_local_13[(_local_12 + 1)].da / _r2[_local_12]) + (_local_13[_local_12].da / _r1[_local_12]));
                             _r3[_local_12] = (((_r3[_local_12]) || (0)) + (_local_15 * _local_15));
                             _local_12++;
-                        };
-                    };
-                };
+                        }
+                    }
+                }
                 _local_10 = _r3.length;
                 while (--_local_10 > -1)
                 {
                     _r3[_local_10] = Math.sqrt(_r3[_local_10]);
-                };
-            };
+                }
+            }
             _local_10 = _local_9.length;
             _local_12 = ((_arg_3) ? 4 : 1);
             while (--_local_10 > -1)
@@ -190,8 +190,8 @@ package com.greensock.plugins
                 {
                     _local_13.splice(0, _local_12);
                     _local_13.splice((_local_13.length - _local_12), _local_12);
-                };
-            };
+                }
+            }
             return (_local_7);
         }
 
@@ -227,8 +227,8 @@ package com.greensock.plugins
                     _local_16 = (((_local_5 * _arg_3) + _local_13) - 1);
                     _arg_2[_local_16] = (((_arg_2[_local_16]) || (0)) + (_local_6 * _local_6));
                     _local_13++;
-                };
-            };
+                }
+            }
         }
 
         protected static function _parseAnchors(_arg_1:Array, _arg_2:String, _arg_3:Boolean, _arg_4:Object):Array
@@ -251,16 +251,16 @@ package com.greensock.plugins
                         if (_local_11.charAt(1) === "=")
                         {
                             _arg_1[_local_7][_arg_2] = (_arg_4[_arg_2] + Number((_local_11.charAt(0) + _local_11.substr(2))));
-                        };
-                    };
-                };
-            };
+                        }
+                    }
+                }
+            }
             _local_6 = (_arg_1.length - 2);
             if (_local_6 < 0)
             {
                 _local_5[0] = new Segment(_arg_1[0][_arg_2], 0, 0, _arg_1[((_local_6 < -1) ? 0 : 1)][_arg_2]);
                 return (_local_5);
-            };
+            }
             _local_7 = 0;
             while (_local_7 < _local_6)
             {
@@ -272,19 +272,19 @@ package com.greensock.plugins
                     _local_10 = _arg_1[(_local_7 + 2)][_arg_2];
                     _r1[_local_7] = (((_r1[_local_7]) || (0)) + ((_local_9 - _local_8) * (_local_9 - _local_8)));
                     _r2[_local_7] = (((_r2[_local_7]) || (0)) + ((_local_10 - _local_9) * (_local_10 - _local_9)));
-                };
+                }
                 _local_7++;
-            };
+            }
             _local_5[_local_7] = new Segment(_arg_1[_local_7][_arg_2], 0, 0, _arg_1[(_local_7 + 1)][_arg_2]);
             return (_local_5);
         }
 
         public static function cubicToQuadratic(_arg_1:Number, _arg_2:Number, _arg_3:Number, _arg_4:Number):Array
         {
-            var _local_5:Object = {"a":_arg_1};
-            var _local_6:Object = {};
-            var _local_7:Object = {};
-            var _local_8:Object = {"c":_arg_4};
+            var _local_5:Object = {"a":_arg_1}
+            var _local_6:Object = {}
+            var _local_7:Object = {}
+            var _local_8:Object = {"c":_arg_4}
             var _local_9:Number = ((_arg_1 + _arg_2) / 2);
             var _local_10:Number = ((_arg_2 + _arg_3) / 2);
             var _local_11:Number = ((_arg_3 + _arg_4) / 2);
@@ -345,7 +345,7 @@ package com.greensock.plugins
                     _local_14 = (_local_11 - (((_local_11 - _local_10) * _arg_2) * 0.5));
                     _local_15 = (_local_11 + (((_local_12 - _local_11) * _arg_2) * 0.5));
                     _local_16 = (_local_11 - ((_local_14 + _local_15) / 2));
-                };
+                }
                 _local_14 = (_local_14 + _local_16);
                 _local_15 = (_local_15 + _local_16);
                 _local_13.c = (_local_17 = _local_14);
@@ -356,7 +356,7 @@ package com.greensock.plugins
                 else
                 {
                     _local_13.b = (_local_8 = (_local_13.a + ((_local_13.c - _local_13.a) * 0.6)));
-                };
+                }
                 _local_13.da = (_local_11 - _local_10);
                 _local_13.ca = (_local_17 - _local_10);
                 _local_13.ba = (_local_8 - _local_10);
@@ -369,10 +369,10 @@ package com.greensock.plugins
                 else
                 {
                     _local_7++;
-                };
+                }
                 _local_8 = _local_15;
                 _local_9++;
-            };
+            }
             _local_13 = _arg_1[_local_7];
             _local_13.b = _local_8;
             _local_13.c = (_local_8 + ((_local_13.d - _local_8) * 0.4));
@@ -383,7 +383,7 @@ package com.greensock.plugins
             {
                 _local_18 = cubicToQuadratic(_local_13.a, _local_8, _local_13.c, _local_13.d);
                 _arg_1.splice(_local_7, 1, _local_18[0], _local_18[1], _local_18[2], _local_18[3]);
-            };
+            }
         }
 
         public static function _parseBezierData(_arg_1:Array, _arg_2:String, _arg_3:Object=null):Object
@@ -401,17 +401,17 @@ package com.greensock.plugins
             var _local_17:int;
             var _local_18:Object;
             _arg_2 = ((_arg_2) || ("soft"));
-            var _local_4:Object = {};
+            var _local_4:Object = {}
             var _local_5:int = ((_arg_2 === "cubic") ? 3 : 2);
             var _local_6:* = (_arg_2 === "soft");
             if (((_local_6) && (_arg_3)))
             {
                 _arg_1 = [_arg_3].concat(_arg_1);
-            };
+            }
             if (((_arg_1 == null) || (_arg_1.length < (_local_5 + 1))))
             {
                 throw (new Error("invalid Bezier data"));
-            };
+            }
             if ((_arg_1[1] is Point))
             {
                 _local_12 = ["x", "y"];
@@ -422,8 +422,8 @@ package com.greensock.plugins
                 for (_local_16 in _arg_1[0])
                 {
                     _local_12.push(_local_16);
-                };
-            };
+                }
+            }
             _local_13 = _local_12.length;
             while (--_local_13 > -1)
             {
@@ -443,13 +443,13 @@ package com.greensock.plugins
                             {
                                 var _local_19:* = _local_17++;
                                 _local_11[_local_19] = ((_local_7 + _local_11[(_local_17 - 2)]) / 2);
-                            };
-                        };
-                    };
+                            }
+                        }
+                    }
                     _local_19 = _local_17++;
                     _local_11[_local_19] = _local_7;
                     _local_14++;
-                };
+                }
                 _local_15 = ((_local_17 - _local_5) + 1);
                 _local_17 = 0;
                 _local_14 = 0;
@@ -462,9 +462,9 @@ package com.greensock.plugins
                     _local_19 = _local_17++;
                     _local_11[_local_19] = ((_local_5 === 3) ? new Segment(_local_7, _local_8, _local_9, _local_10) : new Segment(_local_7, (((2 * _local_8) + _local_7) / 3), (((2 * _local_8) + _local_9) / 3), _local_9));
                     _local_14 = (_local_14 + _local_5);
-                };
+                }
                 _local_11.length = _local_17;
-            };
+            }
             return (_local_4);
         }
 
@@ -486,10 +486,10 @@ package com.greensock.plugins
                         if (_local_2[_local_4] === _local_3)
                         {
                             _local_2.splice(_local_4, 1);
-                        };
-                    };
-                };
-            };
+                        }
+                    }
+                }
+            }
             return (super._kill(_arg_1));
         }
 
@@ -553,14 +553,14 @@ package com.greensock.plugins
                         else
                         {
                             _local_8++;
-                        };
+                        }
                         this._l2 = _local_14[_local_8];
                         this._li = _local_8;
                         this._curSeg = (_local_15 = this._segments[_local_8]);
                         this._s1 = ((_local_15[((this._si = (_local_15.length - 1)) - 1)]) || (0));
                         this._s2 = _local_15[this._si];
-                    };
-                };
+                    }
+                }
                 _local_6 = _local_8;
                 _arg_1 = (_arg_1 - this._l1);
                 _local_8 = this._si;
@@ -587,13 +587,13 @@ package com.greensock.plugins
                         else
                         {
                             _local_8++;
-                        };
+                        }
                         this._s2 = _local_15[_local_8];
                         this._si = _local_8;
-                    };
-                };
+                    }
+                }
                 _local_11 = ((_local_8 + ((_arg_1 - this._s1) / (this._s2 - this._s1))) * this._prec);
-            };
+            }
             _local_7 = (1 - _local_11);
             _local_8 = this._props.length;
             while (--_local_8 > -1)
@@ -604,7 +604,7 @@ package com.greensock.plugins
                 if (this._round[_local_9])
                 {
                     _local_12 = ((_local_12 + ((_local_12 > 0) ? 0.5 : -0.5)) >> 0);
-                };
+                }
                 if (_local_3[_local_9])
                 {
                     var _local_24:* = _local_4;
@@ -613,8 +613,8 @@ package com.greensock.plugins
                 else
                 {
                     _local_4[_local_9] = _local_12;
-                };
-            };
+                }
+            }
             if (this._autoRotate != null)
             {
                 _local_16 = this._autoRotate;
@@ -643,9 +643,9 @@ package com.greensock.plugins
                     else
                     {
                         _local_4[_local_9] = _local_12;
-                    };
-                };
-            };
+                    }
+                }
+            }
         }
 
         override public function _onInitTween(_arg_1:Object, _arg_2:*, _arg_3:TweenLite):Boolean
@@ -662,7 +662,7 @@ package com.greensock.plugins
             this._props = [];
             this._timeRes = ((_local_4.timeResolution == null) ? 6 : int(_local_4.timeResolution));
             var _local_5:Array = ((_local_4.values) || ([]));
-            var _local_6:Object = {};
+            var _local_6:Object = {}
             var _local_7:Object = _local_5[0];
             var _local_8:Object = ((_local_4.autoRotate) || (_arg_3.vars.orientToBezier));
             this._autoRotate = ((_local_8) ? ((_local_8 is Array) ? (_local_8 as Array) : [["x", "y", "rotation", ((_local_8 === true) ? 0 : Number(_local_8))]]) : null);
@@ -675,8 +675,8 @@ package com.greensock.plugins
                 for (_local_9 in _local_7)
                 {
                     this._props.push(_local_9);
-                };
-            };
+                }
+            }
             _local_11 = this._props.length;
             while (--_local_11 > -1)
             {
@@ -689,9 +689,9 @@ package com.greensock.plugins
                     if (_local_6[_local_9] !== _local_5[0][_local_9])
                     {
                         _local_14 = _local_6;
-                    };
-                };
-            };
+                    }
+                }
+            }
             this._beziers = ((((!(_local_4.type === "cubic")) && (!(_local_4.type === "quadratic"))) && (!(_local_4.type === "soft"))) ? bezierThrough(_local_5, ((isNaN(_local_4.curviness)) ? 1 : _local_4.curviness), false, (_local_4.type === "thruBasic"), ((_local_4.correlate) || ("x,y,z")), _local_14) : _parseBezierData(_local_5, _local_4.type, _local_6));
             this._segCount = this._beziers[_local_9].length;
             if (this._timeRes)
@@ -705,14 +705,14 @@ package com.greensock.plugins
                 this._curSeg = this._segments[0];
                 this._s2 = this._curSeg[0];
                 this._prec = (1 / this._curSeg.length);
-            };
+            }
             if ((_local_13 = this._autoRotate))
             {
                 this._initialRotations = [];
                 if (!(_local_13[0] is Array))
                 {
                     this._autoRotate = (_local_13 = [_local_13]);
-                };
+                }
                 _local_11 = _local_13.length;
                 while (--_local_11 > -1)
                 {
@@ -722,11 +722,11 @@ package com.greensock.plugins
                         _local_9 = _local_13[_local_11][_local_12];
                         this._func[_local_9] = ((_arg_1[_local_9] is Function) ? _arg_1[(((_local_9.indexOf("set")) || (!(("get" + _local_9.substr(3)) in _arg_1))) ? _local_9 : ("get" + _local_9.substr(3)))] : false);
                         _local_12++;
-                    };
+                    }
                     _local_9 = _local_13[_local_11][2];
                     this._initialRotations[_local_11] = ((this._func[_local_9]) ? this._func[_local_9]() : this._target[_local_9]);
-                };
-            };
+                }
+            }
             _startRatio = ((_arg_3.vars.runBackwards) ? 1 : 0);
             return (true);
         }
@@ -740,8 +740,8 @@ package com.greensock.plugins
                 if ((((_local_3[_local_4] in _arg_1) || ("bezier" in _arg_1)) || ("bezierThrough" in _arg_1)))
                 {
                     this._round[_local_3[_local_4]] = _arg_2;
-                };
-            };
+                }
+            }
         }
 
 

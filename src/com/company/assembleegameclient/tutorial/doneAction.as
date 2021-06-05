@@ -12,7 +12,7 @@ package com.company.assembleegameclient.tutorial
         if (_arg_1.tutorial_ == null)
         {
             return;
-        };
+        }
         _arg_1.tutorial_.doneAction(_arg_2);
     }
 

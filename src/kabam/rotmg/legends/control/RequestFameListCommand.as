@@ -47,7 +47,7 @@ package kabam.rotmg.legends.control
             if (((this.player.hasAccount()) && (this.death.getIsDeathViewPending())))
             {
                 return (this.death.getLastDeath().charId_);
-            };
+            }
             return (-1);
         }
 

@@ -62,7 +62,7 @@ package com.company.assembleegameclient.screens
             else
             {
                 this.graphic_ = new FullCharBoxGraphic();
-            };
+            }
             this.graphicContainer_ = new Sprite();
             addChild(this.graphicContainer_);
             this.graphicContainer_.addChild(this.graphic_);
@@ -94,7 +94,7 @@ package com.company.assembleegameclient.screens
                 addChild(this.lock_);
                 addChild(this.statusText_);
                 this.classNameText_.y = 78;
-            };
+            }
         }
 
         public function objectType():int
@@ -118,11 +118,11 @@ package com.company.assembleegameclient.screens
                 if (contains(this.statusText_))
                 {
                     removeChild(this.statusText_);
-                };
+                }
                 if (((this.lock_) && (contains(this.lock_))))
                 {
                     removeChild(this.lock_);
-                };
+                }
                 _local_1 = this.getStars(FameUtil.numStars(this.model.getBestFame(this.objectType())), FameUtil.STARS.length);
                 _local_1.y = 60;
                 _local_1.x = ((this.graphic_.width / 2) - (_local_1.width / 2));
@@ -132,14 +132,14 @@ package com.company.assembleegameclient.screens
                 if (!this.unlockedText_)
                 {
                     this.getCharacterUnlockText();
-                };
+                }
                 addChild(this.unlockedText_);
                 _local_2 = new GTween(this.unlockedText_, 2.5, {
                     "alpha":0,
                     "y":-30
                 });
                 _local_2.onComplete = this.removeUnlockText;
-            };
+            }
         }
 
         public function getTooltip():ToolTip
@@ -152,7 +152,7 @@ package com.company.assembleegameclient.screens
             if (!this.available_)
             {
                 return;
-            };
+            }
             if (_arg_1)
             {
                 transform.colorTransform = new ColorTransform(1.2, 1.2, 1.2);
@@ -160,7 +160,7 @@ package com.company.assembleegameclient.screens
             else
             {
                 transform.colorTransform = new ColorTransform(1, 1, 1);
-            };
+            }
         }
 
         private function removeUnlockText(_arg_1:GTween):void
@@ -188,7 +188,7 @@ package com.company.assembleegameclient.screens
                 _local_3.addChild(_local_5);
                 _local_6 = (_local_6 + _local_5.width);
                 _local_4++;
-            };
+            }
             while (_local_4 < _arg_2)
             {
                 _local_5 = new StarGraphic();
@@ -197,7 +197,7 @@ package com.company.assembleegameclient.screens
                 _local_3.addChild(_local_5);
                 _local_6 = (_local_6 + _local_5.width);
                 _local_4++;
-            };
+            }
             return (_local_3);
         }
 

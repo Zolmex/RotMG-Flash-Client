@@ -56,7 +56,7 @@ package io.decagames.rotmg.ui.buttons
                 this._bitmap.scaleY = 1;
                 this._bitmap.x = 0;
                 this._bitmap.y = 0;
-            };
+            }
             super.onRollOverHandler(_arg_1);
         }
 
@@ -68,7 +68,7 @@ package io.decagames.rotmg.ui.buttons
                 this._bitmap.scaleY = 0.9;
                 this._bitmap.x = ((this._bitmap.width * 0.1) / 2);
                 this._bitmap.y = ((this._bitmap.height * 0.1) / 2);
-            };
+            }
             super.onMouseDownHandler(_arg_1);
         }
 
@@ -80,7 +80,7 @@ package io.decagames.rotmg.ui.buttons
                 this._bitmap.scaleY = 1;
                 this._bitmap.x = 0;
                 this._bitmap.y = 0;
-            };
+            }
             super.onClickHandler(_arg_1);
         }
 
@@ -93,7 +93,7 @@ package io.decagames.rotmg.ui.buttons
                 this._bitmap.scaleY = 1;
                 this._bitmap.x = 0;
                 this._bitmap.y = 0;
-            };
+            }
             super.onRollOutHandler(_arg_1);
         }
 
@@ -104,7 +104,7 @@ package io.decagames.rotmg.ui.buttons
             if (_local_2 != null)
             {
                 (_local_2(this._label));
-            };
+            }
             if (this._interactionEffects)
             {
                 if (_arg_1)
@@ -114,8 +114,8 @@ package io.decagames.rotmg.ui.buttons
                 else
                 {
                     this.changeBitmap(this._bitmap.sourceBitmapName, new Point(this._bitmap.marginX, this._bitmap.marginY));
-                };
-            };
+                }
+            }
             this.render();
         }
 
@@ -126,11 +126,11 @@ package io.decagames.rotmg.ui.buttons
                 if (_arg_2 != null)
                 {
                     (_arg_2(this._label));
-                };
+                }
                 this._label.text = _arg_1;
                 addChild(this._label);
                 this.render();
-            };
+            }
             this.stateFactories[_arg_3] = _arg_2;
         }
 
@@ -153,7 +153,7 @@ package io.decagames.rotmg.ui.buttons
             if (this.staticWidth)
             {
                 this._bitmap.width = this._bitmapWidth;
-            };
+            }
             this._label.x = ((((this._bitmapWidth - this._label.textWidth) / 2) + this._bitmap.marginX) + this.labelMargin.x);
             this._label.y = ((((this._bitmap.height - this._label.textHeight) / 2) + this._bitmap.marginY) + this.labelMargin.y);
         }
@@ -164,11 +164,11 @@ package io.decagames.rotmg.ui.buttons
             if (this.disableBitmap)
             {
                 this.disableBitmap.dispose();
-            };
+            }
             if (this.rollOverBitmap)
             {
                 this.rollOverBitmap.dispose();
-            };
+            }
             super.dispose();
         }
 
@@ -180,7 +180,7 @@ package io.decagames.rotmg.ui.buttons
             if (_arg_2 != null)
             {
                 this._bitmap.addMargin(_arg_2.x, _arg_2.y);
-            };
+            }
             addChildAt(this._bitmap, 0);
             this._bitmap.forceRenderInNextFrame = true;
             this.render();

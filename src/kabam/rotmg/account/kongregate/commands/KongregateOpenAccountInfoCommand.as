@@ -30,7 +30,7 @@ package kabam.rotmg.account.kongregate.commands
             else
             {
                 this.api.showRegistrationDialog();
-            };
+            }
         }
 
 

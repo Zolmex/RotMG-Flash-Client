@@ -21,7 +21,7 @@ package com.company.assembleegameclient.ui.tooltip
     import flash.display.BitmapData;
     import com.company.util.CachingColorTransformer;
     import com.company.util.ConversionUtil;
-    import __AS3__.vec.Vector;
+    
     import com.company.assembleegameclient.util.EquipmentUtil;
     import com.company.assembleegameclient.objects.ObjectLibrary;
     import com.company.assembleegameclient.util.FilterUtil;
@@ -84,7 +84,7 @@ package com.company.assembleegameclient.ui.tooltip
                 this._backgroundColor = 0x363636;
                 this._borderColor = 0xFFFFFF;
                 this._lineColor = 0x1C1C1C;
-            };
+            }
             super(this._backgroundColor, 1, this._borderColor, 1);
             this.init();
         }
@@ -122,9 +122,9 @@ package com.company.assembleegameclient.ui.tooltip
                     {
                         this.lineBreakTwo = new LineBreakDesign((CLASS_TOOL_TIP_WIDTH - 6), this._lineColor);
                         addChild(this.lineBreakTwo);
-                    };
-                };
-            };
+                    }
+                }
+            }
         }
 
         private function createCharacter():void
@@ -136,7 +136,7 @@ package com.company.assembleegameclient.ui.tooltip
             if (this.showUnlockRequirements)
             {
                 _local_4 = CachingColorTransformer.transformBitmapData(_local_4, new ColorTransform(0, 0, 0, 0.5, 0, 0, 0, 0));
-            };
+            }
             this.portrait_ = new Bitmap();
             this.portrait_.bitmapData = _local_4;
             this.portrait_.x = -4;
@@ -174,10 +174,10 @@ package com.company.assembleegameclient.ui.tooltip
                         _local_7.x = (12 + (_local_3 * 22));
                         _local_7.filters = FilterUtil.getDarkGreyColorFilter();
                         this._equipmentContainer.addChild(_local_7);
-                    };
-                };
+                    }
+                }
                 _local_3++;
-            };
+            }
         }
 
         private function createCharacterName():void
@@ -221,11 +221,11 @@ package com.company.assembleegameclient.ui.tooltip
                 else
                 {
                     this.nextClassQuest_.setStringBuilder(new LineBuilder().setParams("Earn 20 Fame with {typeToDisplay} to unlock the first star", {"typeToDisplay":getDisplayId(this._playerXML)}));
-                };
+                }
                 this.nextClassQuest_.filters = [new DropShadowFilter(0, 0, 0)];
                 waiter.push(this.nextClassQuest_.textChanged);
                 addChild(this.nextClassQuest_);
-            };
+            }
         }
 
         private function createStarProgress():void
@@ -284,13 +284,13 @@ package com.company.assembleegameclient.ui.tooltip
                             {
                                 _local_13 = int((((_local_7 - _local_3[(_local_5 - 1)]) / (_local_6 - _local_3[(_local_5 - 1)])) * _local_10));
                                 _local_1.drawRect(_local_2, 31, _local_13, 4);
-                            };
-                        };
-                    };
-                };
+                            }
+                        }
+                    }
+                }
                 _local_2 = (_local_2 + (1 + _local_10));
                 _local_5++;
-            };
+            }
         }
 
         private function createBestLevelAndFame():void
@@ -369,11 +369,11 @@ package com.company.assembleegameclient.ui.tooltip
                             _local_12.y = _local_5;
                             this._classUnlockContainer.addChild(_local_12);
                             _local_5 = (_local_5 + 14);
-                        };
-                    };
-                };
+                        }
+                    }
+                }
                 _local_6++;
-            };
+            }
             addChild(this._classUnlockContainer);
         }
 
@@ -399,8 +399,8 @@ package com.company.assembleegameclient.ui.tooltip
                         "unlockLevel":_local_4,
                         "typeToDisplay":ObjectLibrary.typeToDisplayId_[_local_3]
                     });
-                };
-            };
+                }
+            }
             this.unlockText_.setStringBuilder(_local_1);
             this.unlockText_.filters = [new DropShadowFilter(0, 0, 0)];
             waiter.push(this.unlockText_.textChanged);
@@ -430,7 +430,7 @@ package com.company.assembleegameclient.ui.tooltip
                 {
                     this.nextClassQuest_.x = 8;
                     this.nextClassQuest_.y = (height - 4);
-                };
+                }
                 this._progressContainer.x = 10;
                 this._progressContainer.y = (height - 2);
                 this._bestContainer.x = 6;
@@ -444,8 +444,8 @@ package com.company.assembleegameclient.ui.tooltip
                     this.classUnlockText_.y = height;
                     this._classUnlockContainer.x = 6;
                     this._classUnlockContainer.y = (height - 6);
-                };
-            };
+                }
+            }
             this.draw();
             position();
         }

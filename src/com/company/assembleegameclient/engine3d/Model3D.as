@@ -5,13 +5,11 @@
 
 package com.company.assembleegameclient.engine3d
 {
-    import __AS3__.vec.Vector;
     import kabam.rotmg.stage3D.Object3D.Model3D_stage3d;
     import flash.utils.ByteArray;
     import flash.display3D.Context3D;
     import com.company.util.ConversionUtil;
     import kabam.rotmg.stage3D.Object3D.Object3DStage3D;
-    import __AS3__.vec.*;
 
     public class Model3D 
     {
@@ -37,7 +35,7 @@ package com.company.assembleegameclient.engine3d
             for each (_local_2 in models)
             {
                 _local_2.CreatBuffer(_arg_1);
-            };
+            }
         }
 
         public static function parseFromOBJ(_arg_1:String, _arg_2:String):void
@@ -58,7 +56,7 @@ package com.company.assembleegameclient.engine3d
             var _local_4:Array = [];
             var _local_5:Array = [];
             var _local_6:Array = [];
-            var _local_7:Object = {};
+            var _local_7:Object = {}
             var _local_8:Array = [];
             var _local_9:String;
             var _local_10:Array = [];
@@ -78,21 +76,21 @@ package com.company.assembleegameclient.engine3d
                                     if (_local_15.length != 3)
                                     {
                                         return;
-                                    };
+                                    }
                                     _local_4.push(_local_15);
                                     break;
                                 case "vt":
                                     if (_local_15.length != 2)
                                     {
                                         return;
-                                    };
+                                    }
                                     _local_5.push(_local_15);
                                     break;
                                 case "f":
                                     if (_local_15.length < 3)
                                     {
                                         return;
-                                    };
+                                    }
                                     _local_8.push(_local_15);
                                     _local_10.push(_local_9);
                                     for each (_local_17 in _local_15)
@@ -101,21 +99,21 @@ package com.company.assembleegameclient.engine3d
                                         {
                                             _local_7[_local_17] = _local_6.length;
                                             _local_6.push(_local_17);
-                                        };
-                                    };
+                                        }
+                                    }
                                     break;
                                 case "usemtl":
                                     if (_local_15.length != 1)
                                     {
                                         return;
-                                    };
+                                    }
                                     _local_9 = _local_15[0];
                                     break;
-                            };
-                        };
-                    };
-                };
-            };
+                            }
+                        }
+                    }
+                }
+            }
             _local_12 = new (Model3D)();
             for each (_local_13 in _local_6)
             {
@@ -129,8 +127,8 @@ package com.company.assembleegameclient.engine3d
                 else
                 {
                     _local_12.uvts_.push(0, 0, 0);
-                };
-            };
+                }
+            }
             _local_14 = 0;
             while (_local_14 < _local_8.length)
             {
@@ -142,10 +140,10 @@ package com.company.assembleegameclient.engine3d
                 {
                     _local_21.push(_local_7[_local_19[_local_22]]);
                     _local_22++;
-                };
+                }
                 _local_12.faces_.push(new ModelFace3D(_local_12, _local_21, ((_local_20 == null) || (!(_local_20.substr(0, 5) == "Solid")))));
                 _local_14++;
-            };
+            }
             _local_12.orderFaces();
             modelLib_[_arg_1] = _local_12;
         }
@@ -161,7 +159,7 @@ package com.company.assembleegameclient.engine3d
             if (_local_2 == null)
             {
                 return (null);
-            };
+            }
             return (new Object3D(_local_2));
         }
 
@@ -171,7 +169,7 @@ package com.company.assembleegameclient.engine3d
             if (_local_2 == null)
             {
                 return (null);
-            };
+            }
             return (new Object3DStage3D(_local_2));
         }
 

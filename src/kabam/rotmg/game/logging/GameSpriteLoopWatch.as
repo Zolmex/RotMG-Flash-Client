@@ -6,8 +6,8 @@
 package kabam.rotmg.game.logging
 {
     import kabam.lib.console.model.Watch;
-    import __AS3__.vec.Vector;
-    import __AS3__.vec.*;
+    
+    
 
     public class GameSpriteLoopWatch extends Watch 
     {
@@ -47,20 +47,20 @@ package kabam.rotmg.game.logging
                 this.rollingTotal = (this.rollingTotal - this.times[this.index]);
                 this.rollingTotal = (this.rollingTotal + _arg_1);
                 this.times[this.index] = _arg_1;
-            };
+            }
             if (++this.index == COUNT)
             {
                 this.index = 0;
-            };
+            }
             this.mean = (this.rollingTotal / this.count);
             if (_arg_1 > this.max)
             {
                 this.max = _arg_1;
-            };
+            }
             if (_arg_1 < this.min)
             {
                 this.min = _arg_1;
-            };
+            }
             data = WATCH_PATTERN.replace("{NAME}", name).replace("{MEAN}", this.mean).replace("{MIN}", this.min).replace("{MAX}", this.max);
         }
 

@@ -21,9 +21,9 @@ package io.decagames.rotmg.nexusShop
     import kabam.rotmg.text.view.stringBuilder.LineBuilder;
     import flash.text.TextFieldAutoSize;
     import io.decagames.rotmg.ui.texture.TextureParser;
-    import __AS3__.vec.Vector;
+    
     import flash.events.MouseEvent;
-    import __AS3__.vec.*;
+    
     import io.decagames.rotmg.shop.*;
 
     public class NexusShopPopupView extends ModalPopup 
@@ -70,7 +70,7 @@ package io.decagames.rotmg.nexusShop
             if (this.owner_.getSellableType() != -1)
             {
                 _local_2 = new ItemWithTooltip(this.owner_.getSellableType(), 80);
-            };
+            }
             _local_2.x = ((WIDTH / 2) - (_local_2.width / 2));
             _local_2.y = (((HEIGHT / 2) - _local_2.height) + 5);
             addChild(_local_2);
@@ -101,13 +101,13 @@ package io.decagames.rotmg.nexusShop
                 {
                     _local_1.push(_local_2);
                     _local_2++;
-                };
+                }
             }
             else
             {
                 _local_1.push(1);
                 this.buyButton.disabled = true;
-            };
+            }
             this.spinner = new FixedNumbersSpinner(TextureParser.instance.getSliceScalingBitmap("UI", "spinner_up_arrow"), 0, _local_1, "x");
             this.buySectionContainer.addChild(this.buyButtonBackground);
             this.buySectionContainer.addChild(this.spinner);
@@ -135,7 +135,7 @@ package io.decagames.rotmg.nexusShop
             else
             {
                 this.spinner.upArrow.alpha = 0.5;
-            };
+            }
         }
 
         private function countUp(_arg_1:MouseEvent):void
@@ -143,7 +143,7 @@ package io.decagames.rotmg.nexusShop
             if (this.quantity_ < this.availableInventoryNumber)
             {
                 this.quantity_ = (this.quantity_ + 1);
-            };
+            }
             this.refreshValues();
         }
 
@@ -152,7 +152,7 @@ package io.decagames.rotmg.nexusShop
             if (this.quantity_ > 1)
             {
                 this.quantity_ = (this.quantity_ - 1);
-            };
+            }
             this.refreshValues();
         }
 

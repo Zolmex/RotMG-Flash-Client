@@ -37,11 +37,11 @@ package mx.formatters
                 _local_3 = (_local_3 + (this.reqFormat.substring(_local_4.end, _local_2.begin) + this.extractToken(_arg_1, _local_2)));
                 _local_4 = _local_2;
                 _local_6++;
-            };
+            }
             if (((_local_4.end > 0) && (!(_local_4.end == this.reqFormat.length))))
             {
                 _local_3 = (_local_3 + this.reqFormat.substring(_local_4.end));
-            };
+            }
             return (_local_3);
         }
 
@@ -68,9 +68,9 @@ package mx.formatters
                         "end":_local_4
                     });
                     _local_5++;
-                };
+                }
                 _local_8++;
-            };
+            }
             this.patternInfo.sort(this.compareValues);
         }
 
@@ -79,11 +79,11 @@ package mx.formatters
             if (_arg_1.begin > _arg_2.begin)
             {
                 return (1);
-            };
+            }
             if (_arg_1.begin < _arg_2.begin)
             {
                 return (-1);
-            };
+            }
             return (0);
         }
 

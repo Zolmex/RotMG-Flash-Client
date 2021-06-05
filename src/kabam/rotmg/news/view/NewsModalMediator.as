@@ -10,7 +10,7 @@ package kabam.rotmg.news.view
     import kabam.rotmg.news.model.NewsModel;
     import kabam.rotmg.news.services.GetAppEngineNewsTask;
     import kabam.rotmg.dialogs.control.FlushPopupStartupQueueSignal;
-    import __AS3__.vec.Vector;
+    
     import kabam.rotmg.news.model.NewsCellVO;
 
     public class NewsModalMediator extends Mediator 
@@ -35,7 +35,7 @@ package kabam.rotmg.news.view
             if (firstRun)
             {
                 firstRun = false;
-            };
+            }
         }
 
         override public function destroy():void

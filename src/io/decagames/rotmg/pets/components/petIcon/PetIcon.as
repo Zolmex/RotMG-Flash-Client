@@ -53,7 +53,7 @@ package io.decagames.rotmg.pets.components.petIcon
             if (this.enabled)
             {
                 return (super.dispatchEvent(_arg_1));
-            };
+            }
             return (false);
         }
 
@@ -93,7 +93,7 @@ package io.decagames.rotmg.pets.components.petIcon
             this.doShowTooltip = _arg_1;
             if (!_arg_1)
             {
-            };
+            }
         }
 
         public function get petVO():PetVO

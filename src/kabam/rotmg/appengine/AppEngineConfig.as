@@ -46,8 +46,8 @@ package kabam.rotmg.appengine
                 else
                 {
                     this.configureForSimplicity();
-                };
-            };
+                }
+            }
         }
 
         private function configureCoreDependencies():void

@@ -54,7 +54,7 @@ package com.company.assembleegameclient.ui.menu
             if (_arg_1 == this.ct_)
             {
                 return;
-            };
+            }
             this.ct_ = _arg_1;
             if (this.ct_ == null)
             {
@@ -67,7 +67,7 @@ package com.company.assembleegameclient.ui.menu
                 _local_2 = TextureRedrawer.redraw(_local_2, this.redrawSize(), true, 0);
                 this.icon_.bitmapData = _local_2;
                 this.text_.transform.colorTransform = this.ct_;
-            };
+            }
         }
 
         protected function onMouseOver(_arg_1:MouseEvent):void

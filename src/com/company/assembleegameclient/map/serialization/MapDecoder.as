@@ -72,7 +72,7 @@ package com.company.assembleegameclient.map.serialization
                         {
                             _local_11 = GroundLibrary.idToType_[_local_9["ground"]];
                             _arg_2.setGroundTile(_local_8, _local_7, _local_11);
-                        };
+                        }
                         _local_10 = _local_9["objs"];
                         if (_local_10 != null)
                         {
@@ -81,13 +81,13 @@ package com.company.assembleegameclient.map.serialization
                                 _local_13 = getGameObject(_local_12);
                                 _local_13.objectId_ = BasicObject.getNextFakeObjectId();
                                 _arg_2.addObj(_local_13, (_local_8 + 0.5), (_local_7 + 0.5));
-                            };
-                        };
-                    };
+                            }
+                        }
+                    }
                     _local_8++;
-                };
+                }
                 _local_7++;
-            };
+            }
         }
 
         public static function getGameObject(_arg_1:Object):GameObject

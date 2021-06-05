@@ -6,7 +6,7 @@
 package io.decagames.rotmg.seasonalEvent.SeasonalLeaderBoard
 {
     import flash.display.BitmapData;
-    import __AS3__.vec.Vector;
+    
 
     public class SeasonalLeaderBoardItemData 
     {

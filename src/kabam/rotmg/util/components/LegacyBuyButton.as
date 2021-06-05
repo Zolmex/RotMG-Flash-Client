@@ -16,7 +16,7 @@ package kabam.rotmg.util.components
     import kabam.rotmg.text.view.stringBuilder.LineBuilder;
     import flash.display.GraphicsSolidFill;
     import flash.display.GraphicsPath;
-    import __AS3__.vec.Vector;
+    
     import flash.display.IGraphicsData;
     import com.company.util.GraphicsUtil;
     import kabam.rotmg.ui.view.SignalWaiter;
@@ -28,7 +28,7 @@ package kabam.rotmg.util.components
     import flash.display.CapsStyle;
     import flash.display.JointStyle;
     import flash.display.Graphics;
-    import __AS3__.vec.*;
+    
 
     public class LegacyBuyButton extends BuyButton 
     {
@@ -89,7 +89,7 @@ package kabam.rotmg.util.components
                 _local_3 = ((this.prefix != "") ? this.lineBuilder.setParams(this.prefix, {"cost":_arg_1.toString()}) : this.staticStringBuilder.setString(_arg_1.toString()));
                 this.text.setStringBuilder(_local_3);
                 this.updateUI();
-            };
+            }
         }
 
         public function setStringBuilder(_arg_1:StringBuilder):void
@@ -116,7 +116,7 @@ package kabam.rotmg.util.components
                 mouseEnabled = _arg_1;
                 filters = ((_arg_1) ? [] : [grayfilter]);
                 this.draw();
-            };
+            }
         }
 
         override public function setWidth(_arg_1:int):void
@@ -157,7 +157,7 @@ package kabam.rotmg.util.components
                     break;
                 default:
                     this.icon.bitmapData = null;
-            };
+            }
             this.updateIconPosition();
         }
 
@@ -199,7 +199,7 @@ package kabam.rotmg.util.components
             if (this.withOutLine)
             {
                 this.drawOutline(graphics);
-            };
+            }
         }
 
         private function getWidth():int

@@ -41,7 +41,7 @@ package kabam.rotmg.account.kabam.model
                 if (requestDetails.length != 2)
                 {
                     throw (new Error("Invalid signed request"));
-                };
+                }
                 payload = this.base64UrlDecode(requestDetails[1]);
                 userSession = this.json.parse(payload);
             }
@@ -49,7 +49,7 @@ package kabam.rotmg.account.kabam.model
             {
                 logger.info(((("Failed to get user session: " + error.toString()) + ", signed request: ") + signedRequest));
                 userSession = null;
-            };
+            }
             return (userSession);
         }
 
@@ -61,7 +61,7 @@ package kabam.rotmg.account.kabam.model
             while (_local_4--)
             {
                 _arg_1 = (_arg_1 + "=");
-            };
+            }
             _arg_1 = _arg_1.replace(_local_2, "+").replace(_local_3, "/");
             return (this.decoder.decode(_arg_1));
         }

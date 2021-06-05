@@ -9,12 +9,12 @@ package io.decagames.rotmg.dailyQuests.view.list
     import io.decagames.rotmg.ui.tabs.UITabs;
     import io.decagames.rotmg.ui.tabs.TabButton;
     import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
-    import __AS3__.vec.Vector;
+    
     import io.decagames.rotmg.ui.texture.TextureParser;
     import io.decagames.rotmg.ui.tabs.UITab;
     import io.decagames.rotmg.ui.scroll.UIScrollbar;
     import io.decagames.rotmg.ui.buttons.BaseButton;
-    import __AS3__.vec.*;
+    
     import io.decagames.rotmg.ui.tabs.*;
 
     public class DailyQuestsList extends Sprite 
@@ -132,7 +132,7 @@ package io.decagames.rotmg.dailyQuests.view.list
             {
                 this.eventsTab.showIndicator = _arg_1;
                 this.eventsTab.clickSignal.add(this.onEventsClick);
-            };
+            }
         }
 
         private function onEventsClick(_arg_1:BaseButton):void
@@ -140,7 +140,7 @@ package io.decagames.rotmg.dailyQuests.view.list
             if (TabButton(_arg_1).hasIndicator)
             {
                 TabButton(_arg_1).showIndicator = false;
-            };
+            }
         }
 
         public function addQuestToList(_arg_1:DailyQuestListElement):void
@@ -148,7 +148,7 @@ package io.decagames.rotmg.dailyQuests.view.list
             if (!this._dailyQuestElements)
             {
                 this._dailyQuestElements = new Vector.<DailyQuestListElement>(0);
-            };
+            }
             _arg_1.x = 10;
             _arg_1.y = (this.questLinesPosition * 35);
             this.questsContainer.addChild(_arg_1);
@@ -161,7 +161,7 @@ package io.decagames.rotmg.dailyQuests.view.list
             if (!this._eventQuestElements)
             {
                 this._eventQuestElements = new Vector.<DailyQuestListElement>(0);
-            };
+            }
             _arg_1.x = 10;
             _arg_1.y = (this.eventLinesPosition * 35);
             this.eventsContainer.addChild(_arg_1);
@@ -186,14 +186,14 @@ package io.decagames.rotmg.dailyQuests.view.list
             {
                 _local_1 = (this.questsContainer.removeChildAt(0) as DailyQuestListElement);
                 _local_1 = null;
-            };
+            }
             this.questLinesPosition = 0;
             ((this._dailyQuestElements) && (this._dailyQuestElements.length = 0));
             while (this.eventsContainer.numChildren > 0)
             {
                 _local_1 = (this.eventsContainer.removeChildAt(0) as DailyQuestListElement);
                 _local_1 = null;
-            };
+            }
             this.eventLinesPosition = 0;
             ((this._eventQuestElements) && (this._eventQuestElements.length = 0));
         }
@@ -211,8 +211,8 @@ package io.decagames.rotmg.dailyQuests.view.list
                     {
                         _local_2 = _local_3;
                         break;
-                    };
-                };
+                    }
+                }
             }
             else
             {
@@ -224,10 +224,10 @@ package io.decagames.rotmg.dailyQuests.view.list
                         {
                             _local_2 = _local_4;
                             break;
-                        };
-                    };
-                };
-            };
+                        }
+                    }
+                }
+            }
             return (_local_2);
         }
 

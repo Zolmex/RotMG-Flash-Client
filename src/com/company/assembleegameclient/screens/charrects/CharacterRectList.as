@@ -18,7 +18,7 @@ package com.company.assembleegameclient.screens.charrects
     import com.company.assembleegameclient.appengine.SavedCharacter;
     import kabam.rotmg.classes.model.CharacterClass;
     import com.company.assembleegameclient.appengine.CharacterStats;
-    import __AS3__.vec.Vector;
+    
     import com.company.assembleegameclient.parameters.Parameters;
     import kabam.rotmg.core.StaticInjectorContext;
     import org.swiftsuspenders.Injector;
@@ -61,7 +61,7 @@ package com.company.assembleegameclient.screens.charrects
             if (this.canBuyCharSlot())
             {
                 this.createBuyRect();
-            };
+            }
             if (this.isSeasonalEvent)
             {
                 this.charactersAvailable = new UILabel();
@@ -76,11 +76,11 @@ package com.company.assembleegameclient.screens.charrects
                 else
                 {
                     _local_1 = (("You can create " + this.seasonalEventModel.remainingCharacters) + " more characters");
-                };
+                }
                 this.charactersAvailable.text = _local_1;
                 this.charactersAvailable.y = (this.yOffset + 120);
                 addChild(this.charactersAvailable);
-            };
+            }
         }
 
         private function canBuyCharSlot():Boolean
@@ -93,7 +93,7 @@ package com.company.assembleegameclient.screens.charrects
             else
             {
                 _local_1 = true;
-            };
+            }
             return (_local_1);
         }
 
@@ -112,14 +112,14 @@ package com.company.assembleegameclient.screens.charrects
                     if (_local_1)
                     {
                         _local_3.setSeasonalOverlay(true);
-                    };
+                    }
                     _local_3.addEventListener(MouseEvent.MOUSE_DOWN, this.onNewChar);
                     _local_3.y = this.yOffset;
                     addChild(_local_3);
                     this.yOffset = (this.yOffset + (CharacterRect.HEIGHT + 4));
                     _local_2++;
-                };
-            };
+                }
+            }
         }
 
         private function createSavedCharacters():void
@@ -142,11 +142,11 @@ package com.company.assembleegameclient.screens.charrects
                 else
                 {
                     _local_5.setIcon(this.getIcon(_local_2, 100));
-                };
+                }
                 _local_5.y = this.yOffset;
                 addChild(_local_5);
                 this.yOffset = (this.yOffset + (CharacterRect.HEIGHT + 4));
-            };
+            }
         }
 
         private function createSignals():void

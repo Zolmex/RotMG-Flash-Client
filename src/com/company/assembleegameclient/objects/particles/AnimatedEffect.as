@@ -7,7 +7,7 @@ package com.company.assembleegameclient.objects.particles
 {
     import com.company.assembleegameclient.objects.thrown.BitmapParticle;
     import com.company.assembleegameclient.objects.GameObject;
-    import __AS3__.vec.Vector;
+    
     import flash.display.BitmapData;
     import kabam.lib.math.easing.Quad;
 
@@ -47,7 +47,7 @@ package com.company.assembleegameclient.objects.particles
                 _bitmapData = this.images[_local_3];
                 this.currentTime = (this.currentTime + _arg_2);
                 return (this.percentDone < 1);
-            };
+            }
             return (this.percentDone < 1);
         }
 

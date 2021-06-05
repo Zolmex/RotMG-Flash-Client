@@ -42,7 +42,7 @@ package kabam.rotmg.account.transfer.services
 
         private function makeDataPacket():Object
         {
-            var _local_1:Object = {};
+            var _local_1:Object = {}
             _local_1.kabamemail = this.transferData.currentEmail;
             _local_1.kabampassword = this.transferData.currentPassword;
             _local_1.email = this.transferData.newEmail;
@@ -63,7 +63,7 @@ package kabam.rotmg.account.transfer.services
                 _local_3 = new XML(_arg_1);
                 this.account.updateUser(_local_3.GUID, _local_3.Secret, "");
                 this.account.setPlatformToken(_local_3.PlatformToken);
-            };
+            }
         }
 
 

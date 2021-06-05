@@ -35,7 +35,7 @@ package kabam.rotmg.pets.view.components
                 addChild(new CloseButtonLargeAsset());
                 scaleX = (scaleX * _arg_1);
                 scaleY = (scaleY * _arg_1);
-            };
+            }
             buttonMode = true;
             addEventListener(MouseEvent.CLICK, this.onClicked);
         }
@@ -50,7 +50,7 @@ package kabam.rotmg.pets.view.components
             else
             {
                 addEventListener(MouseEvent.CLICK, this.onClicked);
-            };
+            }
         }
 
         public function disableLegacyCloseBehavior():void
@@ -66,7 +66,7 @@ package kabam.rotmg.pets.view.components
                 removeEventListener(MouseEvent.CLICK, this.onClicked);
                 this.closeClicked.dispatch();
                 this.clicked.dispatch();
-            };
+            }
         }
 
 

@@ -11,7 +11,7 @@ package com.company.assembleegameclient.ui
     import kabam.rotmg.text.model.TextKey;
     import flash.events.MouseEvent;
     import kabam.rotmg.messaging.impl.incoming.TradeStart;
-    import __AS3__.vec.Vector;
+    
 
     public class TradePanel extends Sprite 
     {
@@ -69,7 +69,7 @@ package com.company.assembleegameclient.ui
             if (((this.myInv_.isOffer(_arg_1)) && (this.yourInv_.isOffer(_arg_2))))
             {
                 this.yourInv_.setMessage(TradeInventory.TRADEACCEPTED_MESSAGE);
-            };
+            }
         }
 
         private function onAddedToStage(_arg_1:Event):void
@@ -120,7 +120,7 @@ package com.company.assembleegameclient.ui
             else
             {
                 this.myInv_.setMessage(TradeInventory.CLICKITEMS_MESSAGE);
-            };
+            }
             if (((_local_1 - _local_3) - _local_4) > 0)
             {
                 this.yourInv_.setMessage(TradeInventory.NOTENOUGHSPACE_MESSAGE);
@@ -129,7 +129,7 @@ package com.company.assembleegameclient.ui
             else
             {
                 this.yourInv_.setMessage(TradeInventory.TRADEWAITING_MESSAGE);
-            };
+            }
             if (_local_5)
             {
                 this.tradeButton_.reset();
@@ -137,7 +137,7 @@ package com.company.assembleegameclient.ui
             else
             {
                 this.tradeButton_.disable();
-            };
+            }
         }
 
 

@@ -5,8 +5,8 @@
 
 package kabam.lib.tasks
 {
-    import __AS3__.vec.Vector;
-    import __AS3__.vec.*;
+    
+    
 
     public class TaskSequence extends BaseTask 
     {
@@ -47,7 +47,7 @@ package kabam.lib.tasks
             for each (_local_1 in this.tasks)
             {
                 _local_1.reset();
-            };
+            }
         }
 
         private function doNextTaskOrComplete():void
@@ -59,7 +59,7 @@ package kabam.lib.tasks
             else
             {
                 completeTask(true);
-            };
+            }
         }
 
         private function isAnotherTask():Boolean
@@ -83,7 +83,7 @@ package kabam.lib.tasks
             else
             {
                 completeTask(false, _arg_3);
-            };
+            }
         }
 
 

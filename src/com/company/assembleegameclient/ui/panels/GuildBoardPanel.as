@@ -36,7 +36,7 @@ package com.company.assembleegameclient.ui.panels
             if (_local_1 == null)
             {
                 return;
-            };
+            }
             gs_.addChild(new GuildBoardWindow((_local_1.guildRank_ >= GuildUtil.OFFICER)));
         }
 
@@ -55,7 +55,7 @@ package com.company.assembleegameclient.ui.panels
             if (((_arg_1.keyCode == Parameters.data_.interact) && (stage.focus == null)))
             {
                 this.openWindow();
-            };
+            }
         }
 
 

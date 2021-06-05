@@ -54,7 +54,7 @@ package com.company.assembleegameclient.objects.particles
                 _local_11 = new ExplosionComplexParticle(this.color_, 0.2, size_, this.maxLife_, _local_7, _local_8, _local_10);
                 map_.addObj(_local_11, x_, y_);
                 _local_4++;
-            };
+            }
             return (false);
         }
 
@@ -83,7 +83,7 @@ class ExplosionComplexParticle extends Particle
     public var lifetime_:int;
     public var timeLeft_:int;
     protected var moveVec_:Vector3D = new Vector3D();
-    /*private*/ var deleted:Boolean = false;
+    private var deleted:Boolean = false;
 
     public function ExplosionComplexParticle(_arg_1:uint, _arg_2:Number, _arg_3:int, _arg_4:int, _arg_5:Number, _arg_6:Number, _arg_7:Number)
     {
@@ -104,9 +104,9 @@ class ExplosionComplexParticle extends Particle
             {
                 total_--;
                 this.deleted = true;
-            };
+            }
             return (false);
-        };
+        }
         x_ = (x_ + ((this.moveVec_.x * _arg_2) * 0.008));
         y_ = (y_ + ((this.moveVec_.y * _arg_2) * 0.008));
         z_ = (z_ + ((this.moveVec_.z * _arg_2) * 0.008));

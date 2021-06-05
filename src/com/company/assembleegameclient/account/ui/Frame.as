@@ -9,7 +9,6 @@ package com.company.assembleegameclient.account.ui
     import kabam.rotmg.text.view.TextFieldDisplayConcrete;
     import com.company.assembleegameclient.ui.DeprecatedClickableText;
     import kabam.rotmg.core.service.GoogleAnalytics;
-    import __AS3__.vec.Vector;
     import flash.display.GraphicsSolidFill;
     import flash.display.GraphicsStroke;
     import flash.display.LineScaleMode;
@@ -25,7 +24,6 @@ package com.company.assembleegameclient.account.ui
     import flash.text.TextFieldAutoSize;
     import kabam.rotmg.account.web.view.LabeledField;
     import flash.display.DisplayObject;
-    import __AS3__.vec.*;
 
     public class Frame extends Sprite 
     {
@@ -76,7 +74,7 @@ package com.company.assembleegameclient.account.ui
                 this.leftButton_.buttonMode = true;
                 this.leftButton_.x = 109;
                 addChild(this.leftButton_);
-            };
+            }
         }
 
         private function makeAndAddRightButton(_arg_1:String):void
@@ -88,7 +86,7 @@ package com.company.assembleegameclient.account.ui
                 this.rightButton_.x = ((this.w_ - this.rightButton_.width) - 26);
                 this.rightButton_.setAutoSize(TextFieldAutoSize.RIGHT);
                 addChild(this.rightButton_);
-            };
+            }
         }
 
         public function addLabeledField(_arg_1:LabeledField):void
@@ -132,7 +130,7 @@ package com.company.assembleegameclient.account.ui
             {
                 positionText(text);
                 draw();
-            };
+            }
             text = new TextFieldDisplayConcrete().setSize(12).setColor(0xFFFFFF);
             text.setStringBuilder(new LineBuilder().setParams(plainText, tokens));
             text.filters = [new DropShadowFilter(0, 0, 0)];
@@ -187,7 +185,7 @@ package com.company.assembleegameclient.account.ui
             for each (_local_1 in this.navigationLinks_)
             {
                 _local_1.setDefaultColor(0xB3B3B3);
-            };
+            }
             this.leftButton_.setDefaultColor(0xB3B3B3);
             this.rightButton_.setDefaultColor(0xB3B3B3);
         }
@@ -200,7 +198,7 @@ package com.company.assembleegameclient.account.ui
             for each (_local_1 in this.navigationLinks_)
             {
                 _local_1.setDefaultColor(0xFFFFFF);
-            };
+            }
             this.leftButton_.setDefaultColor(0xFFFFFF);
             this.rightButton_.setDefaultColor(0xFFFFFF);
         }
@@ -213,11 +211,11 @@ package com.company.assembleegameclient.account.ui
             if (this.textInputFields_.length > 0)
             {
                 stage.focus = this.textInputFields_[0].inputText_;
-            };
+            }
             if (((this.analyticsPageName_) && (this.googleAnalytics)))
             {
                 this.googleAnalytics.trackPageView(this.analyticsPageName_);
-            };
+            }
         }
 
         protected function draw():void

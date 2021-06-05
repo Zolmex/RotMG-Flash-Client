@@ -83,7 +83,7 @@ package kabam.rotmg.game.view
             {
                 this.infoButton_ = new DeprecatedTextButton(16, _local_6);
                 addChild(this.infoButton_);
-            };
+            }
             this.nameText_.setStringBuilder(new LineBuilder().setParams("Shop"));
             this.bitmap_.bitmapData = ArenaViewAssetFactory.returnHostBitmap(_arg_2).bitmapData;
             addEventListener(Event.ADDED_TO_STAGE, this.onAddedToStage);
@@ -95,7 +95,7 @@ package kabam.rotmg.game.view
             if (_arg_1 == this.owner_)
             {
                 return;
-            };
+            }
             this.owner_ = _arg_1;
             this.buyButton_.setPrice(this.owner_.price_, this.owner_.currency_);
             var _local_2:String = this.owner_.soldObjectName();
@@ -139,15 +139,15 @@ package kabam.rotmg.game.view
                 else
                 {
                     _local_4.dispatch(new MysteryBoxSelectModal());
-                };
+                }
             }
             else
             {
                 if (!_local_3.isRegistered())
                 {
                     _local_4.dispatch(new RegisterPromptDialog("SellableObjectPanelMediator.text", {"type":Currency.typeToName(Currency.GOLD)}));
-                };
-            };
+                }
+            }
         }
 
         private function onKeyDown(_arg_1:KeyboardEvent):void
@@ -155,7 +155,7 @@ package kabam.rotmg.game.view
             if (((_arg_1.keyCode == Parameters.data_.interact) && (stage.focus == null)))
             {
                 this.onInfoButton();
-            };
+            }
         }
 
         override public function draw():void
@@ -166,7 +166,7 @@ package kabam.rotmg.game.view
             if (!contains(this.infoButton_))
             {
                 addChild(this.infoButton_);
-            };
+            }
         }
 
 

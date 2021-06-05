@@ -57,7 +57,7 @@ package com.company.assembleegameclient.screens
             {
                 TweenMax.killTweensOf(this._character);
                 this._character.filters = [];
-            };
+            }
         }
 
         public function updateTimeLabel(_arg_1:Number):void
@@ -77,8 +77,8 @@ package com.company.assembleegameclient.screens
                 else
                 {
                     _local_3 = (_local_3 + (((((((_local_2.days > 9) ? _local_2.days.toString() : ("0" + _local_2.days.toString())) + "d ") + ((_local_2.hours > 9) ? _local_2.hours.toString() : ("0" + _local_2.hours.toString()))) + "h ") + ((_local_2.minutes > 9) ? _local_2.minutes.toString() : ("0" + _local_2.minutes.toString()))) + "m"));
-                };
-            };
+                }
+            }
             this._timeLabel.text = _local_3;
             this._timeLabel.x = ((this._panelBackground.width - this._timeLabel.width) / 2);
             this._timeLabel.y = (this._titleLabel.y + this._titleLabel.height);
@@ -90,7 +90,7 @@ package com.company.assembleegameclient.screens
             if (this._leagueData.endDate)
             {
                 this._endDate = this._leagueData.endDate;
-            };
+            }
             this._container = new Sprite();
             addChild(this._container);
             this.createPanelBackground();
@@ -126,7 +126,7 @@ package com.company.assembleegameclient.screens
                 this._timeLabel = new UILabel();
                 DefaultLabelFormat.createLabelFormat(this._timeLabel, 14, 0xFE9700, TextFormatAlign.CENTER);
                 addChild(this._timeLabel);
-            };
+            }
             if (this._leagueData.maxCharacters != -1)
             {
                 this._maxCharacters = new UILabel();
@@ -138,7 +138,7 @@ package com.company.assembleegameclient.screens
                 this._maxCharacters.x = ((this._panelBackground.width - this._maxCharacters.width) / 2);
                 this._maxCharacters.y = (this._panelBackground.y - 8);
                 addChild(this._maxCharacters);
-            };
+            }
             this._descriptionLabel = new UILabel();
             DefaultLabelFormat.createLabelFormat(this._descriptionLabel, 16, 0xFFFFFF, TextFormatAlign.CENTER);
             this._descriptionLabel.width = 280;
@@ -159,7 +159,7 @@ package com.company.assembleegameclient.screens
                 this._quoteLabel.x = ((this._panelBackground.width - this._quoteLabel.width) / 2);
                 this._quoteLabel.y = (this._descriptionLabel.y + this._descriptionLabel.height);
                 addChild(this._quoteLabel);
-            };
+            }
         }
 
         public function get leagueType():int

@@ -29,7 +29,7 @@ package kabam.lib.console.view
         private var watchTextField:TextField = new TextField();
         private const logged:Array = [];
         private const watched:Array = [];
-        private const watchMap:Object = {};
+        private const watchMap:Object = {}
 
         public function ConsoleOutputView()
         {
@@ -64,7 +64,7 @@ package kabam.lib.console.view
             {
                 delete this.watchMap[_arg_1];
                 this.watched.splice(this.watched.indexOf(_local_2), 1);
-            };
+            }
         }
 
         private function makeWatch(_arg_1:String):Watch
@@ -89,7 +89,7 @@ package kabam.lib.console.view
             for (_local_1 in this.watchMap)
             {
                 delete this.watchMap[_local_1];
-            };
+            }
         }
 
         public function resize(_arg_1:Rectangle):void

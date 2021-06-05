@@ -21,19 +21,19 @@ package io.decagames.rotmg.pets.utils
             _local_1[PetRarityEnum.COMMON] = {
                 "gold":100,
                 "fame":300
-            };
+            }
             _local_1[PetRarityEnum.UNCOMMON] = {
                 "gold":240,
                 "fame":1000
-            };
+            }
             _local_1[PetRarityEnum.RARE] = {
                 "gold":600,
                 "fame":4000
-            };
+            }
             _local_1[PetRarityEnum.LEGENDARY] = {
                 "gold":1800,
                 "fame":15000
-            };
+            }
             return (_local_1);
         }
 
@@ -43,23 +43,23 @@ package io.decagames.rotmg.pets.utils
             _local_1[PetRarityEnum.COMMON] = {
                 "gold":5,
                 "fame":10
-            };
+            }
             _local_1[PetRarityEnum.UNCOMMON] = {
                 "gold":12,
                 "fame":30
-            };
+            }
             _local_1[PetRarityEnum.RARE] = {
                 "gold":30,
                 "fame":100
-            };
+            }
             _local_1[PetRarityEnum.LEGENDARY] = {
                 "gold":60,
                 "fame":350
-            };
+            }
             _local_1[PetRarityEnum.DIVINE] = {
                 "gold":150,
                 "fame":1000
-            };
+            }
             return (_local_1);
         }
 

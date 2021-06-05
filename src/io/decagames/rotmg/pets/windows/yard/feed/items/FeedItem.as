@@ -53,8 +53,8 @@ package io.decagames.rotmg.pets.windows.yard.feed.items
                 if (_local_4.hasOwnProperty("feedPower"))
                 {
                     this._feedPower = _local_4.feedPower;
-                };
-            };
+                }
+            }
             var _local_3:BitmapTextFactory = StaticInjectorContext.getInjector().getInstance(BitmapTextFactory);
             if ((((_local_2) && (_local_2.hasOwnProperty("Quantity"))) && (_local_3)))
             {
@@ -62,7 +62,7 @@ package io.decagames.rotmg.pets.windows.yard.feed.items
                 _local_6 = new Matrix();
                 _local_6.translate(8, 7);
                 _local_1.draw(_local_5, _local_6);
-            };
+            }
             this.imageBitmap.bitmapData = _local_1;
             addChild(this.imageBitmap);
         }
@@ -98,7 +98,7 @@ package io.decagames.rotmg.pets.windows.yard.feed.items
             else
             {
                 this.renderBackground(0x454545, 0.25);
-            };
+            }
         }
 
         public function get item():InventoryTile

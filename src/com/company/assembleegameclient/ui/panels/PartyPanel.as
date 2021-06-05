@@ -6,7 +6,7 @@
 package com.company.assembleegameclient.ui.panels
 {
     import flash.display.DisplayObjectContainer;
-    import __AS3__.vec.Vector;
+    
     import com.company.assembleegameclient.ui.PlayerGameObjectListItem;
     import com.company.assembleegameclient.objects.Party;
     import com.company.assembleegameclient.ui.menu.PlayerMenu;
@@ -18,7 +18,7 @@ package com.company.assembleegameclient.ui.panels
     import flash.geom.ColorTransform;
     import flash.utils.getTimer;
     import com.company.util.MoreColorUtil;
-    import __AS3__.vec.*;
+    
 
     public class PartyPanel extends Panel 
     {
@@ -59,7 +59,7 @@ package com.company.assembleegameclient.ui.panels
                 _local_2.addEventListener(MouseEvent.MOUSE_OVER, this.onMouseOver);
                 _local_2.addEventListener(MouseEvent.MOUSE_OUT, this.onMouseOut);
                 _local_2.addEventListener(MouseEvent.MOUSE_DOWN, this.onMouseDown);
-            };
+            }
         }
 
         private function onRemovedFromStage(_arg_1:Event):void
@@ -71,7 +71,7 @@ package com.company.assembleegameclient.ui.panels
                 _local_2.removeEventListener(MouseEvent.MOUSE_OVER, this.onMouseOver);
                 _local_2.removeEventListener(MouseEvent.MOUSE_OUT, this.onMouseOut);
                 _local_2.removeEventListener(MouseEvent.MOUSE_DOWN, this.onMouseDown);
-            };
+            }
         }
 
         private function onMouseOver(_arg_1:MouseEvent):void
@@ -79,13 +79,13 @@ package com.company.assembleegameclient.ui.panels
             if (((!(this.menu == null)) && (!(this.menu.parent == null))))
             {
                 return;
-            };
+            }
             var _local_2:PlayerGameObjectListItem = (_arg_1.currentTarget as PlayerGameObjectListItem);
             var _local_3:Player = (_local_2.go as Player);
             if (((_local_3 == null) || (_local_3.texture_ == null)))
             {
                 return;
-            };
+            }
             this.mouseOver_ = true;
         }
 
@@ -115,8 +115,8 @@ package com.company.assembleegameclient.ui.panels
                 if (_local_3)
                 {
                     _local_3.setEnabled(true);
-                };
-            };
+                }
+            }
             _arg_1.currentTarget.removeEventListener(Event.REMOVED_FROM_STAGE, this.onMenuRemoved);
         }
 
@@ -126,7 +126,7 @@ package com.company.assembleegameclient.ui.panels
             {
                 this.menu.remove();
                 this.menu = null;
-            };
+            }
         }
 
         override public function draw():void
@@ -142,9 +142,9 @@ package com.company.assembleegameclient.ui.panels
                 for each (_local_4 in this.memberPanels)
                 {
                     _local_4.clear();
-                };
+                }
                 return;
-            };
+            }
             var _local_2:int;
             var _local_3:int;
             while (_local_3 < Party.NUM_MEMBERS)
@@ -156,11 +156,11 @@ package com.company.assembleegameclient.ui.panels
                 else
                 {
                     _local_5 = _local_1.members_[_local_3];
-                };
+                }
                 if (((!(_local_5 == null)) && (_local_5.map_ == null)))
                 {
                     _local_5 = null;
-                };
+                }
                 _local_6 = null;
                 if (_local_5 != null)
                 {
@@ -169,11 +169,11 @@ package com.company.assembleegameclient.ui.panels
                         if (_local_2 == 0)
                         {
                             _local_2 = getTimer();
-                        };
+                        }
                         _local_7 = (int((Math.abs(Math.sin((_local_2 / 200))) * 10)) / 10);
                         _local_8 = 128;
                         _local_6 = new ColorTransform(1, 1, 1, 1, (_local_7 * _local_8), (-(_local_7) * _local_8), (-(_local_7) * _local_8));
-                    };
+                    }
                     if (!_local_5.starred_)
                     {
                         if (_local_6 != null)
@@ -183,12 +183,12 @@ package com.company.assembleegameclient.ui.panels
                         else
                         {
                             _local_6 = MoreColorUtil.darkCT;
-                        };
-                    };
-                };
+                        }
+                    }
+                }
                 this.memberPanels[_local_3].draw(_local_5, _local_6);
                 _local_3++;
-            };
+            }
         }
 
 

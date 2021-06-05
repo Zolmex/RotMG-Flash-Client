@@ -63,7 +63,7 @@ package io.decagames.rotmg.pets.components.petItem
             if (this.backgroundGraphic)
             {
                 removeChild(this.backgroundGraphic);
-            };
+            }
             this.backgroundGraphic = PetItemBackground(ItemBackgroundFactory.create(this.size, this.getCuts(), _arg_2, _arg_3));
             addChildAt(this.backgroundGraphic, 0);
         }
@@ -79,7 +79,7 @@ package io.decagames.rotmg.pets.components.petItem
             if (this.background != REGULAR)
             {
                 _local_1[CUT_STATES.indexOf(this.background)] = 1;
-            };
+            }
             return (_local_1);
         }
 

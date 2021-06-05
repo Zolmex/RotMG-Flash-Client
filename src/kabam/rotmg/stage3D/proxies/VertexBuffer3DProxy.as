@@ -6,7 +6,7 @@
 package kabam.rotmg.stage3D.proxies
 {
     import flash.display3D.VertexBuffer3D;
-    import __AS3__.vec.Vector;
+    
 
     public class VertexBuffer3DProxy 
     {

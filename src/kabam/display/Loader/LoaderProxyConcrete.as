@@ -30,7 +30,7 @@ package kabam.display.Loader
             {
                 this._contentLoaderInfo = new LoaderInfoProxyConcrete();
                 this._contentLoaderInfo.loaderInfo = this.loader.contentLoaderInfo;
-            };
+            }
             return (this._contentLoaderInfo);
         }
 

@@ -11,7 +11,7 @@ package kabam.rotmg.core.model
     import kabam.rotmg.account.kongregate.KongregateAccount;
     import com.company.assembleegameclient.parameters.Parameters;
     import com.company.assembleegameclient.appengine.SavedCharacter;
-    import __AS3__.vec.Vector;
+    
     import com.company.assembleegameclient.appengine.SavedNewsItem;
     import kabam.rotmg.servers.api.LatLong;
 
@@ -106,7 +106,7 @@ package kabam.rotmg.core.model
             {
                 this.charList.credits_ = _arg_1;
                 this.creditsChanged.dispatch(_arg_1);
-            };
+            }
         }
 
         public function getFame():int
@@ -120,7 +120,7 @@ package kabam.rotmg.core.model
             {
                 this.charList.fame_ = _arg_1;
                 this.fameChanged.dispatch(_arg_1);
-            };
+            }
         }
 
         public function getTokens():int
@@ -134,7 +134,7 @@ package kabam.rotmg.core.model
             {
                 this.charList.tokens_ = _arg_1;
                 this.tokensChanged.dispatch(_arg_1);
-            };
+            }
         }
 
         public function getCharacterCount():int
@@ -155,7 +155,7 @@ package kabam.rotmg.core.model
             {
                 this.charList.savedChars_.splice(_local_3, 1);
                 this.charList.numChars_--;
-            };
+            }
         }
 
         public function getAccountId():String
@@ -207,8 +207,8 @@ package kabam.rotmg.core.model
                 if (_local_2.charId() == _arg_1)
                 {
                     return (_local_2);
-                };
-            };
+                }
+            }
             return (null);
         }
 

@@ -41,11 +41,11 @@ package kabam.rotmg.account.kabam.view
                 if (((_local_2) && (_local_2.length)))
                 {
                     _local_1 = _local_2;
-                };
+                }
             }
             catch(error:Error)
             {
-            };
+            }
             return (_local_1);
         }
 

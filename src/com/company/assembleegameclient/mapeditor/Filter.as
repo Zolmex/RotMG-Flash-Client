@@ -12,7 +12,7 @@ package com.company.assembleegameclient.mapeditor
     import flash.events.FocusEvent;
     import com.company.assembleegameclient.objects.ObjectLibrary;
     import flash.events.Event;
-    import __AS3__.vec.Vector;
+    
 
     public class Filter extends Sprite 
     {
@@ -95,7 +95,7 @@ package com.company.assembleegameclient.mapeditor
             if (this._minInput.text() == "")
             {
                 return (0);
-            };
+            }
             return (Number(this._minInput.text()));
         }
 
@@ -104,7 +104,7 @@ package com.company.assembleegameclient.mapeditor
             if (this._maxInput.text() == "")
             {
                 return (-1);
-            };
+            }
             return (Number(this._maxInput.text()));
         }
 
@@ -171,7 +171,7 @@ package com.company.assembleegameclient.mapeditor
                 case this._minInput:
                     this._minPrompt.visible = false;
                     return;
-            };
+            }
         }
 
         private function onFocusOut(_arg_1:FocusEvent):void
@@ -182,21 +182,21 @@ package com.company.assembleegameclient.mapeditor
                     if (this._search.text() == "")
                     {
                         this._searchPrompt.visible = this._isSearchEnabled;
-                    };
+                    }
                     return;
                 case this._maxInput:
                     if (this._maxInput.text() == "")
                     {
                         this._maxPrompt.visible = this._isValueFilterEnabled;
-                    };
+                    }
                     return;
                 case this._minInput:
                     if (this._minInput.text() == "")
                     {
                         this._minPrompt.visible = this._isValueFilterEnabled;
-                    };
+                    }
                     return;
-            };
+            }
         }
 
 

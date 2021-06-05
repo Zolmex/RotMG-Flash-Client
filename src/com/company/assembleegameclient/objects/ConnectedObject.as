@@ -11,7 +11,7 @@ package com.company.assembleegameclient.objects
     import flash.display.BitmapData;
     import com.company.assembleegameclient.map.Square;
     import flash.geom.Utils3D;
-    import __AS3__.vec.Vector;
+    
     import flash.display.IGraphicsData;
     import com.company.assembleegameclient.map.Camera;
     import com.company.assembleegameclient.engine3d.Object3D;
@@ -60,7 +60,7 @@ package com.company.assembleegameclient.objects
             if (dict_ == null)
             {
                 init();
-            };
+            }
             var _local_2:* = (_arg_1 & 0x0F0F0F0F);
             return (dict_[_local_2]);
         }
@@ -76,9 +76,9 @@ package com.company.assembleegameclient.objects
                     dict_[_arg_1] = new ConnectedResults(_arg_2, _local_3);
                     _local_4 = (_arg_1 & 0xFF);
                     _arg_1 = ((_arg_1 >> 8) | (_local_4 << 24));
-                };
+                }
                 _local_3++;
-            };
+            }
         }
 
 
@@ -92,7 +92,7 @@ package com.company.assembleegameclient.objects
             if (obj3D_ == null)
             {
                 this.rebuild3D();
-            };
+            }
             Utils3D.projectVectors(_arg_2.wToS_, obj3D_.vW_, obj3D_.vS_, obj3D_.uvts_);
             for each (_local_4 in obj3D_.faces_)
             {
@@ -105,10 +105,10 @@ package com.company.assembleegameclient.objects
                     if (((_local_8 == null) || (_local_8.texture_ == null)))
                     {
                         _local_7 = null;
-                    };
-                };
+                    }
+                }
                 _local_4.draw(_arg_1, 0, _local_7);
-            };
+            }
         }
 
         public function rebuild3D():void
@@ -119,7 +119,7 @@ package com.company.assembleegameclient.objects
             {
                 obj3D_ = null;
                 return;
-            };
+            }
             this.rotation_ = _local_1.rotation_;
             switch (_local_1.type_)
             {
@@ -144,7 +144,7 @@ package com.company.assembleegameclient.objects
                 default:
                     obj3D_ = null;
                     return;
-            };
+            }
             obj3D_.setPosition(x_, y_, 0, (this.rotation_ * 90));
         }
 

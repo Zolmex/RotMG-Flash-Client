@@ -36,7 +36,7 @@ package com.company.assembleegameclient.objects.particles
             if (this.go_.map_ == null)
             {
                 return (false);
-            };
+            }
             x_ = this.go_.x_;
             y_ = this.go_.y_;
             var _local_3:int = 20;
@@ -51,7 +51,7 @@ package com.company.assembleegameclient.objects.particles
                 _local_10 = new GasParticle(_local_5, this.color_, _local_9, this.props.spread, 0.75, _local_7, _local_8);
                 map_.addObj(_local_10, x_, y_);
                 _local_4++;
-            };
+            }
             return (true);
         }
 

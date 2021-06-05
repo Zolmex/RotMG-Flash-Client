@@ -69,8 +69,8 @@ package io.decagames.rotmg.unity.popup
                 else
                 {
                     this.submit();
-                };
-            };
+                }
+            }
         }
 
         private function submit():void
@@ -94,7 +94,7 @@ package io.decagames.rotmg.unity.popup
             {
                 this.logger.error(_arg_2);
                 this.showSignUpResult(_arg_2);
-            };
+            }
         }
 
         private function checkEmail(_arg_1:String):Boolean

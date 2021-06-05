@@ -6,7 +6,7 @@
 package com.company.util
 {
     import flash.display.GraphicsEndFill;
-    import __AS3__.vec.Vector;
+    
     import flash.display.GraphicsPathCommand;
     import flash.display.GraphicsStroke;
     import flash.display.LineScaleMode;
@@ -74,7 +74,7 @@ package com.company.util
                 _local_13 = (_arg_2 + ((_arg_3 * _local_6) * Math.sin(_local_9)));
                 _arg_4.curveTo(_local_12, _local_13, _local_10, _local_11);
                 _local_7++;
-            };
+            }
         }
 
         public static function drawCutEdgeRect(_arg_1:int, _arg_2:int, _arg_3:int, _arg_4:int, _arg_5:int, _arg_6:Array, _arg_7:GraphicsPath):void
@@ -87,7 +87,7 @@ package com.company.util
             else
             {
                 _arg_7.moveTo(_arg_1, _arg_2);
-            };
+            }
             if (_arg_6[1] != 0)
             {
                 _arg_7.lineTo(((_arg_1 + _arg_3) - _arg_5), _arg_2);
@@ -96,7 +96,7 @@ package com.company.util
             else
             {
                 _arg_7.lineTo((_arg_1 + _arg_3), _arg_2);
-            };
+            }
             if (_arg_6[2] != 0)
             {
                 _arg_7.lineTo((_arg_1 + _arg_3), ((_arg_2 + _arg_4) - _arg_5));
@@ -105,7 +105,7 @@ package com.company.util
             else
             {
                 _arg_7.lineTo((_arg_1 + _arg_3), (_arg_2 + _arg_4));
-            };
+            }
             if (_arg_6[3] != 0)
             {
                 _arg_7.lineTo((_arg_1 + _arg_5), (_arg_2 + _arg_4));
@@ -114,7 +114,7 @@ package com.company.util
             else
             {
                 _arg_7.lineTo(_arg_1, (_arg_2 + _arg_4));
-            };
+            }
             if (_arg_6[0] != 0)
             {
                 _arg_7.lineTo(_arg_1, (_arg_2 + _arg_5));
@@ -122,7 +122,7 @@ package com.company.util
             else
             {
                 _arg_7.lineTo(_arg_1, _arg_2);
-            };
+            }
         }
 
         public static function drawDiamond(_arg_1:Number, _arg_2:Number, _arg_3:Number, _arg_4:GraphicsPath):void

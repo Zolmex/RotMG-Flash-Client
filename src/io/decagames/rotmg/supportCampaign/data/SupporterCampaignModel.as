@@ -5,7 +5,7 @@
 
 package io.decagames.rotmg.supportCampaign.data
 {
-    import __AS3__.vec.Vector;
+    
     import io.decagames.rotmg.supportCampaign.data.vo.RankVO;
     import flash.utils.Dictionary;
     import kabam.rotmg.core.StaticInjectorContext;
@@ -14,7 +14,7 @@ package io.decagames.rotmg.supportCampaign.data
     import flash.display.DisplayObject;
     import com.company.assembleegameclient.util.TimeUtil;
     import io.decagames.rotmg.utils.date.TimeLeft;
-    import __AS3__.vec.*;
+    
 
     public class SupporterCampaignModel 
     {
@@ -53,11 +53,11 @@ package io.decagames.rotmg.supportCampaign.data
             if (this._hasValidData)
             {
                 this.parseConfig(_arg_1);
-            };
+            }
             if (_arg_1.hasOwnProperty("CampaignProgress"))
             {
                 this.parseUpdateData(_arg_1.CampaignProgress, false);
-            };
+            }
         }
 
         public function updatePoints(_arg_1:int):void
@@ -73,7 +73,7 @@ package io.decagames.rotmg.supportCampaign.data
             if (!this.hasValidData)
             {
                 return (0);
-            };
+            }
             var _local_2:int;
             if (((!(this._ranks == null)) && (this._ranks.length > 0)))
             {
@@ -83,10 +83,10 @@ package io.decagames.rotmg.supportCampaign.data
                     if (_arg_1 >= this._ranks[_local_3])
                     {
                         _local_2 = (_local_3 + 1);
-                    };
+                    }
                     _local_3++;
-                };
-            };
+                }
+            }
             return (_local_2);
         }
 
@@ -103,16 +103,16 @@ package io.decagames.rotmg.supportCampaign.data
             if (this._tempRank == 0)
             {
                 this._tempRank = this._rank;
-            };
+            }
             this._claimed = int(this.getXMLData(_arg_1, "Claimed", false));
             if (_arg_2)
             {
                 StaticInjectorContext.getInjector().getInstance(UpdateCampaignProgress).dispatch();
-            };
+            }
             if (this.hasMaxRank())
             {
                 StaticInjectorContext.getInjector().getInstance(MaxRankReachedSignal).dispatch();
-            };
+            }
         }
 
         private function parseConfig(_arg_1:XML):void
@@ -130,7 +130,7 @@ package io.decagames.rotmg.supportCampaign.data
             if (this._ranks)
             {
                 this._maxRank = this._ranks.length;
-            };
+            }
             this._shopPurchasePointsRatio = int(this.getXMLData(_arg_1.CampaignConfig, "ShopPurchasePointsRatio", true));
             this._rankConfig = new Vector.<RankVO>();
             var _local_2:int;
@@ -138,13 +138,13 @@ package io.decagames.rotmg.supportCampaign.data
             {
                 this._rankConfig.push(new RankVO(this._ranks[_local_2], SupporterCampaignModel.RANKS_NAMES[_local_2]));
                 _local_2++;
-            };
+            }
             this._picUrls = new Vector.<String>(0);
             var _local_3:XMLList = XML(_arg_1.CampaignConfig.PicUrls).children();
             for each (_local_4 in _local_3)
             {
                 this._picUrls.push(_local_4);
-            };
+            }
         }
 
         private function parseConfigStatus(_arg_1:XML):void
@@ -160,11 +160,11 @@ package io.decagames.rotmg.supportCampaign.data
             if (_arg_1.hasOwnProperty(_arg_2))
             {
                 return (String(_arg_1[_arg_2]));
-            };
+            }
             if (_arg_3)
             {
                 this._hasValidData = false;
-            };
+            }
             return ("");
         }
 
@@ -178,7 +178,7 @@ package io.decagames.rotmg.supportCampaign.data
             if (!this._campaignImages[_arg_1])
             {
                 this._campaignImages[_arg_1] = _arg_2;
-            };
+            }
         }
 
         public function getCampaignPictureUrlByRank(_arg_1:int):String
@@ -188,7 +188,7 @@ package io.decagames.rotmg.supportCampaign.data
             {
                 _arg_1 = ((_arg_1 == 0) ? 1 : _arg_1);
                 _local_2 = this._picUrls[(_arg_1 - 1)];
-            };
+            }
             return (_local_2);
         }
 
@@ -213,16 +213,16 @@ package io.decagames.rotmg.supportCampaign.data
             if (this._ranks.length == 0)
             {
                 return (1);
-            };
+            }
             var _local_1:int = 1;
             for each (_local_2 in this._ranks)
             {
                 if (((this._rank >= _local_1) && (this._claimed < _local_1)))
                 {
                     return (_local_1);
-                };
+                }
                 _local_1++;
-            };
+            }
             return (this._rank);
         }
 
@@ -233,7 +233,7 @@ package io.decagames.rotmg.supportCampaign.data
             if (_local_2 <= 0)
             {
                 return ("");
-            };
+            }
             if (_local_2 > TimeUtil.DAY_IN_S)
             {
                 _local_1 = (_local_1 + TimeLeft.parse(_local_2, "%dd %hh"));
@@ -253,9 +253,9 @@ package io.decagames.rotmg.supportCampaign.data
                     else
                     {
                         _local_1 = (_local_1 + TimeLeft.parse(_local_2, "%ss"));
-                    };
-                };
-            };
+                    }
+                }
+            }
             return (_local_1);
         }
 

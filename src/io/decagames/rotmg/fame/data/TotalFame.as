@@ -5,10 +5,10 @@
 
 package io.decagames.rotmg.fame.data
 {
-    import __AS3__.vec.Vector;
+    
     import io.decagames.rotmg.fame.data.bonus.FameBonus;
     import flash.utils.Dictionary;
-    import __AS3__.vec.*;
+    
 
     public class TotalFame 
     {
@@ -29,7 +29,7 @@ package io.decagames.rotmg.fame.data
             {
                 this._bonuses.push(_arg_1);
                 this._currentFame = (this._currentFame + _arg_1.fameAdded);
-            };
+            }
         }
 
         public function get bonuses():Dictionary
@@ -39,7 +39,7 @@ package io.decagames.rotmg.fame.data
             for each (_local_2 in this._bonuses)
             {
                 _local_1[_local_2.id] = _local_2;
-            };
+            }
             return (_local_1);
         }
 

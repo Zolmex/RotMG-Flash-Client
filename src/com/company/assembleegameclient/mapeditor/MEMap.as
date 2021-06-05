@@ -16,7 +16,7 @@ package com.company.assembleegameclient.mapeditor
     import com.company.util.AssetLibrary;
     import flash.events.Event;
     import com.company.assembleegameclient.mapeditor.METile;
-    import __AS3__.vec.Vector;
+    
     import flash.geom.Rectangle;
     import flash.events.MouseEvent;
     import flash.events.KeyboardEvent;
@@ -31,7 +31,7 @@ package com.company.assembleegameclient.mapeditor
     import com.company.util.PointUtil;
     import com.adobe.images.PNGEncoder;
     import flash.utils.ByteArray;
-    import __AS3__.vec.*;
+    
     import com.company.assembleegameclient.mapeditor.*;
 
     internal class MEMap extends Sprite 
@@ -135,9 +135,9 @@ package com.company.assembleegameclient.mapeditor
                     if (((_local_6 < NUM_SQUARES) && (_local_7 < NUM_SQUARES)))
                     {
                         this.setTile(_local_6, _local_7, _local_4);
-                    };
-                };
-            };
+                    }
+                }
+            }
             _local_2 = null;
         }
 
@@ -147,7 +147,7 @@ package com.company.assembleegameclient.mapeditor
             if (_local_4 == null)
             {
                 return (-1);
-            };
+            }
             return (_local_4.types_[_arg_3]);
         }
 
@@ -162,7 +162,7 @@ package com.company.assembleegameclient.mapeditor
             if (tile.types_[layer] == type)
             {
                 return;
-            };
+            }
             tile.types_[layer] = type;
             try
             {
@@ -171,7 +171,7 @@ package com.company.assembleegameclient.mapeditor
             catch(error:Error)
             {
                 throw (new Error((((((("Invalid type: 0x" + type.toString(16)) + " at location: ") + x) + " x, ") + y) + " y")));
-            };
+            }
         }
 
         public function getObjectName(_arg_1:int, _arg_2:int):String
@@ -180,7 +180,7 @@ package com.company.assembleegameclient.mapeditor
             if (_local_3 == null)
             {
                 return (null);
-            };
+            }
             return (_local_3.objName_);
         }
 
@@ -199,7 +199,7 @@ package com.company.assembleegameclient.mapeditor
             {
                 _local_3 = int(_local_2);
                 _local_1.push(new IntPoint((_local_3 % NUM_SQUARES), (_local_3 / NUM_SQUARES)));
-            };
+            }
             return (_local_1);
         }
 
@@ -229,7 +229,7 @@ package com.company.assembleegameclient.mapeditor
             {
                 _local_2 = int(_local_1);
                 this.eraseTile((_local_2 % NUM_SQUARES), (_local_2 / NUM_SQUARES));
-            };
+            }
         }
 
         public function getTileBounds():Rectangle
@@ -254,25 +254,25 @@ package com.company.assembleegameclient.mapeditor
                     if (_local_8 < _local_1)
                     {
                         _local_1 = _local_8;
-                    };
+                    }
                     if (_local_9 < _local_2)
                     {
                         _local_2 = _local_9;
-                    };
+                    }
                     if ((_local_8 + 1) > _local_3)
                     {
                         _local_3 = (_local_8 + 1);
-                    };
+                    }
                     if ((_local_9 + 1) > _local_4)
                     {
                         _local_4 = (_local_9 + 1);
-                    };
-                };
-            };
+                    }
+                }
+            }
             if (_local_1 > _local_3)
             {
                 return (null);
-            };
+            }
             return (new Rectangle(_local_1, _local_2, (_local_3 - _local_1), (_local_4 - _local_2)));
         }
 
@@ -286,7 +286,7 @@ package com.company.assembleegameclient.mapeditor
             if ((((_arg_1 > 1) && (this.zoom_ >= maxZoom())) || ((_arg_1 < 1) && (this.zoom_ <= minZoom()))))
             {
                 return;
-            };
+            }
             var _local_2:IntPoint = this.mousePosT();
             this.zoom_ = (this.zoom_ * _arg_1);
             var _local_3:IntPoint = this.mousePosT();
@@ -298,7 +298,7 @@ package com.company.assembleegameclient.mapeditor
             if (((_arg_1 > maxZoom()) || (_arg_1 < minZoom())))
             {
                 return;
-            };
+            }
             var _local_2:IntPoint = this.mousePosT();
             this.zoom_ = _arg_1;
             var _local_3:IntPoint = this.mousePosT();
@@ -314,7 +314,7 @@ package com.company.assembleegameclient.mapeditor
             else
             {
                 this.setZoom(minZoom());
-            };
+            }
         }
 
         private function canMove():Boolean
@@ -327,7 +327,7 @@ package com.company.assembleegameclient.mapeditor
             if (!this.canMove())
             {
                 return;
-            };
+            }
             this.modifyZoom(2);
             this.draw();
         }
@@ -337,7 +337,7 @@ package com.company.assembleegameclient.mapeditor
             if (!this.canMove())
             {
                 return;
-            };
+            }
             this.modifyZoom(0.5);
             this.draw();
         }
@@ -347,7 +347,7 @@ package com.company.assembleegameclient.mapeditor
             if (!this.canMove())
             {
                 return;
-            };
+            }
             this.movePosT(-1, 0);
             this.draw();
         }
@@ -357,7 +357,7 @@ package com.company.assembleegameclient.mapeditor
             if (!this.canMove())
             {
                 return;
-            };
+            }
             this.movePosT(1, 0);
             this.draw();
         }
@@ -367,7 +367,7 @@ package com.company.assembleegameclient.mapeditor
             if (!this.canMove())
             {
                 return;
-            };
+            }
             this.movePosT(0, -1);
             this.draw();
         }
@@ -377,7 +377,7 @@ package com.company.assembleegameclient.mapeditor
             if (!this.canMove())
             {
                 return;
-            };
+            }
             this.movePosT(0, 1);
             this.draw();
         }
@@ -403,7 +403,7 @@ package com.company.assembleegameclient.mapeditor
             if (this.mouseRectAnchorT_ == null)
             {
                 return (new Rectangle(_local_1.x_, _local_1.y_, 1, 1));
-            };
+            }
             return (new Rectangle(Math.min(_local_1.x_, this.mouseRectAnchorT_.x_), Math.min(_local_1.y_, this.mouseRectAnchorT_.y_), (Math.abs((_local_1.x_ - this.mouseRectAnchorT_.x_)) + 1), (Math.abs((_local_1.y_ - this.mouseRectAnchorT_.y_)) + 1)));
         }
 
@@ -479,7 +479,7 @@ package com.company.assembleegameclient.mapeditor
                 case KeyCodes.EQUAL:
                     this.increaseZoom();
                     return;
-            };
+            }
         }
 
         private function onKeyUp(_arg_1:KeyboardEvent):void
@@ -494,7 +494,7 @@ package com.company.assembleegameclient.mapeditor
                     this.mouseMoveAnchorT_ = null;
                     this.draw();
                     return;
-            };
+            }
         }
 
         public function clearSelectRect():void
@@ -518,8 +518,8 @@ package com.company.assembleegameclient.mapeditor
                 if (_arg_1.delta < 0)
                 {
                     this.decreaseZoom();
-                };
-            };
+                }
+            }
         }
 
         private function onMouseDown(_arg_1:MouseEvent):void
@@ -537,9 +537,9 @@ package com.company.assembleegameclient.mapeditor
                 {
                     _local_3.push(new IntPoint(_local_6, _local_7));
                     _local_7++;
-                };
+                }
                 _local_6++;
-            };
+            }
             dispatchEvent(new TilesEvent(_local_3));
         }
 
@@ -568,8 +568,8 @@ package com.company.assembleegameclient.mapeditor
                 if (this.mouseRectAnchorT_ == null)
                 {
                     this.mouseRectAnchorT_ = this.mousePosT();
-                };
-            };
+                }
+            }
             if (!_arg_1.ctrlKey)
             {
                 this.mouseMoveAnchorT_ = null;
@@ -579,12 +579,12 @@ package com.company.assembleegameclient.mapeditor
                 if (this.mouseMoveAnchorT_ == null)
                 {
                     this.mouseMoveAnchorT_ = this.mousePosT();
-                };
-            };
+                }
+            }
             if (_arg_1.buttonDown)
             {
                 dispatchEvent(new TilesEvent(new <IntPoint>[this.mousePosT()]));
-            };
+            }
             if (this.mouseMoveAnchorT_ != null)
             {
                 _local_2 = this.mousePosT();
@@ -594,7 +594,7 @@ package com.company.assembleegameclient.mapeditor
             else
             {
                 this.drawOverlay();
-            };
+            }
         }
 
         private function getOrCreateTile(_arg_1:int, _arg_2:int):METile
@@ -604,7 +604,7 @@ package com.company.assembleegameclient.mapeditor
             if (_local_4 != null)
             {
                 return (_local_4);
-            };
+            }
             _local_4 = new METile();
             this.tileDict_[_local_3] = _local_4;
             return (_local_4);
@@ -630,12 +630,12 @@ package com.company.assembleegameclient.mapeditor
                 this.groundLayer_.erase(_local_4);
                 this.objectLayer_.erase(_local_4);
                 return;
-            };
+            }
             if (_arg_3.types_[Layer.GROUND] != -1)
             {
                 _local_5 = GroundLibrary.getBitmapData(_arg_3.types_[Layer.GROUND]);
                 this.groundLayer_.copyTo(_local_5, _local_5.rect, _local_4);
-            };
+            }
             if (_arg_3.types_[Layer.OBJECT] != -1)
             {
                 _local_6 = ObjectLibrary.getTextureFromType(_arg_3.types_[Layer.OBJECT]);
@@ -646,13 +646,13 @@ package com.company.assembleegameclient.mapeditor
                 else
                 {
                     this.objectLayer_.copyTo(_local_6, _local_6.rect, _local_4);
-                };
-            };
+                }
+            }
             if (_arg_3.types_[Layer.REGION] != -1)
             {
                 _local_7 = RegionLibrary.getColor(_arg_3.types_[Layer.REGION]);
                 this.regionMap_.setPixel32(_arg_1, _arg_2, (0x5F000000 | _local_7));
-            };
+            }
         }
 
         private function drawOverlay():void
@@ -677,11 +677,11 @@ package com.company.assembleegameclient.mapeditor
             if (this.ifShowGroundLayer_)
             {
                 this.groundLayer_.copyFrom(new Rectangle((this.posT_.x_ * SQUARE_SIZE), (this.posT_.y_ * SQUARE_SIZE), _local_1, _local_1), this.map_, this.map_.rect);
-            };
+            }
             if (this.ifShowObjectLayer_)
             {
                 this.objectLayer_.copyFrom(new Rectangle((this.posT_.x_ * SQUARE_SIZE), (this.posT_.y_ * SQUARE_SIZE), _local_1, _local_1), this.map_, this.map_.rect);
-            };
+            }
             if (this.ifShowRegionLayer_)
             {
                 _local_2 = new Matrix();
@@ -699,8 +699,8 @@ package com.company.assembleegameclient.mapeditor
                     _local_2.translate(-(this.posT_.x_), -(this.posT_.y_));
                     _local_2.scale(_local_3, _local_3);
                     this.map_.draw(this.regionMap_, _local_2, null, null, this.map_.rect);
-                };
-            };
+                }
+            }
             this.drawOverlay();
         }
 
@@ -733,23 +733,23 @@ package com.company.assembleegameclient.mapeditor
                 if (_local_6.types_[Layer.GROUND] != -1)
                 {
                     _local_1++;
-                };
+                }
                 if (_local_6.types_[Layer.OBJECT] != -1)
                 {
                     _local_2++;
-                };
+                }
                 if (_local_6.types_[Layer.REGION] != -1)
                 {
                     if (_local_6.types_[Layer.REGION] == RegionLibrary.EXIT_REGION_TYPE)
                     {
                         _local_3++;
-                    };
+                    }
                     if (_local_6.types_[Layer.REGION] == RegionLibrary.ENTRY_REGION_TYPE)
                     {
                         _local_4++;
-                    };
-                };
-            };
+                    }
+                }
+            }
             return ({
                 "numObjects":_local_2,
                 "numGrounds":_local_1,

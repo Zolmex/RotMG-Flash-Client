@@ -72,7 +72,7 @@ package kabam.rotmg.legends.view
             else
             {
                 this.showLoadingAndRequestFameList();
-            };
+            }
         }
 
         private function showLoadingAndRequestFameList():void

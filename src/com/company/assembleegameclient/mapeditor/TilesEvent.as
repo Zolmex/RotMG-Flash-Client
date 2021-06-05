@@ -6,7 +6,7 @@
 package com.company.assembleegameclient.mapeditor
 {
     import flash.events.Event;
-    import __AS3__.vec.Vector;
+    
     import com.company.util.IntPoint;
 
     internal class TilesEvent extends Event 

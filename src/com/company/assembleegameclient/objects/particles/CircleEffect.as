@@ -6,9 +6,9 @@
 package com.company.assembleegameclient.objects.particles
 {
     import com.company.assembleegameclient.objects.GameObject;
-    import __AS3__.vec.Vector;
+    
     import com.company.assembleegameclient.util.ColorUtil;
-    import __AS3__.vec.*;
+    
 
     public class CircleEffect extends ParticleEffect 
     {
@@ -47,11 +47,11 @@ package com.company.assembleegameclient.objects.particles
             if (this.go_.map_ == null)
             {
                 return (false);
-            };
+            }
             if (this.lastUpdate_ < 0)
             {
                 this.lastUpdate_ = Math.max(0, (_arg_1 - 400));
-            };
+            }
             x_ = this.go_.x_;
             y_ = this.go_.y_;
             if (!this.bInitialized_)
@@ -72,20 +72,20 @@ package com.company.assembleegameclient.objects.particles
                     map_.addObj(_local_5, x_, y_);
                     _local_5.move();
                     _local_4++;
-                };
+                }
                 this.bInitialized_ = true;
-            };
+            }
             for each (_local_3 in this.parts_)
             {
                 _local_3.rad_ = this.rad_;
-            };
+            }
             this.rad_ = Math.min((this.rad_ + (this.rise_ * (_arg_2 / 1000))), this.maxRad_);
             this.maxLife_ = (this.maxLife_ - _arg_2);
             if (this.maxLife_ <= 0)
             {
                 this.endEffect();
                 return (false);
-            };
+            }
             this.lastUpdate_ = _arg_1;
             return (true);
         }
@@ -96,7 +96,7 @@ package com.company.assembleegameclient.objects.particles
             for each (_local_1 in this.parts_)
             {
                 _local_1.alive_ = false;
-            };
+            }
         }
 
         override public function removeFromMap():void

@@ -5,7 +5,7 @@
 
 package kabam.rotmg.stage3D
 {
-    import __AS3__.vec.Vector;
+    
     import kabam.rotmg.stage3D.proxies.Context3DProxy;
     import kabam.rotmg.stage3D.graphic3D.TextureFactory;
     import org.swiftsuspenders.Injector;
@@ -32,7 +32,7 @@ package kabam.rotmg.stage3D
     import flash.display.GraphicsBitmapFill;
     import flash.display.GraphicsGradientFill;
     import com.company.assembleegameclient.parameters.Parameters;
-    import __AS3__.vec.*;
+    
 
     public class Renderer 
     {
@@ -171,7 +171,7 @@ package kabam.rotmg.stage3D
             if (((!(((WebMain.STAGE.stageWidth * 3) / 4) == this.stageWidth)) || (!(WebMain.STAGE.stageHeight == this.stageHeight))))
             {
                 this.resizeStage3DBackBuffer();
-            };
+            }
             if (Renderer.inGame == true)
             {
                 this.setTranslationToGame();
@@ -179,7 +179,7 @@ package kabam.rotmg.stage3D
             else
             {
                 this.setTranslationToTitle();
-            };
+            }
             if (_arg_6 > 0)
             {
                 this.renderWithPostEffect(_arg_1, _arg_2, _arg_3, _arg_4, _arg_5, _arg_6);
@@ -187,7 +187,7 @@ package kabam.rotmg.stage3D
             else
             {
                 this.renderScene(_arg_1, _arg_2, _arg_3, _arg_4, _arg_5);
-            };
+            }
             this.context3D.present();
             WebMain.STAGE.scaleMode = StageScaleMode.EXACT_FIT;
         }
@@ -197,7 +197,7 @@ package kabam.rotmg.stage3D
             if (((((WebMain.STAGE.stageWidth * 3) / 4) < 1) || (WebMain.STAGE.stageHeight < 1)))
             {
                 return;
-            };
+            }
             var _local_1:Stage3D = WebMain.STAGE.stage3Ds[0];
             _local_1.context3D.configureBackBuffer(((WebMain.STAGE.stageWidth * 3) / 4), WebMain.STAGE.stageHeight, 2, false);
             this.stageWidth = ((WebMain.STAGE.stageWidth * 3) / 4);
@@ -226,7 +226,7 @@ package kabam.rotmg.stage3D
                     this.context3D.GetContext3D().setVertexBufferAt(0, this.postFilterVertexBuffer_, 0, Context3DVertexBufferFormat.FLOAT_2);
                     this.context3D.GetContext3D().setVertexBufferAt(1, this.postFilterVertexBuffer_, 2, Context3DVertexBufferFormat.FLOAT_2);
                     break;
-            };
+            }
             this.context3D.GetContext3D().setVertexBufferAt(2, null);
             switch (_arg_6)
             {
@@ -242,12 +242,12 @@ package kabam.rotmg.stage3D
                     if (((this.blurFragmentConstants_[3] <= 0.2) || (this.blurFragmentConstants_[3] >= 1.8)))
                     {
                         this.blurFactor = (this.blurFactor * -1);
-                    };
+                    }
                     this.blurFragmentConstants_[3] = (this.blurFragmentConstants_[3] + this.blurFactor);
                     this.context3D.setProgramConstantsFromMatrix(Context3DProgramType.VERTEX, 0, new Matrix3D());
                     this.context3D.setProgramConstantsFromVector(Context3DProgramType.FRAGMENT, 0, this.blurFragmentConstants_, (this.blurFragmentConstants_.length / 4));
                     break;
-            };
+            }
             this.context3D.GetContext3D().clear(0, 0, 0, 1);
             this.context3D.GetContext3D().drawTriangles(this.postFilterIndexBuffer_);
         }
@@ -274,7 +274,7 @@ package kabam.rotmg.stage3D
                     catch(e:Error)
                     {
                         continue;
-                    };
+                    }
                     this.graphic3D_.setGraphic(GraphicsBitmapFill(graphicsData), this.context3D);
                     finalTransform.identity();
                     finalTransform.append(this.graphic3D_.getMatrix3D());
@@ -282,7 +282,7 @@ package kabam.rotmg.stage3D
                     finalTransform.appendTranslation((this.tX / Stage3DConfig.WIDTH), (this.tY / Stage3DConfig.HEIGHT), 0);
                     this.context3D.setProgramConstantsFromMatrix(Context3DProgramType.VERTEX, 0, finalTransform, true);
                     this.graphic3D_.render(this.context3D);
-                };
+                }
                 if ((graphicsData is GraphicsGradientFill))
                 {
                     this.context3D.GetContext3D().setProgram(this.shadowProgram_);
@@ -293,7 +293,7 @@ package kabam.rotmg.stage3D
                     this.context3D.setProgramConstantsFromMatrix(Context3DProgramType.VERTEX, 0, finalTransform, true);
                     this.context3D.setProgramConstantsFromVector(Context3DProgramType.FRAGMENT, 4, Vector.<Number>([0.5, 0.25, 0, 0]));
                     this.graphic3D_.renderShadow(this.context3D);
-                };
+                }
                 if (((graphicsData == null) && (!(grahpicsData3d.length == 0))))
                 {
                     try
@@ -313,9 +313,9 @@ package kabam.rotmg.stage3D
                     }
                     catch(e:Error)
                     {
-                    };
-                };
-            };
+                    }
+                }
+            }
         }
 
         private function setTranslationToGame():void

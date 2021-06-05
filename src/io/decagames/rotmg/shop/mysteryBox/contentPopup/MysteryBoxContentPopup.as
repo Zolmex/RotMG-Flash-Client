@@ -34,7 +34,7 @@ package io.decagames.rotmg.shop.mysteryBox.contentPopup
                 case 3:
                     _local_2.text = "You will win three\nof the rewards listed below!";
                     break;
-            };
+            }
             _local_2.x = ((280 - _local_2.textWidth) / 2);
             addChild(_local_2);
         }

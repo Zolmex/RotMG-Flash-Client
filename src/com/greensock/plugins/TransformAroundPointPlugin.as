@@ -55,8 +55,8 @@ package com.greensock.plugins
                 if (_shortRotation._overwriteProps.length == 0)
                 {
                     _arg_1.shortRotation = true;
-                };
-            };
+                }
+            }
             return (super._kill(_arg_1));
         }
 
@@ -77,16 +77,16 @@ package com.greensock.plugins
                 else
                 {
                     _proxy.parent.addChild(_target.parent);
-                };
-            };
+                }
+            }
             if (_pointIsLocal)
             {
                 _local_2 = _applyMatrix(_local, _target.transform.matrix);
                 if (((Math.abs((_local_2.x - _point.x)) > 0.5) || (Math.abs((_local_2.y - _point.y)) > 0.5)))
                 {
                     _point = _local_2;
-                };
-            };
+                }
+            }
             super.setRatio(_arg_1);
             _local_3 = _target.transform.matrix;
             _local_4 = (((_local.x * _local_3.a) + (_local.y * _local_3.c)) + _local_3.tx);
@@ -100,11 +100,11 @@ package com.greensock.plugins
                 if (_proxySizeData.width != null)
                 {
                     _proxy.width = (_target.width = _proxySizeData.width);
-                };
+                }
                 if (_proxySizeData.height != null)
                 {
                     _proxy.height = (_target.height = _proxySizeData.height);
-                };
+                }
                 _proxy.rotation = (_target.rotation = _local_7);
                 _local_3 = _target.transform.matrix;
                 _local_4 = (((_local.x * _local_3.a) + (_local.y * _local_3.c)) + _local_3.tx);
@@ -120,9 +120,9 @@ package com.greensock.plugins
                     else
                     {
                         _proxy.parent.removeChild(_target.parent);
-                    };
-                };
-            };
+                    }
+                }
+            }
         }
 
         override public function _roundProps(_arg_1:Object, _arg_2:Boolean=true):void
@@ -142,9 +142,9 @@ package com.greensock.plugins
                     if (("y" in _arg_1))
                     {
                         _yRound = _arg_2;
-                    };
-                };
-            };
+                    }
+                }
+            }
         }
 
         override public function _onInitTween(target:Object, value:*, tween:TweenLite):Boolean
@@ -163,7 +163,7 @@ package com.greensock.plugins
             if (!(value.point is Point))
             {
                 return (false);
-            };
+            }
             _target = (target as DisplayObject);
             var m:Matrix = _target.transform.matrix;
             if (value.pointIsLocal == true)
@@ -178,7 +178,7 @@ package com.greensock.plugins
                 matrixCopy = m.clone();
                 matrixCopy.invert();
                 _local = _applyMatrix(_point, matrixCopy);
-            };
+            }
             if (!_classInitted)
             {
                 try
@@ -188,9 +188,9 @@ package com.greensock.plugins
                 catch(e:Error)
                 {
                     _isFlex = false;
-                };
+                }
                 _classInitted = true;
-            };
+            }
             if ((((!(isNaN(value.width))) || (!(isNaN(value.height)))) && (!(_target.parent == null))))
             {
                 point = _target.parent.globalToLocal(_target.localToGlobal(new Point(100, 100)));
@@ -199,15 +199,15 @@ package com.greensock.plugins
                 {
                     _proxy = _target;
                     _target.rotation = 0;
-                    _proxySizeData = {};
+                    _proxySizeData = {}
                     if (!isNaN(value.width))
                     {
                         _addTween(_proxySizeData, "width", (_target.width / 2), value.width, "width");
-                    };
+                    }
                     if (!isNaN(value.height))
                     {
                         _addTween(_proxySizeData, "height", _target.height, value.height, "height");
-                    };
+                    }
                     b = _target.getBounds(_target);
                     s = new Sprite();
                     container = ((_isFlex) ? new (getDefinitionByName("mx.core.UIComponent"))() : new Sprite());
@@ -221,7 +221,7 @@ package com.greensock.plugins
                     else
                     {
                         _proxy.parent.addChild(container);
-                    };
+                    }
                     _target = s;
                     s.graphics.beginFill(0xFF, 0.4);
                     s.graphics.drawRect(b.x, b.y, b.width, b.height);
@@ -233,8 +233,8 @@ package com.greensock.plugins
                 {
                     _target.width = (_target.width / 2);
                     _target.transform.matrix = m;
-                };
-            };
+                }
+            }
             for (p in value)
             {
                 if (!((p == "point") || (p == "pointIsLocal")))
@@ -247,7 +247,7 @@ package com.greensock.plugins
                         for (sp in value[p])
                         {
                             _overwriteProps[_overwriteProps.length] = sp;
-                        };
+                        }
                     }
                     else
                     {
@@ -270,12 +270,12 @@ package com.greensock.plugins
                                 {
                                     _addTween(_target, p, _target[p], value[p], p);
                                     _overwriteProps[_overwriteProps.length] = p;
-                                };
-                            };
-                        };
-                    };
-                };
-            };
+                                }
+                            }
+                        }
+                    }
+                }
+            }
             if (tween != null)
             {
                 enumerables = tween.vars;
@@ -284,11 +284,11 @@ package com.greensock.plugins
                     if (("x" in enumerables))
                     {
                         endX = ((typeof(enumerables.x) == "number") ? enumerables.x : (_target.x + Number(enumerables.x.split("=").join(""))));
-                    };
+                    }
                     if (("y" in enumerables))
                     {
                         endY = ((typeof(enumerables.y) == "number") ? enumerables.y : (_target.y + Number(enumerables.y.split("=").join(""))));
-                    };
+                    }
                     tween._kill({
                         "x":true,
                         "y":true,
@@ -298,14 +298,14 @@ package com.greensock.plugins
                     if (!isNaN(endX))
                     {
                         _addTween(_point, "x", _point.x, (_point.x + (endX - _target.x)), "x");
-                    };
+                    }
                     if (!isNaN(endY))
                     {
                         _addTween(_point, "y", _point.y, (_point.y + (endY - _target.y)), "y");
-                    };
+                    }
                     this.setRatio(0);
-                };
-            };
+                }
+            }
             return (true);
         }
 

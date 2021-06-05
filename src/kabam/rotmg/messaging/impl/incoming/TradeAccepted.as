@@ -5,9 +5,9 @@
 
 package kabam.rotmg.messaging.impl.incoming
 {
-    import __AS3__.vec.Vector;
+    
     import flash.utils.IDataInput;
-    import __AS3__.vec.*;
+    
 
     public class TradeAccepted extends IncomingMessage 
     {
@@ -30,7 +30,7 @@ package kabam.rotmg.messaging.impl.incoming
             {
                 this.myOffer_.push(_arg_1.readBoolean());
                 _local_2++;
-            };
+            }
             this.yourOffer_.length = 0;
             _local_3 = _arg_1.readShort();
             _local_2 = 0;
@@ -38,7 +38,7 @@ package kabam.rotmg.messaging.impl.incoming
             {
                 this.yourOffer_.push(_arg_1.readBoolean());
                 _local_2++;
-            };
+            }
         }
 
         override public function toString():String

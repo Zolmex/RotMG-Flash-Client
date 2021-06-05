@@ -74,7 +74,7 @@ package com.company.assembleegameclient.mapeditor
                 _local_2.y = ((600 - _local_2.height) / 2);
                 SubmitMapForm.cancel.add(this.onSubmitClose);
                 this.editingScreen_.disableInput();
-            };
+            }
         }
 
         private function onSubmitClose():void
@@ -97,7 +97,7 @@ package com.company.assembleegameclient.mapeditor
                 this.blackBackground.graphics.beginFill(0, 0.4);
                 this.blackBackground.graphics.drawRect(0, 0, width, height);
                 this.blackBackground.graphics.endFill();
-            };
+            }
             addChild(this.blackBackground);
         }
 
@@ -106,7 +106,7 @@ package com.company.assembleegameclient.mapeditor
             if (((!(this.blackBackground == null)) && (this.blackBackground.parent)))
             {
                 removeChild(this.blackBackground);
-            };
+            }
         }
 
         private function cleanupGameSprite():void

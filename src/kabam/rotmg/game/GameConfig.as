@@ -170,7 +170,7 @@ package kabam.rotmg.game
             else
             {
                 this.injector.map(LoopMonitor).toType(NullLoopMonitor);
-            };
+            }
         }
 
 

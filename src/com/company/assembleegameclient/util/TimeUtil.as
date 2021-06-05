@@ -63,29 +63,29 @@ package com.company.assembleegameclient.util
                 {
                     _local_5 = (_arg_2.toString() + ((_arg_2 > 1) ? "days" : "day"));
                     return (_local_5);
-                };
+                }
                 if (_arg_4 == 0)
                 {
                     _local_5 = (_arg_2.toString() + ((_arg_2 > 1) ? " days" : " day"));
                     _local_5 = (_local_5 + ((", " + _arg_3.toString()) + ((_arg_3 > 1) ? " hours" : " hour")));
                     return (_local_5);
-                };
+                }
                 _local_5 = (_arg_2.toString() + ((_arg_2 > 1) ? " days" : " day"));
                 _local_5 = (_local_5 + ((", " + _arg_3.toString()) + ((_arg_3 > 1) ? " hours" : " hour")));
                 _local_5 = (_local_5 + ((" and " + _arg_4.toString()) + ((_arg_4 > 1) ? " minutes" : " minute")));
                 return (_local_5);
-            };
+            }
             if (_arg_1 >= HOUR_IN_S)
             {
                 if (_arg_4 == 0)
                 {
                     _local_5 = (_arg_3.toString() + ((_arg_3 > 1) ? " hours" : " hour"));
                     return (_local_5);
-                };
+                }
                 _local_5 = (_arg_3.toString() + ((_arg_3 > 1) ? " hours" : " hour"));
                 _local_5 = (_local_5 + ((" and " + _arg_4.toString()) + ((_arg_4 > 1) ? " minutes" : " minute")));
                 return (_local_5);
-            };
+            }
             _local_5 = (_arg_4.toString() + ((_arg_4 > 1) ? " minutes" : " minute"));
             return (_local_5);
         }

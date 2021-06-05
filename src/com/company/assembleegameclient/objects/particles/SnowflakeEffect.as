@@ -43,7 +43,7 @@ package com.company.assembleegameclient.objects.particles
                 _local_8 = new SnowflakeParticle(size_, _local_6, this.maxLife_, _local_7, _local_4, true);
                 map_.addObj(_local_8, x_, y_);
                 _local_5++;
-            };
+            }
             return (false);
         }
 
@@ -69,13 +69,13 @@ import com.company.assembleegameclient.util.RandomUtil;
 class SnowflakeParticle extends Particle 
 {
 
-    /*private*/ var timeLeft_:int;
-    /*private*/ var angle_:Number;
-    /*private*/ var radius_:Number;
-    /*private*/ var dx_:Number;
-    /*private*/ var dy_:Number;
-    /*private*/ var split_:Boolean;
-    /*private*/ var timeSplit_:int;
+    private var timeLeft_:int;
+    private var angle_:Number;
+    private var radius_:Number;
+    private var dx_:Number;
+    private var dy_:Number;
+    private var split_:Boolean;
+    private var timeSplit_:int;
 
     public function SnowflakeParticle(_arg_1:int, _arg_2:int, _arg_3:int, _arg_4:Number, _arg_5:Number, _arg_6:Boolean=false)
     {
@@ -95,14 +95,14 @@ class SnowflakeParticle extends Particle
         if (this.timeLeft_ <= 0)
         {
             return (false);
-        };
+        }
         moveTo((x_ + (this.dx_ * _arg_2)), (y_ + (this.dy_ * _arg_2)));
         if (((this.split_) && (this.timeLeft_ < this.timeSplit_)))
         {
             map_.addObj(new SnowflakeParticle(size_, color_, this.timeLeft_, (this.angle_ + (60 * MathUtil.TO_RAD)), (this.radius_ * 0.5)), x_, y_);
             map_.addObj(new SnowflakeParticle(size_, color_, this.timeLeft_, (this.angle_ - (60 * MathUtil.TO_RAD)), (this.radius_ * 0.5)), x_, y_);
             this.split_ = false;
-        };
+        }
         map_.addObj(new SparkParticle((100 * (z_ + 1)), color_, 600, z_, RandomUtil.plusMinus(1), RandomUtil.plusMinus(1)), x_, y_);
         return (true);
     }

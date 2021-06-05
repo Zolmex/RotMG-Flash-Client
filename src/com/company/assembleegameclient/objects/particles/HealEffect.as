@@ -30,7 +30,7 @@ package com.company.assembleegameclient.objects.particles
             if (this.go_.map_ == null)
             {
                 return (false);
-            };
+            }
             x_ = this.go_.x_;
             y_ = this.go_.y_;
             var _local_3:int = 10;
@@ -43,7 +43,7 @@ package com.company.assembleegameclient.objects.particles
                 _local_8 = new HealParticle(this.color1_, (Math.random() * 0.3), _local_6, 1000, (0.1 + (Math.random() * 0.1)), this.go_, _local_5, _local_7, this.color2_);
                 map_.addObj(_local_8, (x_ + (_local_7 * Math.cos(_local_5))), (y_ + (_local_7 * Math.sin(_local_5))));
                 _local_4++;
-            };
+            }
             return (false);
         }
 

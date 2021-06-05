@@ -9,13 +9,13 @@ package com.company.assembleegameclient.objects.thrown
     import flash.display.GraphicsBitmapFill;
     import flash.display.GraphicsPath;
     import com.company.util.GraphicsUtil;
-    import __AS3__.vec.Vector;
+    
     import flash.geom.Matrix;
     import flash.display.BitmapData;
     import com.company.assembleegameclient.map.Square;
     import flash.display.IGraphicsData;
     import com.company.assembleegameclient.map.Camera;
-    import __AS3__.vec.*;
+    
 
     public class BitmapParticle extends BasicObject 
     {
@@ -44,7 +44,7 @@ package com.company.assembleegameclient.objects.thrown
             if (!_local_3)
             {
                 return (false);
-            };
+            }
             x_ = _arg_1;
             y_ = _arg_2;
             square_ = _local_3;
@@ -73,7 +73,7 @@ package com.company.assembleegameclient.objects.thrown
                 if (((!(w)) || (!(h))))
                 {
                     return;
-                };
+                }
                 this.vS_.length = 0;
                 this.vS_.push((posS_[3] - (w / 2)), (posS_[4] - (h / 2)), (posS_[3] + (w / 2)), (posS_[4] - (h / 2)), (posS_[3] + (w / 2)), (posS_[4] + (h / 2)), (posS_[3] - (w / 2)), (posS_[4] + (h / 2)));
                 this.path_.data = this.vS_;
@@ -84,11 +84,11 @@ package com.company.assembleegameclient.objects.thrown
                     if (this._rotationDelta)
                     {
                         this._rotation = (this._rotation + this._rotationDelta);
-                    };
+                    }
                     this.fillMatrix_.translate((-(w) / 2), (-(h) / 2));
                     this.fillMatrix_.rotate(this._rotation);
                     this.fillMatrix_.translate((w / 2), (h / 2));
-                };
+                }
                 this.fillMatrix_.translate(this.vS_[0], this.vS_[1]);
                 this.bitmapFill_.matrix = this.fillMatrix_;
                 graphicsData.push(this.bitmapFill_);
@@ -99,7 +99,7 @@ package com.company.assembleegameclient.objects.thrown
             catch(error:Error)
             {
                 return;
-            };
+            }
         }
 
 

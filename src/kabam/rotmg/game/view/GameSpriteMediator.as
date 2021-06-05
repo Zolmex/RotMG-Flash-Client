@@ -131,7 +131,7 @@ package kabam.rotmg.game.view
             while (true)
             {
                 if ((getTimer() - _local_2) >= _arg_1) break;
-            };
+            }
         }
 
 
@@ -178,7 +178,7 @@ package kabam.rotmg.game.view
             else
             {
                 this.flushQueueSignal.dispatch();
-            };
+            }
         }
 
         override public function destroy():void
@@ -223,7 +223,7 @@ package kabam.rotmg.game.view
             if (!this.view.isEditor)
             {
                 this.gameClosed.dispatch();
-            };
+            }
             this.closeDialogs.dispatch();
             this.closeAllPopups.dispatch();
             var _local_1:HideMapLoadingSignal = StaticInjectorContext.getInjector().getInstance(HideMapLoadingSignal);
@@ -236,7 +236,7 @@ package kabam.rotmg.game.view
             if (this.view.isEditor)
             {
                 return;
-            };
+            }
             var _local_2:GameInitData = new GameInitData();
             _local_2.server = _arg_1.server_;
             _local_2.gameId = _arg_1.gameId_;
@@ -254,7 +254,7 @@ package kabam.rotmg.game.view
             if (!this.seasonalEventModel.isChallenger)
             {
                 this.beginnersPackageAvailable.add(this.onBeginner);
-            };
+            }
             this.packageAvailable.add(this.onPackage);
             this.initPackages.dispatch();
         }

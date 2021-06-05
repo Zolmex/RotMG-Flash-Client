@@ -34,7 +34,7 @@ package com.company.assembleegameclient.util
                     return (wrapInBraces(TextKey.GUILD_RANK_LEADER));
                 case FOUNDER:
                     return (wrapInBraces(TextKey.GUILD_RANK_FOUNDER));
-            };
+            }
             return (wrapInBraces(TextKey.GUILD_RANK_UNKNOWN));
         }
 
@@ -63,7 +63,7 @@ package com.company.assembleegameclient.util
                 case FOUNDER:
                     _local_3 = AssetLibrary.getImageFromSet("lofiInterfaceBig", 16);
                     break;
-            };
+            }
             return (TextureRedrawer.redraw(_local_3, _arg_2, true, 0, true));
         }
 
@@ -78,19 +78,19 @@ package com.company.assembleegameclient.util
             if (_arg_2 == _arg_3)
             {
                 return (false);
-            };
+            }
             if ((((_arg_1 == FOUNDER) && (_arg_2 < FOUNDER)) && (_arg_3 < FOUNDER)))
             {
                 return (true);
-            };
+            }
             if ((((_arg_1 == LEADER) && (_arg_2 < LEADER)) && (_arg_3 <= LEADER)))
             {
                 return (true);
-            };
+            }
             if ((((_arg_1 == OFFICER) && (_arg_2 < OFFICER)) && (_arg_3 < OFFICER)))
             {
                 return (true);
-            };
+            }
             return (false);
         }
 
@@ -104,7 +104,7 @@ package com.company.assembleegameclient.util
                     return (OFFICER);
                 case OFFICER:
                     return (LEADER);
-            };
+            }
             return (FOUNDER);
         }
 
@@ -124,7 +124,7 @@ package com.company.assembleegameclient.util
                     return (OFFICER);
                 case FOUNDER:
                     return (LEADER);
-            };
+            }
             return (INITIATE);
         }
 
@@ -159,7 +159,7 @@ package com.company.assembleegameclient.util
                 case FOUNDER:
                     _local_2 = 16;
                     break;
-            };
+            }
             return (_local_2);
         }
 

@@ -33,7 +33,7 @@ package kabam.rotmg.account.web.services
             else
             {
                 this.setGuestPasswordAndComplete();
-            };
+            }
         }
 
         private function getAccountData():void
@@ -49,13 +49,13 @@ package kabam.rotmg.account.web.services
                 if (rotmg.data.hasOwnProperty("Name"))
                 {
                     this.data.name = rotmg.data["Name"];
-                };
+                }
             }
             catch(error:Error)
             {
                 data.username = null;
                 data.password = null;
-            };
+            }
         }
 
         private function setAccountDataThenComplete():void

@@ -10,7 +10,7 @@ package kabam.rotmg.arena.view
     import kabam.rotmg.arena.model.ArenaLeaderboardFilter;
     import kabam.rotmg.text.view.StaticTextDisplay;
     import flash.display.Bitmap;
-    import __AS3__.vec.Vector;
+    
     import com.company.assembleegameclient.screens.TitleMenuOption;
     import kabam.rotmg.arena.component.LeaderboardWeeklyResetTimer;
     import com.company.rotmg.graphics.ScreenGraphic;
@@ -29,7 +29,7 @@ package kabam.rotmg.arena.view
     import kabam.rotmg.text.view.TextFieldDisplayConcrete;
     import flash.display.Shape;
     import flash.display.Graphics;
-    import __AS3__.vec.*;
+    
 
     public class ArenaLeaderboard extends Sprite 
     {
@@ -80,7 +80,7 @@ package kabam.rotmg.arena.view
             {
                 _local_1.selected.remove(this.onSelected);
                 _local_1.destroy();
-            };
+            }
         }
 
         public function reloadList():void
@@ -106,7 +106,7 @@ package kabam.rotmg.arena.view
             else
             {
                 this.requestData.dispatch(_arg_1.getFilter());
-            };
+            }
         }
 
         public function setList(_arg_1:Vector.<ArenaLeaderboardEntry>):void
@@ -128,7 +128,7 @@ package kabam.rotmg.arena.view
                 _local_2.push(_local_4);
                 _local_1.push(_local_4.readyToAlign);
                 addChild(_local_4);
-            };
+            }
             _local_1.complete.addOnce(this.alignTabs);
             return (_local_2);
         }
@@ -139,7 +139,7 @@ package kabam.rotmg.arena.view
             if (_arg_1)
             {
                 _local_2 = BitmapUtil.mirror(_local_2);
-            };
+            }
             return (new Bitmap(_local_2));
         }
 
@@ -193,7 +193,7 @@ package kabam.rotmg.arena.view
             {
                 _local_2.x = _local_1;
                 _local_1 = (_local_1 + (_local_2.width + 20));
-            };
+            }
         }
 
         private function makeResetTimer():LeaderboardWeeklyResetTimer

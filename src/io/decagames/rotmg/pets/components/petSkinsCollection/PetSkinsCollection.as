@@ -16,7 +16,7 @@ package io.decagames.rotmg.pets.components.petSkinsCollection
     import io.decagames.rotmg.ui.scroll.UIScrollbar;
     import io.decagames.rotmg.pets.data.vo.SkinVO;
     import io.decagames.rotmg.pets.components.petSkinSlot.PetSkinSlot;
-    import __AS3__.vec.Vector;
+    
 
     public class PetSkinsCollection extends Sprite 
     {
@@ -104,7 +104,7 @@ package io.decagames.rotmg.pets.components.petSkinsCollection
             if (_arg_1.name > _arg_2.name)
             {
                 return (1);
-            };
+            }
             return (-1);
         }
 
@@ -113,11 +113,11 @@ package io.decagames.rotmg.pets.components.petSkinsCollection
             if (_arg_1.rarity.ordinal == _arg_2.rarity.ordinal)
             {
                 return (this.sortByName(_arg_1, _arg_2));
-            };
+            }
             if (_arg_1.rarity.ordinal > _arg_2.rarity.ordinal)
             {
                 return (1);
-            };
+            }
             return (-1);
         }
 
@@ -127,7 +127,7 @@ package io.decagames.rotmg.pets.components.petSkinsCollection
             if (_arg_2 == null)
             {
                 return;
-            };
+            }
             var _local_3:int;
             var _local_4:int;
             this.petGrid = new UIGrid((COLLECTION_WIDTH - 40), 7, 5);
@@ -139,8 +139,8 @@ package io.decagames.rotmg.pets.components.petSkinsCollection
                 if (_local_5.isOwned)
                 {
                     _local_4++;
-                };
-            };
+                }
+            }
             this.petGrid.x = 10;
             this.petGrid.y = 25;
             var _local_6:PetFamilyContainer = new PetFamilyContainer(_arg_1, _local_4, _local_3);

@@ -252,7 +252,7 @@ package kabam.rotmg.classes.view
             else
             {
                 this.removeEventListeners();
-            };
+            }
         }
 
         private function setCost():void
@@ -282,7 +282,7 @@ package kabam.rotmg.classes.view
             else
             {
                 this.lockText.setStringBuilder(((this.state == CharacterSkinState.PURCHASING) ? new LineBuilder().setParams(TextKey.PURCHASING_SKIN) : this.makeUnlockTextStringBuilder()));
-            };
+            }
             this.lockText.textChanged.addOnce(this.alignText);
         }
 
@@ -340,11 +340,11 @@ package kabam.rotmg.classes.view
             if (this.state.isDisabled())
             {
                 return (LOCKED_COLOR);
-            };
+            }
             if (((this.isSelected) || (this.isOver)))
             {
                 return (HIGHLIGHTED_COLOR);
-            };
+            }
             return (AVAILABLE_COLOR);
         }
 

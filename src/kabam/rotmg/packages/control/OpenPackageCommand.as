@@ -33,7 +33,7 @@ package kabam.rotmg.packages.control
             if (((_local_1) && (!(_local_1.popupImage == ""))))
             {
                 this.showPopupSignal.dispatch(new StartupPackage(_local_1));
-            };
+            }
         }
 
 

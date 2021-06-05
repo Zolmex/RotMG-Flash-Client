@@ -61,7 +61,7 @@ package io.decagames.rotmg.shop
             else
             {
                 this._priceLabel.x = ((bitmap.width - this._priceLabel.textWidth) / 2);
-            };
+            }
             this.coinBitmap.x = ((bitmap.width - this.coinBitmap.width) - 15);
         }
 
@@ -72,7 +72,7 @@ package io.decagames.rotmg.shop
             {
                 this.priceLabel.text = _arg_1.toString();
                 this.updateLabelPosition();
-            };
+            }
         }
 
         public function get priceLabel():UILabel
@@ -95,13 +95,13 @@ package io.decagames.rotmg.shop
                 if (((this.coinBitmap) && (this.coinBitmap.parent)))
                 {
                     removeChild(this.coinBitmap);
-                };
+                }
             }
             else
             {
                 this._priceLabel.text = this._price.toString();
                 addChild(this.coinBitmap);
-            };
+            }
             this.updateLabelPosition();
         }
 

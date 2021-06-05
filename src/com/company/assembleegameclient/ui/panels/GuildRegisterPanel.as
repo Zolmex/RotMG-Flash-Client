@@ -41,7 +41,7 @@ package com.company.assembleegameclient.ui.panels
             if (((gs_.map == null) || (gs_.map.player_ == null)))
             {
                 return;
-            };
+            }
             _local_2 = gs_.map.player_;
             this.title_ = new TextFieldDisplayConcrete().setSize(18).setColor(0xFFFFFF).setTextWidth(WIDTH).setWordWrap(true).setMultiLine(true).setAutoSize(TextFieldAutoSize.CENTER).setHTML(true);
             this.title_.filters = [new DropShadowFilter(0, 0, 0)];
@@ -69,7 +69,7 @@ package com.company.assembleegameclient.ui.panels
                 this.waiter.push(_local_4.readyForPlacement);
                 addChild(_local_4);
                 this.button_ = _local_4;
-            };
+            }
             this.waiter.complete.addOnce(this.alignUI);
         }
 

@@ -11,7 +11,7 @@ package kabam.rotmg.legends.service
     import kabam.rotmg.legends.model.LegendsModel;
     import kabam.rotmg.legends.model.LegendFactory;
     import kabam.rotmg.legends.model.Timespan;
-    import __AS3__.vec.Vector;
+    
     import kabam.rotmg.legends.model.Legend;
 
     public class GetLegendsListTask extends BaseTask 
@@ -50,7 +50,7 @@ package kabam.rotmg.legends.service
 
         private function makeRequestObject():Object
         {
-            var _local_1:Object = {};
+            var _local_1:Object = {}
             _local_1.timespan = this.timespan.getId();
             _local_1.accountId = this.player.getAccountId();
             _local_1.charId = this.charId;

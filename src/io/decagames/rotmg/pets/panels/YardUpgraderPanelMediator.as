@@ -73,7 +73,7 @@ package io.decagames.rotmg.pets.panels
             if (((_arg_1.keyCode == Parameters.data_.interact) && (this.view.stage.focus == null)))
             {
                 this.openPets();
-            };
+            }
         }
 
         private function openPets():void

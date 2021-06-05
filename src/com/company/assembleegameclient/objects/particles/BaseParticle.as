@@ -6,7 +6,7 @@
 package com.company.assembleegameclient.objects.particles
 {
     import com.company.assembleegameclient.objects.BasicObject;
-    import __AS3__.vec.Vector;
+    
     import flash.geom.Matrix;
     import flash.display.GraphicsPath;
     import com.company.util.GraphicsUtil;
@@ -14,7 +14,7 @@ package com.company.assembleegameclient.objects.particles
     import flash.display.BitmapData;
     import flash.display.IGraphicsData;
     import com.company.assembleegameclient.map.Camera;
-    import __AS3__.vec.*;
+    
 
     public class BaseParticle extends BasicObject 
     {

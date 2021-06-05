@@ -12,7 +12,7 @@ package com.company.assembleegameclient.ui
     import flash.display.Bitmap;
     import flash.display.GraphicsSolidFill;
     import flash.display.GraphicsPath;
-    import __AS3__.vec.Vector;
+    
     import flash.display.IGraphicsData;
     import com.company.util.GraphicsUtil;
     import flash.geom.Point;
@@ -21,7 +21,7 @@ package com.company.assembleegameclient.ui
     import flash.display.BitmapData;
     import kabam.rotmg.core.StaticInjectorContext;
     import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
-    import __AS3__.vec.*;
+    
 
     public class Slot extends Sprite 
     {
@@ -60,7 +60,7 @@ package com.company.assembleegameclient.ui
                 case ItemConstants.SPELL_TYPE:
                     _local_4.y = -2;
                     break;
-            };
+            }
             return (_local_4);
         }
 
@@ -96,9 +96,9 @@ package com.company.assembleegameclient.ui
                         this.backgroundImage_.x = ((WIDTH / 2) - (_local_1.width / 2));
                         this.backgroundImage_.y = ((HEIGHT / 2) - 18);
                         addChild(this.backgroundImage_);
-                    };
-                };
-            };
+                    }
+                }
+            }
         }
 
 

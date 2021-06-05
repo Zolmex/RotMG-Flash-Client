@@ -27,7 +27,7 @@ package kabam.lib.tasks
                 this._isStarted = true;
                 ((this._started) && (this._started.dispatch(this)));
                 this.startTask();
-            };
+            }
         }
 
         final public function reset():void
@@ -38,8 +38,8 @@ package kabam.lib.tasks
                 if (!this._isFinished)
                 {
                     throw (new IllegalOperationError("Unable to Task.reset() when a task is ongoing"));
-                };
-            };
+                }
+            }
             ((this._started) && (this._started.removeAll()));
             ((this._finished) && (this._finished.removeAll()));
             ((this._lastly) && (this._lastly.removeAll()));

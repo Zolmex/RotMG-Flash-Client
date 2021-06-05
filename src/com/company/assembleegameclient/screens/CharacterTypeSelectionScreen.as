@@ -8,7 +8,7 @@ package com.company.assembleegameclient.screens
     import flash.display.Sprite;
     import org.osflash.signals.Signal;
     import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-    import __AS3__.vec.Vector;
+    
     import io.decagames.rotmg.ui.buttons.InfoButton;
     import kabam.rotmg.ui.view.ButtonFactory;
     import kabam.rotmg.core.signals.LeagueItemSignal;
@@ -20,7 +20,7 @@ package com.company.assembleegameclient.screens
     import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
     import flash.events.MouseEvent;
     import com.company.assembleegameclient.util.FilterUtil;
-    import __AS3__.vec.*;
+    
 
     public class CharacterTypeSelectionScreen extends Sprite 
     {
@@ -83,7 +83,7 @@ package com.company.assembleegameclient.screens
             if (stage)
             {
                 _local_1 = new Rectangle(0, 0, stage.stageWidth, stage.stageHeight);
-            };
+            }
             return (_local_1);
         }
 
@@ -118,7 +118,7 @@ package com.company.assembleegameclient.screens
             else
             {
                 this._leagueItems.length = 0;
-            };
+            }
             var _local_1:int = this._leagueDatas.length;
             var _local_2:int;
             while (_local_2 < _local_1)
@@ -132,7 +132,7 @@ package com.company.assembleegameclient.screens
                 this._leagueItems.push(_local_3);
                 this._leagueContainer.addChild(_local_3);
                 _local_2++;
-            };
+            }
             this._leagueContainer.x = ((this.width - this._leagueContainer.width) / 2);
             this._leagueContainer.y = ((this.height - this._leagueContainer.height) / 2);
         }
@@ -148,7 +148,7 @@ package com.company.assembleegameclient.screens
             else
             {
                 _arg_1.currentTarget.filters = [];
-            };
+            }
         }
 
         private function onOver(_arg_1:MouseEvent):void
@@ -161,7 +161,7 @@ package com.company.assembleegameclient.screens
             else
             {
                 _arg_1.currentTarget.filters = FilterUtil.getLargeGlowFilter();
-            };
+            }
         }
 
         private function onLeagueItemClick(_arg_1:MouseEvent):void
@@ -180,7 +180,7 @@ package com.company.assembleegameclient.screens
                 this._leagueItems[_local_2].removeEventListener(MouseEvent.ROLL_OUT, this.onOut);
                 this._leagueItems[_local_2].removeEventListener(MouseEvent.ROLL_OVER, this.onOver);
                 _local_2++;
-            };
+            }
         }
 
         public function get infoButton():InfoButton

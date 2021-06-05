@@ -30,7 +30,7 @@ package kabam.rotmg.account.securityQuestions.tasks
 
         private function makeDataPacket():Object
         {
-            var _local_1:Object = {};
+            var _local_1:Object = {}
             _local_1.answers = this.data.answers.join("|");
             MoreObjectUtil.addToObject(_local_1, this.account.getCredentials());
             return (_local_1);

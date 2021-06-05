@@ -24,7 +24,7 @@ package kabam.lib.math.easing
             if ((_arg_1 = (_arg_1 * 2)) < 1)
             {
                 return ((0.5 * _arg_1) * _arg_1);
-            };
+            }
             return (-0.5 * ((--_arg_1 * (_arg_1 - 2)) - 1));
         }
 

@@ -7,7 +7,7 @@ package kabam.rotmg.stage3D.proxies
 {
     import flash.display3D.Context3D;
     import flash.geom.Matrix3D;
-    import __AS3__.vec.Vector;
+    
 
     public class Context3DProxy 
     {

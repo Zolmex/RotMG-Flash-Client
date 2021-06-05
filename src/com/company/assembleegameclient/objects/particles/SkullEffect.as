@@ -7,7 +7,7 @@ package com.company.assembleegameclient.objects.particles
 {
     import com.company.assembleegameclient.objects.thrown.BitmapParticle;
     import flash.geom.Point;
-    import __AS3__.vec.Vector;
+    
     import flash.display.BitmapData;
     import kabam.lib.math.easing.Quart;
 

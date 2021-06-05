@@ -36,7 +36,7 @@ package kabam.lib.console.view
             if (_arg_1.keyCode == this.TRIGGER)
             {
                 this.toggle.dispatch();
-            };
+            }
         }
 
 

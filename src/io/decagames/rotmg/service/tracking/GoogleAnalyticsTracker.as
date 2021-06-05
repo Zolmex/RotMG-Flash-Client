@@ -31,7 +31,7 @@ package io.decagames.rotmg.service.tracking
             if (_arg_4)
             {
                 this.trackingURL = "http://www.google-analytics.com/debug/collect";
-            };
+            }
             this.clientID = this.getClientID();
         }
 
@@ -51,13 +51,13 @@ package io.decagames.rotmg.service.tracking
                 catch(e:Error)
                 {
                     logger.debug(("Could not write SharedObject to disk: " + e.message));
-                };
+                }
             }
             else
             {
                 this.logger.debug(("CID found, restore from SharedObject: " + so.data.clientid));
                 cid = so.data.clientid;
-            };
+            }
             return (cid);
         }
 
@@ -74,7 +74,7 @@ package io.decagames.rotmg.service.tracking
             {
                 var _local_2:String = _arg_1.toString(16);
                 return ((_local_2.length > 1) ? _local_2 : ("0" + _local_2));
-            };
+            }
             var str:String = "";
             var l:uint = randomBytes.length;
             randomBytes.position = 0;
@@ -84,7 +84,7 @@ package io.decagames.rotmg.service.tracking
                 b = randomBytes[i];
                 str = (str + toHex(b));
                 i++;
-            };
+            }
             var uuid:String = "";
             uuid = (uuid + str.substr(0, 8));
             uuid = (uuid + "-");
@@ -122,7 +122,7 @@ package io.decagames.rotmg.service.tracking
             {
                 this.logger.debug(("DEBUGGING GA:" + url));
                 return;
-            };
+            }
             try
             {
                 urlLoader = new Loader();
@@ -132,7 +132,7 @@ package io.decagames.rotmg.service.tracking
             catch(e:Error)
             {
                 logger.error(((((("Tracking Error:" + e.message) + ", ") + e.name) + ", ") + e.getStackTrace()));
-            };
+            }
         }
 
         public function get debug():Boolean

@@ -56,9 +56,9 @@ package kabam.rotmg.game.view
                     else
                     {
                         this.handleNoName();
-                    };
-                };
-            };
+                    }
+                }
+            }
             addEventListener(Event.ADDED_TO_STAGE, this.onAddedToStage);
         }
 
@@ -67,7 +67,7 @@ package kabam.rotmg.game.view
             if (this.button_)
             {
                 stage.addEventListener(KeyboardEvent.KEY_DOWN, this.onKeyDown);
-            };
+            }
             addEventListener(Event.REMOVED_FROM_STAGE, this.onRemovedFromStage);
         }
 
@@ -102,7 +102,7 @@ package kabam.rotmg.game.view
             else
             {
                 this.addListeners();
-            };
+            }
             addChild(this.button_);
         }
 
@@ -172,7 +172,7 @@ package kabam.rotmg.game.view
             if (((_arg_1.keyCode == Parameters.data_.interact) && (stage.focus == null)))
             {
                 this.performAction();
-            };
+            }
         }
 
         private function onButtonClick(_arg_1:MouseEvent):void

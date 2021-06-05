@@ -6,9 +6,9 @@
 package com.company.assembleegameclient.util
 {
     import flash.utils.Dictionary;
-    import __AS3__.vec.Vector;
+    
     import flash.display.BitmapData;
-    import __AS3__.vec.*;
+    
 
     public class AnimatedChars 
     {
@@ -22,7 +22,7 @@ package com.company.assembleegameclient.util
             if (((_local_3 == null) || (_arg_2 >= _local_3.length)))
             {
                 return (null);
-            };
+            }
             return (_local_3[_arg_2]);
         }
 
@@ -35,7 +35,7 @@ package com.company.assembleegameclient.util
             for each (_local_11 in _local_10.images_)
             {
                 _local_9.push(new AnimatedChar(_local_11, _arg_4, _arg_5, _arg_8));
-            };
+            }
             nameMap_[_arg_1] = _local_9;
         }
 

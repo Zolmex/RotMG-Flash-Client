@@ -6,7 +6,7 @@
 package kabam.rotmg.chat.view
 {
     import flash.display.Sprite;
-    import __AS3__.vec.Vector;
+    
     import flash.display.DisplayObject;
     import flash.utils.getTimer;
     import flash.events.MouseEvent;
@@ -72,13 +72,13 @@ package kabam.rotmg.chat.view
                         if (((((this.isTrade) && (!(this.playerName == null))) && (!(this.playerName == ""))) && (!(hmod.gameSprite.map.player_.name_ == this.playerName))))
                         {
                             hmod.gameSprite.addChatPlayerMenu(null, e.stageX, e.stageY, this.playerName, false, true);
-                        };
-                    };
-                };
+                        }
+                    }
+                }
             }
             catch(e:Error)
             {
-            };
+            }
         }
 
         public function isTimedOut():Boolean
@@ -109,11 +109,11 @@ package kabam.rotmg.chat.view
                     {
                         this.list[_local_5].y = (this.list[_local_5].y - this.layoutHeight);
                         _local_5++;
-                    };
-                };
+                    }
+                }
                 _local_1 = (_local_1 + _local_4.width);
                 _local_2++;
-            };
+            }
         }
 
         private function addItems():void
@@ -122,7 +122,7 @@ package kabam.rotmg.chat.view
             for each (_local_1 in this.list)
             {
                 addChild(_local_1);
-            };
+            }
         }
 
 

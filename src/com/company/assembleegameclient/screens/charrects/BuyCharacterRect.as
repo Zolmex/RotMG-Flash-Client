@@ -64,7 +64,7 @@ package com.company.assembleegameclient.screens.charrects
             if (_local_1 != 0)
             {
                 makeTaglineText(new LineBuilder().setParams(TextKey.BUY_CHARACTER_RECT_TAGLINE_TEXT, {"percentage":_local_2}));
-            };
+            }
         }
 
         private function makeIcon():void

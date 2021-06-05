@@ -34,7 +34,7 @@ package kabam.rotmg.errors.view
             if (this.canCatchGlobalErrors())
             {
                 this.addGlobalErrorListener();
-            };
+            }
         }
 
         override public function destroy():void
@@ -42,7 +42,7 @@ package kabam.rotmg.errors.view
             if (this.canCatchGlobalErrors())
             {
                 this.removeGlobalErrorListener();
-            };
+            }
         }
 
         private function canCatchGlobalErrors():Boolean

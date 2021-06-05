@@ -9,10 +9,10 @@ package kabam.rotmg.servers.model
     import kabam.rotmg.core.model.PlayerModel;
     import io.decagames.rotmg.seasonalEvent.data.SeasonalEventModel;
     import kabam.rotmg.servers.api.Server;
-    import __AS3__.vec.Vector;
+    
     import com.company.assembleegameclient.parameters.Parameters;
     import com.company.assembleegameclient.appengine.SavedCharacter;
-    import __AS3__.vec.*;
+    
 
     public class LocalhostServerModel implements ServerModel 
     {
@@ -38,7 +38,7 @@ package kabam.rotmg.servers.model
                 _local_3 = new Server().setName(_local_2).setAddress("localhost").setPort(Parameters.PORT);
                 this.servers.push(_local_3);
                 _local_1++;
-            };
+            }
         }
 
         public function setAvailableServers(_arg_1:int):void
@@ -52,7 +52,7 @@ package kabam.rotmg.servers.model
             else
             {
                 this.availableServers.length = 0;
-            };
+            }
             if (_arg_1 != 0)
             {
                 for each (_local_2 in this.servers)
@@ -60,8 +60,8 @@ package kabam.rotmg.servers.model
                     if (_local_2.name.charAt(0) == "C")
                     {
                         this.availableServers.push(_local_2);
-                    };
-                };
+                    }
+                }
             }
             else
             {
@@ -70,9 +70,9 @@ package kabam.rotmg.servers.model
                     if (_local_3.name.charAt(0) != "C")
                     {
                         this.availableServers.push(_local_3);
-                    };
-                };
-            };
+                    }
+                }
+            }
         }
 
         public function getAvailableServers():Vector.<Server>
@@ -94,7 +94,7 @@ package kabam.rotmg.servers.model
             else
             {
                 _local_2 = Boolean(this.seasonalEventModel.isChallenger);
-            };
+            }
             var _local_4:int = ((_local_2) ? Server.CHALLENGER_SERVER : Server.NORMAL_SERVER);
             this.setAvailableServers(_local_4);
             var _local_5:Server;
@@ -106,7 +106,7 @@ package kabam.rotmg.servers.model
                     if (_local_6.name == _local_7)
                     {
                         return (_local_6);
-                    };
+                    }
                     _local_5 = this.availableServers[0];
                     if (_local_2)
                     {
@@ -115,10 +115,10 @@ package kabam.rotmg.servers.model
                     else
                     {
                         Parameters.data_.bestServer = _local_5.name;
-                    };
+                    }
                     Parameters.save();
-                };
-            };
+                }
+            }
             return (_local_5);
         }
 

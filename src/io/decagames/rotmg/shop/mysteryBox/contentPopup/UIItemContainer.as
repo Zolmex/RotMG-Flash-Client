@@ -72,7 +72,7 @@ package io.decagames.rotmg.shop.mysteryBox.contentPopup
             if (this._quantity > 1)
             {
                 _local_1.showQuantityLabel(this._quantity);
-            };
+            }
             return (_local_1);
         }
 

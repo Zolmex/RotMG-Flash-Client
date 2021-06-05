@@ -10,7 +10,7 @@ package kabam.rotmg.news.view
     import flash.filters.DropShadowFilter;
     import flash.filters.GlowFilter;
     import flash.text.TextField;
-    import __AS3__.vec.Vector;
+    
     import kabam.rotmg.text.model.FontModel;
     import flash.display.Sprite;
     import kabam.rotmg.news.model.NewsModel;
@@ -93,7 +93,7 @@ package kabam.rotmg.news.view
             else
             {
                 _local_5.setStringBuilder(new LineBuilder().setParams(_arg_1));
-            };
+            }
             _local_5.setWordWrap(true);
             _local_5.setMultiLine(true);
             _local_5.setAutoSize(TextFieldAutoSize.CENTER);
@@ -112,7 +112,7 @@ package kabam.rotmg.news.view
             if (this.triggeredOnStartup)
             {
                 _local_1.dispatch();
-            };
+            }
         }
 
         private function onAdded(_arg_1:Event):void
@@ -152,15 +152,15 @@ package kabam.rotmg.news.view
                     if ((this.currentPageNumber + 1) <= this.newsModel.numberOfNews)
                     {
                         this.setPage((this.currentPageNumber + 1));
-                    };
+                    }
                     return;
                 case this.leftNavSprite:
                     if ((this.currentPageNumber - 1) >= 1)
                     {
                         this.setPage((this.currentPageNumber - 1));
-                    };
+                    }
                     return;
-            };
+            }
         }
 
         private function destroy(_arg_1:Event):void
@@ -182,7 +182,7 @@ package kabam.rotmg.news.view
             if (((this.currentPage) && (this.currentPage.parent)))
             {
                 removeChild(this.currentPage);
-            };
+            }
             this.currentPage = this.newsModel.getModalPage(_arg_1);
             addChild(this.currentPage);
             this.updateIndicator();
@@ -194,7 +194,7 @@ package kabam.rotmg.news.view
             if (((!(_local_1 == null)) && (!(_local_1.gameSprite == null))))
             {
                 _local_1.gameSprite.refreshNewsUpdateButton();
-            };
+            }
         }
 
         override protected function makeModalBackground():Sprite
@@ -225,7 +225,7 @@ package kabam.rotmg.news.view
                 if ((this.currentPageNumber + 1) <= this.newsModel.numberOfNews)
                 {
                     this.setPage((this.currentPageNumber + 1));
-                };
+                }
             }
             else
             {
@@ -234,9 +234,9 @@ package kabam.rotmg.news.view
                     if ((this.currentPageNumber - 1) >= 1)
                     {
                         this.setPage((this.currentPageNumber - 1));
-                    };
-                };
-            };
+                    }
+                }
+            }
         }
 
         private function makeLeftNav():Sprite

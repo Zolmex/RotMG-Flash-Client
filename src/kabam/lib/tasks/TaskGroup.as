@@ -5,8 +5,8 @@
 
 package kabam.lib.tasks
 {
-    import __AS3__.vec.Vector;
-    import __AS3__.vec.*;
+    
+    
 
     public class TaskGroup extends BaseTask 
     {
@@ -34,7 +34,7 @@ package kabam.lib.tasks
             else
             {
                 completeTask(true);
-            };
+            }
         }
 
         override protected function onReset():void
@@ -43,7 +43,7 @@ package kabam.lib.tasks
             for each (_local_1 in this.tasks)
             {
                 _local_1.reset();
-            };
+            }
         }
 
         private function startAllTasks():void
@@ -53,7 +53,7 @@ package kabam.lib.tasks
             {
                 this.tasks[_local_1].lastly.addOnce(this.onTaskFinished);
                 this.tasks[_local_1].start();
-            };
+            }
         }
 
         private function onTaskFinished(_arg_1:BaseTask, _arg_2:Boolean, _arg_3:String):void
@@ -63,12 +63,12 @@ package kabam.lib.tasks
                 if (--this.pending == 0)
                 {
                     completeTask(true);
-                };
+                }
             }
             else
             {
                 completeTask(false, _arg_3);
-            };
+            }
         }
 
         public function toString():String

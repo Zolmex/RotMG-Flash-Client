@@ -12,7 +12,7 @@ package kabam.rotmg.characters.reskin.control
     import kabam.rotmg.classes.view.CharacterSkinListItemFactory;
     import kabam.rotmg.characters.reskin.view.ReskinCharacterView;
     import kabam.rotmg.classes.model.CharacterSkins;
-    import __AS3__.vec.Vector;
+    
     import flash.display.DisplayObject;
 
     public class OpenReskinDialogCommand 

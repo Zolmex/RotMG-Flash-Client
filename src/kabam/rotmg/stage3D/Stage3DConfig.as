@@ -61,7 +61,7 @@ package kabam.rotmg.stage3D
             if (_local_2.GetContext3D().driverInfo.toLowerCase().indexOf("software") != -1)
             {
                 Parameters.clearGpuRender();
-            };
+            }
             _local_2.configureBackBuffer(WIDTH, HEIGHT, 2, true);
             _local_2.setBlendFactors(Context3DBlendFactor.SOURCE_ALPHA, Context3DBlendFactor.ONE_MINUS_SOURCE_ALPHA);
             _local_2.setDepthTest(false, Context3DCompareMode.LESS_EQUAL);

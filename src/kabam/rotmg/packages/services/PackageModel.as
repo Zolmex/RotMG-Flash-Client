@@ -7,8 +7,8 @@ package kabam.rotmg.packages.services
 {
     import org.osflash.signals.Signal;
     import kabam.rotmg.packages.model.PackageInfo;
-    import __AS3__.vec.Vector;
-    import __AS3__.vec.*;
+    
+    
     import kabam.rotmg.packages.model.*;
 
     public class PackageModel 
@@ -20,7 +20,7 @@ package kabam.rotmg.packages.services
         private var initialized:Boolean;
         private var maxSlots:int = 18;
 
-        private var models:Object = {};
+        private var models:Object = {}
         public const updateSignal:Signal = new Signal();
 
 
@@ -33,8 +33,8 @@ package kabam.rotmg.packages.services
                 if ((((!(_local_2.slot == 0)) && (!(_local_2.slot == TARGETING_BOX_SLOT))) && (this.isPackageValid(_local_2))))
                 {
                     _local_1[(_local_2.slot - 1)] = _local_2;
-                };
-            };
+                }
+            }
             return (_local_1);
         }
 
@@ -47,8 +47,8 @@ package kabam.rotmg.packages.services
                 if (((_local_2.slot == TARGETING_BOX_SLOT) && (this.isPackageValid(_local_2))))
                 {
                     _local_1.push(_local_2);
-                };
-            };
+                }
+            }
             return (_local_1);
         }
 
@@ -66,7 +66,7 @@ package kabam.rotmg.packages.services
                 if (_local_2.slot == TARGETING_BOX_SLOT)
                 {
                     return (_local_2);
-                };
+                }
                 if ((((this.isPackageValid(_local_2)) && (_local_2.showOnLogin)) && (!(_local_2.popupImage == ""))))
                 {
                     if (_local_1 != null)
@@ -74,14 +74,14 @@ package kabam.rotmg.packages.services
                         if (((!(_local_2.unitsLeft == -1)) || (!(_local_2.maxPurchase == -1))))
                         {
                             _local_1 = _local_2;
-                        };
+                        }
                     }
                     else
                     {
                         _local_1 = _local_2;
-                    };
-                };
-            };
+                    }
+                }
+            }
             return (_local_1);
         }
 
@@ -103,11 +103,11 @@ package kabam.rotmg.packages.services
         public function setPackages(_arg_1:Array):void
         {
             var _local_2:PackageInfo;
-            this.models = {};
+            this.models = {}
             for each (_local_2 in _arg_1)
             {
                 this.models[_local_2.id] = _local_2;
-            };
+            }
             this.updateSignal.dispatch();
             this.initialized = true;
         }
@@ -134,7 +134,7 @@ package kabam.rotmg.packages.services
             for each (_local_1 in this.models)
             {
                 return (true);
-            };
+            }
             return (false);
         }
 

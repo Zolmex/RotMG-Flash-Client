@@ -52,9 +52,9 @@ package kabam.rotmg.text.view.stringBuilder
                 if (((_local_3.charAt(0) == "{") && (_local_3.charAt((_local_3.length - 1)) == "}")))
                 {
                     _local_3 = this.provider.getValue(_local_3.substr(1, (_local_3.length - 2)));
-                };
+                }
                 _local_1 = _local_1.replace((("{" + _local_2) + "}"), _local_3);
-            };
+            }
             _local_1 = _local_1.replace(/\\n/g, "\n");
             return ((this.prefix + _local_1) + this.postfix);
         }

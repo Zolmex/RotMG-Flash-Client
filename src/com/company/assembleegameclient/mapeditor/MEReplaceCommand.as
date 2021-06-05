@@ -24,11 +24,11 @@ package com.company.assembleegameclient.mapeditor
             if (_arg_4 != null)
             {
                 this.oldTile_ = _arg_4.clone();
-            };
+            }
             if (_arg_5 != null)
             {
                 this.newTile_ = _arg_5.clone();
-            };
+            }
         }
 
         override public function execute():void
@@ -40,7 +40,7 @@ package com.company.assembleegameclient.mapeditor
             else
             {
                 this.map_.setTile(this.x_, this.y_, this.newTile_);
-            };
+            }
         }
 
         override public function unexecute():void
@@ -52,7 +52,7 @@ package com.company.assembleegameclient.mapeditor
             else
             {
                 this.map_.setTile(this.x_, this.y_, this.oldTile_);
-            };
+            }
         }
 
 

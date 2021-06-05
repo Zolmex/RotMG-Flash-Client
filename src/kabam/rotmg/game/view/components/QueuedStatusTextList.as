@@ -26,7 +26,7 @@ package kabam.rotmg.game.view.components
             else
             {
                 this.tail = null;
-            };
+            }
         }
 
         public function append(_arg_1:QueuedStatusText):void
@@ -41,7 +41,7 @@ package kabam.rotmg.game.view.components
             {
                 this.head = (this.tail = _arg_1);
                 this.target.addChild(_arg_1);
-            };
+            }
         }
 
 

@@ -31,7 +31,7 @@ package kabam.rotmg.legends.control
             else
             {
                 this.gotoTitleView();
-            };
+            }
         }
 
         private function clearRecentlyDeceasedAndGotoCharacterView():void

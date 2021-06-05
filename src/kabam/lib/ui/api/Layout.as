@@ -5,7 +5,7 @@
 
 package kabam.lib.ui.api
 {
-    import __AS3__.vec.Vector;
+    
     import flash.display.DisplayObject;
 
     public interface Layout 

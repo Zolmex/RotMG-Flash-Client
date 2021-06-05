@@ -112,9 +112,9 @@ package kabam.rotmg.account
                     else
                     {
                         this.context.configure(WebAccountConfig);
-                    };
-                };
-            };
+                    }
+                }
+            }
             this.context.configure(TransferAccountConfig);
         }
 

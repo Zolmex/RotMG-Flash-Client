@@ -31,7 +31,7 @@ package kabam.rotmg.ui.commands
             else
             {
                 this.openBadDomainView();
-            };
+            }
         }
 
         private function showLoadingScreen():void
