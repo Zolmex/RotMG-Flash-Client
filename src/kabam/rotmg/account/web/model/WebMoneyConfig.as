@@ -1,0 +1,41 @@
+﻿// Decompiled by AS3 Sorcerer 6.08
+// www.as3sorcerer.com
+
+//kabam.rotmg.account.web.model.WebMoneyConfig
+
+package kabam.rotmg.account.web.model
+{
+    import kabam.rotmg.account.core.model.MoneyConfig;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.rotmg.text.model.TextKey;
+    import com.company.assembleegameclient.util.offer.Offer;
+    import kabam.rotmg.text.view.stringBuilder.StringBuilder;
+
+    public class WebMoneyConfig implements MoneyConfig 
+    {
+
+
+        public function showPaymentMethods():Boolean
+        {
+            return (true);
+        }
+
+        public function showBonuses():Boolean
+        {
+            return (true);
+        }
+
+        public function parseOfferPrice(_arg_1:Offer):StringBuilder
+        {
+            return (new LineBuilder().setParams(TextKey.PAYMENTS_WEB_COST, {"cost":_arg_1.price_}));
+        }
+
+        public function jsInitializeFunction():String
+        {
+            return ("rotmg.KabamPayment.setupRotmgAccount");
+        }
+
+
+    }
+}//package kabam.rotmg.account.web.model
+
