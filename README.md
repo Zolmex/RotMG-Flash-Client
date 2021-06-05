@@ -4,6 +4,7 @@ Made compatible for Adobe Flex SDK 4.9.1 & AIR SDK 32 SDKs.
 
 ### Resources used to put together the source
 - Scripts decompiled with AS3 Sorcerer 6.08.
+- JPEXS FFDec for a few asset files.
 - Original flash client and its assets (i.e. spritesheets, game xmls) grabbed from https://static.drips.pw/rotmg/production/current/.
 - Embedded SWF files (e.g. MapLoadingScreen.swf) from [BurgerLoverMx/X31.1.2](https://github.com/BurgerLoverMx/X31.1.2).
 - Original *.actionScriptProperties* file from [kaos00723/RotMG_Client_27.7.X2](https://github.com/kaos00723/RotMG_Client_27.7.X2).
