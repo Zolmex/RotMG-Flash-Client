@@ -5,7 +5,15 @@
 
 package com.company.assembleegameclient.appengine
 {
-    import robotlegs.bender.framework.api.ILogger;
+import kabam.rotmg.application.impl.LocalhostSetup;
+import kabam.rotmg.application.impl.PrivateSetup;
+import kabam.rotmg.application.impl.ProductionSetup;
+import kabam.rotmg.application.impl.Testing2Setup;
+import kabam.rotmg.application.impl.Testing3Setup;
+import kabam.rotmg.application.impl.TestingSetup;
+import kabam.rotmg.build.impl.BuildEnvironments;
+
+import robotlegs.bender.framework.api.ILogger;
     import kabam.rotmg.core.StaticInjectorContext;
     import org.swiftsuspenders.Injector;
     import kabam.rotmg.appengine.impl.AppEngineRetryLoader;
@@ -18,7 +26,6 @@ package com.company.assembleegameclient.appengine
     public class RemoteTexture 
     {
 
-        private static const URL_PATTERN:String = "https://{DOMAIN}/picture/get";
         private static const ERROR_PATTERN:String = "Remote Texture Error: {ERROR} (id:{ID}, instance:{INSTANCE})";
         private static const START_TIME:int = int(new Date().getTime());
 
@@ -38,9 +45,32 @@ package com.company.assembleegameclient.appengine
 
         public function run():void
         {
-            var _local_1:String = ((this.instance_ == "testing") ? "test.realmofthemadgod.com" : "realmofthemadgod.com");
-            var _local_2:String = URL_PATTERN.replace("{DOMAIN}", _local_1);
-            var _local_3:Object = {}
+            var address:String;
+            switch (WebMain.ENV){
+                case BuildEnvironments.LOCALHOST:
+                    address = LocalhostSetup.SERVER;
+                    break;
+                case BuildEnvironments.PRIVATE:
+                    address = PrivateSetup.SERVER;
+                    break;
+                case BuildEnvironments.TESTING:
+                    address = TestingSetup.SERVER;
+                    break;
+                case BuildEnvironments.TESTING2:
+                    address = Testing2Setup.SERVER;
+                    break;
+                case BuildEnvironments.TESTING3:
+                    address = Testing3Setup.SERVER;
+                    break;
+                case BuildEnvironments.PRODUCTION:
+                    address = ProductionSetup.SERVER;
+                    break;
+                case BuildEnvironments.DEV:
+                case BuildEnvironments.PRODTEST:
+                    return;
+            }
+            var _local_2:String = address + "/picture/get";
+            var _local_3:Object = {};
             _local_3.id = this.id_;
             _local_3.time = START_TIME;
             var _local_4:RetryLoader = new AppEngineRetryLoader();

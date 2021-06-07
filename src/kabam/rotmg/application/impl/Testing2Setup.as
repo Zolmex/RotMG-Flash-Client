@@ -11,21 +11,15 @@ package kabam.rotmg.application.impl
     public class Testing2Setup implements ApplicationSetup 
     {
 
-        private const SERVER:String = "test2.realmofthemadgod.com";
+        public static const SERVER:String = "test2.realmofthemadgod.com";
         private const UNENCRYPTED:String = ("http://" + SERVER);
         private const ENCRYPTED:String = ("https://" + SERVER);
-        private const ANALYTICS:String = "UA-11236645-6";
         private const BUILD_LABEL:String = "<font color='#FF0000'>TESTING 2 </font> #{VERSION}";
 
 
         public function getAppEngineUrl(_arg_1:Boolean=false):String
         {
             return (this.ENCRYPTED);
-        }
-
-        public function getAnalyticsCode():String
-        {
-            return (this.ANALYTICS);
         }
 
         public function getBuildLabel():String
@@ -76,7 +70,7 @@ package kabam.rotmg.application.impl
 
         public function getServerDomain():String
         {
-            return (this.SERVER);
+            return (SERVER);
         }
 
 

@@ -20,7 +20,7 @@ package kabam.rotmg.appengine
     public class AppEngineConfig implements IConfig 
     {
 
-        private const TRACK_APP_ENGINE_CALLS:Boolean = true;
+        private const TRACK_APP_ENGINE_CALLS:Boolean = false;
 
         [Inject]
         public var context:IContext;
