@@ -52,10 +52,9 @@ package kabam.rotmg.language.service
 
         private function onLanguageResponse(_arg_1:String):void
         {
-            var _local_3:Array;
             this.strings.clear();
             var _local_2:Object = JSON.parse(_arg_1);
-            for each (_local_3 in _local_2)
+            for each (var _local_3:Array in _local_2)
             {
                 this.strings.setValue(_local_3[0], _local_3[1], _local_3[2]);
             }

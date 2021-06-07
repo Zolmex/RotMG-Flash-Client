@@ -48,8 +48,7 @@ import robotlegs.bender.framework.api.ILogger;
             var address:String;
             switch (WebMain.ENV){
                 case BuildEnvironments.LOCALHOST:
-                    address = LocalhostSetup.SERVER;
-                    break;
+                    return;
                 case BuildEnvironments.PRIVATE:
                     address = PrivateSetup.SERVER;
                     break;

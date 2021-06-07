@@ -19,7 +19,7 @@ package kabam.rotmg.core.commands
 
         override public function execute():void
         {
-            this.spamFilter.setPatterns(this.data.FilterList.split(/\n/g));
+            this.spamFilter.setPatterns(String(this.data.FilterList).split(/\n/g));
         }
 
 
