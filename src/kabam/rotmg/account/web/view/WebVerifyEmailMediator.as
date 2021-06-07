@@ -7,14 +7,12 @@ package kabam.rotmg.account.web.view
 {
     import robotlegs.bender.bundles.mvcs.Mediator;
     import kabam.rotmg.account.core.Account;
-    import kabam.rotmg.core.signals.TrackEventSignal;
     import kabam.rotmg.account.core.signals.SendConfirmEmailSignal;
     import kabam.rotmg.dialogs.control.OpenDialogSignal;
     import kabam.rotmg.dialogs.control.CloseDialogsSignal;
     import kabam.rotmg.account.core.signals.UpdateAccountInfoSignal;
     import kabam.rotmg.core.StaticInjectorContext;
     import kabam.rotmg.appengine.api.AppEngineClient;
-    import kabam.rotmg.core.service.TrackingData;
 
     public class WebVerifyEmailMediator extends Mediator 
     {
@@ -23,8 +21,6 @@ package kabam.rotmg.account.web.view
         public var view:WebVerifyEmailDialog;
         [Inject]
         public var account:Account;
-        [Inject]
-        public var track:TrackEventSignal;
         [Inject]
         public var verify:SendConfirmEmailSignal;
         [Inject]
@@ -57,17 +53,9 @@ package kabam.rotmg.account.web.view
 
         private function onLogout():void
         {
-            this.trackLoggedOut();
             this.account.clear();
             this.updateAccount.dispatch();
             this.openDialog.dispatch(new WebLoginDialog());
-        }
-
-        private function trackLoggedOut():void
-        {
-            var _local_1:TrackingData = new TrackingData();
-            _local_1.category = "account";
-            _local_1.action = "loggedOut";
         }
 
         private function onComplete(_arg_1:Boolean, _arg_2:*):void
@@ -84,13 +72,6 @@ package kabam.rotmg.account.web.view
 
         private function onSent():void
         {
-        }
-
-        private function trackEmailSent():void
-        {
-            var _local_1:TrackingData = new TrackingData();
-            _local_1.category = "account";
-            _local_1.action = "verifyEmailSent";
         }
 
         private function onError(_arg_1:String):void

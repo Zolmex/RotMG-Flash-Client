@@ -37,7 +37,6 @@ package com.company.assembleegameclient.game
     import com.company.assembleegameclient.objects.GameObject;
     import flash.display.DisplayObject;
     import flash.display.Sprite;
-    import kabam.rotmg.core.service.GoogleAnalytics;
     import kabam.rotmg.promotions.view.SpecialOfferButton;
     import kabam.rotmg.game.model.QuestModel;
     import io.decagames.rotmg.seasonalEvent.data.SeasonalEventModel;
@@ -121,7 +120,6 @@ package com.company.assembleegameclient.game
         private var displaysPosY:uint = 4;
         private var currentPackage:DisplayObject = new Sprite();
         private var packageY:Number;
-        private var googleAnalytics:GoogleAnalytics;
         private var specialOfferButton:SpecialOfferButton;
         private var questModel:QuestModel;
         private var seasonalEventModel:SeasonalEventModel;
@@ -243,7 +241,6 @@ package com.company.assembleegameclient.game
                 this.showWaveCounter();
             }
             var _local_1:Account = StaticInjectorContext.getInjector().getInstance(Account);
-            this.googleAnalytics = StaticInjectorContext.getInjector().getInstance(GoogleAnalytics);
             this.isNexus_ = (this.mapName == Map.NEXUS);
             if (this.isNexus_)
             {

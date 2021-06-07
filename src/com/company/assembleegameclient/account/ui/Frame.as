@@ -8,7 +8,6 @@ package com.company.assembleegameclient.account.ui
     import flash.display.Sprite;
     import kabam.rotmg.text.view.TextFieldDisplayConcrete;
     import com.company.assembleegameclient.ui.DeprecatedClickableText;
-    import kabam.rotmg.core.service.GoogleAnalytics;
     import flash.display.GraphicsSolidFill;
     import flash.display.GraphicsStroke;
     import flash.display.LineScaleMode;
@@ -36,7 +35,6 @@ package com.company.assembleegameclient.account.ui
         public var analyticsPageName_:String;
         public var w_:int = 288;
         public var h_:int = 100;
-        private var googleAnalytics:GoogleAnalytics;
 
         public var textInputFields_:Vector.<TextInputField> = new Vector.<TextInputField>();
         public var navigationLinks_:Vector.<DeprecatedClickableText> = new Vector.<DeprecatedClickableText>();
@@ -51,7 +49,6 @@ package com.company.assembleegameclient.account.ui
         public function Frame(_arg_1:String, _arg_2:String, _arg_3:String, _arg_4:String="", _arg_5:int=288)
         {
             this.w_ = _arg_5;
-            this.googleAnalytics = StaticInjectorContext.getInjector().getInstance(GoogleAnalytics);
             this.titleText_ = new TextFieldDisplayConcrete().setSize(13).setColor(0xB3B3B3);
             this.titleText_.setStringBuilder(new LineBuilder().setParams(_arg_1));
             this.titleText_.filters = [new DropShadowFilter(0, 0, 0)];
@@ -211,10 +208,6 @@ package com.company.assembleegameclient.account.ui
             if (this.textInputFields_.length > 0)
             {
                 stage.focus = this.textInputFields_[0].inputText_;
-            }
-            if (((this.analyticsPageName_) && (this.googleAnalytics)))
-            {
-                this.googleAnalytics.trackPageView(this.analyticsPageName_);
             }
         }
 

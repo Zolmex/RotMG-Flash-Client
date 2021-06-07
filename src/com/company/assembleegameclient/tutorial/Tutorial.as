@@ -9,7 +9,6 @@ package com.company.assembleegameclient.tutorial
     import com.company.assembleegameclient.game.GameSprite;
     
     import flash.display.Shape;
-    import kabam.rotmg.core.service.GoogleAnalytics;
     import flash.display.Graphics;
     import flash.utils.getTimer;
     import kabam.rotmg.assets.EmbeddedData;
@@ -50,7 +49,6 @@ package com.company.assembleegameclient.tutorial
         private var boxesBack_:Shape = new Shape();
         private var boxes_:Shape = new Shape();
         private var tutorialMessage_:TutorialMessage = null;
-        private var tracker:GoogleAnalytics;
         private var trackingStep:int = -1;
         private var lastTrackingStepTimestamp:uint;
 
@@ -65,8 +63,6 @@ package com.company.assembleegameclient.tutorial
             {
                 this.steps_.push(new Step(_local_2));
             }
-            this.tracker = StaticInjectorContext.getInjector().getInstance(GoogleAnalytics);
-            this.tracker.trackEvent("tutorial", "started");
             addChild(this.boxesBack_);
             addChild(this.boxes_);
             _local_3 = this.darkBox_.graphics;
@@ -151,7 +147,6 @@ package com.company.assembleegameclient.tutorial
                         {
                             if (!_local_4.trackingSent)
                             {
-                                this.tracker.trackEvent("tutorial", "step", _local_3.toString(), (_local_4.satisfiedSince_ - this.lastTrackingStepTimestamp));
                                 this.lastTrackingStepTimestamp = getTimer();
                             }
                             this.trackingStep = _local_3;

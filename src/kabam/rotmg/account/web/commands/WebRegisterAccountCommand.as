@@ -10,7 +10,6 @@ package kabam.rotmg.account.web.commands
     import kabam.rotmg.core.signals.TaskErrorSignal;
     import kabam.rotmg.account.core.signals.UpdateAccountInfoSignal;
     import kabam.rotmg.dialogs.control.OpenDialogSignal;
-    import kabam.rotmg.core.signals.TrackEventSignal;
     import kabam.rotmg.ui.signals.EnterGameSignal;
     import kabam.rotmg.ui.signals.PollVerifyEmailSignal;
     import kabam.lib.tasks.BranchingTask;
@@ -18,7 +17,6 @@ package kabam.rotmg.account.web.commands
     import kabam.lib.tasks.DispatchSignalTask;
     import kabam.rotmg.account.web.view.WebVerifyEmailDialog;
     import kabam.lib.tasks.Task;
-    import kabam.rotmg.core.service.TrackingData;
 
     public class WebRegisterAccountCommand 
     {
@@ -33,8 +31,6 @@ package kabam.rotmg.account.web.commands
         public var updateAccount:UpdateAccountInfoSignal;
         [Inject]
         public var openDialog:OpenDialogSignal;
-        [Inject]
-        public var track:TrackEventSignal;
         [Inject]
         public var enterGame:EnterGameSignal;
         [Inject]
@@ -62,15 +58,6 @@ package kabam.rotmg.account.web.commands
         {
             return (new DispatchSignalTask(this.taskError, this.task));
         }
-
-        private function getTrackingData():TrackingData
-        {
-            var _local_1:TrackingData = new TrackingData();
-            _local_1.category = "account";
-            _local_1.action = "accountRegistered";
-            return (_local_1);
-        }
-
 
     }
 }//package kabam.rotmg.account.web.commands

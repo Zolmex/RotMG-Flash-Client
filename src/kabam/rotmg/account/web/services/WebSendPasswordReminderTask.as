@@ -7,17 +7,13 @@ package kabam.rotmg.account.web.services
 {
     import kabam.lib.tasks.BaseTask;
     import kabam.rotmg.account.core.services.SendPasswordReminderTask;
-    import kabam.rotmg.core.signals.TrackEventSignal;
     import kabam.rotmg.appengine.api.AppEngineClient;
-    import kabam.rotmg.core.service.TrackingData;
 
     public class WebSendPasswordReminderTask extends BaseTask implements SendPasswordReminderTask 
     {
 
         [Inject]
         public var email:String;
-        [Inject]
-        public var track:TrackEventSignal;
         [Inject]
         public var client:AppEngineClient;
 
@@ -42,15 +38,7 @@ package kabam.rotmg.account.web.services
 
         private function onForgotDone():void
         {
-            this.trackPasswordReminder();
             completeTask(true);
-        }
-
-        private function trackPasswordReminder():void
-        {
-            var _local_1:TrackingData = new TrackingData();
-            _local_1.category = "account";
-            _local_1.action = "passwordSent";
         }
 
         private function onForgotError(_arg_1:String):void

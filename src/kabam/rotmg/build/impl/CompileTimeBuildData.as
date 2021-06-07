@@ -33,7 +33,7 @@ package kabam.rotmg.build.impl
 
         public function getEnvironmentString():String
         {
-            return ("production".toLowerCase());
+            return (WebMain.ENV.toLowerCase());
         }
 
         public function getEnvironment():BuildEnvironment

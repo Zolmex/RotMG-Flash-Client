@@ -10,13 +10,11 @@ package kabam.rotmg.account.web.commands
     import kabam.rotmg.dialogs.control.CloseDialogsSignal;
     import kabam.rotmg.dialogs.control.OpenDialogSignal;
     import kabam.rotmg.core.signals.TaskErrorSignal;
-    import kabam.rotmg.core.signals.TrackEventSignal;
     import kabam.lib.tasks.BranchingTask;
     import kabam.lib.tasks.TaskSequence;
     import kabam.lib.tasks.DispatchSignalTask;
     import kabam.rotmg.account.web.view.WebAccountDetailDialog;
     import kabam.lib.tasks.Task;
-    import kabam.rotmg.core.service.TrackingData;
 
     public class WebChangePasswordCommand 
     {
@@ -31,8 +29,6 @@ package kabam.rotmg.account.web.commands
         public var openDialog:OpenDialogSignal;
         [Inject]
         public var loginError:TaskErrorSignal;
-        [Inject]
-        public var track:TrackEventSignal;
 
 
         public function execute():void
@@ -54,13 +50,6 @@ package kabam.rotmg.account.web.commands
             return (new DispatchSignalTask(this.loginError, this.task));
         }
 
-        private function makeTrackingData():TrackingData
-        {
-            var _local_1:TrackingData = new TrackingData();
-            _local_1.category = "account";
-            _local_1.action = "passwordChanged";
-            return (_local_1);
-        }
 
 
     }

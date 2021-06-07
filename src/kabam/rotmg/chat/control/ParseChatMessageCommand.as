@@ -12,7 +12,6 @@ package kabam.rotmg.chat.control
     import kabam.rotmg.build.api.BuildData;
     import kabam.rotmg.dailyLogin.model.DailyLoginModel;
     import kabam.rotmg.core.model.PlayerModel;
-    import kabam.rotmg.core.service.GoogleAnalytics;
     import com.company.assembleegameclient.objects.GameObject;
     import com.company.util.MoreObjectUtil;
     import kabam.rotmg.chat.model.ChatMessage;
@@ -40,8 +39,6 @@ package kabam.rotmg.chat.control
         public var dailyLoginModel:DailyLoginModel;
         [Inject]
         public var player:PlayerModel;
-        [Inject]
-        public var tracking:GoogleAnalytics;
 
 
         public function execute():void

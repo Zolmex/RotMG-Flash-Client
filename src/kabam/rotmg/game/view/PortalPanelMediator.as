@@ -8,7 +8,6 @@ package kabam.rotmg.game.view
     import robotlegs.bender.bundles.mvcs.Mediator;
     import com.company.assembleegameclient.ui.panels.PortalPanel;
     import kabam.rotmg.game.signals.ExitGameSignal;
-    import kabam.rotmg.core.service.GoogleAnalytics;
     import kabam.rotmg.core.model.PlayerModel;
     import kabam.rotmg.core.signals.ShowTooltipSignal;
     import kabam.rotmg.core.signals.HideTooltipsSignal;
@@ -26,8 +25,6 @@ package kabam.rotmg.game.view
         [Inject]
         public var exitGameSignal:ExitGameSignal;
         [Inject]
-        public var googleAnalytics:GoogleAnalytics;
-        [Inject]
         public var playerModel:PlayerModel;
         [Inject]
         public var showTooltipSignal:ShowTooltipSignal;
@@ -40,7 +37,6 @@ package kabam.rotmg.game.view
 
         override public function initialize():void
         {
-            this.view.googleAnalytics = this.googleAnalytics;
             this.view.exitGameSignal.add(this.onExitGame);
             this.view.enterButton_.addEventListener(MouseEvent.CLICK, this.view.onEnterSpriteClick);
         }

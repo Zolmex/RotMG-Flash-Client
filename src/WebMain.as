@@ -7,7 +7,11 @@ package
 {
     import flash.display.Sprite;
     import flash.display.Stage;
-    import robotlegs.bender.framework.api.IContext;
+
+import kabam.rotmg.build.api.BuildEnvironment;
+import kabam.rotmg.build.impl.BuildEnvironments;
+
+import robotlegs.bender.framework.api.IContext;
     import flash.events.Event;
     import com.company.assembleegameclient.util.AssetLoader;
     import flash.display.StageScaleMode;
@@ -68,6 +72,7 @@ package
     public class WebMain extends Sprite 
     {
 
+        public static const ENV:String = BuildEnvironments.LOCALHOST;
         public static var STAGE:Stage;
         public static var USER_AGENT:String = "None";
 

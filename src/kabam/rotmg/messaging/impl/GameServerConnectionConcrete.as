@@ -239,7 +239,6 @@ package kabam.rotmg.messaging.impl
     import kabam.rotmg.ui.view.TitleView;
     import kabam.rotmg.maploading.signals.HideMapLoadingSignal;
     import kabam.rotmg.messaging.impl.data.SlotObjectData;
-    import kabam.rotmg.core.service.GoogleAnalytics;
     import flash.events.TimerEvent;
     import com.company.assembleegameclient.ui.dialogs.Dialog;
     import flash.events.Event;
@@ -2270,13 +2269,6 @@ package kabam.rotmg.messaging.impl
 
         private function onBuyResult(_arg_1:BuyResult):void
         {
-            if (_arg_1.result_ == BuyResult.SUCCESS_BRID)
-            {
-                if (outstandingBuy_ != null)
-                {
-                    outstandingBuy_.record();
-                }
-            }
             outstandingBuy_ = null;
             this.handleBuyResultType(_arg_1);
         }
@@ -2532,7 +2524,6 @@ package kabam.rotmg.messaging.impl
 
         private function onClosed():void
         {
-            var _local_1:GoogleAnalytics;
             var _local_2:HideMapLoadingSignal;
             var _local_3:Server;
             var _local_4:ReconnectEvent;
@@ -2540,8 +2531,6 @@ package kabam.rotmg.messaging.impl
             {
                 if (this.playerId_ != -1)
                 {
-                    _local_1 = StaticInjectorContext.getInjector().getInstance(GoogleAnalytics);
-                    _local_1.trackEvent("error", "disconnect", gs_.map.name_);
                     gs_.closed.dispatch();
                 }
                 else
@@ -2693,21 +2682,12 @@ package kabam.rotmg.messaging.impl
 
         private function handleDefaultFailure(_arg_1:Failure):void
         {
-            var _local_3:GoogleAnalytics;
             var _local_2:String = LineBuilder.getLocalizedStringFromJSON(_arg_1.errorDescription_);
             if (_local_2 == "")
             {
                 _local_2 = _arg_1.errorDescription_;
             }
             this.addTextLine.dispatch(ChatMessage.make(Parameters.ERROR_CHAT_NAME, _local_2));
-            if (_arg_1.errorDescription_ != "")
-            {
-                _local_3 = StaticInjectorContext.getInjector().getInstance(GoogleAnalytics);
-                if (_local_3)
-                {
-                    _local_3.trackEvent("disconnect", _arg_1.errorDescription_, _arg_1.errorConnectionId_);
-                }
-            }
         }
 
         private function onDoClientUpdate(_arg_1:Event):void

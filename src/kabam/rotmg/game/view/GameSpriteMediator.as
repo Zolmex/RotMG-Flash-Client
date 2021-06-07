@@ -21,7 +21,6 @@ package kabam.rotmg.game.view
     import kabam.rotmg.ui.signals.HUDSetupStarted;
     import kabam.rotmg.ui.signals.UpdateHUDSignal;
     import kabam.rotmg.ui.signals.HUDModelInitialized;
-    import kabam.rotmg.core.signals.TrackPageViewSignal;
     import kabam.rotmg.packages.control.BeginnersPackageAvailableSignal;
     import kabam.rotmg.packages.control.PackageAvailableSignal;
     import kabam.rotmg.packages.control.InitPackagesSignal;
@@ -83,8 +82,6 @@ package kabam.rotmg.game.view
         public var updateHUDSignal:UpdateHUDSignal;
         [Inject]
         public var hudModelInitialized:HUDModelInitialized;
-        [Inject]
-        public var tracking:TrackPageViewSignal;
         [Inject]
         public var beginnersPackageAvailable:BeginnersPackageAvailableSignal;
         [Inject]
@@ -156,7 +153,6 @@ package kabam.rotmg.game.view
             this.view.flushQueueSignal = this.flushQueueSignal;
             this.view.showHideKeyUISignal = this.showHideKeyUISignal;
             this.view.connect();
-            this.tracking.dispatch("/gameStarted");
             this.view.showBeginnersPackage = this.showBeginnersPackage;
             this.view.openDailyCalendarPopupSignal = this.showDailyCalendarSignal;
             this.view.showPackage.add(this.onShowPackage);

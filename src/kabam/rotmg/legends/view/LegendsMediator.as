@@ -12,7 +12,6 @@ package kabam.rotmg.legends.view
     import kabam.rotmg.legends.control.RequestFameListSignal;
     import kabam.rotmg.legends.control.FameListUpdateSignal;
     import kabam.rotmg.legends.control.ExitLegendsSignal;
-    import kabam.rotmg.core.signals.TrackPageViewSignal;
     import kabam.rotmg.legends.model.Timespan;
     import kabam.rotmg.legends.model.Legend;
 
@@ -33,13 +32,10 @@ package kabam.rotmg.legends.view
         public var update:FameListUpdateSignal;
         [Inject]
         public var exit:ExitLegendsSignal;
-        [Inject]
-        public var track:TrackPageViewSignal;
 
 
         override public function initialize():void
         {
-            this.track.dispatch("/legendsScreen");
             this.view.close.add(this.onClose);
             this.view.timespanChanged.add(this.onTimespanChanged);
             this.view.showDetail.add(this.onShowCharacter);

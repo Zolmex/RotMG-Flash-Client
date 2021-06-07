@@ -11,7 +11,6 @@ package kabam.rotmg.fame.view
     import io.decagames.rotmg.seasonalEvent.data.SeasonalEventModel;
     import kabam.rotmg.core.signals.SetScreenSignal;
     import kabam.rotmg.core.signals.GotoPreviousScreenSignal;
-    import kabam.rotmg.core.signals.TrackPageViewSignal;
     import kabam.rotmg.fame.service.RequestCharacterFameTask;
     import kabam.rotmg.assets.services.CharacterFactory;
     import kabam.rotmg.messaging.impl.incoming.Death;
@@ -39,8 +38,6 @@ package kabam.rotmg.fame.view
         [Inject]
         public var gotoPrevious:GotoPreviousScreenSignal;
         [Inject]
-        public var track:TrackPageViewSignal;
-        [Inject]
         public var task:RequestCharacterFameTask;
         [Inject]
         public var factory:CharacterFactory;
@@ -51,7 +48,6 @@ package kabam.rotmg.fame.view
         override public function initialize():void
         {
             this.view.closed.add(this.onClosed);
-            this.track.dispatch("/fame");
             this.setViewDataFromDeath();
             this.requestFameData();
         }

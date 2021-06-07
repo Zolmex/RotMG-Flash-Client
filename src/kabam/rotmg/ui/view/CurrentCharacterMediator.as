@@ -9,12 +9,10 @@ package kabam.rotmg.ui.view
     import com.company.assembleegameclient.screens.CharacterSelectionAndNewsScreen;
     import kabam.rotmg.core.model.PlayerModel;
     import kabam.rotmg.classes.model.ClassesModel;
-    import kabam.rotmg.core.signals.TrackEventSignal;
     import kabam.rotmg.core.signals.SetScreenSignal;
     import kabam.rotmg.core.signals.SetScreenWithValidDataSignal;
     import kabam.rotmg.game.signals.PlayGameSignal;
     import kabam.rotmg.ui.signals.NameChangedSignal;
-    import kabam.rotmg.core.signals.TrackPageViewSignal;
     import kabam.rotmg.packages.control.InitPackagesSignal;
     import kabam.rotmg.dialogs.control.OpenDialogSignal;
     import kabam.rotmg.account.securityQuestions.data.SecurityQuestionsModel;
@@ -30,8 +28,6 @@ package kabam.rotmg.ui.view
     import com.company.assembleegameclient.parameters.Parameters;
     import io.decagames.rotmg.seasonalEvent.popups.SeasonalEventComingPopup;
     import com.company.assembleegameclient.screens.ServersScreen;
-    import kabam.rotmg.core.service.TrackingData;
-    import com.company.util.MoreDateUtil;
     import com.company.assembleegameclient.screens.NewCharacterScreen;
     import flash.events.MouseEvent;
     import com.company.assembleegameclient.appengine.SavedCharacter;
@@ -51,8 +47,6 @@ package kabam.rotmg.ui.view
         [Inject]
         public var classesModel:ClassesModel;
         [Inject]
-        public var track:TrackEventSignal;
-        [Inject]
         public var setScreen:SetScreenSignal;
         [Inject]
         public var setScreenWithValidData:SetScreenWithValidDataSignal;
@@ -60,8 +54,6 @@ package kabam.rotmg.ui.view
         public var playGame:PlayGameSignal;
         [Inject]
         public var nameChanged:NameChangedSignal;
-        [Inject]
-        public var trackPage:TrackPageViewSignal;
         [Inject]
         public var initPackages:InitPackagesSignal;
         [Inject]
@@ -87,14 +79,12 @@ package kabam.rotmg.ui.view
         {
             var _local_1:Number;
             var _local_2:Number;
-            this.trackSomething();
             this.view.initialize(this.playerModel);
             this.view.close.add(this.onClose);
             this.view.newCharacter.add(this.onNewCharacter);
             this.view.showClasses.add(this.onNewCharacter);
             this.view.playGame.add(this.onPlayGame);
             this.view.serversClicked.add(this.showServersScreen);
-            this.trackPage.dispatch("/currentCharScreen");
             this.nameChanged.add(this.onNameChanged);
             this.initPackages.dispatch();
             if (this.securityQuestionsModel.showSecurityQuestionsOnStartup)
@@ -145,20 +135,6 @@ package kabam.rotmg.ui.view
             this.setScreen.dispatch(new ServersScreen(Boolean(this.seasonalEventModel.isChallenger)));
         }
 
-        private function trackSomething():void
-        {
-            var _local_2:TrackingData;
-            var _local_1:String = MoreDateUtil.getDayStringInPT();
-            if (Parameters.data_.lastDailyAnalytics != _local_1)
-            {
-                _local_2 = new TrackingData();
-                _local_2.category = "joinDate";
-                _local_2.action = Parameters.data_.joinDate;
-                Parameters.data_.lastDailyAnalytics = _local_1;
-                Parameters.save();
-            }
-        }
-
         private function onNewCharacter():void
         {
             if (((this.seasonalEventModel.isChallenger) && (this.seasonalEventModel.remainingCharacters == 0)))
@@ -199,11 +175,6 @@ package kabam.rotmg.ui.view
             var _local_2:CharacterClass = this.classesModel.getCharacterClass(_local_1.objectType());
             _local_2.setIsSelected(true);
             _local_2.skins.getSkin(_local_1.skinType()).setIsSelected(true);
-            var _local_3:TrackingData = new TrackingData();
-            _local_3.category = "character";
-            _local_3.action = "select";
-            _local_3.label = _local_1.displayId();
-            _local_3.value = _local_1.level();
             var _local_4:GameInitData = new GameInitData();
             _local_4.createCharacter = false;
             _local_4.charId = _local_1.charId();
